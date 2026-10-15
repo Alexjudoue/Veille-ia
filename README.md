@@ -40,7 +40,8 @@ flowchart LR
 ## Installation
 
 ```bash
-git clone https://github.com/<ton-compte>/veille-ia.git
+git clone https://github.com/<
+Alexjudoue>/veille-ia.git
 cd veille-ia
 python -m venv .venv
 source .venv/bin/activate        # Windows : .venv\Scripts\activate

@@ -15,7 +15,6 @@ from pathlib import Path
 
 import yaml
 from dotenv import load_dotenv
-
 from veille import __version__
 from veille.analyze import analyze
 from veille.brief import render_markdown, render_telegram, select, synthesize
