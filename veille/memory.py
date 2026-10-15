@@ -3,6 +3,7 @@ les mêmes articles d'un jour à l'autre. C'est aussi la base de la V2,
 où l'agent suivra l'évolution d'un sujet dans le temps."""
 from __future__ import annotations
 
+import re
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
@@ -52,6 +53,31 @@ class Memory:
             [(a.id, a.url, a.title, now) for a in articles],
         )
         self.db.commit()
+
+    def search(self, query: str, before_date: str, limit: int = 8) -> list[dict]:
+        """Cherche les articles analysés AVANT `before_date` (AAAA-MM-JJ)
+        qui parlent du même sujet. Utilisé par l'outil search_memory de l'agent.
+
+        Méthode volontairement simple : on découpe la requête en mots-clés et
+        on compte combien apparaissent dans le titre, le résumé ou les entités.
+        Les articles qui en contiennent le plus remontent en premier.
+        (LIKE ignore la casse pour les lettres sans accent seulement.)
+        """
+        words = [w for w in re.findall(r"\w+", query.lower()) if len(w) >= 3][:8]
+        if not words:
+            return []
+        haystack = "(title || ' ' || summary_fr || ' ' || entities)"
+        score = " + ".join(f"({haystack} LIKE ?)" for _ in words)
+        q = f"""
+            SELECT date, title, source, summary_fr, why_it_matters, score FROM (
+                SELECT *, ({score}) AS score FROM analyzed WHERE date < ?
+            ) WHERE score > 0
+            ORDER BY score DESC, date DESC
+            LIMIT ?
+        """
+        params = [f"%{w}%" for w in words] + [before_date, limit]
+        cols = ("date", "title", "source", "summary_fr", "why_it_matters", "score")
+        return [dict(zip(cols, row)) for row in self.db.execute(q, params)]
 
     def save_analyzed(self, items: list[AnalyzedArticle], date: str) -> None:
         self.db.executemany(
