@@ -1,0 +1,62 @@
+# Configuration de l'agent de veille économique
+# Tout ce qui se règle sans toucher au code est ici.
+
+llm:
+  # Modèle rapide et peu coûteux : suffisant pour trier et résumer des articles.
+  model: claude-haiku-5-5
+  # Modèle utilisé pour la synthèse finale (peut être le même).
+  synthesis_model: claude-haiku-5-5
+  batch_size: 15          # nombre d'articles envoyés au LLM par appel
+
+collect:
+  lookback_hours: 30      # on garde les articles publiés depuis X heures
+  max_per_feed: 25        # plafond par flux pour maîtriser le coût
+  timeout_seconds: 15
+
+brief:
+  min_relevance: 6        # score minimal (0-10) pour apparaître dans le brief
+  max_items_per_theme: 6
+  language: français
+
+# Le profil du lecteur : c'est ce qui permet au LLM de juger la pertinence.
+reader_profile: >
+  Étudiants ingénieurs et membres de l'association INSA Finance qui suivent
+  les marchés financiers, le secteur bancaire et l'IA. Ils veulent comprendre
+  les mouvements importants, leurs causes et leurs conséquences, sans jargon
+  inutile. Ils préparent des entretiens en conseil, banque et tech.
+
+themes:
+  marches:
+    label: Marchés financiers
+    description: >
+      Indices boursiers, taux, devises, matières premières, banques centrales
+      (BCE, Fed, BoE) : leurs décisions comme leurs dirigeants. Résultats
+      d'entreprises cotées, introductions en bourse, M&A.
+    feeds:
+      - https://www.lemonde.fr/economie/rss_full.xml
+      - https://www.bfmtv.com/rss/economie/
+      - https://news.google.com/rss/search?q=bourse+OR+CAC+40+OR+BCE+when:1d&hl=fr&gl=FR&ceid=FR:fr
+      - https://news.google.com/rss/search?q=stock+market+OR+Fed+OR+bond+yields+when:1d&hl=en-US&gl=US&ceid=US:en
+      - https://www.ecb.europa.eu/rss/press.html
+
+  banques:
+    label: Banques et finance
+    description: >
+      Banques commerciales (BNP Paribas, Société Générale, Crédit Agricole, JPMorgan...),
+      régulation (Bâle, AMF, ACPR), fonds d'investissement, private equity,
+      fintech, paiements, crypto-actifs régulés.
+    feeds:
+      - https://news.google.com/rss/search?q=banque+OR+BNP+OR+%22Soci%C3%A9t%C3%A9+G%C3%A9n%C3%A9rale%22+OR+%22Cr%C3%A9dit+Agricole%22+when:1d&hl=fr&gl=FR&ceid=FR:fr
+      - https://news.google.com/rss/search?q=bank+OR+%22private+equity%22+OR+fintech+when:1d&hl=en-US&gl=US&ceid=US:en
+
+  ia_tech:
+    label: IA et tech
+    description: >
+      Modèles d'IA, laboratoires (OpenAI, Anthropic, Google, Mistral...),
+      levées de fonds, semi-conducteurs, régulation (AI Act), adoption de l'IA
+      en entreprise, en particulier dans la finance et l'industrie.
+    feeds:
+      - https://techcrunch.com/category/artificial-intelligence/feed/
+      - https://www.technologyreview.com/feed/
+      - https://news.google.com/rss/search?q=intelligence+artificielle+when:1d&hl=fr&gl=FR&ceid=FR:fr
+      - https://news.google.com/rss/search?q=%22AI%22+finance+OR+banking+when:1d&hl=en-US&gl=US&ceid=US:en
