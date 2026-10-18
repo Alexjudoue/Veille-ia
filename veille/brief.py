@@ -3,8 +3,9 @@ from __future__ import annotations
 
 import logging
 from datetime import datetime
+from urllib.parse import urlparse
 
-from .models import AnalyzedArticle
+from .models import AnalyzedArticle, DeepDive
 
 log = logging.getLogger(__name__)
 
@@ -104,12 +105,15 @@ def select(items: list[AnalyzedArticle], config: dict, llm=None) -> dict[str, li
     return by_theme
 
 
-def synthesize(selected: dict[str, list[AnalyzedArticle]], llm, config: dict) -> dict:
+def synthesize(selected: dict[str, list[AnalyzedArticle]], llm, config: dict,
+               deep_dives: list[DeepDive] | None = None) -> dict:
+    # Pour les événements approfondis par l'agent, on donne au rédacteur le résumé enrichi
+    enriched = {d.item.article.id: d.summary for d in deep_dives or []}
     lines = []
     for theme, items in selected.items():
         for it in items:
             lines.append(f"- [{config['themes'][theme]['label']}] ({it.relevance}/10) "
-                         f"{it.article.title} : {it.summary_fr}")
+                         f"{it.article.title} : {enriched.get(it.article.id, it.summary_fr)}")
     if not lines:
         return {"key_points": [], "connection": "", "interview_question": ""}
 
@@ -141,8 +145,50 @@ def synthesize(selected: dict[str, list[AnalyzedArticle]], llm, config: dict) ->
     return out
 
 
-def render_markdown(selected, synthesis: dict, config: dict, date: datetime, stats: dict) -> str:
+def _plural(n: int, word: str) -> str:
+    return f"{n} {word}{'s' if n > 1 else ''}"
+
+
+def agent_line(stats: dict) -> str:
+    """« Agent : 2 articles lus, 1 recherche en mémoire, 4 appels au modèle »"""
+    read = stats.get("articles_read", 0)
+    parts = [f"{_plural(read, 'article')} lu{'s' if read > 1 else ''}"]
+    if stats.get("memory_searches"):
+        parts.append(f"{_plural(stats['memory_searches'], 'recherche')} en mémoire")
+    if stats.get("news_searches"):
+        parts.append(f"{_plural(stats['news_searches'], 'recherche')} d'actualité")
+    parts.append(_plural(stats.get("calls", 0), "appel") + " au modèle")
+    return "Agent : " + ", ".join(parts)
+
+
+def _render_deep_dive(d: DeepDive) -> list[str]:
+    it, a = d.item, d.item.article
+    md = [f"### [{a.title}]({a.url})",
+          f"*{a.source} · {a.published:%d/%m %H:%M} UTC · pertinence {it.relevance}/10 · "
+          f"confiance {d.confidence}*", "", d.summary, ""]
+    if d.key_figures:
+        md += ["**Chiffres clés**", ""]
+        md += [f"- **{f['value']}** : {f['label']} ([source]({f['source_url']}))" for f in d.key_figures]
+        md.append("")
+    if d.context:
+        md += [f"**Contexte :** {d.context}", ""]
+    if d.what_changed:
+        md += [f"**Ce qui change depuis les jours précédents :** {d.what_changed}", ""]
+    md += [f"> **Pourquoi c'est important :** {it.why_it_matters}", ""]
+    if d.sources_read:
+        links = ", ".join(f"[{urlparse(u).netloc.removeprefix('www.')}]({u})" for u in d.sources_read)
+        md += [f"*Sources lues : {links}*", ""]
+    if it.related:
+        links = ", ".join(f"[{r['source']}]({r['url']})" for r in it.related)
+        md += [f"*Aussi couvert par : {links}*", ""]
+    md += [f"*{agent_line(d.stats)}*", ""]
+    return md
+
+
+def render_markdown(selected, synthesis: dict, config: dict, date: datetime, stats: dict,
+                    deep_dives: list[DeepDive] | None = None) -> str:
     md = [f"# Veille économique du {date:%d/%m/%Y}", ""]
+    dives = {d.item.article.id: d for d in deep_dives or []}
 
     if synthesis.get("key_points"):
         md += ["## À retenir", ""]
@@ -153,7 +199,14 @@ def render_markdown(selected, synthesis: dict, config: dict, date: datetime, sta
         if synthesis.get("interview_question"):
             md += [f"**Question d'entretien possible :** {synthesis['interview_question']}", ""]
 
+    if dives:
+        md += ["## Analyses approfondies", ""]
+        for d in dives.values():
+            md += _render_deep_dive(d)
+
     for theme, items in selected.items():
+        # un événement approfondi figure déjà plus haut : pas de doublon
+        items = [it for it in items if it.article.id not in dives]
         if not items:
             continue
         md += [f"## {config['themes'][theme]['label']}", ""]
@@ -185,9 +238,15 @@ def render_markdown(selected, synthesis: dict, config: dict, date: datetime, sta
         f"{nb(stats['selected'])} retenu{s(stats['selected'])}. "
         f"{stats['calls']} appel{s(stats['calls'])} au modèle, "
         f"{nb(stats['input_tokens'])} tokens en entrée et {nb(stats['output_tokens'])} en sortie.*",
-        "",
-        "*Résumés générés par IA à partir des titres et extraits : vérifie les chiffres dans l'article source.*",
     ]
+    if stats.get("agent"):
+        ag = stats["agent"]
+        md.append(f"*Dont agent d'approfondissement : {_plural(ag['deep_dives'], 'analyse')} sur "
+                  f"{_plural(ag['events'], 'événement')}, {_plural(ag['calls'], 'appel')} au modèle, "
+                  f"{nb(ag['input_tokens'])} tokens en entrée et {nb(ag['output_tokens'])} en sortie "
+                  "(non inclus dans le total ci-dessus).*")
+    md += ["", "*Résumés générés par IA, fondés sur les titres, extraits et articles lus : "
+               "vérifie les chiffres dans l'article source.*"]
     return "\n".join(md)
 
 

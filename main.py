@@ -16,6 +16,7 @@ from pathlib import Path
 import yaml
 from dotenv import load_dotenv
 from veille import __version__
+from veille.agent import run_agent
 from veille.analyze import analyze
 from veille.brief import render_markdown, render_telegram, select, synthesize
 from veille.collect import collect
@@ -28,6 +29,7 @@ def main() -> None:
     p.add_argument("--config", default="config.yaml")
     p.add_argument("--dry-run", action="store_true", help="collecte seulement, sans LLM")
     p.add_argument("--no-memory", action="store_true", help="ignore les articles déjà vus")
+    p.add_argument("--no-agent", action="store_true", help="désactive l'agent d'approfondissement (comportement V1)")
     p.add_argument("--send", action="store_true", help="envoie le brief sur Telegram")
     p.add_argument("--limit", type=int, default=0, help="nombre max d'articles analysés (tests)")
     args = p.parse_args()
@@ -72,7 +74,13 @@ def main() -> None:
 
     # 3. Sélection et synthèse
     selected = select(analyzed, config, llm)
-    synthesis = synthesize(selected, llm, config)
+
+    # 3 bis. Agent (V2) : approfondit les événements les mieux notés
+    today = f"{now:%Y-%m-%d}"
+    deep_dives, traces = [], []
+    if config.get("agent", {}).get("enabled") and not args.no_agent:
+        deep_dives, traces = run_agent(selected, llm, memory, config, today)
+    synthesis = synthesize(selected, llm, config, deep_dives)
 
     stats = {
         "collected": len(articles),
@@ -82,7 +90,12 @@ def main() -> None:
         "input_tokens": llm.usage.input_tokens,
         "output_tokens": llm.usage.output_tokens,
     }
-    md = render_markdown(selected, synthesis, config, now, stats)
+    if traces:   # coût de l'agent, séparé de celui du pipeline
+        stats["agent"] = {"events": len(traces), "deep_dives": len(deep_dives),
+                          "calls": llm.agent_usage.calls,
+                          "input_tokens": llm.agent_usage.input_tokens,
+                          "output_tokens": llm.agent_usage.output_tokens}
+    md = render_markdown(selected, synthesis, config, now, stats, deep_dives)
 
     out_dir = Path("briefs")
     out_dir.mkdir(exist_ok=True)
@@ -91,10 +104,17 @@ def main() -> None:
     # Les données brutes servent à évaluer la qualité de l'agent (V3)
     (out_dir / f"{now:%Y-%m-%d}.json").write_text(
         json.dumps({"stats": stats, "synthesis": synthesis,
+                    "deep_dives": [d.to_dict() for d in deep_dives],
                     "analyzed": [a.to_dict() for a in analyzed]},
                    ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+    if traces:
+        # Trace de chaque boucle : outils appelés, arguments, durées, tokens
+        (out_dir / f"{now:%Y-%m-%d}.trace.json").write_text(
+            json.dumps({"date": today, "events": traces}, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
     logging.info("Brief écrit : %s", md_path)
     logging.info("Usage : %s", stats)
 
