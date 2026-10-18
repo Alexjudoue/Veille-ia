@@ -34,3 +34,31 @@ class AnalyzedArticle:
         d = asdict(self)
         d["article"]["published"] = self.article.published.isoformat()
         return d
+
+
+@dataclass
+class DeepDive:
+    """Analyse approfondie d'un événement par l'agent (V2)."""
+
+    item: AnalyzedArticle            # l'événement d'origine (résumé v1 conservé)
+    summary: str                     # résumé enrichi, fondé sur les articles lus
+    key_figures: list[dict] = field(default_factory=list)   # [{value, label, source_url}]
+    context: str = ""
+    what_changed: str = ""           # ce qui change depuis les jours précédents
+    confidence: str = "moyenne"      # élevée | moyenne | faible
+    sources_read: list[str] = field(default_factory=list)   # adresses réellement lues
+    # Activité de l'agent : articles lus, recherches, appels au modèle, tokens
+    stats: dict = field(default_factory=dict)
+
+    def to_dict(self) -> dict:
+        return {
+            "article_id": self.item.article.id,
+            "title": self.item.article.title,
+            "summary": self.summary,
+            "key_figures": self.key_figures,
+            "context": self.context,
+            "what_changed": self.what_changed,
+            "confidence": self.confidence,
+            "sources_read": self.sources_read,
+            "stats": self.stats,
+        }

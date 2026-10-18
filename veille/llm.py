@@ -36,7 +36,8 @@ class LLM:
             )
         self.client = anthropic.Anthropic()
         self.model = model
-        self.usage = Usage()
+        self.usage = Usage()          # coût du pipeline (analyse, regroupement, synthèse)
+        self.agent_usage = Usage()    # coût de l'agent (V2), compté à part
 
     def structured(self, system: str, prompt: str, tool_name: str,
                    schema: dict, max_tokens: int = 4000, model: str | None = None) -> dict:
@@ -58,3 +59,20 @@ class LLM:
             if block.type == "tool_use":
                 return block.input
         raise RuntimeError("Le modèle n'a pas renvoyé de résultat structuré.")
+
+    def chat(self, system: str, messages: list, tools: list,
+             tool_choice: dict | None = None, max_tokens: int = 4000,
+             model: str | None = None):
+        """Un tour de conversation avec outils, pour la boucle de l'agent (V2).
+
+        Contrairement à `structured`, on renvoie la réponse complète : c'est la
+        boucle de l'agent qui lit les `tool_use`, exécute les outils et renvoie
+        les résultats. Les tokens sont comptés dans `agent_usage`.
+        """
+        kwargs = dict(model=model or self.model, max_tokens=max_tokens,
+                      system=system, messages=messages, tools=tools)
+        if tool_choice:
+            kwargs["tool_choice"] = tool_choice
+        resp = self.client.messages.create(**kwargs)
+        self.agent_usage.add(resp.usage.input_tokens, resp.usage.output_tokens)
+        return resp

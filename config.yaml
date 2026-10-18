@@ -13,6 +13,14 @@ collect:
   max_per_feed: 25        # plafond par flux pour maîtriser le coût
   timeout_seconds: 15
 
+# V2 : l'agent lit les articles en entier pour les événements les mieux notés.
+agent:
+  enabled: true
+  deep_dive_count: 5      # nombre d'événements approfondis par jour
+  max_tool_calls: 6       # budget d'appels d'outils par événement
+  agent_model: ""         # vide = même modèle que llm.model
+  article_max_chars: 6000 # texte gardé par article lu
+
 brief:
   min_relevance: 6        # score minimal (0-10) pour apparaître dans le brief
   max_items_per_theme: 6
