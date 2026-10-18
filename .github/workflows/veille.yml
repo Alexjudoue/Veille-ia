@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   veille:
+    timeout-minutes: 20         # garde-fou : l'agent lit des pages web, on évite une exécution qui s'éternise
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
