@@ -231,20 +231,26 @@ def render_markdown(selected, synthesis: dict, config: dict, date: datetime, sta
     def s(x: int) -> str:   # pluriel
         return "s" if x > 1 else ""
 
+    def entree(d: dict) -> int:  # tout ce que le modèle a lu, cache compris
+        return d["input_tokens"] + d.get("cache_write_tokens", 0) + d.get("cache_read_tokens", 0)
+
     md += [
         "---",
         f"*{nb(stats['collected'])} article{s(stats['collected'])} collecté{s(stats['collected'])}, "
         f"{nb(stats['analyzed'])} analysé{s(stats['analyzed'])}, "
         f"{nb(stats['selected'])} retenu{s(stats['selected'])}. "
         f"{stats['calls']} appel{s(stats['calls'])} au modèle, "
-        f"{nb(stats['input_tokens'])} tokens en entrée et {nb(stats['output_tokens'])} en sortie.*",
+        f"{nb(entree(stats))} tokens en entrée et {nb(stats['output_tokens'])} en sortie.*",
     ]
     if stats.get("agent"):
         ag = stats["agent"]
         md.append(f"*Dont agent d'approfondissement : {_plural(ag['deep_dives'], 'analyse')} sur "
                   f"{_plural(ag['events'], 'événement')}, {_plural(ag['calls'], 'appel')} au modèle, "
-                  f"{nb(ag['input_tokens'])} tokens en entrée et {nb(ag['output_tokens'])} en sortie "
+                  f"{nb(entree(ag))} tokens en entrée (dont {nb(ag.get('cache_read_tokens', 0))} relus "
+                  f"depuis le cache) et {nb(ag['output_tokens'])} en sortie "
                   "(non inclus dans le total ci-dessus).*")
+    if stats.get("total_cost_usd"):
+        md.append(f"*Coût estimé de ce brief : {stats['total_cost_usd']:.3f} $.*")
     md += ["", "*Résumés générés par IA, fondés sur les titres, extraits et articles lus : "
                "vérifie les chiffres dans l'article source.*"]
     return "\n".join(md)

@@ -7,6 +7,9 @@ llm:
   # Modèle utilisé pour la synthèse finale (peut être le même).
   synthesis_model: claude-haiku-5-5
   batch_size: 15          # nombre d'articles envoyés au LLM par appel
+  # Effort de réflexion du pipeline (tri, notation, synthèse) : "low" suffit pour des
+  # tâches à schéma strict et réduit les tokens de sortie. Vide = défaut du modèle.
+  effort: low
 
 collect:
   lookback_hours: 30      # on garde les articles publiés depuis X heures
@@ -16,10 +19,12 @@ collect:
 # V2 : l'agent lit les articles en entier pour les événements les mieux notés.
 agent:
   enabled: true
-  deep_dive_count: 5      # nombre d'événements approfondis par jour
-  max_tool_calls: 6       # budget d'appels d'outils par événement
+  deep_dive_count: 4      # nombre d'événements approfondis par jour
+  max_tool_calls: 5       # budget d'appels d'outils par événement
+  max_reads: 2            # articles lus avec succès par événement (le texte est relu à chaque tour)
   agent_model: ""         # vide = même modèle que llm.model
-  article_max_chars: 6000 # texte gardé par article lu
+  effort: medium          # effort de réflexion de l'agent (il doit choisir ses outils)
+  article_max_chars: 4500 # texte gardé par article lu
 
 brief:
   min_relevance: 6        # score minimal (0-10) pour apparaître dans le brief

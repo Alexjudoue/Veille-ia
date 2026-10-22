@@ -22,6 +22,7 @@ import re
 import time
 from dataclasses import dataclass, field
 from decimal import Decimal, InvalidOperation
+from urllib.parse import urlparse
 
 from . import tools
 from .models import AnalyzedArticle, DeepDive
@@ -35,8 +36,8 @@ FATAL_STATUS = (400, 401, 403)   # clé invalide, crédits épuisés : inutile d
 TOOL_DEFS = [
     {
         "name": "read_article",
-        "description": ("Télécharge une page web et renvoie son texte principal (environ 6 000 "
-                        "caractères). N'accepte que les liens fournis dans la demande ou renvoyés "
+        "description": ("Télécharge une page web et renvoie son texte principal (début de "
+                        "l'article seulement). N'accepte que les liens fournis dans la demande ou renvoyés "
                         "par search_news. Peut échouer (site payant, accès refusé) : essaie alors "
                         "un autre lien."),
         "input_schema": {"type": "object",
@@ -130,6 +131,7 @@ class Run:
     allowed_urls: set[str]                       # seuls ces liens peuvent être ouverts
     read_texts: dict[str, str] = field(default_factory=dict)   # adresse réelle -> texte lu
     aliases: dict[str, str] = field(default_factory=dict)      # lien d'origine -> adresse réelle
+    blocked_domains: set[str] = field(default_factory=set)     # sites qui ont refusé l'accès (403...)
     counts: dict[str, int] = field(default_factory=lambda: {
         "articles_read": 0, "memory_searches": 0, "news_searches": 0, "tool_calls": 0})
 
@@ -150,7 +152,24 @@ def run_tool(name: str, args: dict, run: Run) -> str:
         if url not in run.allowed_urls:
             raise tools.ToolError("lien non autorisé : utilise uniquement les liens fournis "
                                   "dans la demande ou renvoyés par search_news")
-        real, text = tools.read_article(url, max_chars=run.config["agent"]["article_max_chars"])
+        cfg = run.config["agent"]
+        # Assez lu : un 3e article coûte des tokens (il est relu à chaque tour) sans rien apporter
+        if run.counts["articles_read"] >= cfg.get("max_reads", 2):
+            raise tools.ToolError("tu as déjà lu assez d'articles : conclus avec submit_analysis")
+        # On décode le lien Google News ici pour connaître le vrai site avant de le télécharger
+        real = run.aliases.get(url)
+        if real is None:
+            real = tools.decode_google_news(url) if tools.is_google_news(url) else url
+            run.aliases[url] = real
+        domain = urlparse(real).netloc
+        if domain in run.blocked_domains:
+            raise tools.ToolError(f"{domain} a déjà refusé l'accès pendant cette analyse : "
+                                  "choisis un autre site")
+        try:
+            real, text = tools.read_article(real, max_chars=cfg["article_max_chars"])
+        except tools.AccessDenied:
+            run.blocked_domains.add(domain)       # inutile de réessayer ce site
+            raise
         run.read_texts[real] = text
         run.aliases[url] = real
         run.counts["articles_read"] += 1
@@ -237,17 +256,18 @@ def _first_message(item: AnalyzedArticle, today: str, max_calls: int) -> tuple[s
     return text, {u for _, _, u in links}
 
 
-def _call_model(llm, model, system, messages, force: bool):
+def _call_model(llm, model, system, messages, force: bool, effort: str | None = None):
     """Un appel au modèle. Quand `force` est vrai, on impose submit_analysis ;
     si le modèle refuse le forçage (certains modèles renvoient une erreur 400),
     on se rabat sur un choix libre : la consigne ajoutée au message suffit alors."""
+    opts = {"model": model, **({"effort": effort} if effort else {})}
     if not force:
-        return llm.chat(system, messages, TOOL_DEFS, model=model)
+        return llm.chat(system, messages, TOOL_DEFS, **opts)
     try:
-        return llm.chat(system, messages, TOOL_DEFS, tool_choice=FORCE_SUBMIT, model=model)
+        return llm.chat(system, messages, TOOL_DEFS, tool_choice=FORCE_SUBMIT, **opts)
     except Exception as e:
         if getattr(e, "status_code", None) == 400 and "tool_choice" in str(e):
-            return llm.chat(system, messages, TOOL_DEFS, model=model)
+            return llm.chat(system, messages, TOOL_DEFS, **opts)
         raise
 
 
@@ -270,10 +290,14 @@ def investigate(item: AnalyzedArticle, llm, memory, config: dict, today: str):
     nudge = None   # consigne ajoutée quand on force la conclusion
     for turn in range(max_calls + 2):                 # plafond absolu : la boucle se termine toujours
         force = run.counts["tool_calls"] >= max_calls or turn == max_calls + 1 or nudge is not None
-        resp = _call_model(llm, model, system, messages, force)
+        resp = _call_model(llm, model, system, messages, force, cfg.get("effort"))
         trace["model_calls"] += 1
         trace["input_tokens"] += resp.usage.input_tokens
         trace["output_tokens"] += resp.usage.output_tokens
+        # tokens écrits dans le cache / relus depuis le cache (absents des doubles de test)
+        for key, attr in (("cache_write_tokens", "cache_creation_input_tokens"),
+                          ("cache_read_tokens", "cache_read_input_tokens")):
+            trace[key] = trace.get(key, 0) + (getattr(resp.usage, attr, 0) or 0)
         if resp.stop_reason == "refusal":
             return finish("repli_v1", "refus du modèle")
 

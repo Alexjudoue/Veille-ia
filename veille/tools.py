@@ -30,6 +30,11 @@ class ToolError(Exception):
     """Échec attendu d'un outil. Le message est renvoyé tel quel au modèle."""
 
 
+class AccessDenied(ToolError):
+    """Le site refuse l'accès (401, 402, 403) : l'agent retient son nom de domaine
+    pour ne pas réessayer un autre article du même site pendant ce run."""
+
+
 # --- Liens Google News -------------------------------------------------------
 
 def is_google_news(url: str) -> bool:
@@ -92,7 +97,8 @@ def decode_google_news(url: str, timeout: int = 10) -> str:
 def read_article(url: str, max_chars: int = 6000, timeout: int = 15) -> tuple[str, str]:
     """Télécharge une page et en extrait le texte principal.
 
-    Renvoie (adresse réelle, texte tronqué à max_chars).
+    Renvoie (adresse réelle, texte tronqué à max_chars). Un lien Google News est
+    décodé ici ; l'agent peut aussi le décoder avant, et passer l'adresse réelle.
     """
     real = decode_google_news(url) if is_google_news(url) else url
     try:
@@ -103,7 +109,7 @@ def read_article(url: str, max_chars: int = 6000, timeout: int = 15) -> tuple[st
         raise ToolError(f"connexion impossible ({type(e).__name__})") from e
 
     if resp.status_code in (401, 402, 403):
-        raise ToolError(f"accès refusé (HTTP {resp.status_code}) : site protégé ou payant")
+        raise AccessDenied(f"accès refusé (HTTP {resp.status_code}) : site protégé ou payant")
     if not resp.ok:
         raise ToolError(f"page indisponible (HTTP {resp.status_code})")
 

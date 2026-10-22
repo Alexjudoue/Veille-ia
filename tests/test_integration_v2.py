@@ -82,7 +82,7 @@ def test_synthesis_uses_enriched_summary():
 
 class StubLLM:
     """Remplace veille.llm.LLM : répond à l'analyse, au regroupement, à la synthèse et à l'agent."""
-    def __init__(self, model):
+    def __init__(self, model, effort=None):
         self.usage, self.agent_usage = llm_module.Usage(), llm_module.Usage()
         self.agent_steps = [
             [SimpleNamespace(type="tool_use", id="a", name="read_article", input={"url": "https://exemple.fr/0"})],

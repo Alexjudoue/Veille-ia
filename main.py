@@ -76,7 +76,7 @@ def main() -> None:
 
     # 2. Analyse
     from veille.llm import LLM
-    llm = LLM(config["llm"]["model"])
+    llm = LLM(config["llm"]["model"], effort=config["llm"].get("effort") or None)
     try:
         analyzed = analyze(articles, llm, config)
     except Exception as e:
@@ -104,12 +104,21 @@ def main() -> None:
         "calls": llm.usage.calls,
         "input_tokens": llm.usage.input_tokens,
         "output_tokens": llm.usage.output_tokens,
+        "cache_write_tokens": llm.usage.cache_write_tokens,
+        "cache_read_tokens": llm.usage.cache_read_tokens,
+        "cost_usd": round(llm.usage.cost_usd, 5),
     }
     if traces:   # coût de l'agent, séparé de celui du pipeline
         stats["agent"] = {"events": len(traces), "deep_dives": len(deep_dives),
                           "calls": llm.agent_usage.calls,
                           "input_tokens": llm.agent_usage.input_tokens,
-                          "output_tokens": llm.agent_usage.output_tokens}
+                          "output_tokens": llm.agent_usage.output_tokens,
+                          "cache_write_tokens": llm.agent_usage.cache_write_tokens,
+                          "cache_read_tokens": llm.agent_usage.cache_read_tokens,
+                          "articles_read": sum(t.get("articles_read", 0) for t in traces),
+                          "cost_usd": round(llm.agent_usage.cost_usd, 5)}
+    stats["total_cost_usd"] = round(llm.usage.cost_usd + llm.agent_usage.cost_usd, 5)
+    stats["duration_s"] = round((datetime.now(timezone.utc) - now).total_seconds())
     md = render_markdown(selected, synthesis, config, now, stats, deep_dives)
 
     out_dir = Path("briefs")
@@ -138,8 +147,10 @@ def main() -> None:
     memory.save_analyzed(analyzed, f"{now:%Y-%m-%d}")
     if args.send:
         send_telegram(render_telegram(selected, synthesis, config, now))
-    if args.email:
-        send_email(md, f"Veille économique du {now:%d/%m/%Y}")
+    if args.email and not send_email(md, f"Veille économique du {now:%d/%m/%Y}"):
+        # Le brief est écrit et la mémoire sauvegardée ; mais un e-mail perdu ne doit pas
+        # passer inaperçu (GitHub Actions marque alors l'exécution en échec et vous prévient).
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ from pathlib import Path
 
 import veille.agent as agent
 from veille.models import AnalyzedArticle, Article
-from veille.tools import ToolError
+from veille.tools import AccessDenied, ToolError
 
 CONFIG = yaml.safe_load((Path(__file__).parent.parent / "config.yaml").read_text(encoding="utf-8"))
 TODAY = "2026-10-18"
@@ -59,6 +59,15 @@ class FakeMemory:
                  "summary_fr": "Attente d'une décision.", "why_it_matters": "", "score": 2}]
 
 
+PAYWALL = "https://paywall.fr/bce"   # adresse réelle derrière le lien Google News URL1
+
+
+@pytest.fixture(autouse=True)
+def fake_decoder(monkeypatch):
+    """Aucun test ne doit joindre Google : le lien Google News « décode » vers PAYWALL."""
+    monkeypatch.setattr(agent.tools, "decode_google_news", lambda url: PAYWALL)
+
+
 @pytest.fixture
 def good_tools(monkeypatch):
     monkeypatch.setattr(agent.tools, "read_article", lambda url, max_chars: (URL2, ARTICLE_TEXT))
@@ -102,7 +111,7 @@ def test_budget_forces_submit(good_tools):
 
 def test_failing_tool_is_reported_and_model_adapts(monkeypatch):
     def read(url, max_chars):
-        if url == URL1:
+        if url == PAYWALL:
             raise ToolError("accès refusé (HTTP 403) : site protégé ou payant")
         return URL2, ARTICLE_TEXT
 
@@ -116,6 +125,54 @@ def test_failing_tool_is_reported_and_model_adapts(monkeypatch):
     assert first["is_error"] and "403" in first["content"]
     assert dive and dive.sources_read == [URL2]
     assert trace["steps"][0]["error"].startswith("accès refusé")
+
+
+def test_refused_domain_is_not_retried(monkeypatch):
+    """Un site qui a répondu 403 n'est pas retéléchargé : le 2e lien du même site est refusé tout de suite."""
+    downloads = []
+
+    def read(url, max_chars):
+        downloads.append(url)
+        raise AccessDenied("accès refusé (HTTP 403) : site protégé ou payant")
+
+    monkeypatch.setattr(agent.tools, "read_article", read)
+    it = event()
+    it.related = [{"title": "Autre", "url": "https://paywall.fr/autre-article", "source": "Paywall"}]
+    llm = FakeLLM(reply(use("a", "read_article", url=URL1)),
+                  reply(use("b", "read_article", url="https://paywall.fr/autre-article")),
+                  reply(submit()))
+    agent.investigate(it, llm, FakeMemory(), CONFIG, TODAY)
+
+    assert downloads == [PAYWALL]                                  # un seul téléchargement
+    second = llm.calls[2]["messages"][-1]["content"][0]
+    assert second["is_error"] and "déjà refusé" in second["content"]
+
+
+def test_read_cap_per_event(monkeypatch):
+    """Au-delà de max_reads articles lus, l'outil demande de conclure (le texte est relu à chaque tour)."""
+    monkeypatch.setattr(agent.tools, "read_article", lambda url, max_chars: (url, ARTICLE_TEXT))
+    cfg = {**CONFIG, "agent": {**CONFIG["agent"], "max_reads": 1}}
+    llm = FakeLLM(reply(use("a", "read_article", url=URL2)),
+                  reply(use("b", "read_article", url=URL1)),
+                  reply(submit()))
+    dive, trace = agent.investigate(event(), llm, FakeMemory(), cfg, TODAY)
+
+    assert trace["articles_read"] == 1 and dive is not None
+    refused = llm.calls[2]["messages"][-1]["content"][0]
+    assert refused["is_error"] and "assez" in refused["content"]
+
+
+def test_effort_is_passed_to_the_model(good_tools):
+    seen = []
+
+    class Spy(FakeLLM):
+        def chat(self, system, messages, tools, tool_choice=None, **kw):
+            seen.append(kw)
+            return super().chat(system, messages, tools, tool_choice, **kw)
+
+    llm = Spy(reply(use("a", "read_article", url=URL2)), reply(submit()))
+    agent.investigate(event(), llm, FakeMemory(), CONFIG, TODAY)
+    assert all(kw.get("effort") == CONFIG["agent"]["effort"] for kw in seen)
 
 
 def test_no_readable_article_falls_back_to_v1(monkeypatch):
