@@ -1,15 +1,62 @@
 name: Veille quotidienne
 
+# Objectif : un brief par e-mail chaque jour (week-end compris) vers 7h45, heure de Paris.
+# Le cron de GitHub est en UTC et Paris change d'heure (UTC+2 l'été, UTC+1 l'hiver) :
+# on programme donc les DEUX horaires possibles, et le job « garde » ne laisse passer
+# que celui qui tombe à 7h45 à Paris. Une seule exécution utile par jour, toute l'année.
 on:
   schedule:
-    - cron: "45 5 * * 1-5"   # du lundi au vendredi, 5h45 UTC (7h45 à Paris en été)
-  workflow_dispatch:          # bouton « Run workflow » pour lancer à la main
+    - cron: "45 5 * * *"   # 7h45 à Paris en heure d'été (UTC+2)
+    - cron: "45 6 * * *"   # 7h45 à Paris en heure d'hiver (UTC+1)
+  workflow_dispatch:       # bouton « Run workflow » pour lancer à la main
+    inputs:
+      force:
+        description: "Ignorer la mémoire (--no-memory) : regénère un brief complet même si les articles ont déjà été vus"
+        type: boolean
+        default: false
 
 permissions:
-  contents: write             # pour sauvegarder le brief et la mémoire dans le dépôt
+  contents: write          # pour sauvegarder le brief et la mémoire dans le dépôt
+
+# Jamais deux exécutions en même temps : elles écriraient la même mémoire et le même brief.
+concurrency:
+  group: veille
+  cancel-in-progress: false
 
 jobs:
+  garde:
+    # Décide si cette exécution doit produire le brief. Léger : un checkout et trois lignes de shell.
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      lancer: ${{ steps.decision.outputs.lancer }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Faut-il lancer le brief maintenant ?
+        id: decision
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          jour=$(TZ=Europe/Paris date +%F)
+          heure=$(TZ=Europe/Paris date +%H)
+          echo "Heure de Paris : $jour, ${heure}h (déclenchement : $EVENT)"
+          if [ "$EVENT" = "workflow_dispatch" ]; then
+            echo "Lancement manuel : on exécute."; lancer=oui
+          elif [ "$((10#$heure))" -lt 7 ]; then
+            # Le cron d'été (5h45 UTC) tombe à 6h45 l'hiver : trop tôt, le cron d'hiver prendra le relais.
+            echo "Il est avant 7h à Paris : ce n'est pas le bon cron, on passe."; lancer=non
+          elif [ -f "briefs/$jour.md" ]; then
+            # Le brief du jour est déjà dans le dépôt : l'autre cron, ou un lancement manuel, est passé avant.
+            echo "Le brief du $jour existe déjà : pas de second envoi."; lancer=non
+          else
+            echo "Premier passage après 7h à Paris sans brief du jour : on exécute."; lancer=oui
+          fi
+          echo "lancer=$lancer" >> "$GITHUB_OUTPUT"
+
   veille:
+    needs: garde
+    if: needs.garde.outputs.lancer == 'oui'
     timeout-minutes: 20         # garde-fou : l'agent lit des pages web, on évite une exécution qui s'éternise
     runs-on: ubuntu-latest
     steps:
@@ -24,17 +71,26 @@ jobs:
 
       - run: pytest -q
 
-      - name: Générer le brief
+      - name: Générer le brief et l'envoyer par e-mail
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python main.py --send
+          FORCE: ${{ inputs.force }}
+        run: |
+          options=""
+          if [ "$FORCE" = "true" ]; then options="--no-memory"; fi
+          python main.py --email --send $options
 
+      # Même si l'envoi a échoué, le brief et la mémoire sont déjà écrits : on les sauvegarde.
       - name: Sauvegarder le brief et la mémoire
+        if: ${{ !cancelled() }}
         run: |
           git config user.name "veille-bot"
           git config user.email "veille-bot@users.noreply.github.com"
           git add briefs/ data/
-          git diff --cached --quiet || git commit -m "Brief du $(date +%F)"
+          git diff --cached --quiet || git commit -m "Brief du $(TZ=Europe/Paris date +%F)"
           git push
