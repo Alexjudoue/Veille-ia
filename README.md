@@ -1,6 +1,6 @@
 # Agent de veille économique : marchés, banques, IA
 
-Chaque matin en semaine, cet agent lit une quinzaine de flux d'actualité, élimine les doublons et le bruit, demande à un LLM (Claude) de noter et résumer chaque article, puis rédige un brief : les 3 informations à retenir, un fil rouge entre les actualités et une question d'entretien possible. Le brief est enregistré dans `briefs/` et peut être envoyé sur Telegram.
+Chaque matin en semaine, cet agent lit une quinzaine de flux d'actualité, élimine les doublons et le bruit, demande à un LLM (Claude) de noter et résumer chaque article, puis rédige un brief : les 3 informations à retenir, un fil rouge entre les actualités et une question d'entretien possible. Le brief est enregistré dans `briefs/` et peut être envoyé par e-mail ou sur Telegram.
 
 **Nouveauté V2 : un vrai agent.** Pour les événements les mieux notés, le modèle décide lui-même quoi faire : lire l'article en entier, chercher dans la mémoire ce qui s'est passé les jours précédents, lancer une recherche complémentaire, puis rendre une analyse approfondie (chiffres clés vérifiés, contexte, « ce qui change depuis hier »). Chaque raisonnement est tracé dans `briefs/AAAA-MM-JJ.trace.json`.
 
@@ -22,7 +22,7 @@ flowchart LR
     L --> G[Synthèse LLM<br/>à retenir, fil rouge,<br/>question d'entretien]
     F --> G
     G --> H[Brief Markdown + JSON<br/>+ trace de l'agent]
-    G --> I[Telegram]
+    G --> I[E-mail / Telegram]
 ```
 
 ### Pipeline ou agent ?
@@ -66,7 +66,7 @@ pip install -r requirements.txt
 echo "ANTHROPIC_API_KEY=ta-clé" > .env    # crée le fichier .env avec ta clé API
 ```
 
-Pour l'envoi Telegram, ajoute aussi `TELEGRAM_BOT_TOKEN` et `TELEGRAM_CHAT_ID` dans `.env` (voir plus bas). Le fichier `.env` n'est jamais publié.
+Pour l'envoi par e-mail ou Telegram, ajoute aussi les variables correspondantes dans `.env` (voir `.env.example` et plus bas). Le fichier `.env` n'est jamais publié.
 
 La clé API se crée sur [console.anthropic.com](https://console.anthropic.com).
 
@@ -77,9 +77,20 @@ python main.py --dry-run --no-memory   # liste les articles collectés, sans app
 python main.py --limit 15              # premier vrai test, limité à 15 articles
 python main.py                         # brief complet -> briefs/AAAA-MM-JJ.md (+ .trace.json)
 python main.py --no-agent              # comportement V1 : sans approfondissement, moins cher
+python main.py --email                 # + envoi par e-mail
+python main.py --test-email            # renvoie le dernier brief par e-mail, sans LLM (gratuit)
 python main.py --send                  # + envoi Telegram
 pytest                                 # tests, sans réseau ni clé
 ```
+
+## Envoi par e-mail (optionnel)
+
+Le brief part en HTML mis en forme (lisible sur téléphone), avec une version texte en secours. L'envoi passe par le serveur SMTP de Gmail, sans service tiers.
+
+1. Active la [validation en deux étapes](https://myaccount.google.com/signinoptions/two-step-verification) sur ton compte Google.
+2. Crée un [mot de passe d'application](https://myaccount.google.com/apppasswords) (code de 16 lettres, révocable à tout moment). Ce n'est pas ton mot de passe Google.
+3. Dans `.env`, renseigne `EMAIL_SENDER` (ton adresse Gmail) et `EMAIL_APP_PASSWORD`. `EMAIL_TO` est optionnel : vide, le brief t'est envoyé ; plusieurs adresses séparées par des virgules partent en copie cachée.
+4. Teste avec `python main.py --test-email`.
 
 ## Envoi sur Telegram (optionnel)
 
@@ -93,14 +104,14 @@ pytest                                 # tests, sans réseau ni clé
 Le workflow `.github/workflows/veille.yml` lance la veille du lundi au vendredi à 5h45 UTC, puis enregistre le brief et la mémoire dans le dépôt.
 
 1. Pousse le projet sur GitHub.
-2. Dans *Settings > Secrets and variables > Actions*, ajoute `ANTHROPIC_API_KEY` (et les deux secrets Telegram si besoin).
+2. Dans *Settings > Secrets and variables > Actions*, ajoute `ANTHROPIC_API_KEY`, et si besoin `EMAIL_SENDER`, `EMAIL_APP_PASSWORD`, `EMAIL_TO` ou les deux secrets Telegram.
 3. Dans l'onglet *Actions*, lance le workflow à la main avec *Run workflow* pour vérifier.
 
 ## Feuille de route
 
 - [x] **V1, pipeline** : collecte, analyse, synthèse, mémoire, envoi, exécution quotidienne.
 - [x] **V2, agent** : boucle de tool use (`read_article`, `search_memory`, `search_news`, `submit_analysis`), budget, chiffres vérifiés, trace de chaque raisonnement, coût de l'agent suivi à part.
-- [ ] **Prochaine étape, envoi du brief par e-mail** : en plus de Telegram, pour les membres qui préfèrent leur boîte de réception.
+- [x] **Envoi par e-mail** : brief HTML via Gmail, destinataires multiples en copie cachée.
 - [ ] **V3, évaluation** : jeu d'articles annotés à la main pour mesurer la qualité du score de pertinence et des analyses de l'agent, suivi du coût et des retours des lecteurs.
 
 ## Limites connues

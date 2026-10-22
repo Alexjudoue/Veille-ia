@@ -4,6 +4,8 @@ Exemples :
     python main.py --dry-run     # collecte seule, sans appel au LLM (gratuit)
     python main.py               # brief complet dans briefs/AAAA-MM-JJ.md
     python main.py --send        # + envoi sur Telegram
+    python main.py --email       # + envoi par e-mail
+    python main.py --test-email  # renvoie le dernier brief par e-mail (aucun appel au LLM)
 """
 from __future__ import annotations
 
@@ -20,7 +22,7 @@ from veille.agent import run_agent
 from veille.analyze import analyze
 from veille.brief import render_markdown, render_telegram, select, synthesize
 from veille.collect import collect
-from veille.deliver import send_telegram
+from veille.deliver import send_email, send_telegram
 from veille.memory import Memory
 
 
@@ -31,6 +33,9 @@ def main() -> None:
     p.add_argument("--no-memory", action="store_true", help="ignore les articles déjà vus")
     p.add_argument("--no-agent", action="store_true", help="désactive l'agent d'approfondissement (comportement V1)")
     p.add_argument("--send", action="store_true", help="envoie le brief sur Telegram")
+    p.add_argument("--email", action="store_true", help="envoie le brief par e-mail")
+    p.add_argument("--test-email", action="store_true",
+                   help="envoie le dernier brief existant par e-mail, sans collecte ni LLM (gratuit)")
     p.add_argument("--limit", type=int, default=0, help="nombre max d'articles analysés (tests)")
     args = p.parse_args()
 
@@ -39,6 +44,16 @@ def main() -> None:
     logging.info("Agent de veille %s", __version__)
     config = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
     now = datetime.now(timezone.utc)
+
+    if args.test_email:
+        # Test d'envoi : on réutilise le brief le plus récent, sans rien régénérer
+        briefs = sorted(Path("briefs").glob("????-??-??.md"))
+        if not briefs:
+            logging.error("Aucun brief dans briefs/ : lance d'abord python main.py.")
+            raise SystemExit(1)
+        last = briefs[-1]
+        ok = send_email(last.read_text(encoding="utf-8"), f"[Test] Veille économique du {last.stem}")
+        raise SystemExit(0 if ok else 1)
 
     # 1. Collecte
     articles = collect(config)
@@ -123,6 +138,8 @@ def main() -> None:
     memory.save_analyzed(analyzed, f"{now:%Y-%m-%d}")
     if args.send:
         send_telegram(render_telegram(selected, synthesis, config, now))
+    if args.email:
+        send_email(md, f"Veille économique du {now:%d/%m/%Y}")
 
 
 if __name__ == "__main__":
