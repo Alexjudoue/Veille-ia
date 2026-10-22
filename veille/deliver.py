@@ -46,11 +46,12 @@ EMAIL_CSS = """
 body { margin:0; padding:0; background:#f4f4f5; }
 .wrap { max-width:680px; margin:0 auto; padding:24px 16px; background:#ffffff;
         font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-        font-size:15px; line-height:1.55; color:#1f2328; }
+        font-size:15px; line-height:1.55; color:#1f2328;
+        overflow-wrap:anywhere; word-wrap:break-word; }   /* un long titre ou lien ne déborde pas sur mobile */
 h1 { font-size:22px; margin:0 0 16px; }
 h2 { font-size:18px; margin:28px 0 8px; padding-bottom:4px; border-bottom:2px solid #e5e7eb; }
 h3 { font-size:15px; margin:18px 0 4px; }
-a { color:#1a56db; }
+a { color:#1a56db; word-break:break-word; }
 blockquote { margin:8px 0; padding:6px 12px; border-left:3px solid #1a56db;
              background:#f3f6fc; color:#374151; }
 em { color:#6b7280; }

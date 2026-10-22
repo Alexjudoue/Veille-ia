@@ -17,6 +17,7 @@ Tout échec laisse l'événement avec son résumé v1 : le brief sort quand mêm
 """
 from __future__ import annotations
 
+import json
 import logging
 import re
 import time
@@ -345,10 +346,44 @@ def investigate(item: AnalyzedArticle, llm, memory, config: dict, today: str):
     return finish("repli_v1", "le modèle n'a pas conclu dans le budget")
 
 
+# Défaut rare du modèle : il recopie un autre paramètre de l'outil (« <parameter name="key_figures">
+# [...] ») à l'intérieur d'un champ texte. Sans correction, ce charabda finit dans le brief.
+_LEAK = re.compile(r"\s*<\s*parameter\s+name=\"(\w+)\"\s*>(.*)", re.S)
+_STRAY_TAG = re.compile(r"</?\s*(?:parameter|invoke|antml:[\w:]+)[^>]*>", re.I)
+
+
+def repair_leaked_params(data: dict) -> dict:
+    """Coupe le texte parasite des champs texte et récupère, si besoin, les chiffres clés qui s'y
+    trouvaient. Les chiffres récupérés passent ensuite par verify_figures comme les autres."""
+    data = dict(data)
+    for field_name in ("summary", "context", "what_changed"):
+        value = data.get(field_name)
+        m = _LEAK.search(value) if isinstance(value, str) else None
+        if not m:
+            continue
+        data[field_name] = value[:m.start()]
+        if m.group(1) == "key_figures" and not data.get("key_figures"):
+            try:
+                recovered, _ = json.JSONDecoder().raw_decode(m.group(2).lstrip())
+                if isinstance(recovered, list):
+                    data["key_figures"] = recovered
+            except ValueError:
+                pass
+    for field_name in ("summary", "context", "what_changed"):
+        if isinstance(data.get(field_name), str):
+            data[field_name] = _STRAY_TAG.sub("", data[field_name])
+    return data
+
+
 def _conclude(data: dict, run: Run, trace: dict, item: AnalyzedArticle, finish):
     """Valide l'analyse finale ; en cas de doute on garde le résumé v1."""
     if not run.read_texts:
         return finish("repli_v1", "aucun article lisible")
+    repaired = repair_leaked_params(data)
+    if repaired != data:
+        trace["repaired_leak"] = True
+        log.info("Texte parasite retiré de l'analyse finale")
+    data = repaired
     summary = data.get("summary")
     if not isinstance(summary, str) or not summary.strip():
         return finish("repli_v1", "analyse finale vide")

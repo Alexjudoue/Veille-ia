@@ -1,5 +1,6 @@
 """Tests de la boucle agentique, sans réseau ni clé : un faux LLM rejoue un
 scénario écrit à l'avance et les outils sont simulés."""
+import json
 from datetime import datetime, timezone
 from types import SimpleNamespace
 
@@ -173,6 +174,27 @@ def test_effort_is_passed_to_the_model(good_tools):
     llm = Spy(reply(use("a", "read_article", url=URL2)), reply(submit()))
     agent.investigate(event(), llm, FakeMemory(), CONFIG, TODAY)
     assert all(kw.get("effort") == CONFIG["agent"]["effort"] for kw in seen)
+
+
+def test_leaked_parameter_is_removed_and_figures_recovered(good_tools):
+    """Régression : le modèle a recopié « <parameter name="key_figures">[...] » dans `summary`
+    et laissé key_figures vide. Le texte parasite disparaît, les chiffres sont récupérés puis vérifiés."""
+    figures = json.dumps([{"value": "2,5 %", "label": "taux", "source_url": URL2},
+                          {"value": "99 %", "label": "inventé", "source_url": URL2}])
+    leaked = f'La BCE maintient ses taux.\n<parameter name="key_figures">{figures}'
+    llm = FakeLLM(reply(use("a", "read_article", url=URL2)), reply(submit(summary=leaked, key_figures=[])))
+    dive, trace = agent.investigate(event(), llm, FakeMemory(), CONFIG, TODAY)
+
+    assert dive.summary == "La BCE maintient ses taux."
+    assert [f["value"] for f in dive.key_figures] == ["2,5 %"]       # « 99 % » absent de l'article : rejeté
+    assert trace["repaired_leak"] and len(trace["rejected_figures"]) == 1
+
+
+def test_stray_tags_are_stripped_and_clean_text_untouched():
+    clean = {"summary": "Texte propre.", "context": "Ok", "what_changed": "", "key_figures": []}
+    assert agent.repair_leaked_params(clean) == clean
+    out = agent.repair_leaked_params({**clean, "context": "Contexte.</parameter>"})
+    assert out["context"] == "Contexte."
 
 
 def test_no_readable_article_falls_back_to_v1(monkeypatch):

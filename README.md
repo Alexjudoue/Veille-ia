@@ -1,6 +1,6 @@
 # Agent de veille économique : marchés, banques, IA
 
-Chaque matin en semaine, cet agent lit une quinzaine de flux d'actualité, élimine les doublons et le bruit, demande à un LLM (Claude) de noter et résumer chaque article, puis rédige un brief : les 3 informations à retenir, un fil rouge entre les actualités et une question d'entretien possible. Le brief est enregistré dans `briefs/` et peut être envoyé par e-mail ou sur Telegram.
+Chaque matin à 7h45 (heure de Paris, week-end compris), cet agent lit une quinzaine de flux d'actualité, élimine les doublons et le bruit, demande à un LLM (Claude) de noter et résumer chaque article, puis rédige un brief : les 3 informations à retenir, un fil rouge entre les actualités et une question d'entretien possible. Le brief est enregistré dans `briefs/` et peut être envoyé par e-mail ou sur Telegram.
 
 **Nouveauté V2 : un vrai agent.** Pour les événements les mieux notés, le modèle décide lui-même quoi faire : lire l'article en entier, chercher dans la mémoire ce qui s'est passé les jours précédents, lancer une recherche complémentaire, puis rendre une analyse approfondie (chiffres clés vérifiés, contexte, « ce qui change depuis hier »). Chaque raisonnement est tracé dans `briefs/AAAA-MM-JJ.trace.json`.
 
@@ -15,8 +15,8 @@ flowchart LR
     C --> D[(Mémoire SQLite<br/>articles déjà vus)]
     D --> E[Analyse LLM par lots<br/>thème, score 0-10,<br/>résumé, enjeu]
     E --> F[Sélection + regroupement<br/>score ≥ 6, un événement<br/>par groupe d'articles]
-    F --> J{{Agent V2<br/>top 5 événements}}
-    J <-->|tool use, 6 appels max| K[Outils<br/>read_article<br/>search_memory<br/>search_news]
+    F --> J{{Agent V2<br/>top 4 événements}}
+    J <-->|tool use, 5 appels max| K[Outils<br/>read_article<br/>search_memory<br/>search_news]
     K -.-> D
     J --> L[Analyse approfondie<br/>chiffres vérifiés dans le code]
     L --> G[Synthèse LLM<br/>à retenir, fil rouge,<br/>question d'entretien]
@@ -50,10 +50,42 @@ flowchart LR
 - **Garde-fous contre les hallucinations.** Le prompt interdit d'inventer, la synthèse ne s'appuie que sur les articles retenus, et chaque résumé renvoie vers sa source.
 - **Coût suivi.** Chaque brief affiche le nombre d'appels et de tokens consommés, avec la part de l'agent comptée à part.
 - **Boucle de tool use écrite à la main.** Appels directs à l'API Messages, sans framework : le modèle demande des outils (`stop_reason == "tool_use"`), le code les exécute et renvoie les `tool_result`, jusqu'à l'appel de l'outil final `submit_analysis`. On maîtrise chaque étape avant d'ajouter LangChain ou un SDK d'agents.
-- **Budget et sortie garantie.** 6 appels d'outils au plus par événement. Le budget atteint, l'appel à `submit_analysis` est forcé (`tool_choice`), et un plafond absolu d'appels au modèle garantit que la boucle se termine toujours.
+- **Budget et sortie garantie.** 5 appels d'outils au plus par événement. Le budget atteint, l'appel à `submit_analysis` est forcé (`tool_choice`), et un plafond absolu d'appels au modèle garantit que la boucle se termine toujours.
 - **Les pages web sont des données, pas des ordres.** Le texte d'un article est encadré par des balises `<document>`, le modèle a pour consigne d'en ignorer toute instruction, une balise de fermeture glissée dans la page est neutralisée, et l'agent ne peut ouvrir que les liens fournis ou renvoyés par sa recherche (jamais une adresse arbitraire).
 - **Chiffres vérifiés dans le code.** Chaque chiffre clé annoncé par le modèle doit apparaître dans le texte d'un article réellement lu (les écritures `1,5`, `1.5` et `1 500` sont reconnues) ; sinon il est supprimé et noté dans la trace. On ne se contente pas de demander au modèle de ne pas inventer.
 - **Échecs absorbés.** Site payant, erreur 403, délai dépassé : l'outil renvoie un échec que le modèle peut contourner (autre lien, recherche). Sans aucune source lisible, l'événement garde son résumé V1. Une erreur de clé ou de crédits (400, 401, 403) arrête seulement l'agent : le brief V1, déjà payé, est écrit.
+
+- **Texte parasite réparé.** Il arrive que le modèle recopie un paramètre de l'outil (`<parameter name="key_figures">[...]`) dans un champ texte. Le code coupe ce texte et récupère les chiffres qui s'y trouvaient, qui passent ensuite par la même vérification que les autres.
+
+## Optimisation du coût (v2.2)
+
+Tarif de `claude-haiku-5-5` : 0,10 $ par million de tokens en entrée, 0,50 $ en sortie. Le cache est compté à 1,25 x l'entrée à l'écriture et 0,1 x à la lecture (barème standard, non confirmé pour ce modèle). Le coût affiché dans le brief est une estimation calculée à partir des tokens que l'API renvoie.
+
+| Choix | Pourquoi |
+|---|---|
+| **Prompt caching** sur le système + outils et sur l'historique de l'agent | Chaque tour de l'agent renvoie tout l'historique, articles compris : 85 % des tokens d'entrée venaient de là. Le préfixe commun aux événements est aussi réutilisé. |
+| **2 articles lus au plus par événement**, 5 appels d'outils (au lieu de 6) | Le texte lu est renvoyé à chaque tour : un 3e article coûte cher pour peu d'information. |
+| **Domaine refusé mémorisé** | Un site qui répond 403 n'est pas retéléchargé pendant l'analyse du même événement. Les liens Google News sont décodés avant, pour connaître le vrai site. |
+| **4 500 caractères par article** (au lieu de 6 000) | Le début d'un article contient l'essentiel. Les analyses gardent 0 à 4 chiffres vérifiés, comme avant ; l'échantillon (4 à 5 événements) est trop petit pour mesurer un effet plus fin. |
+| **4 événements approfondis** (au lieu de 5) | Choix de l'auteur pour réduire le coût de l'agent d'environ 20 %. |
+| **Effort `low`** pour le tri et la notation, `medium` pour l'agent | Tâches à schéma strict. Test A/B sur 30 articles : l'écart de notes entre `low` et le défaut (0,29 à 0,47 point) est du même ordre que l'écart entre deux runs identiques (0,38 à 0,39) ; thèmes identiques. |
+
+**Mesure avant / après** (`python main.py --limit 30 --no-memory`, mêmes flux le même jour) :
+
+| | Avant (v2.1) | Après (v2.2) |
+|---|---|---|
+| Événements approfondis | 5 | 4 |
+| Appels au modèle | 17 | 17 |
+| Tokens lus (cache compris) | 89 447 | 88 888 (dont 43 227 relus depuis le cache) |
+| Tokens produits (sortie) | 17 948 | 14 680 |
+| **Coût estimé** | **≈ 0,018 $** | **≈ 0,013 $ (-26 %)** |
+| Coût de l'agent par événement | ≈ 0,0027 $ | ≈ 0,0023 $ (-14 %) |
+| Durée | 162 s | 124 s |
+| Articles lus / lectures refusées (403) | 7 / 4 | 5 / 1 |
+
+Lecture honnête : sur 30 articles, la moitié de l'économie vient du 4e événement supprimé. Le cache ne réduit le coût par événement que de 14 %, car chaque nouveau morceau d'historique est d'abord écrit dans le cache (1,25 x) avant d'être relu (0,1 x). L'économie principale est donc le plafond de lectures, pas le cache.
+
+**Coût d'un brief complet** (≈ 210 articles collectés, 158 analysés, 4 analyses approfondies) : environ **0,03 $** et 4 à 5 minutes, dont 0,022 $ pour le pipeline (surtout les tokens de sortie des résumés) et 0,009 $ pour l'agent, soit environ 1 $ par mois.
 
 ## Installation
 
@@ -101,22 +133,35 @@ Le brief part en HTML mis en forme (lisible sur téléphone), avec une version t
 
 ## Automatisation avec GitHub Actions
 
-Le workflow `.github/workflows/veille.yml` lance la veille du lundi au vendredi à 5h45 UTC, puis enregistre le brief et la mémoire dans le dépôt.
+Le workflow `.github/workflows/veille.yml` génère le brief **tous les jours à 7h45, heure de Paris**, l'envoie par e-mail, puis enregistre le brief et la mémoire dans le dépôt.
+
+**Pourquoi deux crons et une garde.** Le cron de GitHub est en UTC, et Paris passe de UTC+2 (été) à UTC+1 (hiver). Un seul cron serait faux la moitié de l'année. Le workflow programme donc les deux horaires, `45 5` et `45 6` (UTC), et un premier job « garde » décide lequel doit s'exécuter :
+
+- il lit l'heure à Paris (`TZ=Europe/Paris`) ; avant 7h, c'est le mauvais cron (le cron d'été tombe à 6h45 l'hiver) : on passe ;
+- si le brief du jour existe déjà dans `briefs/`, l'autre cron ou un lancement manuel est déjà passé : on passe, **pas de double envoi** ;
+- sinon on exécute.
+
+Résultat : une seule exécution utile par jour, au changement d'heure (25 octobre, puis fin mars) comme le reste de l'année, sans rien modifier à la main. Cette garde teste « après 7h et pas encore de brief » plutôt que « exactement 7h45 » : GitHub retarde parfois les crons de plusieurs minutes, et un retard ne fait pas perdre le brief du jour. En heure d'été, si la première exécution échoue avant d'écrire le brief, le second cron (8h45) réessaie ; en hiver, une seule exécution est utile et il n'y a pas de réessai automatique.
+
+**Mise en place**
 
 1. Pousse le projet sur GitHub.
-2. Dans *Settings > Secrets and variables > Actions*, ajoute `ANTHROPIC_API_KEY`, et si besoin `EMAIL_SENDER`, `EMAIL_APP_PASSWORD`, `EMAIL_TO` ou les deux secrets Telegram.
-3. Dans l'onglet *Actions*, lance le workflow à la main avec *Run workflow* pour vérifier.
+2. Dans *Settings > Secrets and variables > Actions > New repository secret*, crée : `ANTHROPIC_API_KEY`, `EMAIL_SENDER` (ton adresse Gmail), `EMAIL_APP_PASSWORD` (le mot de passe d'application de 16 lettres) et `EMAIL_TO` (le destinataire ; plusieurs adresses séparées par des virgules partent en copie cachée). Les deux secrets Telegram restent optionnels.
+3. Dans l'onglet *Actions > Veille quotidienne > Run workflow*, lance une exécution à la main pour vérifier. Case *force* cochée : le brief est regénéré même si les articles ont déjà été vus (`--no-memory`).
+
+**À savoir.** Un e-mail qui ne part pas fait échouer l'exécution (GitHub t'envoie alors sa propre alerte) ; le brief et la mémoire sont tout de même sauvegardés. Un lancement manuel ignore la garde : il peut donc produire un second e-mail dans la journée.
 
 ## Feuille de route
 
 - [x] **V1, pipeline** : collecte, analyse, synthèse, mémoire, envoi, exécution quotidienne.
 - [x] **V2, agent** : boucle de tool use (`read_article`, `search_memory`, `search_news`, `submit_analysis`), budget, chiffres vérifiés, trace de chaque raisonnement, coût de l'agent suivi à part.
 - [x] **Envoi par e-mail** : brief HTML via Gmail, destinataires multiples en copie cachée.
+- [x] **V2.2, coût et automatisation** : prompt caching, lectures plafonnées, coût estimé dans chaque brief, envoi quotidien à 7h45 heure de Paris toute l'année.
 - [ ] **V3, évaluation** : jeu d'articles annotés à la main pour mesurer la qualité du score de pertinence et des analyses de l'agent, suivi du coût et des retours des lecteurs.
 
 ## Limites connues
 
-- **Seuls les événements approfondis sont lus en entier** (5 par jour par défaut). Les autres résumés s'appuient toujours sur le titre et l'extrait RSS, souvent vide pour Google News.
+- **Seuls les événements approfondis sont lus en entier** (4 par jour par défaut). Les autres résumés s'appuient toujours sur le titre et l'extrait RSS, souvent vide pour Google News.
 - **Beaucoup de sites ne se laissent pas lire** (paywall, accès refusé : environ la moitié des liens testés). L'agent essaie alors un autre lien du même événement ou une recherche ; à défaut, l'événement garde son résumé V1.
 - **Le décodage des liens Google News repose sur un service interne non documenté.** Il fonctionne aujourd'hui, mais Google peut le modifier : l'agent le traite alors comme un échec d'outil.
 - **La vérification des chiffres est volontairement simple** : elle contrôle qu'un nombre apparaît dans le texte lu, pas qu'il est associé au bon sujet. Un chiffre écrit en toutes lettres (« quatre milliards ») n'est pas reconnu et sera écarté.
