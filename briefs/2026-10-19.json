@@ -1,0 +1,2807 @@
+{
+  "stats": {
+    "collected": 178,
+    "analyzed": 130,
+    "selected": 18,
+    "calls": 14,
+    "input_tokens": 51424,
+    "output_tokens": 30796,
+    "agent": {
+      "events": 5,
+      "deep_dives": 5,
+      "calls": 15,
+      "input_tokens": 92967,
+      "output_tokens": 13435
+    }
+  },
+  "synthesis": {
+    "key_points": [
+      "Le CAC 40 recule le 19 octobre 2026 après les violences en France, et l'écart de taux OAT-Bund s'élargit à 1,45 point, son niveau le plus haut depuis la crise des dettes souveraines du début des années 2010.",
+      "Le KOSPI a perdu environ 21 % en sept séances depuis le 2 octobre, sous l'effet des inquiétudes sur le financement de l'IA (obligations CoreWeave tendues, ralentissement de la croissance d'Anthropic) et d'un poids excessif des semi-conducteurs dans l'indice.",
+      "Santander et NVIDIA signent un accord-cadre de trois ans, et la banque dit avoir ramené le coût d'une interaction d'IA d'environ 5 € à 0,03 € en passant à des modèles spécialisés."
+    ],
+    "connection": "Le financement de l'IA apparaît comme un point de fragilité commun : la chute du KOSPI est liée aux doutes sur le crédit des acteurs de l'IA (CoreWeave), tandis que Santander mise sur l'IA bancaire pour réduire ses coûts. En France, la hausse de l'écart OAT-Bund reflète aussi un risque politique et budgétaire qui pèse sur les banques françaises (BNP Paribas, Société Générale).",
+    "interview_question": "Pourquoi une hausse du spread OAT-Bund pèse-t-elle à la fois sur le CAC 40 et sur les banques françaises, et comment expliqueriez-vous ce lien à un client ?"
+  },
+  "deep_dives": [
+    {
+      "article_id": "820a903c8bb0d247",
+      "title": "Cac 40 : «Le week-end ajoute une couche supplémentaire de risque politique pour les marchés»... La tension grimpe sur la dette française, le fossé avec l'Allemagne se creuse (et le CAC 40 souffre)",
+      "summary": "Lundi 19 octobre 2026, le CAC 40 recule (environ 1,3 % vers 10h), sous-performant la plupart des indices européens, après les violences des 17 et 18 octobre en France. Le rendement de l'OAT à 10 ans monte de 0,08 point à 4,90 %, tandis que le Bund allemand baisse légèrement ; l'écart (« spread ») entre les deux s'élargit de 0,07 point à 1,45 point, soit un niveau proche de 150 points de base déjà évoqué par UBS. Les analystes (Deutsche Bank) y voient une couche supplémentaire de risque politique, dans un contexte de déficit public, de projet de loi de finances 2027 et d'élections en 2027. Le président Macron a promis dimanche soir aux commerçants qu'ils ne seraient « pas laissés seuls », sans préciser d'aides.",
+      "key_figures": [
+        {
+          "value": "1,3%",
+          "label": "Baisse du CAC 40 vers 10h le 19 octobre 2026",
+          "source_url": "https://www.tradingsat.com/cac-40-FR0003500008/actualites/cac-40-apres-les-violences-du-week-end-en-france-la-tension-grimpe-sur-la-dette-francaise-le-fosse-avec-l-allemagne-se-creuse-et-le-cac-40-souffre-1171963.html"
+        },
+        {
+          "value": "4,90%",
+          "label": "Rendement de l'OAT française à 10 ans (taux de la dette, en hausse de 0,08 point)",
+          "source_url": "https://www.tradingsat.com/cac-40-FR0003500008/actualites/cac-40-apres-les-violences-du-week-end-en-france-la-tension-grimpe-sur-la-dette-francaise-le-fosse-avec-l-allemagne-se-creuse-et-le-cac-40-souffre-1171963.html"
+        },
+        {
+          "value": "1,45 point de pourcentage",
+          "label": "Écart de taux (spread) entre la dette française et allemande à 10 ans",
+          "source_url": "https://www.tradingsat.com/cac-40-FR0003500008/actualites/cac-40-apres-les-violences-du-week-end-en-france-la-tension-grimpe-sur-la-dette-francaise-le-fosse-avec-l-allemagne-se-creuse-et-le-cac-40-souffre-1171963.html"
+        },
+        {
+          "value": "2.000",
+          "label": "Nombre minimum de commerces touchés par les dégâts, selon le président des CCI",
+          "source_url": "https://www.tradingsat.com/cac-40-FR0003500008/actualites/cac-40-apres-les-violences-du-week-end-en-france-la-tension-grimpe-sur-la-dette-francaise-le-fosse-avec-l-allemagne-se-creuse-et-le-cac-40-souffre-1171963.html"
+        }
+      ],
+      "context": "La hausse de la défiance vient de deux facteurs qui se cumulent : une trajectoire de déficit public dégradée et des incertitudes sur le budget 2027, puis des violences en France le week-end du 17-18 octobre qui ajoutent un risque politique immédiat. Les investisseurs réclament donc une prime plus élevée pour détenir la dette française par rapport à l'allemande, ce qui fait monter le spread. Le CAC 40 souffre en parallèle car les actifs français sont tous touchés en même temps (actions, obligations, euro).",
+      "what_changed": "Le 15 octobre, la mémoire montre un CAC 40 résistant et des taux souverains en repli ; le 19 octobre, la tension se réinstalle sur la dette française, ce qui renverse la tendance de la semaine précédente.",
+      "confidence": "moyenne",
+      "sources_read": [
+        "https://www.tradingsat.com/cac-40-FR0003500008/actualites/cac-40-apres-les-violences-du-week-end-en-france-la-tension-grimpe-sur-la-dette-francaise-le-fosse-avec-l-allemagne-se-creuse-et-le-cac-40-souffre-1171963.html"
+      ],
+      "stats": {
+        "articles_read": 1,
+        "memory_searches": 1,
+        "news_searches": 0,
+        "tool_calls": 4,
+        "calls": 4,
+        "input_tokens": 31836,
+        "output_tokens": 3113
+      }
+    },
+    {
+      "article_id": "62abe77e3ca2b0d2",
+      "title": "Santander s'allie à NVIDIA pour se doter de nouvelles capacités d'IA",
+      "summary": "Santander étend sa collaboration avec NVIDIA via son Santander AI Lab pour évaluer et déployer des modèles et agents d'IA bancaires. La banque passe de grands modèles généralistes à des modèles plus petits et spécialisés sur des tâches bancaires précises, avec un coût d'exécution qui serait tombé d'environ 5 € à 0,03 € par interaction dans des tests. Les deux groupes ont signé un accord-cadre de trois ans couvrant modèles fondamentaux, agents, lutte contre la fraude et le blanchiment, décision en temps réel et jumeau numérique bancaire. Aucun montant financier du partenariat n'est communiqué.</summary>\n<parameter name=\"key_figures\">[{\"value\": \"5 EUR à 0,03 EUR\", \"label\": \"Coût d'exécution par interaction, avant et après passage à des modèles spécialisés (tests expérimentaux)\", \"source_url\": \"https://www.pymnts.com/news/banking/2026/santander-turns-to-nvidia-to-build-new-ai-banking-capabilities/\"}, {\"value\": \"plus de 50%\", \"label\": \"Baisse des coûts sur un test de service client, avec qualité de conversation améliorée\", \"source_url\": \"https://www.boursorama.com/bourse/actualites-amp/santander-s-allie-a-nvidia-pour-se-doter-de-nouvelles-capacites-d-ia-f384338d97bee6e0c35c223fc37626e2\"}, {\"value\": \"3 ans\", \"label\": \"Durée de l'accord-cadre de collaboration entre Santander et NVIDIA\", \"source_url\": \"https://www.boursorama.com/bourse/actualites-amp/santander-s-allie-a-nvidia-pour-se-doter-de-nouvelles-capacites-d-ia-f384338d97bee6e0c35c223fc37626e2\"}]",
+      "key_figures": [],
+      "context": "Le mouvement s'inscrit dans la course des banques à rendre l'IA rentable à grande échelle. Le coût d'usage des grands modèles généralistes freine le déploiement ; Santander mise sur des modèles plus petits, entraînés sur ses propres données, et évalués sur des tâches réelles. NVIDIA, de son côté, vend l'infrastructure et les outils de personnalisation des modèles. Les chiffres de coûts restent issus de tests expérimentaux, non de résultats audités.",
+      "what_changed": "Les mémoires des 15 octobre concernaient NVIDIA sous l'angle de la dépendance des marchés à quelques valeurs de semi-conducteurs et de ses partenariats publics ou industriels (Allemagne, Iambic Therapeutics) ; l'accord avec Santander est le premier partenariat bancaire de NVIDIA repéré dans la mémoire.",
+      "confidence": "moyenne",
+      "sources_read": [
+        "https://www.boursorama.com/bourse/actualites-amp/santander-s-allie-a-nvidia-pour-se-doter-de-nouvelles-capacites-d-ia-f384338d97bee6e0c35c223fc37626e2",
+        "https://www.pymnts.com/news/banking/2026/santander-turns-to-nvidia-to-build-new-ai-banking-capabilities/"
+      ],
+      "stats": {
+        "articles_read": 2,
+        "memory_searches": 1,
+        "news_searches": 0,
+        "tool_calls": 4,
+        "calls": 3,
+        "input_tokens": 17302,
+        "output_tokens": 2643
+      }
+    },
+    {
+      "article_id": "4734014f3f1be043",
+      "title": "La banque centrale chinoise étudie la possibilité de faire du taux au jour le jour son principal taux directeur",
+      "summary": "La banque centrale chinoise (PBoC) envisage de remplacer son taux directeur principal, aujourd'hui le taux de prise en pension à 7 jours (1,4 %), par le taux au jour le jour (overnight). Selon Reuters, l'annonce vient de médias d'État et le gouverneur Pan Gongsheng présente le taux interbancaire au jour le jour comme la cible de fait de la politique monétaire. La banque centrale dit vouloir mieux contrôler les taux courts et aligner son cadre sur celui de la Fed. Ce n'est pas une baisse de taux selon les analystes cités.",
+      "key_figures": [
+        {
+          "value": "1,4 %",
+          "label": "Taux de prise en pension à 7 jours, principal taux directeur actuel depuis 2024",
+          "source_url": "https://finance.yahoo.com/economy/policy/articles/chinas-central-bank-studies-making-104255751.html"
+        },
+        {
+          "value": "1,25 %",
+          "label": "Taux moyen des prises en pension au jour le jour, proche d'un plus bas de cinq mois",
+          "source_url": "https://finance.yahoo.com/economy/policy/articles/chinas-central-bank-studies-making-104255751.html"
+        },
+        {
+          "value": "4,5 %",
+          "label": "Croissance chinoise du troisième trimestre 2026 sur un an, au-dessus des attentes",
+          "source_url": "https://finance.yahoo.com/economy/policy/articles/chinas-central-bank-studies-making-104255751.html"
+        }
+      ],
+      "context": "La PBoC veut mieux piloter les taux courts et rendre sa politique monétaire plus lisible, à l'image de la Fed. Le marché interbancaire est déjà bien approvisionné, et le taux au jour le jour sert déjà de référence de fait. La croissance du troisième trimestre, meilleure qu'attendu, réduit la pression pour un stimulus agressif.",
+      "what_changed": "Rien de comparable dans la mémoire des jours précédents : les articles récents portaient sur les taux américains et l'IA, pas sur le cadre de politique monétaire chinois.",
+      "confidence": "moyenne",
+      "sources_read": [
+        "https://finance.yahoo.com/economy/policy/articles/chinas-central-bank-studies-making-104255751.html"
+      ],
+      "stats": {
+        "articles_read": 1,
+        "memory_searches": 1,
+        "news_searches": 1,
+        "tool_calls": 4,
+        "calls": 3,
+        "input_tokens": 14572,
+        "output_tokens": 1869
+      }
+    },
+    {
+      "article_id": "0950dd710b85794d",
+      "title": "KOSPI sinks as AI credit strains hit, semiconductor concentration magnifies fall - CHOSUNBIZ",
+      "summary": "Le KOSPI a perdu environ 21 % en sept séances de bourse depuis le 2 octobre, une baisse rapide que l'analyste Heo Jae-hwan (Eugene Investment & Securities) juge rare depuis les années 1980. Le recul est lié aux inquiétudes sur le financement des entreprises de l'IA : les obligations de CoreWeave se sont fortement tendues, et le ralentissement de la croissance du chiffre d'affaires annualisé d'Anthropic au troisième trimestre alimente les doutes sur la durabilité des investissements. Le poids des semi-conducteurs dans le KOSPI, passé d'environ 25 % au deuxième trimestre 2025 à la zone des 60 % en juin, a amplifié la chute. L'analyste juge pour l'instant prématuré de parler d'éclatement de bulle ou de récession, car le stress de crédit reste concentré sur les émetteurs les plus risqués.",
+      "key_figures": [
+        {
+          "value": "21%",
+          "label": "Baisse du KOSPI en sept séances de bourse depuis le 2 octobre",
+          "source_url": "https://biz.chosun.com/en/en-finance/2026/10/19/G6HUQ5YACREYJOOLGTTIB2E2XA/"
+        },
+        {
+          "value": "1,100 bp",
+          "label": "Prime de CDS à 5 ans de CoreWeave la semaine dernière (risque de défaut de l'émetteur)",
+          "source_url": "https://biz.chosun.com/en/en-finance/2026/10/19/G6HUQ5YACREYJOOLGTTIB2E2XA/"
+        },
+        {
+          "value": "12.78 percentage points",
+          "label": "Écart de rendement des obligations CCC (spéculatives, notation faible) le 15 octobre",
+          "source_url": "https://biz.chosun.com/en/en-finance/2026/10/19/G6HUQ5YACREYJOOLGTTIB2E2XA/"
+        },
+        {
+          "value": "60%",
+          "label": "Part approximative des semi-conducteurs dans la capitalisation du KOSPI en juin 2026 (contre environ 25 % au T2 2025)",
+          "source_url": "https://biz.chosun.com/en/en-finance/2026/10/19/G6HUQ5YACREYJOOLGTTIB2E2XA/"
+        }
+      ],
+      "context": "Le goulot d'étranglement de l'IA se déplace des composants (semi-conducteurs) vers le financement : les acteurs de l'infrastructure IA empruntent massivement, et le marché de la dette commence à le sanctionner. La forte concentration du KOSPI sur quelques valeurs de puces transforme un doute sectoriel en baisse de l'indice entier. Les marchés ont aussi réagi à la baisse des valeurs de l'IA en général, déjà évoquée dans la presse de la semaine précédente.",
+      "what_changed": "Les 15 octobre, la presse notait déjà que Wall Street se lassait des valeurs concentrées sur quelques acteurs des semi-conducteurs (Nvidia, AMD, Broadcom), ce qui prolonge ce constat ; la nouveauté est la chute chiffrée du KOSPI et le lien explicite avec le crédit des entreprises d'IA.",
+      "confidence": "moyenne",
+      "sources_read": [
+        "https://biz.chosun.com/en/en-finance/2026/10/19/G6HUQ5YACREYJOOLGTTIB2E2XA/"
+      ],
+      "stats": {
+        "articles_read": 1,
+        "memory_searches": 1,
+        "news_searches": 0,
+        "tool_calls": 2,
+        "calls": 2,
+        "input_tokens": 8078,
+        "output_tokens": 2525
+      }
+    },
+    {
+      "article_id": "6df0cc838b419b30",
+      "title": "France Riots and the Stock Market: CAC 40, Banks, OATs",
+      "summary": "Le week-end du 17-18 octobre 2026, des manifestations contre la vie chère, la situation des services publics et la paralysie politique ont tourné à la violence en France (bâtiments et voitures incendiés, pillages, affrontements). Le lundi 19 octobre, les actifs français ont reculé : le CAC 40 a perdu environ 1,2 % en début de séance, BNP Paribas et Société Générale ont cédé plus de 2 %, et les taux des OAT à 10 ans ont grimpé, l'écart avec le Bund allemand atteignant son niveau le plus élevé depuis la crise des dettes souveraines du début des années 2010. Les investisseurs s'inquiètent du budget 2027 encore en négociation, d'un gouvernement minoritaire et de l'élection présidentielle de 2027. Il s'agit de lectures de presse du matin, l'article Admirals principal n'ayant pas pu être consulté.",
+      "key_figures": [
+        {
+          "value": "1,2 %",
+          "label": "Baisse du CAC 40 en début de séance le 19 octobre (Cristina Iglesias)",
+          "source_url": "https://cristinaiglesias.com/newsday/french-bonds-or-german-bunds-which-asset-are-investors-dumping-after-weekend-riots/"
+        },
+        {
+          "value": "4,89 %",
+          "label": "Taux de l'OAT 10 ans après une hausse de 10 points de base",
+          "source_url": "https://cristinaiglesias.com/newsday/french-bonds-or-german-bunds-which-asset-are-investors-dumping-after-weekend-riots/"
+        },
+        {
+          "value": "2 000 interpellations",
+          "label": "Arrestations signalées lors des manifestations du week-end (CNBC)",
+          "source_url": "https://www.cnbc.com/2026/10/19/france-protests-bond-yields-markets.html"
+        },
+        {
+          "value": "60 %",
+          "label": "Part approximative des investisseurs étrangers dans la dette française début 2026",
+          "source_url": "https://www.cnbc.com/2026/10/19/france-protests-bond-yields-markets.html"
+        }
+      ],
+      "context": "La France cumule une dette publique élevée, un déficit persistant, une croissance faible et une croissance politique incertaine (gouvernement minoritaire de Sébastien Lecornu, budget 2027 en négociation, présidentielle de 2027 où Marine Le Pen est en tête de nombreux sondages). Les investisseurs demandent une prime plus forte pour prêter à Paris, car ils doutent d'un vrai redressement budgétaire. Les banques sont particulièrement sensibles à l'écart OAT-Bund, car il pèse sur leur coût de financement et sur leur exposition aux dettes souveraines.",
+      "what_changed": "Les 15 octobre, la mémoire évoque déjà un CAC 40 au-dessus de 7 900 points et un débat sur la dette française, mais aucun lien direct avec des émeutes ; l'épisode du 19 octobre marque donc un choc politique et social nouveau pour les marchés français.",
+      "confidence": "moyenne",
+      "sources_read": [
+        "https://www.cnbc.com/2026/10/19/france-protests-bond-yields-markets.html",
+        "https://www.sharecast.com/amp/news/market-report-europe/french-protests-france-political-crisis-french-government-bond-yields-france-10-year-oat-yield-oat-bund-spread-german-bund-yield-european-stock-markets-european-bond-markets-eurozone-sovereign-debt-french-fiscal-outlook-italy-stock-market-european-political-risk-stocks-and-bonds--23882975.html",
+        "https://cristinaiglesias.com/newsday/french-bonds-or-german-bunds-which-asset-are-investors-dumping-after-weekend-riots/"
+      ],
+      "stats": {
+        "articles_read": 3,
+        "memory_searches": 1,
+        "news_searches": 1,
+        "tool_calls": 6,
+        "calls": 3,
+        "input_tokens": 21179,
+        "output_tokens": 3285
+      }
+    }
+  ],
+  "analyzed": [
+    {
+      "article": {
+        "id": "a6c36c653c94ed8f",
+        "title": "Ce que les voyageurs attendent de l'IA : des tarifs, pas des itinéraires sur mesure",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQeHF0c29tQTVKSEQxbGNybGlQV21LRmpwWVlXOWl1RjdtVlVvTzRJRGtTSEprell5aks1T1ZTeFp5WkkzUHVoYnFnVWVEQklSMDRFV1NGRVc5Tk9wd244d2dTc0x3SmMzVFJaTTVvMHdpNE5zNTBHU3dVZlNiR3VBaFplUFJlTk03VW9KbDRFOWJtSU1wMS04ZE8yZUpLbVVyUHFldkFudGxvR3pFNFRTdTJ0TlQ?oc=5",
+        "source": "Euronews.com",
+        "published": "2026-10-19T11:03:33+00:00",
+        "summary": "Ce que les voyageurs attendent de l'IA : des tarifs, pas des itinéraires sur mesure Euronews.com",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Une étude indique que les voyageurs attendent de l'IA surtout des comparaisons de tarifs plutôt que des itinéraires personnalisés. L'extrait ne donne pas de chiffres.",
+      "why_it_matters": "Cela illustre une attente client concrète pour l'IA dans le tourisme, utile comme exemple d'adoption en entreprise.",
+      "entities": [
+        "Euronews"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "0a8be5a2a6abb20f",
+        "title": "« On a abusé de notre patience » : le hedge fund Arbiter réclame des millions d'euros à une caisse régionale de Crédit Agricole",
+        "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxNeGduTkJoVXJKWENSMF9ZWTRnTXVoN09wS0x4TVRTanNKQUZaT0RZX0JJN2lNOUZXdkpKcDVLY2JJSDlPOUxmTDVFcDNRTG5uM2JuOU81WUw2Q2VTZkxWSmpqblROOGFZck95eEd2a290RkVwTnBRV3IwRVhNeG9IU3pfcjVaaVZxVTNxWF8xSGNNVzVKVXRxRktrbHNXNzJoWVdGazJPQnJoLVFsUXFBdXpQejY5TDVrQXNUM2F3ZnNURmtsYkdlcmtZNmFkNnNVZ25YY29SYUpmWlF2QnVudnpnT01WbkZnME5ReWZtVUNjM1MyWDBsX3BmY19LQndBdkxxXzlDSDZleTB5VnNGWloyVFE?oc=5",
+        "source": "Les Echos",
+        "published": "2026-10-19T11:03:28+00:00",
+        "summary": "« On a abusé de notre patience » : le hedge fund Arbiter réclame des millions d'euros à une caisse régionale de Crédit Agricole Les Echos",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "Le hedge fund Arbiter réclame plusieurs millions d'euros à une caisse régionale de Crédit Agricole. Le litige porte sur une relation d'investissement entre le fonds et la banque régionale.",
+      "why_it_matters": "Ce différend entre un fonds activiste et une caisse régionale touche au fonctionnement et à la gouvernance des banques coopératives françaises.",
+      "entities": [
+        "Arbiter",
+        "Crédit Agricole"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "8e0c00cfeaa925d9",
+        "title": "PARIS : Conseil et IA – L’intelligence artificielle bouleverse la formation et la valeur du métier",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPUE1ERVFkd2tpcWZsc1VYNHI5LS1ScFRGSWR0QTdIME5neDd3VVVsMGt4WkR4ZVEzSEFYWEN6MUdZcW9yVkt6WTdLS09KaVctZEdndU5fb0RQNnEtbmJlOWVoNnpZZ1lwVXV6VUZyVmJYNFY4R1d2WC11NDk1bUtjdEFFRkt4WlJWbTJ0eXdyUW1QV0FFdVhUd1VBczNKaW95Mi1JTzFQT2FvT1F4ejQwWnU1ODhXZFFlRUE?oc=5",
+        "source": "Presse Agence",
+        "published": "2026-10-19T11:00:00+00:00",
+        "summary": "PARIS : Conseil et IA – L’intelligence artificielle bouleverse la formation et la valeur du métier Presse Agence",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Un article de Presse Agence affirme que l'intelligence artificielle transforme la formation et la valeur du métier de conseil. L'extrait ne donne pas de détails.",
+      "why_it_matters": "L'impact de l'IA sur les métiers du conseil est un sujet fréquent en entretien pour les candidats aux cabinets.",
+      "entities": [
+        "Presse Agence"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "bfee904587f697f7",
+        "title": "Cartes bancaires, retraits, découverts... La Banque Postale augmente ses prix au 1er janvier 2027",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQNFBYUXlWNFdvenlWakhPX1VvdkdtTzFsa1NjUGxoRGJlYnduZnZPaVpFMjhMbVdocVNJUktfc2E3amk4YkhaVVZOcnczNVFPaF9qRF9QcUtRZkRxNjdVTS1iMHRnRkVGaFZZbFlFeHpqYWM3N19pMHRkTXlHcjkxSEFMMzk2bkE1eUFvLU52NnNyT1EtVG03NFcyVjRXRS0zWlZEbTJrYlFsYjc3LXViMktqVGJYWERaWnVLYjktWloyWVQtcklkd1p3cWlXVlh2amxibFJHNjdmc1N2M0FjeTBMUQ?oc=5",
+        "source": "MoneyVox",
+        "published": "2026-10-19T10:58:37+00:00",
+        "summary": "Cartes bancaires, retraits, découverts... La Banque Postale augmente ses prix au 1er janvier 2027 MoneyVox",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "La Banque Postale augmentera ses tarifs (cartes bancaires, retraits, découverts) à partir du 1er janvier 2027. L'extrait ne précise pas les montants.",
+      "why_it_matters": "Une hausse de tarifs bancaires de détail touche directement les clients et reflète la pression sur les revenus des banques.",
+      "entities": [
+        "La Banque Postale"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "678aca97bc1b4e41",
+        "title": "Bank of America prévoit une performance « solide » au T3 pour BNP Paribas et évoque un possible rachat d’actions",
+        "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxON01uVjVhd2Z6UE9PZ1REYTRpTmxVZEZLVjZSOTlXeUdMRnVGTGNpOXBUcmRSZHZWUmd4ak0yOGRGREZ4cld3TGdMT1hNMHQ2TTJIOFVYb2twNWVKOHgyTWkzSFZTYk91cnhFSk4tbkFfbzduaWFIWHZIb3RMM3BqODBFejlpeWdmMl9mOFFYelEyZW9SdEhMWExxcWZESS1UakRVVjJ2bkNrcl9EYXRTMm1DUlZieXlnTmFOWWRiNTJRdTlISjJjTG5xcU5SR1VuTklSRVdHbmpib2VVYzcyX1F2OG9JVWlmVUd6SQ?oc=5",
+        "source": "Zonebourse Suisse",
+        "published": "2026-10-19T10:58:23+00:00",
+        "summary": "Bank of America prévoit une performance « solide » au T3 pour BNP Paribas et évoque un possible rachat d’actions Zonebourse Suisse",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "Bank of America anticipe une performance « solide » pour BNP Paribas au troisième trimestre et évoque un possible rachat d'actions. Aucun chiffre n'est donné dans l'extrait.",
+      "why_it_matters": "Les perspectives d'une grande banque européenne et un éventuel rachat d'actions sont des indicateurs suivis par les investisseurs.",
+      "entities": [
+        "Bank of America",
+        "BNP Paribas"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "6df0cc838b419b30",
+        "title": "France Riots and the Stock Market: CAC 40, Banks, OATs",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQUGVqTEVJUjhBV21DUUJzekVsdXV6Zk9NZE9SN2R3Unppc1JzNDZJc2p6SmZ3Y3NsQmFkREVwTlVqRnhrV2M5bXAxSWpMSGh3Uk9PVUJCdzFZVkdGVXhHcTZkOVREYWdNWVlzSGxLdFBZNlNRSEtyV2Yya0NSMDNfaw?oc=5",
+        "source": "Admirals",
+        "published": "2026-10-19T10:52:30+00:00",
+        "summary": "France Riots and the Stock Market: CAC 40, Banks, OATs Admirals",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "Un article d'Admirals analyse l'effet des émeutes en France sur le CAC 40, les banques et les OAT. L'extrait ne contient pas de données chiffrées.",
+      "why_it_matters": "Il montre comment un événement politique et social peut peser sur le CAC 40, les banques françaises et la dette souveraine.",
+      "entities": [
+        "CAC 40",
+        "OAT"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "5156e73e16a6c469",
+        "title": "World ID Launches for Banking and Finance to Combat AI-Driven Fraud and Deepfakes",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPY3Z5d1NDSm9pdVhjM0lmcUJHNTNrMWZIM1ZENUdZa0NZcFFCeGZmRFJsenJBd09HLVdTd1V3b2N2b1pXS1VIUXRQbXVhRVZqeGVwVlpfN2FGYmk2RjlDVll3WVIzNFZnSlNpYWd6S2EySTdJZW9maEVSQk5zUldZb25kejNyeE0xWC1FN2FsbXVKNDd4UTQxUW5sYUUxX3l3cTFaQTVnMEowYUJBVFJXQjhScw?oc=5",
+        "source": "FF News",
+        "published": "2026-10-19T10:49:55+00:00",
+        "summary": "World ID Launches for Banking and Finance to Combat AI-Driven Fraud and Deepfakes FF News",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "World ID lance une offre destinée à la banque et à la finance pour lutter contre la fraude générée par l'IA et les deepfakes. L'extrait ne précise pas les partenaires.",
+      "why_it_matters": "La lutte contre les deepfakes devient un enjeu de conformité et de sécurité pour les banques, thème fréquent en entretien tech et finance.",
+      "entities": [
+        "World ID"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "da132879ed8740ee",
+        "title": "JPMorgan, HSBC et BNP Paribas en discussions pour financer l’acquisition de Tristar par Aegis Logistics pour 809 millions de dollars",
+        "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQU1NEcmxnbS1MZ05ISl9XblAwWnNWbThTUV83WDRnTHJZM2YxaHdhVjk1RldSaVVkamw2R0hZUWJZSWJxZGd1TzM5MEd0VW9zTE1HaDBFM0V0d1RRcVprMDJ6YnYxRXltbjFsNHVSWFJmV1p4R1IwbVJsdExDZVNNOTVyOFRrdlpHVUpvTkM1RnFtbVc3SHdSbDd6RURRMUJLR29HS0pnVmVLMnIwT21oZnRSbnQtX3pWQlNyTm9OTGw0bXBpcGpqN2dFclBCMFF3MldRRWExcG9QdUxNVEFFWDJ1c3VIMUNQU3ZsMkptdw?oc=5",
+        "source": "Zonebourse Suisse",
+        "published": "2026-10-19T10:43:00+00:00",
+        "summary": "JPMorgan, HSBC et BNP Paribas en discussions pour financer l’acquisition de Tristar par Aegis Logistics pour 809 millions de dollars Zonebourse Suisse",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 7,
+      "summary_fr": "JPMorgan, HSBC et BNP Paribas seraient en discussions pour financer l'acquisition de Tristar par Aegis Logistics, pour 809 millions de dollars. Il s'agit d'un financement d'acquisition (M&A) par un pool bancaire.",
+      "why_it_matters": "Ce type de financement syndiqué illustre le rôle des banques d'investissement dans les opérations de fusion-acquisition.",
+      "entities": [
+        "JPMorgan",
+        "HSBC",
+        "BNP Paribas",
+        "Aegis Logistics"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e8e11e9728cbfacf",
+        "title": "China's central bank studies making overnight rate its main policy rate",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVFVkTTk1dlA4bDhncTBMZWJIcFd3dlEyTC1DNkxuc1lmZTRUUGRRZlFZd1FUVlVLektxWklNT0FfX1M4dE1LM2NHcUxhbHNLNjA2NklnVlA2dkNYOVFDcmVXWTVpX2RfZTloQ3NGdjBoZkt1NW9wbzNnM2QxNGlzSk80S0FsN0VTZlRITE9FODNTdmJ0Y29uZUdnZy1aTTVV?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-19T10:42:55+00:00",
+        "summary": "China's central bank studies making overnight rate its main policy rate Yahoo Finance",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "La banque centrale chinoise étudie la possibilité de faire du taux overnight son principal taux directeur. Ce changement modifierait le pilotage de la politique monétaire chinoise.",
+      "why_it_matters": "Une évolution du cadre de taux d'une grande banque centrale affecte les marchés monétaires mondiaux et les conditions de financement en Chine.",
+      "entities": [
+        "Banque populaire de Chine"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "67019f446a71560d",
+        "title": "L’exposition de Barclays au crédit privé fait l’objet d’une enquête de la Banque d’Angleterre",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOVlJHRnhvXzI4M1loSGRxUU1Ob2cyVXk4eWZSS2E5M0ZVdDdDbHpuc0VpUFpPOGdkVWdLY09jTmExSFY4LTgzZlNWalcxMnE2dFVCRnFDcHJSeFNMdnJnQjJUT0l0SUdYX1Rxam5WbzBNYnBYUTR0TW52UXBGTWtxbnh2NzViOFlBUEp0SnZwMDZjRVZNeTFFQ3BWZ2cxaWxHZ1B3UlpZNXhwR2FBdEZHVlZRM1JVUnRMbEo2U1ZBTkVfWm9xWXhlVy1nYUU?oc=5",
+        "source": "L'Agefi",
+        "published": "2026-10-19T10:42:20+00:00",
+        "summary": "L’exposition de Barclays au crédit privé fait l’objet d’une enquête de la Banque d’Angleterre L'Agefi",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 7,
+      "summary_fr": "La Banque d'Angleterre enquête sur l'exposition de Barclays au crédit privé. L'enquête porte sur les risques liés à ce segment de financement hors banque traditionnelle.",
+      "why_it_matters": "Le crédit privé est un sujet de surveillance prudentielle majeur, et une enquête du régulateur sur une grande banque est un signal fort pour le secteur.",
+      "entities": [
+        "Barclays",
+        "Banque d'Angleterre"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "d4556227113affbd",
+        "title": "CAC40 : les taux français pèsent sur la Bourse de Paris",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQl9iS1diVXQyM0FkRE5IU2t4bVEyYVprRFRoRngwUmJsRlgxVGhNbFVsd2Z5em81SXpoc1ZtX2lHXzNtRGV1eEVKZDM0c1JwcEZpYm9ZZkxsMndTWFF2eXVfekVFcUxXNVhkWUdMMW1IWVhOR1ZFb29TX000OXJtOEJ0Wmh1VEthaGhkSlhiZm1FdWhtbHFrd1FlOFZxYUQ3a3dSYWVNRnY1NWs?oc=5",
+        "source": "Le Revenu",
+        "published": "2026-10-19T10:41:00+00:00",
+        "summary": "CAC40 : les taux français pèsent sur la Bourse de Paris Le Revenu",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "La Bourse de Paris recule sous l'effet de la hausse des taux français, qui pèse sur le CAC 40. L'extrait ne donne pas de niveaux précis.",
+      "why_it_matters": "Les taux souverains français influencent directement la valorisation des actions et le coût de la dette de l'État.",
+      "entities": [
+        "CAC 40"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f819336733c484c2",
+        "title": "Array acquires Hansa for embedded SMB credit tools",
+        "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1wdFJkSGNkWW5kM2xrR0JZV1VLcnRld3VUU2xSaVdCQ0FHNVBTSVBETkZ3TU1OZDczbzY3TUkxakhaYmlEN21qdTNDQkdKR1BFMkQ5ZUtFSlU5YjRMeldCX0x3YXlCZw?oc=5",
+        "source": "FinTech Futures",
+        "published": "2026-10-19T10:40:31+00:00",
+        "summary": "Array acquires Hansa for embedded SMB credit tools FinTech Futures",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Array annonce l'acquisition de Hansa, une société spécialisée dans les outils de crédit intégrés destinés aux PME. L'extrait ne donne ni montant ni autre détail de l'opération.",
+      "why_it_matters": "Le crédit embarqué (embedded finance) aux PME est un segment fintech en consolidation, utile à connaître pour les discussions sur les nouveaux modèles de distribution du crédit.",
+      "entities": [
+        "Array",
+        "Hansa"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "7c5966a92cf9f0fa",
+        "title": "World Tackles AI Impersonation in Banking with World ID Launch at Money20/20",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTW9ndEZsU1VGRG1FRHQ1QVloOXFmSUxKZ05WdWdPMHBpSWN1Zi01MkR2M1RfYm5Mb3c3WF9zSjRjWjI3eDZBUk9SYi1YZnpCVFo5ZkNDdHpMZHgyRzlON0tVNmktUDY3TlFYUWNTVnF5MFhVckFtdXFDVnc5WEg1R2JxdDlTZXR6SGFyVHRqQW5NZlVieUpIX2FubUtFbHlBQ20zYTVn?oc=5",
+        "source": "Bobsguide",
+        "published": "2026-10-19T10:32:25+00:00",
+        "summary": "World Tackles AI Impersonation in Banking with World ID Launch at Money20/20 Bobsguide",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "World lance World ID au salon Money20/20 pour lutter contre l'usurpation par IA dans le secteur bancaire. Le dispositif vise à vérifier l'identité humaine face aux deepfakes et aux arnaques automatisées.",
+      "why_it_matters": "L'usurpation d'identité par IA devient un enjeu majeur pour les banques, et les solutions d'authentification biométrique sont un sujet fréquent en entretien tech et banque.",
+      "entities": [
+        "World",
+        "Money20/20"
+      ],
+      "related": [
+        {
+          "title": "World ID Launches for Banking and Finance to Combat AI-Driven Fraud and Deepfakes",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPY3Z5d1NDSm9pdVhjM0lmcUJHNTNrMWZIM1ZENUdZa0NZcFFCeGZmRFJsenJBd09HLVdTd1V3b2N2b1pXS1VIUXRQbXVhRVZqeGVwVlpfN2FGYmk2RjlDVll3WVIzNFZnSlNpYWd6S2EySTdJZW9maEVSQk5zUldZb25kejNyeE0xWC1FN2FsbXVKNDd4UTQxUW5sYUUxX3l3cTFaQTVnMEowYUJBVFJXQjhScw?oc=5",
+          "source": "FF News"
+        },
+        {
+          "title": "World brings biometric proof of human to banking and AI agents",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQc0xYcnJUMFRrSFJ3eXFNQzRiSHRCanRQbkNGOGMtbFFvbGhTT1BGbmxaMFllZ0dtYzZhQWx2NEhJSkctbEQ4X01WT1o5cWdYQW5WVEJ5VkNmM21ZejZBaWtFYlVmaGVfWmRWUVRZZTdZcEdsNEtESzNOYXBCZXhaeVdtRG8wY2ZLcWd3dXZINF9VSEJoYVVUM3d1T19DcDZnWmVj?oc=5",
+          "source": "Biometric Update"
+        },
+        {
+          "title": "Sam Altman’s World Targets Deepfake Fraud With New Banking Tools",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOelowRDJPNUhXYXpxdjl1V1lUdlVNNm9tZ21yZFpCcnNEb281NDNjeFUydGRGSURMN0ZRTExzcDVlWHJvXzd6eTRnSzJrQS0zZ3lBbnZVaktKeEw4WlotN2tCYWI1NVNNOEM1R1JoLUlKNXhqNmw3QnJDNVhlbnV5V2tFU1BDZkhFTG05WUQtWS15VFJjTDc0Wl81VmVDWnQtaEdF?oc=5",
+          "source": "CryptoRank"
+        },
+        {
+          "title": "World takes on AI-driven impersonations with new suite for banking and finance",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNTHRaVWZ6cFAzTHBwbWhKNzR2Y0pwN2doVlZSVGNta29WTURZM1V1dW9qTTNmNlEwQ2FvYTNFQXZNYmJFSmxuZVI3SkZLdTh1bmpFTEFOU2RDM29vWjBObTJ5endkWEltdXREaXUwVWE2UzZleUdlengxam1FSS1DcU9tV0N4VlBxSzZJM0lQamczZE8xN3hqT3FGNzlmNmVJZEQtMGdLa2FZNm5iUms4b2dBQmlfeUhYT3ZuY1l3?oc=5",
+          "source": "Finextra Research"
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "4b203da6651c361e",
+        "title": "Le Cac 40 perd pied : « Les événements du week-end soulignent le délicat équilibre que le gouvernement doit trouver entre satisfaire la population et les marchés",
+        "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQRDBGMDBtRUVrNmdBUERtQ05FaWdxMldCT1RlMlRTVWJzTnBuY2hOTmJ5SXRMc25nelp4Y2RIeXU1a1ozaGlrY2hicjFjVFFGTDFTZTRMM05VY0FxSFRhVXpISjNsQlhDWmpLZGtBbi0yRW9MV1EwU1hndlAzSFd0b1NSYlYxOWZQS3JhYUhSNG9iR2tlMDBhN00xc1hqQXN4alJ5VWdKYVJMUldSZjVzZUxkZFdHUEFRNzJFQUQzNV9vLVhEcTlyckFkUVVOYnZSaFViQnllc2IxNWRfYlBVRExFOHJDbWtNUE1RZ2tRZFpQa0NaaDRoTktIOEI0MzlTcExfRHpGcldPd0dfckxPTjEtTllNUkd4cWY1NVFNaVFURmJ4OEE0VnJqazRQcEVEbzBnN0xORGhNSmhuRVlKc2NXdzZPT1ctT21zaQ?oc=5",
+        "source": "Investir Les Echos",
+        "published": "2026-10-19T10:31:23+00:00",
+        "summary": "Le Cac 40 perd pied : « Les événements du week-end soulignent le délicat équilibre que le gouvernement doit trouver entre satisfaire la population et les marchés Investir Les Echos",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Le CAC 40 recule après les événements du week-end, et un analyste souligne l'équilibre délicat que le gouvernement doit trouver entre population et marchés. L'extrait ne donne pas de niveau ni de pourcentage de baisse.",
+      "why_it_matters": "Les tensions politiques en France pèsent sur les marchés actions nationaux, un facteur à suivre pour comprendre la prime de risque française.",
+      "entities": [
+        "CAC 40"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "bd73ba35438e7889",
+        "title": "Elle dispose du plus grand fonds souverain au monde: la Norvège, qui refusait les investissements dans les armes nucléaires, envisage de revoir ses règles éthiques",
+        "url": "https://www.bfmtv.com/economie/entreprises/defense/elle-dispose-du-plus-grand-fonds-souverain-au-monde-la-norvege-qui-refusait-les-investissements-dans-les-armes-nucleaires-envisage-de-revoir-ses-regles-ethiques_AN-202610190420.html",
+        "source": "bfmtv.com",
+        "published": "2026-10-19T10:27:25+00:00",
+        "summary": "Une commission préconise d'assouplir les règles éthiques du fonds souverain norvégien pour lui permettre d'investir dans certains fabricants d'armes nucléaires basés dans des pays alliés. Cette recommandation, remise au ministre des Finances, ouvrirait la voie au retour de grands groupes de défense américains, britanniques et français au portefeuille du fonds.",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "Une commission recommande d'assouplir les règles éthiques du fonds souverain norvégien, qui exclut aujourd'hui les armes nucléaires, pour lui permettre d'investir dans certains fabricants basés dans des pays alliés. La recommandation est remise au ministre des Finances et ouvrirait la voie au retour de groupes de défense américains, britanniques et français.",
+      "why_it_matters": "Le plus grand fonds souverain du monde changerait ses critères ESG, un signal fort pour la place de la défense dans les portefeuilles institutionnels.",
+      "entities": [
+        "Fonds souverain norvégien",
+        "Ministère des Finances norvégien"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "91bbf8da8dd0bf15",
+        "title": "US Equity Investors to Monitor Meta Platform, Tesla's Earnings While Watching Treasury Yields Alongside Crude Oil This Week",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOUmdyVjhRZ0J4dHM0aEJ1WEljUzZUZzRoRm44RFNaRktFaFFMTlhqcTk5cDBZTk5ySHVyQmNXZWpVdkpMSGVySUtJWTl5angyc29CNUI2dTRJWFBCWk5pLVlXRmZpbnVoQ1F2bGw2bHNDWFN1VkdiS3VLZ1diLURvbXRycG9XR19va0JOc3F3VkVOVmIxZWhsd2R6c3lmdw?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-19T10:14:27+00:00",
+        "summary": "US Equity Investors to Monitor Meta Platform, Tesla's Earnings While Watching Treasury Yields Alongside Crude Oil This Week Yahoo Finance",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "Les investisseurs américains suivent cette semaine les résultats de Meta et de Tesla, ainsi que les rendements du Trésor et le cours du pétrole brut. L'article présente ces indicateurs comme les principaux points de suivi de la semaine.",
+      "why_it_matters": "Les publications de Meta et Tesla et les taux du Trésor américain sont des repères clés pour comprendre l'humeur du marché actions américain.",
+      "entities": [
+        "Meta",
+        "Tesla"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "6f9540517021d570",
+        "title": "Is your bank really calling? How to spot a bank scam before you lose money",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOU2YtcXN3T2hqQlRaWmlkb1o3RE4wZVF0ck53bG5xbm1jakVlNmxOdFZEaDR3TS1rTTR2ckZRVGpwMDRuVmg1VzkyZDFQajdEeHhxMnFuVHJrUUpFYkFEY3hVWmxPN2MwSDdFM0RRUUYwWFNabzdCLXB1WnhPRUFFQlpIRkJpdVRSM0FYZnl5ODBnLWFEYUZhdGpZdUN6X1NCV1dHV2NrY0ZkYVEwS01Pc0k0SjgxeERJdHR1MTRIaFpKbGlNQVhhUjVPaw?oc=5",
+        "source": "WCPO 9 Cincinnati",
+        "published": "2026-10-19T10:12:36+00:00",
+        "summary": "Is your bank really calling? How to spot a bank scam before you lose money WCPO 9 Cincinnati",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 3,
+      "summary_fr": "Un article présente des conseils pour reconnaître une fraude bancaire par téléphone avant de perdre de l'argent. Le contenu relève de la prévention grand public.",
+      "why_it_matters": "La fraude par faux conseillers est un risque courant, mais le contenu reste à portée grand public.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "8ffc677f0d658f8d",
+        "title": "Lodigroup accueille GENEO à son capital, aux côtés de BNP Paribas Développement",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQN3BuUnRsTG9ISUw3RnBnc2E3d0piVTZVMFptQmZNTmdSNHNMcHpVMkV1U184M2pXREhqTzdEYnhETmU3VEQ3cEdtbHZfYnZqb09ZZ3pjcHdGOUpoMUthcFpyTFcyV2xMVEVfRThtdXVoYkQzRFdxUy01Z1pwdm9mcXY2Z2YzUHRScXdQLUdIVUgxOUhwRF94ekt2S1VZQ0IzWWhxRzZGbjhERVFiYVBacE1fQnpYR0hPX0tkcm43OHRDUGhHc0t5MlNmd1I?oc=5",
+        "source": "Le Journal des Entreprises",
+        "published": "2026-10-19T10:11:27+00:00",
+        "summary": "Lodigroup accueille GENEO à son capital, aux côtés de BNP Paribas Développement Le Journal des Entreprises",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Lodigroup accueille GENEO à son capital, aux côtés de BNP Paribas Développement. L'extrait ne précise ni le montant ni la part détenue.",
+      "why_it_matters": "Entrée d'une banque dans le capital d'une entreprise, illustrant le rôle des capital-investisseurs bancaires dans le financement de la croissance.",
+      "entities": [
+        "Lodigroup",
+        "GENEO",
+        "BNP Paribas Développement"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "74fee0057ce2cb5b",
+        "title": "Florida woman accused of hacking civil rights activist’s bank accounts, stealing thousands",
+        "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNWk9CMDl4Z0RFV29PUlllckthY2RCN3JIaHBFRmNfTzhJcTdLZ3lVWUZPTlg5QVBCMnhZSUpLUnQwV0pxSWR2WG1YYjdBU1RqWGd5bGhvOUdUcGRSb0pLOE5UbzY1QmhaaEc4NGdPNVZfcEFyaU9NclVreWRyaVEyQ1V2OVdZQ1BOdXYtb0NaanRXTnFILUk4TWRERGNMdG5tZ0lqT1B5U1VpVmJ3MndXTGdITTFBRWgyMmpCNVgwTFhkWFVZd2FsWWRXNlo5Zw?oc=5",
+        "source": "wtvcfox",
+        "published": "2026-10-19T10:06:21+00:00",
+        "summary": "Florida woman accused of hacking civil rights activist’s bank accounts, stealing thousands wtvcfox",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 3,
+      "summary_fr": "Une femme de Floride est accusée d'avoir piraté les comptes bancaires d'une militante des droits civiques et d'en avoir dérobé des milliers de dollars. Il s'agit d'un fait divers de cybercriminalité.",
+      "why_it_matters": "Cas concret de fraude bancaire en ligne, utile comme exemple de risque cyber pour la banque de détail.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "2e7df5d61f7f2984",
+        "title": "AI, fraud prevention and cybersecurity take center stage at Smart Banking 2026",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPM3BHM3FxY3JsbmYySEY1LTFDSVhDWWNub19SMDRqUlNva2ItdnkxN3h1bmtuWWNmU1o5a0VFYy1XdUNCd2F4LUhZa0l5a3hEZ3IyV21vWVNlV3BIQ0FvXzlKVUQwbE03bG91M2hRXzVvWUVLVDZwckk5Q3BNNlE2Z0pLX25YTEtxX0N5eHdPVFJEZ1U4WEZTWFRleldZSU40aUtQaFBJanROUG9JMFZQNDM2b0NPUQ?oc=5",
+        "source": "Báo VietNamNet",
+        "published": "2026-10-19T10:05:00+00:00",
+        "summary": "AI, fraud prevention and cybersecurity take center stage at Smart Banking 2026 Báo VietNamNet",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Le salon Smart Banking 2026 met en avant l'IA, la prévention de la fraude et la cybersécurité. L'extrait ne donne pas de chiffres ni de annonces précises.",
+      "why_it_matters": "Les thèmes IA et lutte contre la fraude sont au cœur des priorités technologiques des banques.",
+      "entities": [
+        "Smart Banking 2026"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "d5e0ffe4c6c7c704",
+        "title": "CoreWeave Stock Forecast: Debt Fears Drag CRWV to $60 Support Despite a $104 Billion Backlog",
+        "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQWFprWjIyVW9BVlVwQ3NadGRaZUlDZlR0bDQ2SkZHSlZmblVsc016VVo5LXZBNTlwYWFnZVNZeGROaktHSF9YUl9iU0FHaWVBT1o3TEVaNDROV1VPVkRQQXdNTG04RGI2bzcyNk1RU3lHZDZyUVl1b2NwQWJGZWE1aVpfQ29qeVROMnI3ekZueUI3MmRNT19tUlJCeWk0RU1SRFE5a05fdURFdkltd1ZGdU9rTlp0RXI2bGhPbnNFMFh6dnQ0bVJIY3l4QURFNk9Eem1pWFNlX0JlMWlzd2Y0RFQ4THBWYVFfRnV5aQ?oc=5",
+        "source": "TradingKey",
+        "published": "2026-10-19T10:03:51+00:00",
+        "summary": "CoreWeave Stock Forecast: Debt Fears Drag CRWV to $60 Support Despite a $104 Billion Backlog TradingKey",
+        "feed_theme": "marches"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "L'action CoreWeave recule vers 60 dollars sous l'effet d'inquiétudes sur sa dette, malgré un carnet de commandes de 104 milliards de dollars. CoreWeave est un fournisseur de cloud dédié aux charges de calcul d'IA.",
+      "why_it_matters": "CoreWeave est un acteur clé de l'infrastructure IA, et sa dette illustre le risque de financement des data centers dédiés à l'IA.",
+      "entities": [
+        "CoreWeave"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "cbcd2c1ebe5b02b6",
+        "title": "Mi-séance Paris : le CAC 40 trébuche avant une semaine chargée",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQam9Xem1aNHZLNDZqblpsWnBVWnFFaThfWXRsVmVaTjEyS0NwblV1QmRza1RrcXl3Vk56M1ZLUFJhWXNfNkRYMk9FQ2F3clg1YzFvQTlpU1U1ckNGZXdrVkxHMmZUaGhHaHcwclVxUW8zUHVJSHRvclhpNGN4RmVIcVJpS1lwWlF2ekFxMXJxVG9OVy1Hc0xUeGRBdzJNS0VsS21McEphSHZBM19KcGc0aGU1TG1mRGVXeThOdTFB?oc=5",
+        "source": "Boursier.com",
+        "published": "2026-10-19T10:00:00+00:00",
+        "summary": "Mi-séance Paris : le CAC 40 trébuche avant une semaine chargée Boursier.com",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "Le CAC 40 recule en milieu de séance à Paris, avant une semaine jugée chargée par Boursier.com.",
+      "why_it_matters": "Donne le ton du marché parisien au début de la semaine, sans chiffres précis dans l'extrait.",
+      "entities": [
+        "CAC 40",
+        "Boursier.com"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "641fb1248b6d6afd",
+        "title": "L'action BNP Paribas enfonce son support à 88,94 € et cède 2,5 %",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQbWMxNThYY3pENlAyX001cjk4UVdZMDdBbEs3NGVpWktQajVTaWo3Zk1wVTNmRHJ6eFF6NC1VRjF4aFJpOWJWcVBRbkpHSnhKMk1oZnpuNTFyR3JWUHlBVmc1RXQyR05wMVNwNGU0ekd2Q25CSFdCbGpjTy11R2ZVZjkxWkgyY1lPdlhMNVpveFd0bXNoTnh5Zndnb29qWWpwYjcxS3g1TjNMRHVGeTJhVXhR?oc=5",
+        "source": "Idéal Investisseur",
+        "published": "2026-10-19T09:56:00+00:00",
+        "summary": "L'action BNP Paribas enfonce son support à 88,94 € et cède 2,5 % Idéal Investisseur",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "L'action BNP Paribas recule de 2,5 % et passe sous son support à 88,94 euros.",
+      "why_it_matters": "Baisse notable d'une grande banque française en séance, à suivre pour le secteur bancaire.",
+      "entities": [
+        "BNP Paribas"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "32f4f80be96e0a1b",
+        "title": "L'action Société Générale perd 2,5 %, parmi les plus fortes baisses du CAC 40",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNejV2RmUxT1ZaSXlLc3ozWDdjV19FZjlTdTdXNVp1Qm9Eby1LRWI5Y29sdEFCNWRBSWpvWHZyOGxXamJjS3ZmVUVpLXlkRE01R2ZuUnVwS3FrVTVDSERNeG1hcnJza0ktVmFVeVF6TkhzUzMydnY0MWtyQmh1c0RlZEd5bG16QUFBWFpXVnhGUllWR3JHa2tmU2JOWmx1NnpXSGpZOFpfY0ZiaW44Vy0zMnpDMjJSRUN0dmhTR1lDM1k3eWVQS1E?oc=5",
+        "source": "Idéal Investisseur",
+        "published": "2026-10-19T09:56:00+00:00",
+        "summary": "L'action Société Générale perd 2,5 %, parmi les plus fortes baisses du CAC 40 Idéal Investisseur",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "L'action Société Générale perd 2,5 %, figurant parmi les plus fortes baisses du CAC 40.",
+      "why_it_matters": "Le recul de Société Générale illustre la faiblesse des banques françaises cotées ce jour-là.",
+      "entities": [
+        "Société Générale"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f3440aa4e27122be",
+        "title": "L'action Crédit Agricole en queue du CAC 40, RSI tombé à 23",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOaFNEVEpHSk8yZElqVHViUlZsOW1qVkxxNzNNTGVOYjJnS0stUno1b1c1U3Y1czR3RE9zMjVaQmtZVFNJdTN6dnR3QmlZdEpmSmM5OGVPQTBQTC1wNmg2Rl9wVE43TWNKSk5iQ3R3TENodk1LeW1MbHVUSS1JOTdSV3BPMGU0N0RQR0M2a2pPZXhGOFc1allqNFR6RjZ3MXEzWWNScmlVUkp2NUZ3XzBNaEx3?oc=5",
+        "source": "Idéal Investisseur",
+        "published": "2026-10-19T09:55:00+00:00",
+        "summary": "L'action Crédit Agricole en queue du CAC 40, RSI tombé à 23 Idéal Investisseur",
+        "feed_theme": "marches"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "L'action Crédit Agricole se retrouve en queue du CAC 40, avec un RSI (indicateur technique) tombé à 23.",
+      "why_it_matters": "Un RSI à 23 signale une survente technique, information utile pour comprendre les lectures de graphiques boursiers.",
+      "entities": [
+        "Crédit Agricole"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "56d7e1857771759c",
+        "title": "L'action Engie en queue du CAC 40, lestée par un repli de 4,5 % sur un mois",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdlFBVkMyM0JNQURSZ3djeENxTlNRdzB5Y2gwaTV2Ykd3NFBXWkFDZmxpRUtHN3haRTFfSmFhZDFsamJrMGhRWFNfVnkweWZtamlrTU5mSkVWMkhtWUgtQ0FJOFF6QjdrVjhXSWtmLUs4MXNaTV9keFQ1MWE0dG1CMzJ3c2poWVVURlFSaHlrLXpPUmw5WlBqckxGQmd0QzR5cjBoMHJxcVY3SzJhOElteE9HYU5EWDhwTVZWQW02em5SUGM?oc=5",
+        "source": "Idéal Investisseur",
+        "published": "2026-10-19T09:54:00+00:00",
+        "summary": "L'action Engie en queue du CAC 40, lestée par un repli de 4,5 % sur un mois Idéal Investisseur",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "L'action Engie est en queue du CAC 40, en repli de 4,5 % sur un mois.",
+      "why_it_matters": "Baisse modérée d'un grand groupe énergétique, intérêt limité hors contexte sectoriel.",
+      "entities": [
+        "Engie"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "16a905935713d6fa",
+        "title": "L'action Orange cède près de 2 %, en queue du CAC 40 après -13 % en trois mois",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNMXhvMEZSRlNkSUdnLWNfaWZ1SzdtcnZLc3lnbnI3Rk9GY0Zpc0lhbzQzTklTS085STgwWm9RVktKeXF0VTJoR2ZlTVozc3R3cXJXQkktaUZfOWsybndsRVZsU0Jjd0VPQnhwY0VBX0xnaEZhbWFtTW1qRVFLQlBUQUtmTFl5YjNCTnJVRGk1TDVLV0FRaURaeTRkdnlHWDZvVEZGRjdYVGFFMEJfOThvVUE4Y250N0RqNUZnOWRKZHNoYkFN?oc=5",
+        "source": "Idéal Investisseur",
+        "published": "2026-10-19T09:54:00+00:00",
+        "summary": "L'action Orange cède près de 2 %, en queue du CAC 40 après -13 % en trois mois Idéal Investisseur",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "L'action Orange cède près de 2 % et figure en queue du CAC 40, après une baisse de 13 % sur trois mois.",
+      "why_it_matters": "Le repli prolongé de l'opérateur télécom illustre une contre-performance sur le trimestre.",
+      "entities": [
+        "Orange"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "b04d47cf46223ef1",
+        "title": "BforBank : taux boosté à 3,5% sur l'épargne et jusqu’à 280 euros offerts pour l’ouverture d’un compte",
+        "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQV1NjVjBucVA0YzNydkpKcHN2cUhtNEM3NDhQLTlJRWVQc2tzczNNMWIzNmdLNm0tbmFQVHRwRmdvcU5abzBOQnlmUzB2d1h2eWN0VENWaTBua3RYYXpzZDF3RDd1S0dhTW90dVluNWFRTkNiQzJ2aWstQ2JlWkNsaDBIWkN4bmRxNjRLU1hzSkRTQXRHcmM3d0pnRFVNWUllSzJRZkEtUUlpMU82emFtN1FBUkItV0d5czByb3laUnZZTlZFS3dOZ1cyejhxdmpsM0NDWnBlbUY0Z25RVWoyLTZ0VXBqZWhKU19uaS1yZ3VkQWEyTkM5SWU3azJ2aXNneWMxeg?oc=5",
+        "source": "BFM",
+        "published": "2026-10-19T09:54:00+00:00",
+        "summary": "BforBank : taux boosté à 3,5% sur l'épargne et jusqu’à 280 euros offerts pour l’ouverture d’un compte BFM",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "BforBank propose un taux boosté de 3,5 % sur l'épargne et jusqu'à 280 euros offerts pour l'ouverture d'un compte.",
+      "why_it_matters": "Offre commerciale d'une banque en ligne, utile pour comparer les conditions de l'épargne en ligne.",
+      "entities": [
+        "BforBank"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "30d871e0131799cf",
+        "title": "Crédit Agricole : crédit d'urgence de 20 000 euros pour les commerçants après les violences du 17 octobre",
+        "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPZVprdjZ2V19ETGRlZDVZSnd0cF8wbXd3anlUZW9xS0xraWI0RUl1R1h6N2ZuM3ZZbEg4ZTlzZktYVmhCcVFXTV9UYzZYQ05xUG1VQTZLOC1PdVVZdlIyTll3YXFyZnhBcFhRMmtQck9hS3RNdmN3QkVRUFdKX3JoanVaNXhSQ09WWERENTRaemRsTzlZczBQOWUzekhfSVd1eU9YdkxNWllzVTA2N1ZuOGJqRDB3TE11NjByR2xPYVFJWThvUGcwVkhoc2wtc2Zya3pua1VjTlNHamRiZzJyTXo2cS1EdV9jSnQxRA?oc=5",
+        "source": "MoneyVox",
+        "published": "2026-10-19T09:53:17+00:00",
+        "summary": "Crédit Agricole : crédit d'urgence de 20 000 euros pour les commerçants après les violences du 17 octobre MoneyVox",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Le Crédit Agricole propose un crédit d'urgence de 20 000 euros aux commerçants touchés par les violences du 17 octobre.",
+      "why_it_matters": "Exemple concret de réponse d'une banque de réseau à une crise locale touchant les petits commerces.",
+      "entities": [
+        "Crédit Agricole"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "8b71f185e71431bb",
+        "title": "Crédit Agricole : un analyste confiant",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNX091NS11SzBsdmVmUzNOeTRGNGtxS3FaZVg4SEhTMG9wWmVnNjZvSGVJUGhJdkcyM1BFb0c2Z0RsU0twbXRieExYWEpISzBpS1NDUmwtaXNlS0NFT2tVUkhfMTVGcmdVNkJNTDRWbkpLZlB3YW0tbDcxeGUyb0ptVm84TDh1UWpack81LUVTZFMyMDh1U0JuQjZyOFhmdw?oc=5",
+        "source": "Boursier.com",
+        "published": "2026-10-19T09:51:00+00:00",
+        "summary": "Crédit Agricole : un analyste confiant Boursier.com",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Un analyste se dit confiant sur le Crédit Agricole, selon Boursier.com.",
+      "why_it_matters": "Avis d'analyste sur une grande banque française, utile pour suivre les recommandations de marché.",
+      "entities": [
+        "Crédit Agricole",
+        "Boursier.com"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "4734014f3f1be043",
+        "title": "La banque centrale chinoise étudie la possibilité de faire du taux au jour le jour son principal taux directeur",
+        "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOWkM1U3pRSi1DbmNQR0J1TFRNVi1kWFMtQXFPTmhQNDVURGNLakhIVUZhMXM3dHIwVDhNWkVweTY0Y1FGZlpMMVdlZFZRcC02dUFqTEs1YnktWk4wUWVKSXJ2c1RXTGhzUW1JYUg2MUt6Ni1hbzFTT2NTMVJMcmZFQkhyb2NwZm9iQnkwckFJRlUxMmdMakRzRVhaSUhOTmZXYUZCUzJUS29RY0tsb0wzcU1UUzJNQjR2N1lzdEZNNkU2eXpQQ0c2bjA2UDJpa281SVVXOXlNRVJNekh1eVd5WU1teWNKbVdmMmd4WWRZcXdSZw?oc=5",
+        "source": "Zonebourse Suisse",
+        "published": "2026-10-19T09:47:15+00:00",
+        "summary": "La banque centrale chinoise étudie la possibilité de faire du taux au jour le jour son principal taux directeur Zonebourse Suisse",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 8,
+      "summary_fr": "La banque centrale chinoise (PBoC) étudie la possibilité de faire du taux au jour le jour son principal taux directeur.",
+      "why_it_matters": "Changement potentiel du principal instrument de politique monétaire chinoise, qui touche les marchés de taux et la devise.",
+      "entities": [
+        "Banque populaire de Chine"
+      ],
+      "related": [
+        {
+          "title": "China's central bank studies making overnight rate its main policy rate",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVFVkTTk1dlA4bDhncTBMZWJIcFd3dlEyTC1DNkxuc1lmZTRUUGRRZlFZd1FUVlVLektxWklNT0FfX1M4dE1LM2NHcUxhbHNLNjA2NklnVlA2dkNYOVFDcmVXWTVpX2RfZTloQ3NGdjBoZkt1NW9wbzNnM2QxNGlzSk80S0FsN0VTZlRITE9FODNTdmJ0Y29uZUdnZy1aTTVV?oc=5",
+          "source": "Yahoo Finance"
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "a1d6a61272878780",
+        "title": "Les contrats à terme de Wall Street progressent grâce au rebond des valeurs liées à l'IA ; le pétrole et les t",
+        "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxPMmpCMVJjUDhVNWZVYVhwbkFQTEEwQUxqNVhsYmI2dkoxTHo1WGU0WTRMd1N1WGVoRGJ4WTY5eGpLdzBzY1BPYlFrc05UcER5c2VZU3ZEYi0wOWlCYnN1QVpicmllZGlqem1KSmdQZXNoWGZjRlBNd3U0MEtkM0ZxT19UdGQ5aGxBMDAyeWxNZXd3UEt3dzl3Y2FJT052bWVBcEVlanZLUF8ybzlrQmd6Qi1wQndQZU15RGRiVzcwNGVXQVNLR2ZuMllUMUZTblNGZ1lZWERDZWlGNmprRERVSFNiSUhvcTgxeV8yaWwycm1kbFEwc3VyZWcyQ3YwQ1dDVnhkZC00Z0wyLTR2ZHl5dmx3VWo1dkxwcHRqR3BTQ0ttOHVJMjZfTUd4RGFvVF93NzNOTy1Ia9IBtwJBVV95cUxPMmpCMVJjUDhVNWZVYVhwbkFQTEEwQUxqNVhsYmI2dkoxTHo1WGU0WTRMd1N1WGVoRGJ4WTY5eGpLdzBzY1BPYlFrc05UcER5c2VZU3ZEYi0wOWlCYnN1QVpicmllZGlqem1KSmdQZXNoWGZjRlBNd3U0MEtkM0ZxT19UdGQ5aGxBMDAyeWxNZXd3UEt3dzl3Y2FJT052bWVBcEVlanZLUF8ybzlrQmd6Qi1wQndQZU15RGRiVzcwNGVXQVNLR2ZuMllUMUZTblNGZ1lZWERDZWlGNmprRERVSFNiSUhvcTgxeV8yaWwycm1kbFEwc3VyZWcyQ3YwQ1dDVnhkZC00Z0wyLTR2ZHl5dmx3VWo1dkxwcHRqR3BTQ0ttOHVJMjZfTUd4RGFvVF93NzNOTy1Iaw?oc=5",
+        "source": "Boursorama",
+        "published": "2026-10-19T09:43:00+00:00",
+        "summary": "Les contrats à terme de Wall Street progressent grâce au rebond des valeurs liées à l'IA ; le pétrole et les t Boursorama",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Les contrats à terme sur Wall Street progressent grâce au rebond des valeurs liées à l'IA, tandis que le pétrole et les taux sont mentionnés dans le titre sans détail dans l'extrait.",
+      "why_it_matters": "Le rebond des valeurs IA pèse sur l'ouverture des marchés américains et reflète leur poids dans les indices.",
+      "entities": [
+        "Wall Street"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "6b7762acdc805a6a",
+        "title": "Se former à l’intelligence artificielle : 6 solutions pour apprendre l’IA gratuitement",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNb29CQ3p3T09BTlpkajVkc1BieF82TkYtUVNwYl91UkJSUmhqWGpJN2hYdjdYbEtaa1NqMTBRS1dVVkNUM2JYLWItOHJNaFdNSjJlQzdDR01vVFpyYl9YT2R2WG5TUllEMmZ3SGpFTVFlVElPVGpOdnVMUWZCYmcwb1VOMUlZdk1NQ2RtT3lrVktKR0Z5aXFqZkVxRm11ck5ydXdZakFRUVg4MDlCb3lHVWFpQQ?oc=5",
+        "source": "digiSchool France",
+        "published": "2026-10-19T09:41:49+00:00",
+        "summary": "Se former à l’intelligence artificielle : 6 solutions pour apprendre l’IA gratuitement digiSchool France",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 2,
+      "summary_fr": "Article de digiSchool présentant six solutions pour apprendre l'intelligence artificielle gratuitement. L'extrait ne donne pas le détail des formations citées.",
+      "why_it_matters": "Utile pour un étudiant qui veut monter en compétence en IA sans budget, mais sans information de marché.",
+      "entities": [
+        "digiSchool France"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "9bf041d5f257d4e6",
+        "title": "Le placement à suivre : Arnaud Gihan - Taux élevés, la donne change pour l'investissement - 19/10",
+        "url": "https://www.bfmtv.com/economie/replay-emissions/bfm-patrimoine/le-placement-a-suivre-arnaud-gihan-taux-eleves-la-donne-change-pour-l-investissement-19-10_EN-202610190372.html",
+        "source": "bfmtv.com",
+        "published": "2026-10-19T09:40:22+00:00",
+        "summary": "Ce lundi 19 octobre, Antoine Larigaudrie vous présente le placement à suivre dans l'émission Tout pour investir sur BFM Business. Retrouvez l'émission du lundi au vendredi et réécoutez la en podcast.",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "Présentation de l'émission « Le placement à suivre » de BFM Business avec Arnaud Gihan, sur le thème « Taux élevés, la donne change pour l'investissement ». Le contenu n'est pas détaillé dans l'extrait.",
+      "why_it_matters": "Le sujet des taux élevés et de leur effet sur les placements est central pour comprendre les arbitrages d'investissement actuels.",
+      "entities": [
+        "BFM Business",
+        "Arnaud Gihan",
+        "Antoine Larigaudrie"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "4a7e9c45857ffe39",
+        "title": "GTT (GAZTRANSPORT ET TEC.) Cours Action GTT, Cotation Bourse Euronext Paris",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5KMlhiQU9RYjJ2X0RHeE5JS3VXM252aWhLRFdJZzhPR05HSkhLUXhtV2lPRkFXSjNoRkJfOWNBSkMyTWJNZklZLVZRNkJTdWxZLVE?oc=5",
+        "source": "Boursorama",
+        "published": "2026-10-19T09:39:59+00:00",
+        "summary": "GTT (GAZTRANSPORT ET TEC.) Cours Action GTT, Cotation Bourse Euronext Paris Boursorama",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 1,
+      "summary_fr": "Page de cotation Boursorama de l'action GTT (Gaztransport et Technigaz) sur Euronext Paris. Aucune donnée de cours n'apparaît dans l'extrait.",
+      "why_it_matters": "Simple page de cotation sans information exploitable.",
+      "entities": [
+        "GTT",
+        "Euronext Paris"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "8fc47d77bbaf846c",
+        "title": "Ce serait un \"don\" à 10 milliards de dollars: Elon Musk promet de \"donner une de ses actions SpaceX à chaque enfant en Amérique\" en 2027",
+        "url": "https://www.bfmtv.com/economie/entreprises/ce-serait-un-don-a-10-milliards-de-dollars-elon-musk-promet-de-donner-une-de-ses-actions-space-x-a-chaque-enfant-en-amerique-en-2027_AV-202610190370.html",
+        "source": "bfmtv.com",
+        "published": "2026-10-19T09:38:13+00:00",
+        "summary": "L'homme le plus riche du monde assure sur son réseau social X qu'il offrira une action SpaceX, d'une valeur actuelle de 146 dollars, à chaque enfant américain.",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Elon Musk annonce sur X qu'il offrira une action SpaceX, valorisée actuellement 146 dollars, à chaque enfant américain en 2027, soit un « don » évalué à 10 milliards de dollars. L'annonce porte sur une opération future et ne précise pas ses modalités.",
+      "why_it_matters": "Donne une valorisation de référence de SpaceX (146 dollars par action) et illustre l'importance de la cotation ou de la valorisation d'une entreprise non cotée dans les discussions du secteur.",
+      "entities": [
+        "Elon Musk",
+        "SpaceX"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f7a84632e9df7d7a",
+        "title": "VALEO Cours Action FR, Cotation Bourse Euronext Paris",
+        "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1rRnJjVFhnNjZBLWgtWkN0ZHBOeW1NY2JmQmlMQVJWbHRleUg4Um9HdXFhdkZiUG84VTg0NzJvS2loWXJIbGFfYktyRFVORjFo?oc=5",
+        "source": "Boursorama",
+        "published": "2026-10-19T09:29:46+00:00",
+        "summary": "VALEO Cours Action FR, Cotation Bourse Euronext Paris Boursorama",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 2,
+      "summary_fr": "Page de cotation Boursorama de l'action Valeo sur Euronext Paris. Aucune donnée de cours n'apparaît dans l'extrait.",
+      "why_it_matters": "Simple page de cotation sans information exploitable.",
+      "entities": [
+        "Valeo",
+        "Euronext Paris"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f26485022b72c4f2",
+        "title": "Ed Yardeni Says Stocks Could Face Trouble If Bond Yields Hit 6% — ‘We’d All Start To Get Concerned’",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNWnZCVmNPbTZ6c0plTmxHR242a2dhZjJZZ2tMT3g3SElKdU9YS1pPNFEtT3RCbDJ5Skk4WmNuMEpSTF9ud0tuWE1oM211dkdQUDlfSHN4RXlYSDJ5Y1ZVRW5FZ050NmJlb1BnWjRfd0Z4NFNvWDYxQzFKZTktQUxYZGV2aDlWdFdSSmxkS2ZrYXdFM2pVc0VnSmFkVnNCM2s5cE4yZUtn?oc=5",
+        "source": "Stocktwits",
+        "published": "2026-10-19T09:29:09+00:00",
+        "summary": "Ed Yardeni Says Stocks Could Face Trouble If Bond Yields Hit 6% — ‘We’d All Start To Get Concerned’ Stocktwits",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "L'économiste Ed Yardeni affirme que les actions pourraient subir des turbulences si les rendements obligataires atteignaient 6 %. Il ajoute que les investisseurs commenceraient alors à s'inquiéter.",
+      "why_it_matters": "Le lien entre niveau des taux obligataires et valorisation des actions est un raisonnement de base à maîtriser pour les entretiens en marchés.",
+      "entities": [
+        "Ed Yardeni"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "0bc3ef3a0b02825c",
+        "title": "FCA Outlines Vision for 'Agentic' Finance and Responsible AI Adoption in UK Services",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTDU2aEJ2VkhPYW5mV09oSjZLcnFYd3VmMlZoM1N2TnE0OVpqRGcxVzhub2V3WWVqU1JkaDA5dTVBMDgzYWpid1JLYm8wbl9HVmQtRTBUNFQ3SlU5ZlJHaU9tbmU4LWliaFVUYW1fVVlHNkFHQk45VGdUUElLRURVV0V3UVhwUEU1RUlxX2dmR1hHWG5MMFVsVllnRG9Qdk42aDA3bUJ3?oc=5",
+        "source": "FF News",
+        "published": "2026-10-19T09:25:15+00:00",
+        "summary": "FCA Outlines Vision for 'Agentic' Finance and Responsible AI Adoption in UK Services FF News",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "La FCA britannique présente sa vision de la finance « agentique » (agents d'IA autonomes) et d'une adoption responsable de l'IA dans les services financiers au Royaume-Uni. L'extrait ne détaille pas de mesures précises.",
+      "why_it_matters": "Position d'un régulateur financier majeur sur l'IA agentique, sujet clé pour la conformité des banques et fintechs.",
+      "entities": [
+        "FCA"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "dd6f986cdaa64688",
+        "title": "Stibbe Contributes to IBA Global Fintech Report 2026",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObTFMdVRwSjZaXzZGQlExZGV5ZDJRRHJRbjFSNEh6RVV6empFVmMzTVlYZEdSdEpiY1htdTRSSUZQTGxZOE9RZ3RqZnpMdUE2Zmh3LWQ1VXlNRk9uVVNaMnZMMVFQRjhQSnJ3TlJEbmxEUDZzcXQ5NWJXN0VnX0NfNy1EbUVPV1puZ3BmZF85cGpsUDVRZU40ZkcwbG1pdHFzTW5F?oc=5",
+        "source": "Stibbe",
+        "published": "2026-10-19T09:19:10+00:00",
+        "summary": "Stibbe Contributes to IBA Global Fintech Report 2026 Stibbe",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Cabinet d'avocats Stibbe contribue au rapport IBA Global Fintech Report 2026. L'extrait ne donne pas de chiffres ni de conclusions.",
+      "why_it_matters": "Rapport sectoriel sur la fintech mondiale, utile comme référence de contexte pour les acteurs du secteur.",
+      "entities": [
+        "Stibbe",
+        "IBA"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "0ab28f8fafe48909",
+        "title": "Après une première phase boulimique et généraliste, l'IA entre dans l'ère de la spécialisation",
+        "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQWGJZN2hUckhCZThySnNUbTN0S3lpZE1jaG5KakRkd1lqd2lCalkyYlZ3QUp6Z0NTR1Rqb1RmUC1acnh6bG51djJhVzNlTER6XzFXeDdVcTgxY3BCNThCNEp3MzcydFg3bHNPVlZVWXVkYmdIdm1NVTlLXzFscTJkNzBQRXJKOVJQdm92OTRjRjhGUFVjQlV4RDBxSkpzTm92OEFTelE5ZFlBMm1GS2dIcm1NbkpiMnBocWNteUJPa1drOFdlUV9tWENiSC16U29SNWJSVGFRSS1ZVlhlVWxSaDlZOEVkQ3NYdTZ2cEx3?oc=5",
+        "source": "JDN",
+        "published": "2026-10-19T09:18:42+00:00",
+        "summary": "Après une première phase boulimique et généraliste, l'IA entre dans l'ère de la spécialisation JDN",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Selon JDN, après une phase initiale généraliste et « boulimique », l'intelligence artificielle entre dans une ère de spécialisation. L'extrait ne détaille pas les acteurs ni les chiffres.",
+      "why_it_matters": "La spécialisation sectorielle de l'IA est une tendance structurante pour les projets IA en banque et en industrie.",
+      "entities": [
+        "JDN"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "3097b69d54315296",
+        "title": "IA : la révolution technologique demande aux cabinets davantage que des investissements",
+        "url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxPWFlMV2Fjbzl3Qkh3LTcwM19ZZ0ZWZ09qc3Z1cUZlaUkxUTNkRGNLNXRVQzFuSlIxb0p4ZGV5RkRZZGRoaVZuVXUxNEtKZ1doRElRVkZqNFU0ZFhLQnFkMFpzUWJIZ0laVGtkR25xR3lDdUh2U0RlZENLb080Si0ySjFFUmoyczAwMVpWd01aWTlSVDEzSTBrWjhCYl9nbXJMSW9hS1V5dFpJSnlCT0VLVmRTRVkzUF9VdEd6NV9waWNPdzdnY0E3TURibmxEVTFzZlNEU1lobGREZjV4V0ZzWUd1RlBQT1J1N0MtNUpsQVdWeEhadmFsT1FRbFBxVV80M3laM3dqMzd2eF9ZQXJuV3JJV3ZVQXlxb0sxQkFsTjlCWXNyaUhSNWgya3NVT3FKTi1CeExDMVRRaFN6M2U2bXJLNDEyZWk1dkZhdTNkTTRaUjVFOTRETk53?oc=5",
+        "source": "JDN",
+        "published": "2026-10-19T09:18:30+00:00",
+        "summary": "IA : la révolution technologique demande aux cabinets davantage que des investissements JDN",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "JDN indique que la révolution de l'IA demande aux cabinets plus que des investissements, sans détailler les exigences évoquées. L'extrait ne précise pas le type de cabinets concernés.",
+      "why_it_matters": "L'adoption de l'IA dépend aussi de l'organisation et des compétences, un point fréquent en entretien de conseil.",
+      "entities": [
+        "JDN"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "cc1fd73d69ddb34c",
+        "title": "World brings biometric proof of human to banking and AI agents",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQc0xYcnJUMFRrSFJ3eXFNQzRiSHRCanRQbkNGOGMtbFFvbGhTT1BGbmxaMFllZ0dtYzZhQWx2NEhJSkctbEQ4X01WT1o5cWdYQW5WVEJ5VkNmM21ZejZBaWtFYlVmaGVfWmRWUVRZZTdZcEdsNEtESzNOYXBCZXhaeVdtRG8wY2ZLcWd3dXZINF9VSEJoYVVUM3d1T19DcDZnWmVj?oc=5",
+        "source": "Biometric Update",
+        "published": "2026-10-19T09:18:00+00:00",
+        "summary": "World brings biometric proof of human to banking and AI agents Biometric Update",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "World (anciennement Worldcoin) propose une preuve biométrique d'humanité destinée aux banques et aux agents IA. L'extrait ne détaille pas le mécanisme ni les partenaires.",
+      "why_it_matters": "La vérification d'identité humaine face aux agents IA devient un enjeu concret pour la lutte contre la fraude et la KYC bancaire.",
+      "entities": [
+        "World",
+        "Biometric Update"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f6c01f9aa34c0c90",
+        "title": "Nvidia investit dans la French Tech : qui maîtrisera réellement l'IA française ?",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOaS1IWlBYX3NZU25vYnZ6Y1BSM3BNTm5wQlNNc2YzNGhfSUxGbmh4UTBoRUl5UHRxemw3LWt4NUJxNmpkdnY5QTlmOW5qSGJ6bG9jdmJqbl91OFhHWENsQTV4TWgxZlYtQjBGUWw5S2Z0V2ExRnVtNFpTNjNBejJmQjlDOF85TW5yOU0wNndPX2RwS2ZEenRRU25UWm9EZzEtRUZUeUtuZE5rS3lFdjdrcGpKOE1VNUtfM0pPSXppLWJURmVhZGlzVDBWaTlyU3ZVd3MtMlVkcw?oc=5",
+        "source": "JDN",
+        "published": "2026-10-19T09:17:41+00:00",
+        "summary": "Nvidia investit dans la French Tech : qui maîtrisera réellement l'IA française ? JDN",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Nvidia investit dans des startups de la French Tech, selon le titre de JDN. L'extrait ne précise ni les montants ni les bénéficiaires.",
+      "why_it_matters": "Les investissements de Nvidia dans l'écosystème français éclairent la question de la souveraineté de l'IA en France.",
+      "entities": [
+        "Nvidia",
+        "JDN"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "d2218855992d9f8e",
+        "title": "Bank Indonesia narrowly expected to hold interest rates despite market turmoil",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNTklTTEZCYlRSNmVCNVNkb0Nybkd0cUNtNGpDQ28wT0lnclBoMlAxUlNPd3BycE5KRzZjTU1aOFcyWDJTbUhtcmVCWWVPdEs1d05GWHZJdnl2WHdSS1YxQ3E3ajNvLVB6a3RUcVpJTVUzdEZGMEgxaGZmLXdwV2R5QkEtWlltOXVoTGZZZDI5Y3pzS1dpcWJGM3UtYzQ2VDVPS1oyNzgyYm1RUmctOXR2eVN1YzJ2UzhjM1prV2xMd2FMeU45cmlpdk5n?oc=5",
+        "source": "Reuters",
+        "published": "2026-10-19T09:13:45+00:00",
+        "summary": "Bank Indonesia narrowly expected to hold interest rates despite market turmoil Reuters",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "La Banque d'Indonésie devrait maintenir ses taux d'intérêt de justesse, malgré les turbulences de marché. Les prévisions sont serrées.",
+      "why_it_matters": "Une décision de banque centrale émergente dans un contexte de tensions de marché illustre l'arbitrage entre stabilité monétaire et soutien à la devise.",
+      "entities": [
+        "Bank Indonesia",
+        "Reuters"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "164fb4e8ecc5f5cf",
+        "title": "Foreign outflows, rising yields weigh on Indian markets; earnings to drive recovery: HSBC",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQWXB1VERuZ2NtNlZUSzRVY1A3WlNqVEt4LTVuT3ZRSzdjcTRvWmFLdVBveS1zRm0zSUtLQkJJV1RvNGpneWdkT2hFR2M5X1lLYU5qcmRQTUlsZWt1UEpMYko3djV6YzByN1U4a2lsaFNHeDNNaVF1eFhrYkV0b0Q4bW1EYWFJQ0ViOFBxUkFfOFcxOXZHYWRDWXFBS0Jpd1I3WXhtLUw5LU9BQXdNcEgycjREUGlhUFowaHlzSTNjSVlTalNZd2hncW5ROGFvYks40gHWAUFVX3lxTE5DWldEMGEwN09JbGpDeWRwcldVNU1yaTQ5OUVSaWVTYkFKeDhCdVdoeE44OFV1a0JBOEstVUI5ckhBazllWGdmU1owb0s3dFV0OG1hVTQtelFiN3VvcWxhS0hUUmhmZnNha01xTE5YZW5CWGZqNEd4ZndLX09RQjZveERSbzVVZlVTM1NCU1N1NmphRFRiOV80RkthUFQxYXlGdFRxWXRaYzBET1dMUUQ2NF9RMjJMMEt6OEJIOThLSmtheEJ3ZHJFUEhjaEdoWlVvT2tWLVE?oc=5",
+        "source": "Firstpost",
+        "published": "2026-10-19T09:13:38+00:00",
+        "summary": "Foreign outflows, rising yields weigh on Indian markets; earnings to drive recovery: HSBC Firstpost",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Les sorties de capitaux étrangers et la hausse des rendements pèsent sur les marchés indiens, selon HSBC. La banque anticipe une reprise tirée par les résultats des entreprises.",
+      "why_it_matters": "Les flux étrangers et la remontée des taux obligataires sont des variables clés pour comprendre les marchés émergents.",
+      "entities": [
+        "HSBC",
+        "Firstpost"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "6c6da9e59922bfec",
+        "title": "L'Allemagne copie le \"Choose France\" de Macron pour trouver 4.100 milliards d'euros mais la montée de l'extrême droite glace les investisseurs",
+        "url": "https://www.bfmtv.com/international/l-allemagne-copie-le-choose-france-de-macron-pour-trouver-4-100-milliards-d-euros-mais-la-montee-de-l-extreme-droite-glace-les-investisseurs_AN-202610190356.html",
+        "source": "bfmtv.com",
+        "published": "2026-10-19T09:10:18+00:00",
+        "summary": "Réuni ce 19 octobre à Berlin, le sommet \"Invest in Germany\" vise à attirer les investissements nécessaires à la relance de l’économie allemande. Mais l’instabilité politique et la montée de l’extrême droite inquiètent les investisseurs, alors que le pays doit mobiliser plusieurs centaines de milliards d’euros d’ici 2035.",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Le sommet « Invest in Germany » s'est tenu le 19 octobre à Berlin pour attirer des investissements nécessaires à la relance allemande. Le pays doit mobiliser plusieurs centaines de milliards d'euros d'ici 2035, mais l'instabilité politique et la montée de l'extrême droite inquiètent les investisseurs.",
+      "why_it_matters": "Le risque politique allemand pèse sur l'attractivité de la première économie européenne et sur le plan d'investissement public.",
+      "entities": [
+        "Invest in Germany",
+        "bfmtv"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "5d22b94345cdd89e",
+        "title": "« Hey Joe, réserve-moi une voiture pour une journée en montagne » : j'ai testé pour vous les agents IA grand public qui fleurissent en Californie",
+        "url": "https://news.google.com/rss/articles/CBMisAJBVV95cUxNTWhwMXpXY2xSbVgxYzVhdFJvUWdpdkNjOUpialNxbDd6RVlFWjFPaFNfN0dUSUxmZDg4YnhiZW9Ra0NoalFjLUNWZjR0UzNOUlQ2OHZ6Y3hyb281bC1UelVOcWFyTkp5a2lBYnF5UFJ1YmozeV9ESUpfSkp5RzZvZW5GeXo3NDd3ZThndGw0cFlqdTd3aWtOdVNxQ0FodDZDMDNHc19fT01TZzJwWW5GZ1RJTVJiSmktTkxmQVMwbXRlOVRjY3UwRlZSM2s1bklzQ19FTElYd0JucjU0SUhnVWVubEtmR1B3Q0h6NHNvU0RTMVBIX2lKZWJvZElnUktSWGNHMHQ0akJKWlFOMnFrMER5SFFLcS02WC1aaWVma2cyMzRORmVLU1BjSnBKZVFC?oc=5",
+        "source": "Les Echos",
+        "published": "2026-10-19T09:10:08+00:00",
+        "summary": "« Hey Joe, réserve-moi une voiture pour une journée en montagne » : j'ai testé pour vous les agents IA grand public qui fleurissent en Californie Les Echos",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Un journaliste des Echos a testé des agents IA grand public en Californie, capables par exemple de réserver une voiture. L'article relate une expérience d'usage.",
+      "why_it_matters": "Les agents IA sortent des laboratoires vers le grand public, ce qui pose la question de leur fiabilité et de leur adoption.",
+      "entities": [
+        "Les Echos"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "b327983725873259",
+        "title": "AI researchers stranded Claude on a virtual desert island. It started to “play.”",
+        "url": "https://www.technologyreview.com/2026/10/19/1147095/ai-stranded-claude-virtual-desert-island-play/",
+        "source": "technologyreview.com",
+        "published": "2026-10-19T09:08:05+00:00",
+        "summary": "What do AI agents do if you don’t tell them to do anything? The answer looks a lot like play. Researchers repeatedly stranded them alone on a virtual desert island for 30 hours in an experiment reminiscent of the movies Cast Away or Home Alone. The agents—copies of Claude Opus 4.7 nicknamed Eko—were able to…",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Des chercheurs ont laissé seuls sur une île virtuelle pendant 30 heures des copies de Claude Opus 4.7, surnommées Eko. Les agents se sont mis à « jouer » en l'absence de consigne.",
+      "why_it_matters": "Ce type d'expérience sur le comportement autonome des agents IA alimente les débats sur leur contrôle et leur sécurité.",
+      "entities": [
+        "Claude Opus 4.7",
+        "Eko",
+        "MIT Technology Review"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "2427376fedceeeb8",
+        "title": "Where the decision gets made: Timberline Bank and the case for banking close to home",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOT2ZsUjRoMlV3RC1QSDg4SElUdVdwZU90aVJrSWRESlhjX3BqanRXT0JBclZYa3IzNHlxZXVIN0xCZlJkUmtiVkJSb0hYN25iSUF0bm5RUU45TU9weEFZdk9TNjBEV24tUk1Cb2FSZmFyUHM1eW1JZ240dGRtSmJRSUw2ZVpReTItYTdncFNndXRVd0ZOY0F3dVNEXzN6R0p1UWNoRXJtOFoyVUlQYkRfUFhNTURnYjZTU2x6VFVCV0lubFUzRktjUVF4UTh2T1k0OGdB?oc=5",
+        "source": "Aspen Daily News",
+        "published": "2026-10-19T09:05:45+00:00",
+        "summary": "Where the decision gets made: Timberline Bank and the case for banking close to home Aspen Daily News",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 3,
+      "summary_fr": "Article de promotion sur Timberline Bank, une banque locale, et l'intérêt de confier ses décisions de crédit à des acteurs proches. Il s'agit d'un contenu très local.",
+      "why_it_matters": "Intérêt limité, reflète toutefois la tendance des banques régionales américaines à se positionner sur la proximité.",
+      "entities": [
+        "Timberline Bank",
+        "Aspen Daily News"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "62abe77e3ca2b0d2",
+        "title": "Santander s'allie à NVIDIA pour se doter de nouvelles capacités d'IA",
+        "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPQ3lYbk4zcEx5ZkNIWl9iTjZhbXJyQWZ5UEZKUXhFR1pGNnJyTDlaVndZZk9ZWXI1ZEJvMV9seGRDdmVaaUhKZXlsenY4S1VoT3FYOFpmSnItV0J6Z2g3dVBuZ1RLUDhheTJCUzEzT1ZOWWJZVFU1OWZrMUVkOTJFOVpDTWk1Q3lPQXBxYmJLbS1FOFhfUlQza19ncUJMV0ZyLXU5LS1DbGktUVdmV3lKMDY3MVozU1FvR2xQdXZNdUVrTlRnNFpJSkZiRHZ1c0U3YUt3ZWdQbVBCS09ZbDRrb3NYSFrSAeQBQVVfeXFMT0N5WG5OM3BMeWZDSFpfYk42YW1yckFmeVBGSlF4RUdaRjZyckw5WlZ3WWZPWVlyNWRCbzFfbHhkQ3ZlWmlISmV5bHp2OEtVaE9xWDhaZkpyLVdCemdoN3VQbmdUS1A4YXkyQlMxM09WTlliWVRVNTlmazFFZDkyRTlaQ01pNUN5T0FwcWJiS20tRThYX1JUM2tfZ3FCTFdGci11OS0tQ2xpLVFXZld5SjA2NzFaM1NRb0dsUHV2TXVFa05UZzRaSUpGYkR2dXNFN2FLd2VnUG1QQktPWWw0a29zWEha?oc=5",
+        "source": "Boursorama",
+        "published": "2026-10-19T09:05:00+00:00",
+        "summary": "Santander s'allie à NVIDIA pour se doter de nouvelles capacités d'IA Boursorama",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 8,
+      "summary_fr": "Santander s'allie à NVIDIA pour développer de nouvelles capacités d'intelligence artificielle. L'extrait ne précise pas les montants ni le périmètre du partenariat.",
+      "why_it_matters": "Un grand groupe bancaire européen qui s'appuie sur Nvidia illustre l'adoption de l'IA dans la finance, sujet d'entretien fréquent.",
+      "entities": [
+        "Santander",
+        "NVIDIA",
+        "Boursorama"
+      ],
+      "related": [
+        {
+          "title": "Banco Santander, Nvidia Expand AI Collaboration to Cut Banking Costs",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVGE4TERJSEhUVDNBQy1BNXVGajVSVzdzVDhpUjZZZEdjTXpXREt0ZW8yRk5FcTJ6SDZ2SEtuc0Q1aEdvZy1iYjlSRlZJQl8xMkNiQzlHSEIwamJaZUVaVDcwWnBPVEh0blV1VDZqSnNSNDFGcVd4OEU2dFJGNlB6RTdraGVhZENtZHpSbDNpdi1VbGdLN3dzWEVqX2ZUZHlKVlRxXzUxOVJ5aHBWeFk1U1RLM1B5Y2hWNHJiWA?oc=5",
+          "source": "marketscreener.com"
+        },
+        {
+          "title": "Santander Turns to Nvidia to Build New AI Banking Capabilities",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVEtnc2E3c0VteThUaG5Ub0R4OEZZcEhWWlVXb3NhSGpyY3VENm5hVTdaZTlSZEdVZmg1cWV4Qmh4ZEIxMm9SdWtINGRQOE92Q1MyTzl6UTNpbXpfODdxUml4VHEzQnMta3VnY1lvU0E4Y2JjcHJQWjQ5WDRPc2Exd1NIZmsxa3BESDJodEtyVTNmNkVIWV8wNHpRT1pwNVRhMUtGWHpGRQ?oc=5",
+          "source": "PYMNTS.com"
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "4a1b528a8980df7d",
+        "title": "The next AI decision financial institutions must get right",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORGQ1dnM2N0h1SnpGNzd3dzVlc3pTa0I0VldLOGF3TFJDdDNpNXZhbnpfRE9scGN0QzJKcUpPa3hUdUpOVTBLajhYXzNYNldPWnpzbGRSY1hFOGlVdmJwZjh1NFNueEZZbk9LTXpVTWd4aU51b1Vnb3dqcUE5QVlZNjN5OHprVHpuaTN0Sng4TUxMQnNNUVFLaTB3OWJ4Q3p1M2c?oc=5",
+        "source": "Banking Dive",
+        "published": "2026-10-19T09:01:46+00:00",
+        "summary": "The next AI decision financial institutions must get right Banking Dive",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Banking Dive aborde la prochaine décision liée à l'IA que les institutions financières doivent bien prendre. L'extrait ne détaille pas les options évoquées.",
+      "why_it_matters": "Les choix stratégiques en matière d'IA sont au cœur des décisions des directions bancaires.",
+      "entities": [
+        "Banking Dive"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "8e12719927f006ac",
+        "title": "Before you buy another AI tool, ask this question",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNNWRSYlhTRFVkbUVvd1MyblZDTFpwUzVYWDY0NnRta0ZQdFVmU1l0cm4tN0ZsQUtwSGE1ZE13OXF5ZEZtdzFsdDYzNkpaX0lUMU5xU1ZsTXc3U0JSVlplVHlqZHgyMDZvTUNVS1BMckZNY1BoeFdJcmJ2aUZlSXVQdUZNZzZhYlhUcGVKVkNrSWlUdTNG?oc=5",
+        "source": "Banking Dive",
+        "published": "2026-10-19T09:01:20+00:00",
+        "summary": "Before you buy another AI tool, ask this question Banking Dive",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Banking Dive publie un article conseillant aux banques de se poser une question avant d'acheter un nouvel outil d'IA. L'extrait ne donne pas la question.",
+      "why_it_matters": "Le sujet touche à la gouvernance des achats technologiques dans les banques, utile pour les entretiens en conseil.",
+      "entities": [
+        "Banking Dive"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "19f98acef2106aa2",
+        "title": "How far can we push computing?",
+        "url": "https://www.technologyreview.com/2026/10/19/1145904/tr-explains-how-far-can-we-push-computing/",
+        "source": "technologyreview.com",
+        "published": "2026-10-19T09:00:00+00:00",
+        "summary": "MIT Technology Review Explains: Let our writers untangle the complex, messy world of science and technology to help you understand what’s coming next. You can read more from the series here. On the evening of December 29, 1959, at an American Physical Society meeting at Caltech, the physicist Richard Feynman gave a lecture called “There’s…",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "MIT Technology Review Explains revient sur les limites de la puissance de calcul, en rappelant la conférence de Richard Feynman de 1959 sur le sujet. L'article est une explication de fond.",
+      "why_it_matters": "Les limites physiques du calcul sous-tendent l'évolution des puces et les coûts de l'IA, utile pour comprendre le secteur des semi-conducteurs.",
+      "entities": [
+        "Richard Feynman",
+        "MIT Technology Review"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "1ec2f37431112b05",
+        "title": "What Fidelity National Information Services' AI Finance Tools Launch Means For Shareholders",
+        "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNN3B5MVltYlRQdDFnYUtQb0pLTy1BU05Sc0N1d2g4ZC1jTkU5Smc5WHdtLS05cHdIX0dUSncwUGtXYU5Vd1FQN2FwN0NINVY0T1pPVC1BRG5xTVdyM0taWFZWZmY2a0NsWGw4dTRtM2YxQlc2NTFCNVBrZmtsOWd5eGlHdHlsbHlIRGFKYXdaZWdkODVHOHpMLU5GZERuVnlpaWZBNHJlai01bVhtenFDZG5lTl9ySjhLZ1F5TE9DaDRkelNTR1ZCbmpKNXJYQlpKZ3BscmFXN2RGeXkyWVlCaUYzWmtNZUEtTWt6NGdpYUJCdFU1V2luZ1p6R3HSAYICQVVfeXFMT0gtLVFRUGktOE9BRy1uVkRXQ2dfeWQyeXlfTXd0WkFPN2hDNnczekh0Q0htWjdFZUVtcVZPM2h3Q0Q3Vmt0a29nT2tMcTg3azdHMHRkQ3BQSUswUWZPaS1IU25XR1lOUENwcjR6RktfcXFIU0tLUllEdkpfS3BRa0ZxUmZaelAwRDljeG04UWZDT182dE9URXNhRGVJb2h1bmt0WE9hdDRIMFhFajUyY25aQ2ViMU1wWkhWVFphSEFHeUJ5WjdETURHX0VxeWR5Q0MwcjBDYVlIVHppQ3QyYTNHVi1CQ2stMlFkbmZtdW4wQzFudjNoNk1idE5CXzM0V2pR?oc=5",
+        "source": "Simply Wall Street",
+        "published": "2026-10-19T08:57:51+00:00",
+        "summary": "What Fidelity National Information Services' AI Finance Tools Launch Means For Shareholders Simply Wall Street",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Simply Wall Street analyse le lancement par Fidelity National Information Services (FIS) d'outils financiers basés sur l'IA et leur effet pour les actionnaires.",
+      "why_it_matters": "Illustre l'adoption de l'IA par les prestataires de services bancaires et de paiement, un sujet utile pour les entretiens en fintech.",
+      "entities": [
+        "Fidelity National Information Services"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "dd4abc454254c6eb",
+        "title": "Le gouverneur de la Banque d’État appelle à une baisse ciblée des taux d’intérêt",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONnJ0YUZGOE5hcDBRQU1qTk4xSzZlYjFPSnA0ZXNLRU1xcHQxWXNVNmlkQ1BrdVkzblhKVzRYMlBqV0Nfc19lM2VhNUREY0xEZkcwblhUc0ZXYllSMHhRNnFqbkZNM3R1UXFVWGJqbTdONHZPMmhaX0NJVjBULW02ZERMOUgxUmJuQ0FqU19oRGNwa2x2R0lHUlQ2S1lnc0lOdzhZc2hLMDBtajFMRkxBNDFudw?oc=5",
+        "source": "lecourrier.vn",
+        "published": "2026-10-19T08:54:00+00:00",
+        "summary": "Le gouverneur de la Banque d’État appelle à une baisse ciblée des taux d’intérêt lecourrier.vn",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Le gouverneur de la Banque d'État du Vietnam appelle à une baisse ciblée des taux d'intérêt.",
+      "why_it_matters": "Montre comment une banque centrale émergente réfléchit à l'arbitrage entre soutien à la croissance et stabilité, utile en comparaison avec la BCE ou la Fed.",
+      "entities": [
+        "Banque d'État du Vietnam"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "9c5d5787d6e2eb78",
+        "title": "Building The Future Of Finance In The Age Of AI",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPdVg1SERpMTkyWXR5bmJHNUhKMEFIUlFFWUowUmh3SWhRYmtYVzlIRUliU3NhNFktNzNiblRsNm5MXzlQSXViV0xwdC15R25WcUZybjJ6N05RdVBTQUhVUjhYTmVBMGNQWDNpTlhDUXJYMVZkM05acEMxbm05LXk5X1EteWhaaTd6b1V2M19ZLTl1ZnVwbWlZeFBhaUo?oc=5",
+        "source": "Crowdfund Insider",
+        "published": "2026-10-19T08:52:42+00:00",
+        "summary": "Building The Future Of Finance In The Age Of AI Crowdfund Insider",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Crowdfund Insider publie un article sur l'avenir de la finance à l'ère de l'IA, sans détails chiffrés dans l'extrait.",
+      "why_it_matters": "Thème général de la transformation de la finance par l'IA, à relier aux cas concrets d'adoption en banque.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "894c6f4addef1e70",
+        "title": "Institutional Insights | Morgan Stanley: The U.S. stock market correction is nearing its end; prepare to allocate to risk assets.",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPR3pKbHVCSnd0MEIwRHV3TG1GN2hDZjVBRzgzUFdKN2RuWUR3U3lna2dEakladm5GbS03UWsyVzh1aEtuOVNJblRlOEhlWVRPVUEyYVNvclkwS2xxbmVuUk01YUJzNklObFJNWTRBSXdZdy1aaHZVenpTVmJzUmkwWlRnTVlOcWRGeDRwcXc0Nmllc1hBTE93T1RWTnBaRUhxM2c0S0trbUdLdE5jYkkyTHpZTWM?oc=5",
+        "source": "富途牛牛",
+        "published": "2026-10-19T08:51:58+00:00",
+        "summary": "Institutional Insights | Morgan Stanley: The U.S. stock market correction is nearing its end; prepare to allocate to risk assets. 富途牛牛",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Morgan Stanley estime que la correction du marché boursier américain touche à sa fin et recommande de se préparer à réallouer vers les actifs risqués.",
+      "why_it_matters": "Une prise de position d'une grande banque d'investissement sur le marché américain, utile pour suivre le consensus de marché.",
+      "entities": [
+        "Morgan Stanley"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a89a63930db728ef",
+        "title": "CAC 40 : la Bourse chute, les violences ravivent les inquiétudes sur la dette française",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMFdtRnczaDJiUmJkOHJNYzc4WnZMS09HMWxlNWVUQ3paM3JRYlZrZWs5S3Q1aU51dDRRV2YySFpqZEI0Y1g5MTlmR2hOQW1yZXhUbzByblg0TWMxYk5yRmY3QU9XWlZJRG9ldURsWXhCQnJTc0s1NERwUnZVTC16M0hSTW5rb09lejNBZkg0LWpRRTMwbzZjZXFsc2ZCZlBnREFNYmhLUEt0bUd5VkVQQUhPc2tEQWQ4N2pPeWZtdy1uUHhUZW5yS1NOYklvU2hN?oc=5",
+        "source": "Capital.fr",
+        "published": "2026-10-19T08:49:21+00:00",
+        "summary": "CAC 40 : la Bourse chute, les violences ravivent les inquiétudes sur la dette française Capital.fr",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 8,
+      "summary_fr": "Le CAC 40 recule à l'ouverture, les violences ravivent les inquiétudes sur la dette publique française.",
+      "why_it_matters": "Lien direct entre risque politique et spread de la dette française, à connaître pour tout entretien sur les marchés français.",
+      "entities": [
+        "CAC 40"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "1c6bc75f2042c04e",
+        "title": "Indonesia's Stock Market Selloff Deepens With Officials Set For MSCI Meeting",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNMGJ6empTam92RzdaSjdCdVF0T2hGTHVQd194alBOWGRHSGwtVmUyMy1VWnFtVHNUSTBPYkMwZHR3a1J6ZGJ4Q2JOWGhmOFg3VEFrcDZDQ0NrU1hha2ktSzNpQXF0ZzFfbklvcGhLVXFkYTVTNTFxeG5VR0lINHQ1NF8xLTk3ZTQ5ak56enpxTTNiLW5JU0NFSi02ejcySWI4WjB5UEdCb0ZlWVZ6eFVCN3Rja1FzOVJRLUhj0gHDAUFVX3lxTFBYOVIyQmQ2ZWp0LVcwRzdmSk1SZzFWMkxQQnVQUzI0czZFMXVEU1Ewa0hBLXRaZGFyVG9GaGtGVHA5ZlFQeEpZcXhYLTNTRm54TmRnZHRXSmNGTWI0YVVWUmxYbWI3emhxd1VhRHRUSmY5bHZwZi1VUzRONGVucDkxVmpZZC04T3pVNHFoUVU5M2hCSTJhMlc5T3VoTFA5NkEwUlc4ZmtkU0xKa1Z1UmRxM3BUUXBWbDFwVkNkeDJqTEc2aw?oc=5",
+        "source": "NDTV Profit",
+        "published": "2026-10-19T08:45:27+00:00",
+        "summary": "Indonesia's Stock Market Selloff Deepens With Officials Set For MSCI Meeting NDTV Profit",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "La Bourse d'Indonésie poursuit sa chute alors que des responsables se préparent à une réunion avec MSCI.",
+      "why_it_matters": "Une décision de MSCI sur le classement d'un marché émergent peut impacter les flux de capitaux étrangers.",
+      "entities": [
+        "MSCI"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "af02081c6b6fd86e",
+        "title": "Ordinateur sous le sapin : la pièce précise devenue hors de prix à cause de l'intelligence artificielle",
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNRmotVmVlT1Fibk1vc1NGemZESnN0MEp6QzFjRGtkSXlMR3JsazVfTWZRZ2c3MG1VbE5YRmZGb0VJaTZZTVJjdzRNVjRRMzJwUU9KOXNGSmpPS1JjSUFQNko2QnJGek5TWTZpaUZiSEhSUWd6SXFwVmQzQlFHZ3l6OENabGdvVG5WaE5RQXZwQnM3VzU1?oc=5",
+        "source": "Selectra",
+        "published": "2026-10-19T08:40:21+00:00",
+        "summary": "Ordinateur sous le sapin : la pièce précise devenue hors de prix à cause de l'intelligence artificielle Selectra",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Selectra explique que la demande liée à l'intelligence artificielle a fait monter le prix d'une pièce d'ordinateur à l'approche de Noël.",
+      "why_it_matters": "Illustre l'effet de la demande IA sur la chaîne d'approvisionnement des composants électroniques.",
+      "entities": [
+        "Selectra"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e160ad68aeed64f8",
+        "title": "Bank of America Identifies Technoprobe and Soitec as Preferred European Semiconductor Stocks",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbGw1UzhBazE1Y1FpWlVlLTU5dmlRX19SeHl3M19xYUNCM09KSm9nQ0xDWUJjQ1htWFpob1UwSXlOM2RfYWxPaml0UTViN2h5R1pHRUY5clpycEstZjFGYV91QUNzTUhEdlFNaEJmaTN3bTNaRGF1RUFKVWF0LXN6RTREQ08zV2dYdG1HMzhrOS1wS3lkTXc?oc=5",
+        "source": "Yahoo Finance UK",
+        "published": "2026-10-19T08:39:14+00:00",
+        "summary": "Bank of America Identifies Technoprobe and Soitec as Preferred European Semiconductor Stocks Yahoo Finance UK",
+        "feed_theme": "banques"
+      },
+      "theme": "ia_tech",
+      "relevance": 7,
+      "summary_fr": "Bank of America retient les sociétés Technoprobe et Soitec comme valeurs européennes préférées dans les semi-conducteurs.",
+      "why_it_matters": "Une recommandation de broker sur le secteur des semi-conducteurs européens, utile pour les discussions sur la chaîne de valeur de l'IA.",
+      "entities": [
+        "Bank of America",
+        "Technoprobe",
+        "Soitec"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "4bc7127b8c5f6677",
+        "title": "« Face à l'IA et au quantique, nous sommes tous débutants »",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPV1VqUXpBbWpXSFBjcDkyQ3JPQmlkLWZib1p4UHljU0VhTmRHd01zbnZycEcyU0MwQ2ljQlVCNzlEN1h2QWh3dllPQWVfMjJTMDBYRmRTNW5hdjRoSW1nbU12aEY2QjEyRVU1ZHNfWW8xVjFuOUVjUVRya2FTYThkeE9ka0tmYlpkcnNnbDMtRHBGUG1FYi1qUXk2MW9KOTg5QWREWnBzTVVzMW0wR2wyQ3d2a3FtQVVp?oc=5",
+        "source": "Futura, le média qui explore le monde",
+        "published": "2026-10-19T08:30:00+00:00",
+        "summary": "« Face à l'IA et au quantique, nous sommes tous débutants » Futura, le média qui explore le monde",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "Le média Futura aborde les enjeux de l'intelligence artificielle et de l'informatique quantique, en soulignant que tout le monde en est au stade de débutant. L'extrait ne donne pas d'élément chiffré ou factuel précis.",
+      "why_it_matters": "Article de vulgarisation générale, utile pour se faire une culture de fond mais sans information nouvelle identifiable.",
+      "entities": [
+        "Futura"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e0aa91cc48fcc49b",
+        "title": "French political turmoil spreads to markets as Paris-listed stocks, bonds and the euro fall",
+        "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE4yZ0RIWVU0dGdFR3VzT185QnhqcGFWRnZNZTlneWpIaUhVMlFqeF9pQmEtZm9SVE1GVnRMYVpiM2QwQm42QjZhUXp0ZGZhbnU2dm91TnlXWjNDbVlVNkdHQ2xic0VVTEo0aFNGWTBTZFRPYXZWMXF0VDlrWXU?oc=5",
+        "source": "CNBC",
+        "published": "2026-10-19T08:28:59+00:00",
+        "summary": "French political turmoil spreads to markets as Paris-listed stocks, bonds and the euro fall CNBC",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 8,
+      "summary_fr": "La crise politique française se propage aux marchés : les actions cotées à Paris, les obligations et l'euro reculent. Les tensions touchent ainsi simultanément la bourse, la dette et la devise.",
+      "why_it_matters": "Illustre comment un risque politique se transmet aux trois classes d'actifs (actions, taux, change), point clé pour un entretien sur les marchés.",
+      "entities": [
+        "CNBC",
+        "Euronext Paris",
+        "euro"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "22cfd8ace9c3faac",
+        "title": "Banco Santander, Nvidia Expand AI Collaboration to Cut Banking Costs",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVGE4TERJSEhUVDNBQy1BNXVGajVSVzdzVDhpUjZZZEdjTXpXREt0ZW8yRk5FcTJ6SDZ2SEtuc0Q1aEdvZy1iYjlSRlZJQl8xMkNiQzlHSEIwamJaZUVaVDcwWnBPVEh0blV1VDZqSnNSNDFGcVd4OEU2dFJGNlB6RTdraGVhZENtZHpSbDNpdi1VbGdLN3dzWEVqX2ZUZHlKVlRxXzUxOVJ5aHBWeFk1U1RLM1B5Y2hWNHJiWA?oc=5",
+        "source": "marketscreener.com",
+        "published": "2026-10-19T08:28:10+00:00",
+        "summary": "Banco Santander, Nvidia Expand AI Collaboration to Cut Banking Costs marketscreener.com",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 7,
+      "summary_fr": "Banco Santander et Nvidia élargissent leur collaboration en intelligence artificielle, avec pour objectif de réduire les coûts bancaires. L'annonce ne précise pas de montant dans l'extrait.",
+      "why_it_matters": "Exemple concret d'adoption de l'IA par une grande banque européenne, directement pertinent pour les métiers bancaires et conseil.",
+      "entities": [
+        "Banco Santander",
+        "Nvidia"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "1a93b399fb7cf347",
+        "title": "Pourquoi 57% des TPE-PME n'ont pas de stratégie pour l'IA malgré l'enjeu",
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQU0lpRkhrdFVnX3drLWhHWGtvZnhBLXk2X0c0aVJmVll0b3FCTHY0Q2l4VHpGS0VnZ0Jvbk5jQ1RTaUdqYjBDalZwUkJHVXFyblgwd0t5Q2VNSlB2aWEtVXZhdldtY1BLNlRHV0w5VElRZElJRmVQNmE2U004Y1FldXRuUW9LOXFMMjBHM1l4cnk3QngyMnQ3eVhpZVBSNHpyTk9TTWt3MWwyTWZheWh5ZnFudjcxTEFJa25QR2pKbGZNSXI3cU95Tmd1WVNvTG81dEpNRXhkUlZvMmNickp2eDR3?oc=5",
+        "source": "La Tribune",
+        "published": "2026-10-19T08:25:01+00:00",
+        "summary": "Pourquoi 57% des TPE-PME n'ont pas de stratégie pour l'IA malgré l'enjeu La Tribune",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Selon l'article, 57% des TPE-PME n'ont pas de stratégie pour l'intelligence artificielle, malgré les enjeux. Le chiffre est tiré de l'étude citée par La Tribune.",
+      "why_it_matters": "Donnée utile sur le retard d'adoption de l'IA dans le tissu économique français, souvent évoquée en entretien conseil.",
+      "entities": [
+        "La Tribune",
+        "TPE-PME"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "27c406f3076c48be",
+        "title": "M&T Bank’s Q3 Earnings Call: Our Top 5 Analyst Questions",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOUy1zb1Q3RWwtMGhyS3p3RndFYVR5amRVcHY2NUo0LVlMdjh1eWxVcVVoNnJGcEpWZjV3cGs4UENoa3dwbUJ5Ym1xNHplTlNMMU53RUlBdm9FR0FFX1FXOGdoLTFJdG9BeUxWdU5OQlRrWEQ0UEloSVBiNEt3QWZXRTl0WXhZLWFEeWVJZUZR?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-19T08:24:55+00:00",
+        "summary": "M&T Bank’s Q3 Earnings Call: Our Top 5 Analyst Questions Yahoo Finance",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "M&T Bank présente les principales questions posées par les analystes lors de son appel aux résultats du troisième trimestre. L'extrait ne détaille pas les chiffres.",
+      "why_it_matters": "Permet de suivre la santé d'une banque régionale américaine et les sujets qui préoccupent les analystes.",
+      "entities": [
+        "M&T Bank"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "737d5c063bd26d0d",
+        "title": "Power Players 2026: Adam Currie, First Bank",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNNUgxUVM3cW9rdWFSRHJvSUtrZXpXaUg3M0ZMQzZHOVhETkEwSExad3I4QXd3WWxicGtiOUQwT3dkeWk5OFB5ZTR6Tm1COGQ1ZFhjSmZnOHJ1c2JKV0dSMDgwWEhkMXRNQWI5V21ma01WWS1fNnVFVVBCSkxrcFd2N2ZySnpWU1l4LWY2OXVMcU5pT3BtVGVwT2l3MHBlTlZSUlJsTjdR?oc=5",
+        "source": "The Business Journals",
+        "published": "2026-10-19T08:20:00+00:00",
+        "summary": "Power Players 2026: Adam Currie, First Bank The Business Journals",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 3,
+      "summary_fr": "The Business Journals publie son classement « Power Players 2026 », qui met notamment en avant Adam Currie de First Bank. L'extrait ne décrit pas son rôle précis.",
+      "why_it_matters": "Profil de dirigeant bancaire régional américain, intérêt limité pour le lecteur français.",
+      "entities": [
+        "First Bank",
+        "Adam Currie"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "820a903c8bb0d247",
+        "title": "Cac 40 : «Le week-end ajoute une couche supplémentaire de risque politique pour les marchés»... La tension grimpe sur la dette française, le fossé avec l'Allemagne se creuse (et le CAC 40 souffre)",
+        "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNdkJNTURROU5EZklaYVNZR0xsR3JYcjRQNHZ3cjN2OHBacnJhclpUbXU2emtGVWRUTi0wc2lTRndYTHdpa0dlQUNiNC1zVUo3VUs4OE1YSURScTFwdWR0akFHLW52b1ZTWVgwWXpodnVyZWxSZnJxQWR0cUxlUVE3LVIxa2VBWlFKazJXa3QxNEVwbkdaNFE5M1hpWHFaMFhTaU0xaHkwSDZYWUJvbFQyQ3VGaXIzUXVHbW5BU3dxdkRIQWpCcUdQNkpVNndnSThZaS0teWFlNV84VjUyUUFwT1VCZ3NfMzJDMmZWTDhTSWdXa2J3aW9VWGpwb0RHbWROak1ZNDNEcWlzLTV5dkFJOTVMZXFmUGx2NmlEdUlWQ0JCWFJmMXJLeVNKWTQ1UXpnT1I3SFYyQ0Y3Q2dNMkE?oc=5",
+        "source": "BFM Bourse",
+        "published": "2026-10-19T08:17:55+00:00",
+        "summary": "Cac 40 : «Le week-end ajoute une couche supplémentaire de risque politique pour les marchés»... La tension grimpe sur la dette française, le fossé avec l'Allemagne se creuse (et le CAC 40 souffre) BFM Bourse",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 9,
+      "summary_fr": "Le CAC 40 recule sous l'effet de la tension sur la dette française, l'écart de taux avec l'Allemagne se creusant. Les analystes évoquent un risque politique supplémentaire lié au week-end.",
+      "why_it_matters": "Mouvement majeur du marché français lié à la dette souveraine, à suivre pour comprendre le spread OAT-Bund et le lien entre politique et finances publiques.",
+      "entities": [
+        "CAC 40",
+        "BFM Bourse"
+      ],
+      "related": [
+        {
+          "title": "CAC 40 : la Bourse chute, les violences ravivent les inquiétudes sur la dette française",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMFdtRnczaDJiUmJkOHJNYzc4WnZMS09HMWxlNWVUQ3paM3JRYlZrZWs5S3Q1aU51dDRRV2YySFpqZEI0Y1g5MTlmR2hOQW1yZXhUbzByblg0TWMxYk5yRmY3QU9XWlZJRG9ldURsWXhCQnJTc0s1NERwUnZVTC16M0hSTW5rb09lejNBZkg0LWpRRTMwbzZjZXFsc2ZCZlBnREFNYmhLUEt0bUd5VkVQQUhPc2tEQWQ4N2pPeWZtdy1uUHhUZW5yS1NOYklvU2hN?oc=5",
+          "source": "Capital.fr"
+        },
+        {
+          "title": "French political turmoil spreads to markets as Paris-listed stocks, bonds and the euro fall",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE4yZ0RIWVU0dGdFR3VzT185QnhqcGFWRnZNZTlneWpIaUhVMlFqeF9pQmEtZm9SVE1GVnRMYVpiM2QwQm42QjZhUXp0ZGZhbnU2dm91TnlXWjNDbVlVNkdHQ2xic0VVTEo0aFNGWTBTZFRPYXZWMXF0VDlrWXU?oc=5",
+          "source": "CNBC"
+        },
+        {
+          "title": "« La crise politique et l’image d’une France quasi insurrectionnelle risquent de contaminer les tensions budgétaires »",
+          "url": "https://www.lemonde.fr/economie/article/2026/10/19/la-crise-politique-et-l-image-d-une-france-quasi-insurrectionnelle-risquent-de-contaminer-les-tensions-budgetaires_6797498_3234.html",
+          "source": "lemonde.fr"
+        },
+        {
+          "title": "L'Europe ouvre dans le rouge, les violences du week-end pénalisent le CAC 40",
+          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOZXNDVldMRDd6QjdWUDc0eGhpdDdITEMzN0gxbHpLODFaZEZMa3cwbU5adnU5WUhtWGtMeF80blBOVklnZG5VLU9QN1NVWkdseDdNcnFYOVlNekVfUUw3OGxDdnhHVjAyZWcwVUFNUXN5WWRRRzFrWWxjLW9wUC1HZ05maTNLdmxwWWpMcm9QRkV4RVZhcVhwWkw4VDJFWWI2Q1UxWW1FVmdWOFpzWEVoNGRZNVhjU3NzNmtHOXJWZXJodk5qbDZWXzdZZzcyUkhTSlNGaG5ac1V5UTZZLV83SUlPOERkM0JJYWEwM1RR0gHuAUFVX3lxTE5lc0NWV0xEN3pCN1ZQNzR4aGl0N0hMQzM3SDFseks4MVpkRkxrdzBtTlp2dTlZSG1Ya0x4XzRuUE5WSWdkblUtT1A3U1VaR2x4N01ycVg5WU16RV9RTDc4bEN2eEdWMDJlZzBVQU1Rc3lZZFFHMWtZbGMtb3BQLUdnTmZpM0t2bHBZakxyb1BGRXhFVmFxWHBaTDhUMkVZYjZDVTFZbUVWZ1Y4WnNYRWg0ZFk1WGNTc3M2a0c5clZlcmh2TmpsNlZfN1lnNzJSSFNKU0ZoblpzVXlRNlktXzdJSU84RGQzQklhYTAzVFE?oc=5",
+          "source": "Boursorama"
+        },
+        {
+          "title": "Violences du 17 octobre : la Bourse de Paris en nette baisse après les évènements du week-end",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQR3piSzJ2Tm55VHVmMkYxVzZIZzJvbHlCQUI5UjBSWFJrSDllTDlYWGtzdWdQSWVzWS1IQzZrTWlIOEhKZkt1SmdkUDZST1lCd0hpVlNjaHh1M0hUQ2k5T3JmUktkM0ZOMEpKU0FaUWYyY1pzWTNUZm5JOXJsam51LWJuQnFabzZOTzNVOW5zRnZWdF9mV0xQZmJwZmpBdnpVbkpLNkdkbV9jaHlNZkRGUGRn?oc=5",
+          "source": "Le Figaro"
+        },
+        {
+          "title": "Le Cac 40 perd plus de 1% après les violences en France, nouvelle hausse des rendements obligataires du pays",
+          "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNVTIzcnBfdVpGbWtWVDFpaHdHd1d0eTd3Z1NpbHJHVUJsU0U2Q2hXRThhOGM0TTRzX2JSbGprTFo1ZGljTXl4SlJOM3ZHXzNWbjFodkRNQkI5MjNXS1l3R01TSWM1VlFEel80TDFJa2FYOFo2emZ5STVwbjVqWExZeDZ4OTlEdmZaaW1falcteXozYnlSSURBRjZlN1VkWDVKcGpYTUFwOXotblQxOWVubHBBb3F5WEpRaURYZnY4OS1EZjRFYmlSemg1a0E3b3N2YmhYUEhRMmxvOC1yNVQxMUhXM1ZxRnQwaV90S2dOQW9nX041WlNJbmU4UFU3Zw?oc=5",
+          "source": "Investir Les Echos"
+        },
+        {
+          "title": "Le Cac 40 perd pied : « Les événements du week-end soulignent le délicat équilibre que le gouvernement doit trouver entre satisfaire la population et les marchés",
+          "url": "https://news.google.com/rss/articles/CBMizAJBVV95cUxQRDBGMDBtRUVrNmdBUERtQ05FaWdxMldCT1RlMlRTVWJzTnBuY2hOTmJ5SXRMc25nelp4Y2RIeXU1a1ozaGlrY2hicjFjVFFGTDFTZTRMM05VY0FxSFRhVXpISjNsQlhDWmpLZGtBbi0yRW9MV1EwU1hndlAzSFd0b1NSYlYxOWZQS3JhYUhSNG9iR2tlMDBhN00xc1hqQXN4alJ5VWdKYVJMUldSZjVzZUxkZFdHUEFRNzJFQUQzNV9vLVhEcTlyckFkUVVOYnZSaFViQnllc2IxNWRfYlBVRExFOHJDbWtNUE1RZ2tRZFpQa0NaaDRoTktIOEI0MzlTcExfRHpGcldPd0dfckxPTjEtTllNUkd4cWY1NVFNaVFURmJ4OEE0VnJqazRQcEVEbzBnN0xORGhNSmhuRVlKc2NXdzZPT1ctT21zaQ?oc=5",
+          "source": "Investir Les Echos"
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "b1b9ecc5e24bc568",
+        "title": "« La crise politique et l’image d’une France quasi insurrectionnelle risquent de contaminer les tensions budgétaires »",
+        "url": "https://www.lemonde.fr/economie/article/2026/10/19/la-crise-politique-et-l-image-d-une-france-quasi-insurrectionnelle-risquent-de-contaminer-les-tensions-budgetaires_6797498_3234.html",
+        "source": "lemonde.fr",
+        "published": "2026-10-19T08:05:53+00:00",
+        "summary": "Les difficultés budgétaires de la France étaient jusque-là considérées comme sérieuses, mais gérables à la condition de maintenir un vrai cap politique. La casse et les pillages lors des manifestations du 17 octobre pourraient éloigner cet horizon, souligne Eric Albert, journaliste au service Economie du « Monde ».",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 8,
+      "summary_fr": "Eric Albert (Le Monde) estime que la crise politique et les violences lors des manifestations du 17 octobre pourraient compromettre la trajectoire budgétaire française, jusque-là jugée sérieuse mais gérable. L'analyse porte sur le risque de contagion des tensions budgétaires.",
+      "why_it_matters": "Donne le cadre d'analyse qui explique la hausse des taux français : la crédibilité budgétaire conditionne le coût de la dette.",
+      "entities": [
+        "Eric Albert",
+        "Le Monde"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "b508cfff5fd71dce",
+        "title": "Hameçonnage : la banque doit rembourser sous 1 jour ouvrable, et prouver une négligence grave après, tranche la CJUE",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbnpjYzV2QW5XcUROTjlTZzVZT3NUUzR5UmoyR2FSRi1RSGJkdFVVVUhxN3lpTGJYUjBZa2NTMHJSRWw5UE5aZ0NwelIzTG1BZkV2elVFWF83WFJWemlOTURJTkxwY19JZU9KWXdJRk5pNHJzekxRY0ZaeDlaN0h6RDJRWG81aU1pWGhVMHhIMTZxR2Y1czcxaE5sbzFlSVVsOHRJ?oc=5",
+        "source": "JeChange",
+        "published": "2026-10-19T07:55:00+00:00",
+        "summary": "Hameçonnage : la banque doit rembourser sous 1 jour ouvrable, et prouver une négligence grave après, tranche la CJUE JeChange",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 7,
+      "summary_fr": "La CJUE juge qu'en cas d'hameçonnage, la banque doit rembourser le client sous un jour ouvrable, et ne peut ensuite exiger la preuve d'une négligence grave qu'à partir de ce moment. La décision encadre la responsabilité des banques face aux fraudes en ligne.",
+      "why_it_matters": "Jurisprudence européenne qui modifie la charge de la preuve entre banques et clients, à connaître pour les sujets régulation et fraude.",
+      "entities": [
+        "CJUE",
+        "JeChange"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "73072536c8c15704",
+        "title": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris",
+        "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
+        "source": "Boursorama",
+        "published": "2026-10-19T07:54:31+00:00",
+        "summary": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris Boursorama",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "Page de cotation de l'action BNP Paribas sur Euronext Paris. L'extrait ne contient pas de cours ni de variation chiffrée.",
+      "why_it_matters": "Page de cotation générique, utile seulement pour consulter le cours en direct.",
+      "entities": [
+        "BNP Paribas",
+        "Euronext Paris"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "0043f0717f2d8f7c",
+        "title": "L’IA en Outre-mer, véritable levier de développement ou simple promesse ?",
+        "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAwSzhxMWdlckc2dEhSNGhyUkpLS2VFUVl4U1RyT2lSSDA4ZjhzeDBMekF5NzNLemhJRkxWcjNmelFqWmtWY2xKcmlBRjFadjJlWVA4U2xsdEpPR1kwdC1BNnkyaw?oc=5",
+        "source": "FranceTvPro.fr",
+        "published": "2026-10-19T07:52:35+00:00",
+        "summary": "L’IA en Outre-mer, véritable levier de développement ou simple promesse ? FranceTvPro.fr",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "Article de FranceTvPro sur le rôle de l'IA dans les Outre-mer, présenté comme un possible levier de développement. L'extrait ne contient que le titre.",
+      "why_it_matters": "Donne un aperçu des enjeux territoriaux de l'adoption de l'IA hors de la métropole.",
+      "entities": [
+        "FranceTvPro"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "5c163a2bf2f8ad4e",
+        "title": "East West Bank (EWBC) To Report Earnings Tomorrow: Here Is What To Expect",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOOEY5T0pLbGVpdFFlVDJHRWpFTUZacXRJc3Bnc1ZNX1BOYkZ0N0ViMjJWdTdYem94QTk5ZWFXakNHTzJYU05OS1hUVWZJbEJWb1FDVl9vRDJhd0h3QVpUbXpyT0VkbHl0a2FyU0I1Yk00TjN5dklyU3U3WVRsOEFYSlc2V0VjbG1zNTdrSWd1eXljcG5Obi1peVBhQTgtRGU1WGZHZmppUFRUa1RFckVoamxMMjZnaDJYSlVGR1V5NFpINTV1ZFNvNw?oc=5",
+        "source": "StockStory",
+        "published": "2026-10-19T07:41:42+00:00",
+        "summary": "East West Bank (EWBC) To Report Earnings Tomorrow: Here Is What To Expect StockStory",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "StockStory annonce que East West Bank (EWBC) publie ses résultats le lendemain. L'extrait ne donne pas de chiffres.",
+      "why_it_matters": "Une banque régionale américaine publie ses résultats, utile pour suivre le secteur bancaire US.",
+      "entities": [
+        "East West Bank"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e9388cbfc7cf1650",
+        "title": "L'Europe ouvre dans le rouge, les violences du week-end pénalisent le CAC 40",
+        "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOZXNDVldMRDd6QjdWUDc0eGhpdDdITEMzN0gxbHpLODFaZEZMa3cwbU5adnU5WUhtWGtMeF80blBOVklnZG5VLU9QN1NVWkdseDdNcnFYOVlNekVfUUw3OGxDdnhHVjAyZWcwVUFNUXN5WWRRRzFrWWxjLW9wUC1HZ05maTNLdmxwWWpMcm9QRkV4RVZhcVhwWkw4VDJFWWI2Q1UxWW1FVmdWOFpzWEVoNGRZNVhjU3NzNmtHOXJWZXJodk5qbDZWXzdZZzcyUkhTSlNGaG5ac1V5UTZZLV83SUlPOERkM0JJYWEwM1RR0gHuAUFVX3lxTE5lc0NWV0xEN3pCN1ZQNzR4aGl0N0hMQzM3SDFseks4MVpkRkxrdzBtTlp2dTlZSG1Ya0x4XzRuUE5WSWdkblUtT1A3U1VaR2x4N01ycVg5WU16RV9RTDc4bEN2eEdWMDJlZzBVQU1Rc3lZZFFHMWtZbGMtb3BQLUdnTmZpM0t2bHBZakxyb1BGRXhFVmFxWHBaTDhUMkVZYjZDVTFZbUVWZ1Y4WnNYRWg0ZFk1WGNTc3M2a0c5clZlcmh2TmpsNlZfN1lnNzJSSFNKU0ZoblpzVXlRNlktXzdJSU84RGQzQklhYTAzVFE?oc=5",
+        "source": "Boursorama",
+        "published": "2026-10-19T07:30:51+00:00",
+        "summary": "L'Europe ouvre dans le rouge, les violences du week-end pénalisent le CAC 40 Boursorama",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 8,
+      "summary_fr": "L'Europe ouvre en baisse et le CAC 40 est pénalisé par les violences du week-end en France. Le mouvement fait suite aux événements du 17 octobre.",
+      "why_it_matters": "Les tensions sociales en France pèsent directement sur la place de Paris et sur les anticipations des investisseurs.",
+      "entities": [
+        "CAC 40",
+        "Boursorama"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "9f35c4f2dbc0d946",
+        "title": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
+        "source": "Boursorama",
+        "published": "2026-10-19T07:30:36+00:00",
+        "summary": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris Boursorama",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 2,
+      "summary_fr": "Page de cotation de l'action Stellantis (STLAP) sur Euronext Paris, sans information de cours dans l'extrait.",
+      "why_it_matters": "Page de cotation sans contenu d'analyse.",
+      "entities": [
+        "Stellantis"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "3eb6e7112e5fb97b",
+        "title": "Violences du 17 octobre : la Bourse de Paris en nette baisse après les évènements du week-end",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQR3piSzJ2Tm55VHVmMkYxVzZIZzJvbHlCQUI5UjBSWFJrSDllTDlYWGtzdWdQSWVzWS1IQzZrTWlIOEhKZkt1SmdkUDZST1lCd0hpVlNjaHh1M0hUQ2k5T3JmUktkM0ZOMEpKU0FaUWYyY1pzWTNUZm5JOXJsam51LWJuQnFabzZOTzNVOW5zRnZWdF9mV0xQZmJwZmpBdnpVbkpLNkdkbV9jaHlNZkRGUGRn?oc=5",
+        "source": "Le Figaro",
+        "published": "2026-10-19T07:27:08+00:00",
+        "summary": "Violences du 17 octobre : la Bourse de Paris en nette baisse après les évènements du week-end Le Figaro",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 8,
+      "summary_fr": "La Bourse de Paris recule nettement après les violences du week-end du 17 octobre. Le marché réagit à ces événements à l'ouverture.",
+      "why_it_matters": "Un choc politique et social intérieur peut faire baisser les cours et augmenter la prime de risque sur la France.",
+      "entities": [
+        "Bourse de Paris"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "b73c8c227b842609",
+        "title": "L’humain dans une époque de plus en plus façonnée par l'IA",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbVk5QW96WFFPX1I3M3FldGxyRC11UlpZYWxwVThNVjNnSkVLRFZEY0xwRGZpSkV3SHVaNm1jczlhRm9aRFJsUzJVbTBXMkZaWE52bGhRVFllMmFITWllRXVKbDg5UGxLSHY0YUVVUGtxV3NzVEI0QUNVNXNhZ1k3WFR2NzVlaXc0ZVlQMFhha1VYaHlNSTdJdlpaRWZkVENTVnpSd1NXVzB1dng3QWpoOElIVkY?oc=5",
+        "source": "Welcome to the United Nations",
+        "published": "2026-10-19T07:26:24+00:00",
+        "summary": "L’humain dans une époque de plus en plus façonnée par l'IA Welcome to the United Nations",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "Texte sur la place de l'humain dans une époque de plus en plus façonnée par l'IA, publié sur le site des Nations Unies. L'extrait ne donne pas d'éléments précis.",
+      "why_it_matters": "Éclaire le débat institutionnel international sur l'IA et ses effets sociaux.",
+      "entities": [
+        "Nations Unies"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "d4d4d3f78394c7ee",
+        "title": "Sam Altman’s World Targets Deepfake Fraud With New Banking Tools",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOelowRDJPNUhXYXpxdjl1V1lUdlVNNm9tZ21yZFpCcnNEb281NDNjeFUydGRGSURMN0ZRTExzcDVlWHJvXzd6eTRnSzJrQS0zZ3lBbnZVaktKeEw4WlotN2tCYWI1NVNNOEM1R1JoLUlKNXhqNmw3QnJDNVhlbnV5V2tFU1BDZkhFTG05WUQtWS15VFJjTDc0Wl81VmVDWnQtaEdF?oc=5",
+        "source": "CryptoRank",
+        "published": "2026-10-19T07:24:35+00:00",
+        "summary": "Sam Altman’s World Targets Deepfake Fraud With New Banking Tools CryptoRank",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "Worldcoin, société de Sam Altman, annonce de nouveaux outils bancaires visant à lutter contre la fraude par deepfake. L'extrait ne détaille pas les produits.",
+      "why_it_matters": "La fraude par deepfake devient un enjeu majeur pour les banques et les services de paiement, et les acteurs crypto-IA s'y positionnent.",
+      "entities": [
+        "World",
+        "Sam Altman"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "c798293edb2f352f",
+        "title": "CAC40 : les marchés prudents avant une semaine de résultats",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVEREZTlrZmJqeGhxVmh2bllxMUdEMlFQcGdPWGswbjBCUVExaExLNmItdDRQRUN4Znh3bkw5ajBQaEdCajl6bEVSOGU5bTVEeXF2RzJ2SmUxUkxfdms5UmNTN0JXVGpKUjVIVkc0WW5Dc1RvRE9rU2J6YW5SejdOaFp1NHQ3ZW56ZXlISnJ0RE9may1fYWZLSjJuN2F4cVU1WGZMQkNLbWNIejA?oc=5",
+        "source": "Le Revenu",
+        "published": "2026-10-19T07:23:00+00:00",
+        "summary": "CAC40 : les marchés prudents avant une semaine de résultats Le Revenu",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Les marchés européens se montrent prudents avant une semaine chargée de publications de résultats d'entreprises du CAC 40.",
+      "why_it_matters": "La saison des résultats est un moment clé pour lire la santé des grandes entreprises françaises.",
+      "entities": [
+        "CAC 40"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "70b90de9883cc8fc",
+        "title": "OpenWorld Signs Term Sheet to Finance Solar-Powered, Distributed AI Computing Network Initially Integrated with Residential Battery Storage with Tokenized Financing Program of up to $1 Billion",
+        "url": "https://news.google.com/rss/articles/CBMi_wJBVV95cUxPVzZNakxxUkRJUmxkaWhSMndrUVFpeWl5WjZUMFdzVExhM0RMV3poajdzZGRKNE1NMHZzX18xemh0b0VUa3REMnVWaGdIX0hCM3lSQkhvMTQzMUlhMmpPSVlzTE5tdGJvQmlnNEY0Yk9qcTFoOW80VkdnN09tMnVyWC1WZk9uejJGTTJtdUxYNzBSV3UyNV84SDE4REJlelNLdjd5bzNxMXNIMGdIWm9VMTdzRktBWjZLYkk4bUk3NVpEVVZuSk1Uc0JEV29PRDVYb1J6NzZhcWR2aVJJcWJNR25JX0twTjA1UDBWMzg0Nk9LR3dBLWxUeFVRR1ozVXEzSXlxdFZQRkp5X2l6bERXTjRqZ3VQVkxlSnp2eGlYanBFY0x4M0I1YWtLZ2pLUkstOE9FTVR3a3pUMmw3VlNhbWlnNzVfZlpjSGU5VV9zWkR0QlZscU9JU1lTeVZYQkRGVXlWMUFMOVhjUFpIajd1UHpWS3d3LWNlTDBiSnlLQQ?oc=5",
+        "source": "TradingView",
+        "published": "2026-10-19T07:19:41+00:00",
+        "summary": "OpenWorld Signs Term Sheet to Finance Solar-Powered, Distributed AI Computing Network Initially Integrated with Residential Battery Storage with Tokenized Financing Program of up to $1 Billion TradingView",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "OpenWorld signe un term sheet pour financer un réseau de calcul IA distribué, alimenté par énergie solaire et batteries résidentielles, avec un programme de financement tokenisé pouvant atteindre 1 milliard de dollars.",
+      "why_it_matters": "Illustre la convergence entre infrastructure IA, énergie et financement tokenisé, un modèle encore peu établi.",
+      "entities": [
+        "OpenWorld"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "2730db7ef8efeff5",
+        "title": "Le Cac 40 perd plus de 1% après les violences en France, nouvelle hausse des rendements obligataires du pays",
+        "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNVTIzcnBfdVpGbWtWVDFpaHdHd1d0eTd3Z1NpbHJHVUJsU0U2Q2hXRThhOGM0TTRzX2JSbGprTFo1ZGljTXl4SlJOM3ZHXzNWbjFodkRNQkI5MjNXS1l3R01TSWM1VlFEel80TDFJa2FYOFo2emZ5STVwbjVqWExZeDZ4OTlEdmZaaW1falcteXozYnlSSURBRjZlN1VkWDVKcGpYTUFwOXotblQxOWVubHBBb3F5WEpRaURYZnY4OS1EZjRFYmlSemg1a0E3b3N2YmhYUEhRMmxvOC1yNVQxMUhXM1ZxRnQwaV90S2dOQW9nX041WlNJbmU4UFU3Zw?oc=5",
+        "source": "Investir Les Echos",
+        "published": "2026-10-19T07:16:51+00:00",
+        "summary": "Le Cac 40 perd plus de 1% après les violences en France, nouvelle hausse des rendements obligataires du pays Investir Les Echos",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 8,
+      "summary_fr": "Le CAC 40 perd plus de 1 % après les violences en France, tandis que les rendements obligataires français augmentent à nouveau. La hausse des taux souverains signale une prime de risque accrue.",
+      "why_it_matters": "La hausse des rendements de la dette française renchérit le financement de l'État et intéresse directement les étudiants en marchés de taux.",
+      "entities": [
+        "CAC 40",
+        "Investir Les Echos"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a6c140585c64eabb",
+        "title": "Hyakujushi Bank (TSE:8386) Stock Could Be Overvalued Given Its Earnings Premium",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPbloyUHhQYWhzWFNnUFJyVkcyRnJfS1djRHNDLU9yd19iVkF3NExvUmd5ZTBfNWtuQVZjLWtPOWFUYTJNYVNtdVlEMmh2ajZhcGJueDhuNTQyamFlZi1KV2FJaThrQzdWdE4yVk54MWZTNE1uUXJwVk5ITzlFM0pockJwMWppUDlIUHFlT0hVTURObGJGT1JkMDhBVQ?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-19T07:15:07+00:00",
+        "summary": "Hyakujushi Bank (TSE:8386) Stock Could Be Overvalued Given Its Earnings Premium Yahoo Finance",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 3,
+      "summary_fr": "Article de Yahoo Finance sur la valorisation de la banque japonaise Hyakujushi (TSE:8386), jugée potentiellement surévaluée au regard de ses bénéfices.",
+      "why_it_matters": "Exemple d'analyse de valorisation par le PER dans une banque régionale japonaise.",
+      "entities": [
+        "Hyakujushi Bank"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "973fed71c0d6e4b3",
+        "title": "L'intelligence artificielle dans les services publics - Johan Theuret, Le Sens du service public",
+        "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOU21EeFpnZmNPRlpibTloNVZhVWd0aDRYcGJNTnc1d2tCemxCOWxSZW0xOUtuSkwxVmw5UlIwaGFtZU91eV92cTRoMGQ3WWxYaEExWURqMjFDVFBKYmFRQWdKTEo3MGsxSHIxckNuYlo0c2x0SlQwakpSR19lWFU2NUIwQTd1TlJFRjVPR3Z1YjU4elVNczdaOUNJNlNtZHhBa3NBTEJPdkJEMnlEREU0Y1ZGVHVPRk1mLWZZU1RTYmZjUF9YVURCOG1wVW5pbmdtQXpqdEZsY3ZzVmZLdjMwa2F1UUl3UlRJTllOLTBSRVN6V0VFb0E1amphM19HMnNUVDd3?oc=5",
+        "source": "Éditions WEKA",
+        "published": "2026-10-19T07:15:06+00:00",
+        "summary": "L'intelligence artificielle dans les services publics - Johan Theuret, Le Sens du service public Éditions WEKA",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Intervention de Johan Theuret sur l'usage de l'intelligence artificielle dans les services publics. L'extrait ne donne pas de contenu détaillé.",
+      "why_it_matters": "Donne un éclairage sur l'adoption de l'IA dans le secteur public français.",
+      "entities": [
+        "Johan Theuret",
+        "Éditions WEKA"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "325423733544f442",
+        "title": "Suruga Bank (TSE:8358) Stock May Trade At A Discount To Fair Value",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNeFR0dHVrLThxTUpqZ3lITTBFdHJ3a3hmTTA1N0VZaWpZaklPTlNFeFFyZG0zT3JvdjVLNzFQdS1QYV9KRk1qOTljeEdxVkkzZTNuSl9mUWxoaUtSWjEwOHVpamlaUjByRFV1RWJQTFZQRnBNZ3haWkQ0Mm9ZT3dwQkw5dzdlNnBrcjgzLXB4TlVHcUZGeFE?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-19T07:08:57+00:00",
+        "summary": "Suruga Bank (TSE:8358) Stock May Trade At A Discount To Fair Value Yahoo Finance",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "Un article Yahoo Finance indique que l'action de la banque japonaise Suruga Bank (TSE:8358) pourrait se négocier avec une décote par rapport à sa juste valeur estimée. L'extrait ne donne pas de chiffres.",
+      "why_it_matters": "Ce type d'analyse de valorisation sur une petite banque japonaise illustre la décote fréquente des banques régionales japonaises, utile pour comprendre les méthodes de valorisation.",
+      "entities": [
+        "Suruga Bank"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "0587ff007f075645",
+        "title": "Escroquerie au faux conseiller bancaire : un appel de votre banque vous signale une opération suspecte et vous demande d'appuyer sur la touche 1",
+        "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOMVFtQ3l0R3QtTXJRNklGcmRnRHlUQW1FaTdoN01MOFBaaGdqYzdyRG5JaVNEbWhublVpbXlsa2Y2Z1BZQk14TzhfaWFISkxsLWVkX1pTQVpQbUxFbFVKWEZyUlViVWlGTXNsTDJsR0owTjZBXy16a0RnbzBnc1RwR2QtcENPSTBuSGNQeW9SekNzRTFTTzdHR2JrZmZUckVlcGg3T2FleGk1VDRZR3NmeFZnczZaZVVsVUJRUkRxeFFvcmRVV0c3MFZRRHRKMHd2U2toMlJjNGtqMURmU1R5bFZmdW0wS0lERHhwRm1R?oc=5",
+        "source": "SeniorActu",
+        "published": "2026-10-19T07:06:00+00:00",
+        "summary": "Escroquerie au faux conseiller bancaire : un appel de votre banque vous signale une opération suspecte et vous demande d'appuyer sur la touche 1 SeniorActu",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Une alerte de SeniorActu décrit une arnaque au faux conseiller bancaire : l'escroc appelle en se faisant passer pour la banque, signale une opération suspecte et demande d'appuyer sur la touche 1. Le piège vise à obtenir des données ou un transfert frauduleux.",
+      "why_it_matters": "La fraude au faux conseiller est une menace majeure pour les clients et les banques, et un sujet classique sur les enjeux de sécurité et de conformité.",
+      "entities": [
+        "SeniorActu"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "878999459f637f00",
+        "title": "Five hallmarks of effective AI strategies in banking",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZm9zLXFHNzJqU0RoanZ0NklKQzhWRWVoS2hpazRzSHd5VVBxMENRRzFfUU5RSkYtQU00aHNSVzh6YUk1U0NwZXlnTTd5X2dqRW5LQ3dENGFiY1dpRzJVYy1UdWhBVkt2QnhTNzVhcUk4YUc2M0VXYUl4cDVSd2lEWUxyd2o2aWt1c1Z6aW9icjh6ZUQzVVRWUmdaVUNXazRaN2NUNGFTaUt1bDNURGMw?oc=5",
+        "source": "EY",
+        "published": "2026-10-19T07:03:14+00:00",
+        "summary": "Five hallmarks of effective AI strategies in banking EY",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Un article du cabinet EY présente cinq caractéristiques d'une stratégie IA efficace dans la banque. L'extrait ne détaille pas le contenu de ces cinq points.",
+      "why_it_matters": "Les cadres de stratégie IA bancaire sont des références utiles pour préparer des entretiens en conseil ou en banque sur l'adoption de l'IA.",
+      "entities": [
+        "EY"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "6f58e02331a30fc1",
+        "title": "Cac 40 : L’indice parisien a ouvert la séance en baisse de -0.90%",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQNXlnUGJYRHVzVEstWWZmaUdRVUJ3MC0yRjVuNDh2eWRPUzNuNU5mdlVBcjJXdDh6dmIzajdza2U4LXdvZkZuMXlWUGJPVkN6cDVYZk5ELUNTQi1IdnJfb2czdlJseTlQeHdjOGpMZmlnZDlRRHpmQVhEci13ZmxJcVlKajJyaFMzMjRZbE1NbTNnR0RJd0kzZ3FlQWgyaWZ0a2RiMkl5QUtXSVFNcGc2Mmh0VkEzZjE3cjNsV0dESTRhTmhxWFJGQ1Jn?oc=5",
+        "source": "BFM Bourse",
+        "published": "2026-10-19T07:00:00+00:00",
+        "summary": "Cac 40 : L’indice parisien a ouvert la séance en baisse de -0.90% BFM Bourse",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Le CAC 40 a ouvert la séance du 19 octobre en baisse de 0,90 % selon BFM Bourse. Aucun autre niveau ou cause n'est donné dans l'extrait.",
+      "why_it_matters": "Une ouverture en baisse de près de 1 % donne le ton du marché parisien au début de séance et constitue un repère de base pour suivre la semaine.",
+      "entities": [
+        "CAC 40"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "6537ecd22be8598b",
+        "title": "Who Is Robert Leitão? The Rothschild Adviser Calling AI Financing a ‘Concentrated Bet’",
+        "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNQTloNkJiWmp6WGtCQ0tZWTJlNlZVa3hZV1V4RXFSNnJtVWRnNnc4dFg4eV94V2Q3NmY3bnZlSncyei0wNnUwSWhWVVQ3b2JTT2daSkFJUV91WXgwZEFCeVlYRTF5dDVlZXlxVmd0bnRlV3dsWW8wTXhzR0JfZGxHTk8tWUt6OElwTzBON0J6UHozR3FSMDdWTUsyYkVsVS1qbFVmXzBEWkgwRmlMb1ZlSUo5S0lHRVJsRjlKWk5Jd0JCLUZvQjdpag?oc=5",
+        "source": "Disruption Banking",
+        "published": "2026-10-19T06:53:30+00:00",
+        "summary": "Who Is Robert Leitão? The Rothschild Adviser Calling AI Financing a ‘Concentrated Bet’ Disruption Banking",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "Disruption Banking présente Robert Leitão, conseiller de Rothschild, qui qualifie le financement de l'IA de « pari concentré ». L'extrait ne détaille pas ses arguments.",
+      "why_it_matters": "Les critiques sur le financement massif de l'IA par la dette et les banques d'affaires sont un sujet d'actualité fréquent en entretien sur le private equity et le financement de projets.",
+      "entities": [
+        "Robert Leitão",
+        "Rothschild"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "fd724b8e9be00a6b",
+        "title": "3 enseignements clés de la conférence BNP Paribas Global Markets Asie-Pacifique 2026",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPU2tKSnFnQXkwaUlRN2tab0pIQnJUUDdwX1RrU1pHVFJmVGEyY0hEbmFzMk0zUzdCV0hoNVRjVjZsN2Q2WUtrZDhnaW5tOWFVWE5jWkZZd2R6RV9iZXlDSENISms1SWg1NFVJTjdheUlmaFpJR0dhQXJjQnJoa1pKcEF3WGV3VzJ2cGo5TmRua2RDb1g0c3VLeUNkMTY4dFJfOXlkeVdGNVptMU1qenFuR3duSXNoTHc5RzN3?oc=5",
+        "source": "Groupe BNP Paribas",
+        "published": "2026-10-19T06:35:00+00:00",
+        "summary": "3 enseignements clés de la conférence BNP Paribas Global Markets Asie-Pacifique 2026 Groupe BNP Paribas",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "BNP Paribas publie trois enseignements de sa conférence Global Markets Asie-Pacifique 2026. L'extrait ne précise pas ces enseignements.",
+      "why_it_matters": "Il s'agit d'un contenu de communication interne de la banque, avec peu d'information chiffrée sur les marchés.",
+      "entities": [
+        "BNP Paribas"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "17d8d95d44611fdb",
+        "title": "Pré-ouverture Paris : le CAC 40 sous pression avant une semaine chargée",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZTZOSFZNdk1ibWc5THVBcWNzZmhheXhhSUt2X19pLVZmMDZoRGxGZmFpT1pzNHA4Snp4eWh6N0pkX3FaY0hqX0hxRVNXNGtpeWxMeUdnUURHbHJjYW1Dc2ZlNUZnT1gxaWtCX25QRXdZM29nN2t0Yy1nNWpseGpkSWFJYXl0eEFSM0JaQ0g2WWN5VmFGTE9pbkhQMUt1WXV4TXo1eHZXVU1FLS14dWNMcWRDTmliR3JtZUVpbFF1bGpqdnhiYW81emZB?oc=5",
+        "source": "Boursier.com",
+        "published": "2026-10-19T06:30:00+00:00",
+        "summary": "Pré-ouverture Paris : le CAC 40 sous pression avant une semaine chargée Boursier.com",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Boursier.com annonce un CAC 40 sous pression en pré-ouverture à Paris, avant une semaine chargée. L'extrait ne donne pas de chiffres ni d'événements précis.",
+      "why_it_matters": "Une semaine chargée en publications et décisions donne le contexte des mouvements de marché à suivre.",
+      "entities": [
+        "CAC 40"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "30ef29013f20eb95",
+        "title": "Le Crédit Agricole annonce une série d'aides aux commerçants",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPVmxzY1ZtRUd4TGVKOUp5Z3FIbG55cTNRTnF0TkoxSTJkc0JBMUtXOFA3dWxha1B3a0NIQVNZQ09kS2IzOUx5c25ER2JUMFFqNTR2aUxUZDg1MmVXM1VwcXZiOWdnbGstT1RaWlN6MEk5WXE2X1VCS1c4cXUxb3V3cjVGT2FPa3pPa1ZveWQyQVJ0NFJUcjVqeDludExvWE9EcTJVek1KeF96SXBmUXdOVFlyaDVIelRsRS1kemN3?oc=5",
+        "source": "Boursier.com",
+        "published": "2026-10-19T06:30:00+00:00",
+        "summary": "Le Crédit Agricole annonce une série d'aides aux commerçants Boursier.com",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Le Crédit Agricole annonce une série d'aides destinées aux commerçants. L'extrait ne détaille pas les mesures.",
+      "why_it_matters": "Les dispositifs d'accompagnement des petites entreprises par les banques de détail sont un sujet de fond sur le rôle bancaire dans l'économie réelle.",
+      "entities": [
+        "Crédit Agricole"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "765771c638584ffd",
+        "title": "India bonds rise after flat open as sharp drop in US yields spurs value buying",
+        "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQUGNOOXk2V0x3OHFackMybFJNd0V6ZzVHaFdHQ2p4MVR1dFQ0bkd6LWVULWV5X2U4MTI4OUhDamQ0Ylg3T2lGX0hqNnN6VGJ2RTFxd2ItSEdhd01SN0FQLUtfZGo4MHRIUGZmbnZhRi1VSnZyMXJGNUxkb2E5MWhjTHltV2Jka25CWWpCd0E4Z1FfLWRfQUJqRFkzYmNLcGQ3aDV3WDFKZHlfdkIxRWtKMlY4bjJ2VVFUZGxTOUQ4SGpMT01rQkZDbDZiaEpPS0UtWXlJVTVqWTNhbjcyVlVPUjZQamjSAeQBQVVfeXFMUFBjTjl5NldMdzhxWnJDMmxSTXdFemc1R2hXR0NqeDFUdXRUNG5Hei1lVC1leV9lODEyODlIQ2pkNGJYN09pRl9IajZzelRidkUxcXdiLUhHYXdNUjdBUC1LX2RqODB0SFBmZm52YUYtVUp2cjFyRjVMZG9hOTFoY0x5bVdiZGtuQllqQndBOGdRXy1kX0FCakRZM2JjS3BkN2g1d1gxSmR5X3ZCMUVrSjJWOG4ydlVRVGRsUzlEOEhqTE9Na0JGQ2w2YmhKT0tFLVl5SVU1alkzYW43MlZVT1I2UGpo?oc=5",
+        "source": "The Economic Times",
+        "published": "2026-10-19T06:28:00+00:00",
+        "summary": "India bonds rise after flat open as sharp drop in US yields spurs value buying The Economic Times",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Les obligations indiennes ont progressé après une ouverture stable, portées par une forte baisse des rendements américains. L'article attribue ce mouvement à des achats sur valeur.",
+      "why_it_matters": "La baisse des rendements américains se transmet aux marchés émergents et montre l'effet des taux de la Fed sur les obligations d'autres pays.",
+      "entities": [
+        "Economic Times"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "534ccae6fab10b25",
+        "title": "World ID for banking and finance: AI-safe proof of human",
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5pd29rU3Z1bUFrNHI5VHZVNHZOQU1ZengxeHpFR2VLbWxrTFBqR19WeHBwUWFDU1RBMGNNX2ctalAxR01rSmNVWTZCWGxNa2FtSjZyMlRpTnVtYXNZNngtVGhSMmVzbVRFVzlCODNqWmFKSHhxdkR1NA?oc=5",
+        "source": "World - The real human network",
+        "published": "2026-10-19T06:23:33+00:00",
+        "summary": "World ID for banking and finance: AI-safe proof of human World - The real human network",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "World présente son offre World ID pour la banque et la finance, un système de preuve d'humanité pour contrer les agents IA. L'extrait reste général.",
+      "why_it_matters": "La vérification d'identité face aux deepfakes et aux bots est un enjeu croissant pour la conformité KYC des banques.",
+      "entities": [
+        "World"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "dcfa9b1ea31b2a0f",
+        "title": "Placements : les Français dans l’étau des taux",
+        "url": "https://www.lemonde.fr/economie/article/2026/10/19/placements-les-francais-dans-l-etau-des-taux_6797492_3234.html",
+        "source": "lemonde.fr",
+        "published": "2026-10-19T06:00:09+00:00",
+        "summary": "La remontée des taux d’intérêt rebat les cartes de l’épargne. Certains épargnants vont profiter de cette tendance haussière, tandis que d’autres seront pénalisés.",
+        "feed_theme": "marches"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "Le Monde explique que la remontée des taux d'intérêt modifie l'épargne : certains épargnants en profitent, d'autres sont pénalisés. L'article ne chiffre pas l'effet dans l'extrait.",
+      "why_it_matters": "L'effet de la hausse des taux sur les placements des ménages est un point central de la transmission monétaire, souvent demandé en entretien.",
+      "entities": [
+        "Le Monde"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "69afe8bb3edd9dc9",
+        "title": "Frank Elderson: From climate and nature risks to economic resilience and competitiveness",
+        "url": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261019~f0a3e053de.en.html",
+        "source": "ecb.europa.eu",
+        "published": "2026-10-19T06:00:00+00:00",
+        "summary": "",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Un discours de Frank Elderson, membre du directoire de la BCE, porte sur les risques climatiques et naturels et leur effet sur la résilience économique. L'extrait ne contient pas de contenu détaillé.",
+      "why_it_matters": "Les risques climatiques sont désormais intégrés à la supervision bancaire, un point important pour les métiers de la régulation et de la finance durable.",
+      "entities": [
+        "Frank Elderson",
+        "BCE"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "44b6002715b3fd7c",
+        "title": "BNP PARIBAS : La tendance baissière peut reprendre",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOOEtzWTI4djV0NVV2NTBlXzk2UWZjVzNZTk5aeGVUalhMOHRGcFhWZE56WUEwOUZ6OU5wenNKbTFjT0JrT3BVMDduVC12SVU5MEhQcUVuNnA4S3Y2ekpEcHVaTGRzcjlQTkd3YzdvQTRNaGNjRWpBbEhYa21YdW9mSTdhZi1YVndJWFRnd2JoWDliRFEtMXlQWFpLX28zQTJ2OVJmYzhFWTFjSEJPVTBwUVB6OEJ4S2ZOY3N2azVhdWxKZ3pFcXFpN2ln0gHKAUFVX3lxTE44S3NZMjh2NXQ1VXY1MGVfOTZRZmNXM1lOTlp4ZVRqWEw4dEZwWFZkTnpZQTA5Rno5TnB6c0ptMWNPQmtPcFUwN25ULXZJVTkwSFBxRW42cDhLdjZ6SkRwdVpMZHNyOVBOR3djN29BNE1oY2NFakFsSFhrbVh1b2ZJN2FmLVhWd0lYVGd3YmhYOWJEUS0xeVBYWktfbzNBMnY5UmZjOEVZMWNIQk9VMHBRUHo4QnhLZk5jc3ZrNWF1bEpnekVxcWk3aWc?oc=5",
+        "source": "Boursorama",
+        "published": "2026-10-19T05:49:00+00:00",
+        "summary": "BNP PARIBAS : La tendance baissière peut reprendre Boursorama",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "Boursorama publie une analyse technique indiquant que la tendance baissière de l'action BNP Paribas peut reprendre. L'extrait ne donne ni niveau de cours ni chiffre.",
+      "why_it_matters": "Il s'agit d'une analyse technique à court terme, d'intérêt limité pour la compréhension des fondamentaux de BNP Paribas.",
+      "entities": [
+        "BNP Paribas"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e8f4ef4e35874514",
+        "title": "India's Axis Bank slides after quarterly profit falls short of expectations",
+        "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOaEJxaHB5V2h4YkZOanhtZy15VGRUQ2s0VFN4UXBHdy1OV3ZFeUtpSjlTdnIyaWhtaHI5OVRRWXdiSTZvaV94Y0paeFRSLVh5WkRnVDdsR1ExUEdvZnlVb2tabGxrbWFfdmVhbEh1ZVlrLXFWemJkWmdJczFfa3lhMTZjWkR1SWowOVNZQUpsUENlVDdJUUtTRGZ1QTBnQ3hFVU1uNTZ5aGFZODJ6Ym8wSDJzOFRzblFObm1r?oc=5",
+        "source": "Reuters",
+        "published": "2026-10-19T05:30:00+00:00",
+        "summary": "India's Axis Bank slides after quarterly profit falls short of expectations Reuters",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "L'action de la banque indienne Axis Bank recule après la publication d'un bénéfice trimestriel inférieur aux attentes des analystes. L'extrait ne donne pas de chiffres détaillés.",
+      "why_it_matters": "Un résultat manqué chez un grand acteur bancaire indien éclaire la sensibilité des marchés aux publications trimestrielles des banques émergentes.",
+      "entities": [
+        "Axis Bank"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "55b377eac8039da3",
+        "title": "Intelligence artificielle en mécanique des fluides numérique multi-échelle",
+        "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPd1Y3cEJ4aWREb0d0Y0ZqcEpHaVh2MmJGeUdDcEM5YWtNclFxLV9GNk51dDBVZ21CZkttc1BGZWZKRDBBcUZPd0ttM1JKcHBKMkx2VWhJVVByRHpxd1R4WXB4QmtNbVIzRjdRdUJIclVFYm41Nkd0LVJjNXJ0WGw1RnhTSEkzb3QyTlVJekoyV1U4dlpIb091c0RvczViZ2FCMzkxUE5vT2xkTGgzQk5KV2pEcGVHOUE?oc=5",
+        "source": "IFPEN",
+        "published": "2026-10-19T05:21:13+00:00",
+        "summary": "Intelligence artificielle en mécanique des fluides numérique multi-échelle IFPEN",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "Publication de l'IFPEN sur l'intelligence artificielle appliquée à la mécanique des fluides numérique multi-échelle. Le sujet relève de la recherche scientifique en simulation.",
+      "why_it_matters": "Illustre l'usage de l'IA pour accélérer les simulations d'ingénierie, un domaine recherché par les ingénieurs.",
+      "entities": [
+        "IFPEN"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "b77fdffe29f18354",
+        "title": "Santander Turns to Nvidia to Build New AI Banking Capabilities",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPVEtnc2E3c0VteThUaG5Ub0R4OEZZcEhWWlVXb3NhSGpyY3VENm5hVTdaZTlSZEdVZmg1cWV4Qmh4ZEIxMm9SdWtINGRQOE92Q1MyTzl6UTNpbXpfODdxUml4VHEzQnMta3VnY1lvU0E4Y2JjcHJQWjQ5WDRPc2Exd1NIZmsxa3BESDJodEtyVTNmNkVIWV8wNHpRT1pwNVRhMUtGWHpGRQ?oc=5",
+        "source": "PYMNTS.com",
+        "published": "2026-10-19T05:13:09+00:00",
+        "summary": "Santander Turns to Nvidia to Build New AI Banking Capabilities PYMNTS.com",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 7,
+      "summary_fr": "La banque espagnole Santander s'associe à Nvidia pour développer de nouvelles capacités de banque assistée par l'IA. L'extrait ne précise pas le montant ni le calendrier du projet.",
+      "why_it_matters": "Exemple concret d'adoption de l'IA par une grande banque européenne en partenariat avec un fournisseur de puces de référence.",
+      "entities": [
+        "Santander",
+        "Nvidia"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "0926406d02526226",
+        "title": "Technoprobe, l’intelligence artificielle (IA) dope les comptes, mais le titre est exposé à la volatilité",
+        "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPZmR3aFRUSlAxVlM5X3I5TGlUY1FfbFlfaHhlQXJiQ0dhaWM0dnR5RWUyYkMzUGFBLUhrcFp5cjdYOUpueEp1RXdxZWJCZExpZlFEM2Y4YjEweUZ1SjlCSWNfaGg0QjViNEpMenJXRk9mMTNtbF9SNTBQWjhTMy13d2U4anJPNFhzdVF1U3NQRW5VZy1TSmlCQlZRVXRBc1BMN05PUThpTndVWnlRM1VNOFo1aE85bHJLWF8wZ2VJQ3dRYjNUNGZFWW5kemRiOWdWTFN3WTAyeGZILWVERk94VjZQQTZOSzZFMVJR?oc=5",
+        "source": "Zonebourse Suisse",
+        "published": "2026-10-19T05:07:25+00:00",
+        "summary": "Technoprobe, l’intelligence artificielle (IA) dope les comptes, mais le titre est exposé à la volatilité Zonebourse Suisse",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Le fabricant de semi-conducteurs Technoprobe affiche des comptes en hausse portés par l'intelligence artificielle, mais son titre reste exposé à la volatilité. L'extrait ne donne pas de chiffres.",
+      "why_it_matters": "Montre le lien entre la demande liée à l'IA et les résultats des équipementiers de semi-conducteurs, ainsi que le risque de valorisation boursière.",
+      "entities": [
+        "Technoprobe"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a8af2841eb008153",
+        "title": "UBS capital rules have Swiss stuck between a rock and a hard place",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdmU4ejBfTEtHRFlEM3JPeU1DLTVfX1VtS3NKOTM3TnJlNEhRRWZ5d2Ryd2pzQllZWU5XUlEzckdLeEZzUG1UUlpabG04Qkt4R0dyRW9KU0dhdjh0dWtnVGthb2w3RVhKNWZxWk1XWGJGVnRqc1BqcVNST0EtUXA5bmNTR3dLSHZyYzFOcllRQlVuVDQxelQ3SGdrNDY3Y09SNUwxRzEwSFdnNXhkTk4ydA?oc=5",
+        "source": "Reuters",
+        "published": "2026-10-19T05:01:00+00:00",
+        "summary": "UBS capital rules have Swiss stuck between a rock and a hard place Reuters",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 7,
+      "summary_fr": "Les règles de capital imposées à UBS placent les autorités suisses dans une position délicate, selon Reuters. L'extrait ne détaille pas les exigences chiffrées.",
+      "why_it_matters": "Le dossier des fonds propres d'UBS touche à la régulation bancaire post-Credit Suisse, sujet fréquent en entretien bancaire.",
+      "entities": [
+        "UBS"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "ad7931c9d9305bee",
+        "title": "Dette de la France : faut-il s’inquiéter ? La Banque de France à Lyon répond sans détour",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNYThNSUExMUE5UUF0VjduY0xLaC1oczhqTUFmd2JybWZuWVo4bm9xWTVKeVRDeW1TSkdIb2ZGbHBOaVpoelk5TGZrbjBPY1pyLXpKUUJwMklfOEtRWk9rNnMxajFBSmZRUVVEb3JzVlc1cnIwZkRfVlFLX3FxTHdva0tGVXVyV2lleU9rdnZEd3A3WGstRDRnZXp3bkw?oc=5",
+        "source": "Lyon Capitale",
+        "published": "2026-10-19T05:00:00+00:00",
+        "summary": "Dette de la France : faut-il s’inquiéter ? La Banque de France à Lyon répond sans détour Lyon Capitale",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "La Banque de France à Lyon répond aux questions sur la dette publique française et son niveau d'inquiétude. L'extrait ne contient pas de chiffres précis.",
+      "why_it_matters": "Donne le point de vue de la banque centrale sur la dette française, utile pour comprendre le débat budgétaire national.",
+      "entities": [
+        "Banque de France"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "d49f1f0699cd0c5c",
+        "title": "Un appel à projets pour booster les start-up de l’intelligence artificielle en PACA",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPR2c3WWJ1QmRWUm83a21vNEN0c19haGllOVVxclY3V2pKZzN4ZENaaHdvbVA3TFpQVEY5bElsZmF1Y1MyRXBNUGNwdlZiTElNUDdTNWFkVmFOR1RJNTdUYVQ3dzl1RXBQd0V5dFliTXBhb1JJT1o5LWRuOWN6dmhObXVIbEpSSWtoYkY0MTBOTXFsRHBYT1lxQzQza3hsOEZZbVp6dFVDTXJ6M1JWSC1iUWFkc3NrTThrMnAycUVoaFMzRmM?oc=5",
+        "source": "Made in Marseille",
+        "published": "2026-10-19T04:50:43+00:00",
+        "summary": "Un appel à projets pour booster les start-up de l’intelligence artificielle en PACA Made in Marseille",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "Lancement d'un appel à projets destiné à soutenir les start-up de l'intelligence artificielle en région Provence-Alpes-Côte d'Azur. Le montant et les modalités ne sont pas indiqués dans l'extrait.",
+      "why_it_matters": "Aperçu des dispositifs régionaux de soutien à l'écosystème IA français, à connaître pour les projets de start-up.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "566e49bccf380884",
+        "title": "Global Market: Japan bond yields fall as US tech selloff fuels safe-haven demand",
+        "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQdlkxREMzTmlTMVZFVDV2VElwUl9ucHZfT2ZZU1IzUFpIV0VEenJPUlZmT2hvTEVQVld4NWhVR1ZZVFFGWUpyOWJFX1g5RXhrY2pxRXc0MTQwRDZ4b2VLbDRxWlJwWGVHSzBINXMtME5yakdIczZWUXctOGhUcGt3MmhEWU94Qk13M2RKWEFlTTUyTEI3OTJUU2hGZktldGRCV0M4RnhwbVhmdkJIYk5BYjk3aE9hTlhQekdsa3A2cHZtbEM0QmlFU09hMzdLcFFyQlZPdkQxVkhCOVVlQWtTTGlkMUxsOWtYNExqOE85Q010d0FtX0Q4Q9IB8gFBVV95cUxQNGZhcmloMkFTam44MzlFYkVOemFQQ2haUU85bWlQbHZRUlhIQ09qNTBFemZ0LXFJYXhJY29UVWxraEtxZ1NfOG9pUC1wZFRsTV8tMHNGYkFHOFd4NFNqQm9JME5XNmNuOW1oWk11c0tHMGFrbGpHSHNiX19zWHhDRE9NbkRFcWxHakR1ZHRJRFlXbUMtVFdtZE1VN0pVbkxLMG43RXBramI4Uk5BNlpxV1dzVVFqckdPZXhxZDVHd3gzZ0EwVEUwYlJ3Rm1oREV3aElJUUZOM1A1cEFTZFFMSWRTVTdvc2dvaFlxWHVPTGxMUQ?oc=5",
+        "source": "The Economic Times",
+        "published": "2026-10-19T04:49:26+00:00",
+        "summary": "Global Market: Japan bond yields fall as US tech selloff fuels safe-haven demand The Economic Times",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Les rendements des obligations japonaises baissent alors qu'une vente massive dans la tech américaine alimente la demande de valeurs refuges. L'extrait ne donne pas de niveaux chiffrés.",
+      "why_it_matters": "Illustre le mécanisme de fuite vers les actifs sûrs lors d'un repli des valeurs technologiques, lien clé entre actions et taux.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "d6e371d32527968f",
+        "title": "Perception that India is a laggard in AI development is no longer valid: Finance Minister",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNbTJpaXMwRFVjWkJVTTBwX1B4ZGlwNjc3bnNSRkZkWVp2bTA1NDA3R2ttZlJXQ3JtWTFmR1cyV09PdXp5aTBBQ2llWExWaXBOSWpfUlJ3SWlKZHJHMXpockFrZ3RrbkdxWW9YcDFOdnRsaVFWZU9PbEFwNENXaEE0QkkxWUR4d3NEeVk5WTZldmhhYVQ1cVphZlVTTVVFQW1fbVBNSy1UY0Z2aGRYM0ljWg?oc=5",
+        "source": "CNBC",
+        "published": "2026-10-19T04:21:35+00:00",
+        "summary": "Perception that India is a laggard in AI development is no longer valid: Finance Minister CNBC",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "La ministre des Finances indienne affirme que l'idée selon laquelle l'Inde est en retard sur l'IA n'est plus valable. L'extrait ne donne pas de données chiffrées.",
+      "why_it_matters": "Reflète la stratégie de l'Inde pour se positionner comme acteur majeur de l'IA, enjeu géopolitique et économique.",
+      "entities": [
+        "Ministre des Finances indienne"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "26caba8bf9010822",
+        "title": "Korea’s early rate hikes curb bond yields as Kospi slides sharply",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOWndzSW5sMTZpd2dTcktYZHVLd3NyM1pVNWttcWNtT0tKNUtnalk3T294VlpacWg4SUpaWFdEa2JrMzQzYnNpWWtCazJUdGVqcEwxSUVjVFlKbEtkdElwVnFGQlJUOUpWTFI5Q3N2WFJLdU5KbWFIY1JTOW9jRnZocXRVMXNOd0hUdVVNQkFNRHZDSUlpdDNSUy10T0ttLTUzYnhtNmZuZE1VaVp5cmZMODFWZC01SUgt?oc=5",
+        "source": "Korea JoongAng Daily",
+        "published": "2026-10-19T04:16:27+00:00",
+        "summary": "Korea’s early rate hikes curb bond yields as Kospi slides sharply Korea JoongAng Daily",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "En Corée du Sud, des hausses de taux précoces font reculer les rendements obligataires, tandis que le Kospi chute fortement. L'extrait ne précise pas l'ampleur des mouvements.",
+      "why_it_matters": "Montre la réaction des marchés asiatiques aux politiques monétaires restrictives et l'impact sur les indices actions.",
+      "entities": [
+        "Banque de Corée",
+        "Kospi"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "8354e0772175fafd",
+        "title": "Les fonds responsables offrent-ils vraiment de mauvais rendements ?",
+        "url": "https://www.lemonde.fr/argent/article/2026/10/19/les-fonds-responsables-offrent-ils-vraiment-de-mauvais-rendements_6797480_1657007.html",
+        "source": "lemonde.fr",
+        "published": "2026-10-19T04:00:33+00:00",
+        "summary": "Les fonds intégrant des critères environnementaux, sociaux et de gouvernance ne souffrent pas de sous-performance chronique, mais rien ne garantit que l’épargne finance réellement des fonds écologiques.",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "Une analyse indique que les fonds intégrant des critères ESG ne souffrent pas de sous-performance chronique. Rien ne garantit toutefois que l'épargne finance réellement des projets écologiques.",
+      "why_it_matters": "Pose la question de l'impact réel de l'investissement responsable, sujet d'actualité en gestion d'actifs.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "066f0dacf8dda5d8",
+        "title": "How Will AI Affect Jobs? The UK Finance Industry Is Showing Us",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMzd5NWdlcEpuVzlCVGRIQkJSUkRZTTZ2OHNUX0NtSlUxY0R6TWY1ZFh1ZFkyT0FtZFJobEJzME42ajJBX1ZsSk1Vb3dGcV93Nnplb0JFR2ZuUXhTaTZ3VzNKUngzRl93a3gzMXhvd2lLazZjNUo5aDEzREx5YVkxd3pMUDBhOUQ0bFZ3RG85QnRSRUlsNVBvNTcxZVo3V2pvOGZLaDBVTUpZUE40czRr?oc=5",
+        "source": "Bloomberg.com",
+        "published": "2026-10-19T04:00:00+00:00",
+        "summary": "How Will AI Affect Jobs? The UK Finance Industry Is Showing Us Bloomberg.com",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Bloomberg examine l'effet de l'IA sur l'emploi à partir de l'industrie financière britannique. L'extrait ne fournit pas de données chiffrées.",
+      "why_it_matters": "Le secteur financier est en première ligne de la transformation par l'IA, un thème central pour les discussions sur les métiers de la banque et du conseil.",
+      "entities": [
+        "Industrie financière britannique"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "94a4c094b6496b16",
+        "title": "What we learned from bank earnings",
+        "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9WLVhTQkpwU1IyZDN4TGJ3cDl6aG5yNGV2MjRZazYwcnFuWmFqOWIzZ2VUb3QweVRiQ096dHZfc0xkekJQUGZGUUdQTXBsRmdZemVMSWlHbU9mN3ZfVDVYM2FqWGZiSEZsYUkw?oc=5",
+        "source": "Punchbowl News",
+        "published": "2026-10-19T03:51:49+00:00",
+        "summary": "What we learned from bank earnings Punchbowl News",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 3,
+      "summary_fr": "Article intitulé « What we learned from bank earnings » de Punchbowl News, publié le 19/10, consacré aux résultats des banques. L'extrait ne donne pas de chiffres ni de détails.",
+      "why_it_matters": "Les résultats trimestriels des grandes banques américaines donnent le ton sur la santé du secteur et les perspectives de crédit.",
+      "entities": [
+        "Punchbowl News"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "3aba807b586c82fe",
+        "title": "Placements : la remontée des taux d’intérêt rebat les cartes de l’épargne",
+        "url": "https://www.lemonde.fr/economie/article/2026/10/19/placements-la-remontee-des-taux-d-interet-rebat-les-cartes-de-l-epargne_6797404_3234.html",
+        "source": "lemonde.fr",
+        "published": "2026-10-19T03:30:08+00:00",
+        "summary": "Après un été mouvementé, les taux d’intérêt ont franchi de nouveaux seuils ces dernières semaines. Cette remontée bouleverse l’environnement des placements. Pour les épargnants, elle crée autant de risques que de nouvelles opportunités.",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "Les taux d'intérêt ont franchi de nouveaux seuils ces dernières semaines, après un été mouvementé. Cette remontée modifie l'environnement de l'épargne, avec à la fois risques et opportunités pour les épargnants.",
+      "why_it_matters": "La hausse des taux change le rendement relatif des placements (livrets, obligations, actions) et sert de référence pour toute discussion macroéconomique.",
+      "entities": [
+        "Le Monde"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f6c937a42db41548",
+        "title": "15 Year Stock Market Returns",
+        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBhQU9xejZTSHFlUVNYTmpGRDhybVJ6YW4yRkNYS2M0SXhrOEd1emJrVGlxTGtSbDdNRTFMYm1LbkVra05VU19BVkFGTm5XczBXSG5VVTRHTERaX0hfMHdIbmRURjdYUG05SDRXZTN5Y1ZjYkhVTEJlSzBB?oc=5",
+        "source": "A Wealth of Common Sense",
+        "published": "2026-10-19T03:23:27+00:00",
+        "summary": "15 Year Stock Market Returns A Wealth of Common Sense",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "Article de A Wealth of Common Sense sur les rendements des actions sur 15 ans. L'extrait ne contient pas de chiffres.",
+      "why_it_matters": "Le rendement long terme des actions sert de repère pour évaluer le risque et l'horizon de placement.",
+      "entities": [
+        "A Wealth of Common Sense"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "55f02112bccc07b0",
+        "title": "CoreWeave, Oracle have an interest rate problem",
+        "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOdzMtSTYtc1J1bFB0M0prTDlSdVdvcThmMThuVlRnTFlnWXZXcU9DTTRWd3dobFdOTzh6cWpmOWJfaHJOei1fT09iV3dOTE9QZ25IYm1ITmR0MVY0QTVLTkhoam16czdSQkUzN2hrTGhUYzlPczNjaDZMNnZRX3VyRllSMG9hSnYxWWIwazM1eFFKeWpaN3dNMGFMM05Vb00tWm1KMm9B?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-19T02:47:00+00:00",
+        "summary": "CoreWeave, Oracle have an interest rate problem Yahoo Finance",
+        "feed_theme": "marches"
+      },
+      "theme": "ia_tech",
+      "relevance": 7,
+      "summary_fr": "CoreWeave et Oracle font face à un problème lié aux taux d'intérêt, selon Yahoo Finance. L'extrait ne détaille pas les montants ni les mécanismes.",
+      "why_it_matters": "CoreWeave et Oracle sont deux acteurs clés de l'infrastructure IA, et leur financement par dette rend le secteur sensible aux taux.",
+      "entities": [
+        "CoreWeave",
+        "Oracle",
+        "Yahoo Finance"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "7720ce65a3535367",
+        "title": "AI to transform the future of finance",
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE92c3JKbTZFbE8wVnZ0aGFsa3QyV0VxcEZzclFoTG5MOUUwRjY0ekpYZXNZR0Y1Xzh5V2MwTkx6X0tZdEZ0cFFJaG5Pa0k0TmN1SnJ1MWdPTmxYd3h4Nl84UW1MQ0dGS2l2bzlkb0pFcDlOanlzbGdB?oc=5",
+        "source": "Vietnam Investment Review - VIR",
+        "published": "2026-10-19T02:04:42+00:00",
+        "summary": "AI to transform the future of finance Vietnam Investment Review - VIR",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Article de Vietnam Investment Review sur la transformation de la finance par l'IA. L'extrait ne contient pas d'informations concrètes.",
+      "why_it_matters": "L'adoption de l'IA dans la finance est un thème central des entretiens en banque et en conseil.",
+      "entities": [
+        "Vietnam Investment Review"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e06048dbcb61a702",
+        "title": "Edvance and CWG Launch RealRelay Fintech, AI Agents for Finance with Trust Built First",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNb0RUTWZzVjNVa2ZFZl9Sb09EdmhwX0RDUkM2dmlaazFFRHdZdFJYNHYtaVViaG5VYnZVaWM1WFNtMlZLOC15SnhvSTZUUzZXWElXNDVNSFpqaDlrX25wNlhXTVJ1UmpVX2t2Y1VOb3ZOQkdoYk1OZHFzVV9BOVI3S0VudDExeGt2azhWa25CbDVBbEtFeTBrVGJ4dDZrNjlsbEE?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-19T02:00:00+00:00",
+        "summary": "Edvance and CWG Launch RealRelay Fintech, AI Agents for Finance with Trust Built First Yahoo Finance",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Edvance et CWG lancent RealRelay Fintech, une offre d'agents IA pour la finance. L'extrait ne donne pas de détails techniques.",
+      "why_it_matters": "Illustre la multiplication des agents IA appliqués à la finance, tendance utile à connaître pour les discussions tech-finance.",
+      "entities": [
+        "Edvance",
+        "CWG",
+        "RealRelay"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "61cb6e1be8f47b91",
+        "title": "Double-digit growth and the stock market's capital raising mission.",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQeTR1Y0F3UFQzdlAzYU5NVGZ1X3pISVFKZDhBWkhhU2owcksyRDJsYWtFNmNDRXVNODEzbHBxOFdNQXVUSFF4RzNWbUZuUDlKb2F0Z0dJa0JDU2lvWHpYdk84dTIxNmxqdEpZeGR1OWdmX2g0LTJ3Q0xmV18yVnI1WC1Scm9yN05YSFZabmFpQThLYkZobXI1aGhFNXJ5bzg?oc=5",
+        "source": "Vietnam.vn",
+        "published": "2026-10-19T01:54:34+00:00",
+        "summary": "Double-digit growth and the stock market's capital raising mission. Vietnam.vn",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "Article de Vietnam.vn sur une croissance à deux chiffres et le rôle de la bourse dans la levée de capitaux au Vietnam. L'extrait ne contient pas de chiffres précis.",
+      "why_it_matters": "Donne un aperçu du développement des marchés de capitaux dans une économie émergente.",
+      "entities": [
+        "Vietnam.vn"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "4953833e3ea5168c",
+        "title": "China’s investors flock to dividend stocks as returns double 10-year bond yields",
+        "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQd0tjX1RpcWZPUkpLNWRSRU4taTk2Vy1laGJRMnd3SUY1R1hwNWt6eEF5aXl1ZTlOSkR3N1FOUFZTd1cxekFuTVUteEFOS19hMkx6S1ExWTdRZlBoLXZ0WGhnaDdjWFB3cERxWWhtQmhXLW0xa2RQRVFJOHdDVkVTdE5LYzJzUkl5UDBoQnJKXzUxcU1ySEtZNDZoY2FnVjJHVUhpRjAxdHlkcDVsLVlLT0JmcS1JNlBhQTdsMXY1VDJSMlIxRnVwT3RobG3SAcwBQVVfeXFMT29zWmVMWW9Uc1VKUzZ3NFd2QUVTLW02bUQ2UzBONHNLT21yRzlyeGxYc01pY2xELVotMTdvaTI5NVJIcE9UZ2U5T1NnLTUtM0tBdENHRnhkRFduOUlLM1ctM1FCbDE4cDV2TlZCWi1CVGNHZU1taU1hZEFidE5iaWNQalQxOW1zdlBfdlhseG5LSlUzVXlWbk5pZnpxd0pYaVFRU1Z5UUpFMFhjbC1VdF9IbFFfT3F2Rl9DX2RtWUFMT00tV285YWhNUC12?oc=5",
+        "source": "South China Morning Post",
+        "published": "2026-10-19T01:00:13+00:00",
+        "summary": "China’s investors flock to dividend stocks as returns double 10-year bond yields South China Morning Post",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Les investisseurs chinois se tournent vers les actions à dividende, dont le rendement dépasse le double de celui des obligations d'État à 10 ans. Ce mouvement illustre une recherche de rendement dans un contexte de taux bas.",
+      "why_it_matters": "Le basculement des épargnants vers les actions à dividende montre comment les taux obligataires orientent les flux de capitaux.",
+      "entities": [
+        "South China Morning Post"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "5161a4e24fcd86df",
+        "title": "Bangkok accueille les assemblées du FMI et de la Banque mondiale du 12 au 18 octobre 2026",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNNC1rOWVVRG5hQUkyanI4T2c0MmNyTnJHazlBUjUtbXFMdzZXcHZ4TnhNV0pnRHN2M3hlVDFDTlJOSHpmZ3BYaDk3UlNDc2xtZUluelJ4TU5jRS1zT1NiQmJSRGlRc0ZINFNEWVl1aHQyTzZIa0xNOFZKWVZ0VDNqN0ZXUGlnMkJvQVpXSG44Y0FBaWdnVjVMMjVQSElzM0hhY0hrbEtWdlVLZXhPX1o0TmVkQXIzbWx3N3R6R1RERQ?oc=5",
+        "source": "Lepetitjournal.com",
+        "published": "2026-10-19T00:38:20+00:00",
+        "summary": "Bangkok accueille les assemblées du FMI et de la Banque mondiale du 12 au 18 octobre 2026 Lepetitjournal.com",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Bangkok accueille les assemblées annuelles du FMI et de la Banque mondiale du 12 au 18 octobre 2026. L'article ne précise pas les décisions prises.",
+      "why_it_matters": "Ces réunions fixent le cadre des discussions sur la croissance mondiale et la dette des pays émergents.",
+      "entities": [
+        "FMI",
+        "Banque mondiale"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "d93180307763cc21",
+        "title": "Samyang Holdings plans KRW 200 billion bonds: Samyang Holdings stock yields 5.70 percent",
+        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQcFRmWFF0b0UzdUtCRC1DT0JURWpDT25QSVRhZG9KaGVEcTFBVkRPVDBxTjNhU2dhaHl3bWdpb1RMYnlxVVItMVc3R3VuSkxUUkh0M0xQQXI5UkEwUjBycDAwLUNCRkUxazdVSndDY1Jmbnp6dXBSOElKMTJ0eHhPUFRJRllNVnhzNE1NQ1BSZnByc3Q0Y1Q3WkpfdUNkZmt3VURFZ1pCX1VVWURucDVzSTdjdUlmTWlaQWJGNUc4d0RCVnJWY2Jic1ZmVk1udTF4dzhibHp1UDhUZEFYVmQ0?oc=5",
+        "source": "ad-hoc-news.de",
+        "published": "2026-10-19T00:33:06+00:00",
+        "summary": "Samyang Holdings plans KRW 200 billion bonds: Samyang Holdings stock yields 5.70 percent ad-hoc-news.de",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "Samyang Holdings prévoit une émission obligataire de 200 milliards de wons, et son action affiche un rendement de 5,70 %. L'extrait reste bref.",
+      "why_it_matters": "Les émissions obligataires d'entreprises coréennes reflètent les conditions de financement sur le marché.",
+      "entities": [
+        "Samyang Holdings"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "35d0ef14dcd5b676",
+        "title": "World takes on AI-driven impersonations with new suite for banking and finance",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNTHRaVWZ6cFAzTHBwbWhKNzR2Y0pwN2doVlZSVGNta29WTURZM1V1dW9qTTNmNlEwQ2FvYTNFQXZNYmJFSmxuZVI3SkZLdTh1bmpFTEFOU2RDM29vWjBObTJ5endkWEltdXREaXUwVWE2UzZleUdlengxam1FSS1DcU9tV0N4VlBxSzZJM0lQamczZE8xN3hqT3FGNzlmNmVJZEQtMGdLa2FZNm5iUms4b2dBQmlfeUhYT3ZuY1l3?oc=5",
+        "source": "Finextra Research",
+        "published": "2026-10-19T00:01:00+00:00",
+        "summary": "World takes on AI-driven impersonations with new suite for banking and finance Finextra Research",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "World lance une suite de produits destinée à la banque et à la finance pour lutter contre les usurpations d'identité générées par l'IA. L'extrait ne détaille pas les fonctionnalités.",
+      "why_it_matters": "Les deepfakes et usurpations par IA sont un enjeu croissant de sécurité et de conformité pour les banques.",
+      "entities": [
+        "World",
+        "Finextra Research"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "0950dd710b85794d",
+        "title": "KOSPI sinks as AI credit strains hit, semiconductor concentration magnifies fall - CHOSUNBIZ",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNM1NQVGFxM0IwQXlOcUhLd1ZvSGpyeVIwd2R5SXNxUlBtVE5aQXhkV05BMGNrdWIycF9wUVNkMWZYdTVxSjVoTHZQd0dOTFdVc1g0Tk1vX2lPUUE2cWI0WkNBWjVXTU4yeF9MTTd6OUxsY0pKX3BSS1EwVHlMWFJmbNIBlAFBVV95cUxNS2ZfM1FJVFprZ1R0TGMycjdmUkNvQXk3MHI0cWVSOWFDbDAtZTRWLUdtdXZWY1hFMV84SjNoNmhfT0pXTFkwdVZ2ODdIZ3h1dm9vNXI3ZmtWT3drbVJxYVhZYVcxcFFqN002WXk5cUpPWHB2QTRpR21jNHQ0VlplUGhrMTJqTmdRaUtPX1pSMTVjQmNC?oc=5",
+        "source": "Chosunbiz",
+        "published": "2026-10-18T23:46:00+00:00",
+        "summary": "KOSPI sinks as AI credit strains hit, semiconductor concentration magnifies fall - CHOSUNBIZ Chosunbiz",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 8,
+      "summary_fr": "Le KOSPI chute sous l'effet de tensions sur le crédit lié à l'IA, la forte concentration du marché sur les semi-conducteurs amplifiant la baisse. L'extrait ne donne pas le montant de la chute.",
+      "why_it_matters": "Montre que la dépendance d'un indice aux valeurs de l'IA et des semi-conducteurs transmet rapidement les craintes sur le crédit IA aux marchés.",
+      "entities": [
+        "KOSPI",
+        "Chosunbiz"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "325149fa44b93e8c",
+        "title": "Bond Market Triggers Wall Street Risk Warnings As Long Yields Surge",
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNQ2xCMEJVN2tiLS12Y2FTZVcxZEE1WmNkNjBBQ3JKSnN2ZDQ4Z3IzenlpajdVanlpLVhVaUFLY3lOSjFvVUpOekxMN1l2V1c3MmV3a1FDZUtxLWhQb0NLM2dsb0RMQkRkQjc5ekQ1aE5oQnpvYUx5NHg0djU1OGRma0M0UjRjSWdUTVFWQTN1SnFkTWtwaGxuVWNqeVVDbGdYQVRkVEdIRWtBSVhqeDhpeTV4RllrNU5KUzZPajU4ZFgtZEtVcHBJZzRTOA?oc=5",
+        "source": "Stocktwits",
+        "published": "2026-10-18T23:35:36+00:00",
+        "summary": "Bond Market Triggers Wall Street Risk Warnings As Long Yields Surge Stocktwits",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "Les rendements des obligations longues augmentent fortement, et les acteurs de Wall Street émettent des alertes de risque. L'extrait ne précise pas les niveaux de taux.",
+      "why_it_matters": "La hausse des taux longs pèse sur la valorisation des actions et le coût de la dette, sujet central des discussions sur les marchés.",
+      "entities": [
+        "Stocktwits"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "cef1d05c75250eda",
+        "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
+        "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+        "source": "techcrunch.com",
+        "published": "2026-10-18T20:37:40+00:00",
+        "summary": "Anthropic said that it will commit 5% of its shares to the fund.",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Anthropic annonce qu'elle engagera 5 % de ses actions dans un « fonds de bien public » (public benefit fund). L'article ne détaille que cet engagement de principe.",
+      "why_it_matters": "Ce mécanisme de redistribution d'une partie du capital d'un acteur majeur de l'IA éclaire la gouvernance des laboratoires d'IA, un sujet fréquent en entretien.",
+      "entities": [
+        "Anthropic"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "3ff67c1a370b29fe",
+        "title": "WisdomTree Launches 2 ETFs on the Texas Stock Exchange, Bringing Hedge Fund-Style Long/Short Strategies to Everyday Investors",
+        "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxOaDBDR1FyaEs1OUNBU3dPVGlRSVVRY1djajJMeEY5RUsyQlppLW94ZEpDMElMdmo2czVaRmZhRTk0c1FqYlZNcmRYSmZsckRmM2ZtWHpYVjRsUl9KU1UtR2pzV3FMYXF4V0ZlV1NycERoRUx3NXg5NWdKdWxNVWpsZ3ZBdjktMEtBQ0phZDZmV0hieGJZZTNPOG9KTGpwdEhGZXBqVG5EVkR4djV3czRHcEd5Nzg0Y296U1F0b3FPMDNURU5kb3hjb0cteFlpS0JGeWVnTExMU0dBNzdYSXAxTWIzZnZSRTVFQmIwQ1YzcTdBdmlwZWtuU1VYRm4tQllhZ2c?oc=5",
+        "source": "24/7 Wall St.",
+        "published": "2026-10-18T20:03:00+00:00",
+        "summary": "WisdomTree Launches 2 ETFs on the Texas Stock Exchange, Bringing Hedge Fund-Style Long/Short Strategies to Everyday Investors 24/7 Wall St.",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "WisdomTree lance deux ETF sur la Texas Stock Exchange, reprenant des stratégies long/short proches de celles des hedge funds, accessibles aux particuliers.",
+      "why_it_matters": "Illustre la démocratisation des stratégies alternatives et l'émergence de nouvelles places boursières aux États-Unis.",
+      "entities": [
+        "WisdomTree",
+        "Texas Stock Exchange"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "994034a88ee433ac",
+        "title": "Finance Chiefs at Arm, Synopsys Talk AI’s Risks and Rewards",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQWllQaE5TRFBTa0pfakpOZk56dHFJd2xlSkttMmFrenU3OVl5SVFYcWw2RmNtWGE4UVFfa1NxZFpMNjdsSGNmNUZvT0I3bnZXVnhUUWMzNlRqRkxmSTczYlBBbE9zeXBtN0Z6NERWWVl4YVZ6SW4xMjh5SE9jNXk4V1RjUWd2clkxc3dKckpB?oc=5",
+        "source": "Bloomberg.com",
+        "published": "2026-10-18T20:00:01+00:00",
+        "summary": "Finance Chiefs at Arm, Synopsys Talk AI’s Risks and Rewards Bloomberg.com",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Les directeurs financiers d'Arm et de Synopsys s'expriment sur les risques et les opportunités de l'IA. L'article ne fournit pas de chiffres dans l'extrait.",
+      "why_it_matters": "Les points de vue des directions financières sur l'IA donnent un aperçu de la manière dont les grands groupes tech justifient leurs investissements.",
+      "entities": [
+        "Arm",
+        "Synopsys"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f37813a984d7cf6e",
+        "title": "Bond Market’s Big Short Bet Gets Wakeup Call as AI Trade Wobbles",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNV2duSlpzQlF4bmx6OXZSVTg1ZEdTRDZjQ0dGQkZsRmpySEVEVFVGYTNkeTJIeEh2OGFwMU5YTjFoQVJfV202ekppZ3RVS3h1UnhROXpkUmVCTTloSGVVYldIMDFFajkxM2ZXc1ZHbXFQTXk1SEFyUGQ1MS1xdGJ4WFhPc29ROEMyT3JZcjZsdE5kdnNNTUE?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-18T19:00:00+00:00",
+        "summary": "Bond Market’s Big Short Bet Gets Wakeup Call as AI Trade Wobbles Yahoo Finance",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Un pari baissier massif sur les obligations (big short) sur le marché obligataire est remis en cause alors que la tendance IA vacille. L'extrait ne donne pas de chiffres.",
+      "why_it_matters": "Le lien entre positionnement obligataire et valorisations tech est un sujet clé pour comprendre les flux de marché actuels.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "6a083a36de897bf0",
+        "title": "Disney agrees to hire the majority of Character.AI’s workforce",
+        "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
+        "source": "techcrunch.com",
+        "published": "2026-10-18T16:30:00+00:00",
+        "summary": "The filing also says that the “vast majority” of Character.AI employees who were offered jobs at Disney accepted them. However, this is a stalking horse bid, so another company could come forward with a higher offer.",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 7,
+      "summary_fr": "Disney accepte d'embaucher la majorité des salariés de Character.AI, selon un dépôt réglementaire, la vaste majorité des salariés concernés ayant accepté. Il s'agit d'une offre de type stalking horse, ce qui signifie qu'une autre entreprise pourrait faire une offre supérieure.",
+      "why_it_matters": "Cette opération illustre la consolidation des start-ups d'IA par les acteurs établis du divertissement et les mécanismes de rachat en procédure.",
+      "entities": [
+        "Disney",
+        "Character.AI"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e1446ff99bbf1894",
+        "title": "'Just another scare': Wall Street sees the AI trade strong despite tech's latest rout",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxONkF2UGc0SmgxTzdidVlLNWRHU3JjZFdrOHpKRGt2ODFqSUJFQWpnYVRXLUJ0aDJ6c3pmNDB3OVB0VGpsNlJJRkkzZjNXODNzaEJnUFdOemZZVTBKc3pWbUJ6MnBaeFdIRjB1VDl0UlVzMnNneDJGN0NJTGNaWmUyVnRqT2QxOERjZ2ZJYVltT0tLZzE0T2pSYjRqZW1tbE00TVJzbzJTQjRTemRILTV5cGFQZU9EeHg0TlVDdE95bE5VVHh0Z0w5eGdGa1FmWGdtVzY4Wg?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-18T15:59:30+00:00",
+        "summary": "'Just another scare': Wall Street sees the AI trade strong despite tech's latest rout Yahoo Finance",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Selon Yahoo Finance, Wall Street considère que la tendance IA reste solide malgré le dernier repli du secteur technologique, qualifié de simple « frayeur ». L'extrait ne fournit pas de chiffres.",
+      "why_it_matters": "Le débat sur la solidité du trade IA face aux corrections récentes est central pour comprendre la valorisation des valeurs tech.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "37fc926dd4123195",
+        "title": "Une start-up londonienne rêve de recréer les concerts des idoles disparues",
+        "url": "https://www.lemonde.fr/economie/article/2026/10/18/une-start-up-londonienne-reve-de-recreer-les-concerts-des-idoles-disparues_6797078_3234.html",
+        "source": "lemonde.fr",
+        "published": "2026-10-18T14:00:07+00:00",
+        "summary": "La société Unit1 Studio veut créer les avatars numériques de musiciens disparus ou trop âgés pour se produire sur scène. Et espère par la suite les envoyer en tournée.",
+        "feed_theme": "marches"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "La start-up londonienne Unit1 Studio développe des avatars numériques de musiciens disparus ou trop âgés pour se produire, avec l'objectif de les faire tourner ensuite.",
+      "why_it_matters": "Cas d'usage de l'IA générative dans le divertissement, d'intérêt limité pour les sujets financiers.",
+      "entities": [
+        "Unit1 Studio"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "89c6d6998496ddaa",
+        "title": "Indian Stock Market Outlook Next Week, October 19-23: Sensex, Nifty May Extend Rally Amid IT Buying, FII Flows",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPeXl0blpwbkdnWU85U0dNWnVoLXREMGMyT1ZUaVJCaWRvM3owdzZTODhiVS1TQk1fUk9ac1dtd1c2RHZ3MXJiWE1mbEktRUtfNzNxSnFyYTZNTVpHV053UF9lcWJBYlVzWVVpdzM5XzNiMU1XZldYSUVpOHEwY1ZxRWpWb29iNUhZSTdNQ0R0b0cwV3llMGJ3dWFkOHY1TnVHVDFHamlUUG1GNm42cHJnZVdFWjd6ZTRQbDNQRDVRX3dReXhKaHAwQVVQU00zQzZBbGtrSzJ4cWg2dw?oc=5",
+        "source": "Goodreturns",
+        "published": "2026-10-18T11:53:55+00:00",
+        "summary": "Indian Stock Market Outlook Next Week, October 19-23: Sensex, Nifty May Extend Rally Amid IT Buying, FII Flows Goodreturns",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "Perspectives pour la semaine du 19 au 23 octobre sur les indices indiens Sensex et Nifty, qui pourraient poursuivre leur hausse portés par les achats sur le secteur IT et les flux d'investisseurs étrangers (FII).",
+      "why_it_matters": "Les flux étrangers et le secteur IT indien sont des repères utiles sur les marchés émergents, sans information précise dans l'extrait.",
+      "entities": [
+        "Sensex",
+        "Nifty"
+      ],
+      "related": []
+    }
+  ]
+}
