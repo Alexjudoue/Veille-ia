@@ -1,0 +1,213 @@
+{
+  "date": "2026-10-23",
+  "events": [
+    {
+      "event": "Qui viendra sauver la France en cas de crise de la dette ?",
+      "steps": [
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://www.lemonde.fr/economie/article/2026/10/23/qui-viendra-sauver-la-france-en-cas-de-crise-de-la-dette_6798902_3234.html"
+          },
+          "error": "accès refusé (HTTP 402) : site protégé ou payant",
+          "duration_s": 0.44
+        },
+        {
+          "tool": "search_memory",
+          "args": {
+            "query": "dette française taux obligations BCE FMI"
+          },
+          "result_chars": 2685,
+          "duration_s": 0.0
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://www.bfmtv.com/economie/replay-emissions/les-experts/video-intervention-de-la-bce-la-solution-face-a-la-dette_VN-202610230430.html"
+          },
+          "result_chars": 876,
+          "duration_s": 0.44
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://www.lemonde.fr/economie/article/2026/10/23/la-france-est-le-maillon-faible-de-cette-lutte-mondiale-pour-les-capitaux_6799035_3234.html"
+          },
+          "error": "www.lemonde.fr a déjà refusé l'accès pendant cette analyse : choisis un autre site",
+          "duration_s": 0.0
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://www.lemonde.fr/idees/article/2026/10/22/la-politique-monetaire-de-la-bce-a-fabrique-de-la-dette-publique-elle-peut-aussi-en-effacer_6798617_3232.html"
+          },
+          "error": "www.lemonde.fr a déjà refusé l'accès pendant cette analyse : choisis un autre site",
+          "duration_s": 0.0
+        }
+      ],
+      "model_calls": 4,
+      "input_tokens": 30,
+      "output_tokens": 1498,
+      "status": "ok",
+      "reason": "",
+      "cache_write_tokens": 8944,
+      "cache_read_tokens": 9378,
+      "rejected_figures": [
+        {
+          "value": "5 %",
+          "label": "Taux français à dix ans atteint en séance le 21 octobre, plus haut depuis 2002 (source : mémoire, non lue directement)"
+        }
+      ],
+      "articles_read": 1,
+      "memory_searches": 1,
+      "news_searches": 0,
+      "tool_calls": 5
+    },
+    {
+      "event": "OpenAI working on new $30B raise at $1.25T valuation ahead of IPO",
+      "steps": [
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://techcrunch.com/2026/10/22/openai-working-on-new-30b-raise-at-1-25t-valuation-ahead-of-ipo/"
+          },
+          "result_chars": 1704,
+          "duration_s": 0.08
+        },
+        {
+          "tool": "search_memory",
+          "args": {
+            "query": "OpenAI levée valorisation IPO"
+          },
+          "result_chars": 2668,
+          "duration_s": 0.0
+        }
+      ],
+      "model_calls": 2,
+      "input_tokens": 6,
+      "output_tokens": 2023,
+      "status": "ok",
+      "reason": "",
+      "cache_write_tokens": 2415,
+      "cache_read_tokens": 4188,
+      "repaired_leak": true,
+      "articles_read": 1,
+      "memory_searches": 1,
+      "news_searches": 0,
+      "tool_calls": 2
+    },
+    {
+      "event": "Les inquiétudes sur l’intelligence artificielle font plonger Wall Street",
+      "steps": [
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://www.lemonde.fr/economie/article/2026/10/23/les-inquietudes-sur-l-intelligence-artificielle-font-plonger-wall-street_6798868_3234.html"
+          },
+          "error": "accès refusé (HTTP 402) : site protégé ou payant",
+          "duration_s": 0.44
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdjE4aWxCWDhLWVY5cUNkZ2lpLUNJaDBMYUFZRUZGSkVpM3o3TkprNlFDQzBMUEw4NmhoR1VnS1RyUUNpMUVzR0diOFM5TUNZeGhEbVJiUzVibElvUkpKb2VOXzRQNEVIWkhvX0xGSUs2MXdfMzVncG5RdGlvLXJ2YnRFV2NHTFhsTTJCYnA2SUhHMnhiNFlxSGlxSXlRZVQ1VHJTVXhsVm94ZXJIcnpBSUVWcGw?oc=5"
+          },
+          "error": "accès refusé (HTTP 403) : site protégé ou payant",
+          "duration_s": 0.53
+        },
+        {
+          "tool": "search_memory",
+          "args": {
+            "query": "Meta Wall Street intelligence artificielle"
+          },
+          "result_chars": 2580,
+          "duration_s": 0.0
+        },
+        {
+          "tool": "search_news",
+          "args": {
+            "query": "Meta stock falls capital raise AI spending",
+            "lang": "en"
+          },
+          "result_chars": 3049,
+          "duration_s": 0.52
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNQzM0bkNoT3p6WmpOZU83cnFNdTRYNDVVNVo4THFOTjQxUEdoak1JMzZYR2k3bmJrOUptcjhLWWpLN3M1ak1KNHRaX0NmQmZTQmQ4dkJaRUhVc2JDbHFMNVI1dWs2Y3ZlaTJwQmxuSUQyUjZ2YlJoOWJWNEphM0pYLXJVcmVTc01Ram95QlpBRVJua0VxSXZ6MUp5U1VzdEZ4bnA5WUtJNG8?oc=5"
+          },
+          "result_chars": 2716,
+          "duration_s": 0.87
+        }
+      ],
+      "model_calls": 3,
+      "input_tokens": 28,
+      "output_tokens": 1996,
+      "status": "ok",
+      "reason": "",
+      "cache_write_tokens": 10860,
+      "cache_read_tokens": 7329,
+      "articles_read": 1,
+      "memory_searches": 1,
+      "news_searches": 1,
+      "tool_calls": 5
+    },
+    {
+      "event": "Safe-haven capital is flooding into U.S. Treasuries, pushing the 10-year yield back below 5%! AI stocks are being sold off—what exactly is the market worried about?",
+      "steps": [
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNaFdYUzZyVjN6b0o4Vk9Rd2ZUemlMQ1BvMk5uaGtqOGdCaGFwVjQzTnloblFHdDJyQlRXMUtzTUY5dXc5RWRfQkI3aVAzaXJhS1pGTURrd01xUmV4SUx5Wm9BUXdQaTlEZS1xMHczYU14U3hEMF90T0hXa3JXR3FNVmZEbWJIb2RzOFlYNURlWEdodkZOLVJJRFNCZ2g2UUwzUHdjT3RfOA?oc=5"
+          },
+          "error": "texte trop court : page vide, mur de consentement ou paywall",
+          "duration_s": 0.92
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNOFhfOFg2U2dCbUZqVVJITDVEZ1pxSHF0U1NwckVKWkkwZVVXb2d3MWRmTWlROHpzaG1udE9oSGJpeUQ2THlINFFIYlV1R01SWVlISjZOU21Od2FzNV9RMWlpOXR5SmpLdTBBTG1Ya1R1N1VOMWZGT3VwZWhoT2pYa2UwR0NxbWlpNUdHS25PNTEtNC16Rk91WEJtMXF1MUxpSl83RC1WUHU0QnREdTdSMg?oc=5"
+          },
+          "error": "accès refusé (HTTP 401) : site protégé ou payant",
+          "duration_s": 0.58
+        },
+        {
+          "tool": "search_memory",
+          "args": {
+            "query": "Treasury yields AI stocks sell-off"
+          },
+          "result_chars": 2358,
+          "duration_s": 0.0
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOdDNHQlIxQkRfeVl2bWtrX2lzYTZsX0JYazZRaGdkclU5aHAwWlppV05YSTdvS0kwQXNVa0p6N0tseXVpcDZPRFBhdV9fbTExaXZZSTJJT1RXQmVXR3ZpTE5aZXp5cXFHRnB0WGxJNjVubU14LUs0eFV0SDVHWnJpYVkwYlNxZEhvZDVPa1U1MXlsYi15a2czRGJiOER5RjQ5M0toakZZbWV5S245WkM3QVNhZw?oc=5"
+          },
+          "error": "www.marketwatch.com a déjà refusé l'accès pendant cette analyse : choisis un autre site",
+          "duration_s": 0.43
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUjlodHl3Vy1TTFQ3S01nNmk0OW9kS1RmRHVJT0hfWXUxOTc2VmJ3WjRpQmdxaE0xdXNOZzhxY2xQYkQwa1VJQ053WXVfV3l5LVN3MHJOTUs4RlYzbERqWmlsdWs0OGNKRmNrUzBCUEZtNUwtNEdRWW8yeFdfUzlkZGR2NFdZQXFycTgwNUNMdDF4RFpIcXI2V0hOUlFyY0NNZUJ6dzB6Sl9wS1V0Ym5GSjQ1LUZaSk0?oc=5"
+          },
+          "result_chars": 3347,
+          "duration_s": 0.77
+        }
+      ],
+      "model_calls": 3,
+      "input_tokens": 28,
+      "output_tokens": 2424,
+      "status": "ok",
+      "reason": "",
+      "cache_write_tokens": 8756,
+      "cache_read_tokens": 7197,
+      "articles_read": 1,
+      "memory_searches": 1,
+      "news_searches": 0,
+      "tool_calls": 5
+    }
+  ]
+}
