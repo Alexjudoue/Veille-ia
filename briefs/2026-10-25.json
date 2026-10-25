@@ -1,0 +1,2088 @@
+{
+  "stats": {
+    "collected": 159,
+    "analyzed": 96,
+    "selected": 18,
+    "calls": 13,
+    "input_tokens": 29009,
+    "output_tokens": 26116,
+    "cache_write_tokens": 2846,
+    "cache_read_tokens": 14780,
+    "cost_usd": 0.01646,
+    "agent": {
+      "events": 4,
+      "deep_dives": 4,
+      "calls": 9,
+      "input_tokens": 26,
+      "output_tokens": 10150,
+      "cache_write_tokens": 24677,
+      "cache_read_tokens": 22073,
+      "articles_read": 6,
+      "cost_usd": 0.00838
+    },
+    "total_cost_usd": 0.02485,
+    "duration_s": 178
+  },
+  "synthesis": {
+    "key_points": [
+      "Moody's maintient la note de la France à Aa3 avec perspective négative, mais le taux à 10 ans dépasse 5 % pour la première fois depuis 2002 : la dette coûte plus cher malgré la stabilité de la note.",
+      "Les marchés actions reculent sous l'effet d'une vente mondiale d'obligations : le rendement américain à 30 ans atteint 5,274 %, un plus haut en 19 ans, et le Sensex et le Nifty enchaînent les baisses, poussés par le pétrole cher et les tensions au Moyen-Orient.",
+      "La CJUE (affaire Tukowiecka, 15 octobre 2026) impose aux banques de rembourser d'abord une victime de phishing, sans invoquer d'emblée sa négligence grave, ce qui renforce la protection des clients."
+    ],
+    "connection": "Hausse des taux et du coût du capital : la dette française, les obligations américaines et les indices indiens baissent sous la même pression des rendements et du pétrole cher.",
+    "interview_question": "Pourquoi une hausse des rendements obligataires pèse-t-elle à la fois sur les finances publiques d'un État et sur les marchés actions ?"
+  },
+  "deep_dives": [
+    {
+      "article_id": "5013b7ec51ab1bb5",
+      "title": "Moody’s épargne la France, mais Roland Lescure met en garde ceux qui veulent \"voter un budget en dérive\"",
+      "summary": "Vendredi 23 octobre, Moody's a maintenu la note souveraine de la France à Aa3, avec perspective négative, ce qui conserve le dernier « double A » du pays, alors que Fitch et S&P la classent déjà à A+. Le ministre de l'Économie Roland Lescure y voit la reconnaissance de la force de l'économie, mais aussi un avertissement aux parlementaires qui voudraient voter un budget « en dérive » et à ceux qui alimentent le désordre politique. Les marchés, eux, restent sévères : le taux à 10 ans a dépassé 5 % pour la première fois depuis 2002, et l'écart de taux avec l'Allemagne reste supérieur à 170 points de base. La note est donc stable, mais le coût de la dette grimpe.",
+      "key_figures": [
+        {
+          "value": "Aa3",
+          "label": "Note de la dette française maintenue par Moody's, avec perspective négative",
+          "source_url": "https://www.bfmtv.com/economie/economie-social/finances-publiques/moody-s-epargne-la-france-mais-lescure-met-en-garde-ceux-qui-veulent-voter-un-budget-en-derive_AD-202610240309.html"
+        },
+        {
+          "value": "5,4%",
+          "label": "Déficit public attendu, en % du PIB",
+          "source_url": "https://www.bfmtv.com/economie/economie-social/finances-publiques/moody-s-epargne-la-france-mais-lescure-met-en-garde-ceux-qui-veulent-voter-un-budget-en-derive_AD-202610240309.html"
+        },
+        {
+          "value": "119%",
+          "label": "Niveau de la dette publique",
+          "source_url": "https://www.bfmtv.com/economie/economie-social/finances-publiques/moody-s-epargne-la-france-mais-lescure-met-en-garde-ceux-qui-veulent-voter-un-budget-en-derive_AD-202610240309.html"
+        },
+        {
+          "value": "170 points de base",
+          "label": "Écart de taux France-Allemagne, vendredi (contre environ 70 points en début d'année)",
+          "source_url": "https://www.bfmtv.com/economie/economie-social/finances-publiques/moody-s-epargne-la-france-mais-lescure-met-en-garde-ceux-qui-veulent-voter-un-budget-en-derive_AD-202610240309.html"
+        }
+      ],
+      "context": "Le déficit attendu (plus de 5,4 % du PIB) et une dette de 119 % pèsent sur les comptes, alors que le budget 2027 n'est pas encore voté. L'instabilité politique et le climat social dégradé font craindre que le texte ne passe pas, ce qui inquiète les investisseurs. Le gouvernement compte sur le 49.3 ou les ordonnances pour faire adopter le budget début 2027.</context>",
+      "what_changed": "",
+      "confidence": "moyenne",
+      "sources_read": [
+        "https://www.bfmtv.com/economie/economie-social/finances-publiques/moody-s-epargne-la-france-mais-lescure-met-en-garde-ceux-qui-veulent-voter-un-budget-en-derive_AD-202610240309.html"
+      ],
+      "stats": {
+        "articles_read": 1,
+        "memory_searches": 1,
+        "news_searches": 0,
+        "tool_calls": 2,
+        "calls": 2,
+        "input_tokens": 6,
+        "output_tokens": 1935
+      }
+    },
+    {
+      "article_id": "744adea0bab183e5",
+      "title": "Dow, S&P 500, Nasdaq Futures Slip As Global Bond Rout Catches Up With Markets: LUNR, MSTR, WYFI, AMLX Stocks In Focus",
+      "summary": "Mardi soir, les contrats à terme sur le Dow, le S&P 500 et le Nasdaq reculaient légèrement, alors qu'une vente mondiale d'obligations gagnait les marchés actions. Le rendement de l'obligation américaine à 30 ans a atteint un plus haut en 19 ans (5.274%) et celui à 10 ans était à 4.692%. Les trois indices avaient fini en baisse, pour la troisième séance d'affilée, le Nasdaq Composite cédant 1,33%, et les valeurs de semi-conducteurs ont été les plus touchées (SOXX en baisse d'environ 5% à la clôture). Le pétrole, dont le Brent autour de 91,8 dollars, et les tensions entre les États-Unis et l'Iran ajoutent aux craintes d'inflation.",
+      "key_figures": [
+        {
+          "value": "5.274%",
+          "label": "Rendement de l'obligation américaine à 30 ans, plus haut depuis 19 ans",
+          "source_url": "https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-slip-as-global-bond-rout-catches-up-with-markets-lunr-mstr-wyfi-amlx-stocks-in-focus/cZYdcsfRJkP"
+        },
+        {
+          "value": "4.692%",
+          "label": "Rendement de l'obligation américaine à 10 ans",
+          "source_url": "https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-slip-as-global-bond-rout-catches-up-with-markets-lunr-mstr-wyfi-amlx-stocks-in-focus/cZYdcsfRJkP"
+        },
+        {
+          "value": "1,33%",
+          "label": "Recul du Nasdaq Composite à la clôture de mardi",
+          "source_url": "https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-slip-as-global-bond-rout-catches-up-with-markets-lunr-mstr-wyfi-amlx-stocks-in-focus/cZYdcsfRJkP"
+        }
+      ],
+      "context": "La hausse des rendements obligataires est mondiale : au Japon, le taux à 10 ans a atteint son niveau le plus haut depuis 30 ans, le Bund allemand à 30 ans est au plus haut depuis 2011 et l'OAT française à 30 ans au niveau de 2008. Les investisseurs vendent des obligations, ce qui fait monter les taux, et l'envolée du pétrole alimente la crainte d'une inflation durable, en lien avec les tensions autour de l'Iran. Les valeurs technologiques, très sensibles aux taux d'intérêt, subissent le choc le plus fort.",
+      "what_changed": "Les mémoires récentes montrent une tension déjà présente la semaine précédente : le 23 octobre, les contrats sur le S&P 500 reculaient après une surprise d'inflation au Royaume-Uni, et un article du 22 octobre décrivait un marché obligataire « sous tension ». La baisse actuelle prolonge donc ce mouvement, avec des rendements longs qui atteignent des niveaux records depuis 2007 à 2008.",
+      "confidence": "moyenne",
+      "sources_read": [
+        "https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-slip-as-global-bond-rout-catches-up-with-markets-lunr-mstr-wyfi-amlx-stocks-in-focus/cZYdcsfRJkP",
+        "https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-futures-fall-as-10-year-yield-nears-5-2-trump-xi-dinner-with-big-tech-ce-os-in-spotlight/cZMaMNMRBaI"
+      ],
+      "stats": {
+        "articles_read": 2,
+        "memory_searches": 1,
+        "news_searches": 0,
+        "tool_calls": 3,
+        "calls": 2,
+        "input_tokens": 6,
+        "output_tokens": 2890
+      }
+    },
+    {
+      "article_id": "1dcb67c5d45ffde1",
+      "title": "Phishing : la banque doit rembourser d'abord, l'Europe tranche !",
+      "summary": "Le 15 octobre 2026, la Cour de justice de l'Union européenne (affaire C-70/25, dite Tukowiecka) a jugé qu'une banque ne peut pas refuser d'emblée de rembourser une victime de phishing en invoquant sa « négligence grave ». Dans l'affaire, une vendeuse en ligne a saisi ses identifiants sur une fausse page de sa banque polonaise, et un escroc a débité environ 700 euros. La banque doit rembourser immédiatement, au plus tard à la fin du premier jour ouvrable suivant le signalement de la fraude. Elle ne peut récupérer la somme qu'ensuite, en prouvant une faute grave ou intentionnelle, sauf si elle soupçonne sérieusement le client lui-même de fraude et le signale par écrit aux autorités. La décision ne couvre pas tous les cas : si la victime a elle-même validé un virement sous la pression d'un faux conseiller, la qualification juridique peut changer.",
+      "key_figures": [
+        {
+          "value": "700 euros",
+          "label": "Montant débité par le fraudeur dans l'affaire jugée par la CJUE",
+          "source_url": "https://www.lalibre.be/economie/decideurs-chroniqueurs/2026/10/24/phishing-la-banque-doit-rembourser-dabord-leurope-tranche-H4MVSUJIF5H6XIKSX3OICQCIXI/"
+        },
+        {
+          "value": "15 octobre 2026",
+          "label": "Date de l'arrêt de la CJUE",
+          "source_url": "https://www.24matins.fr/fraude-bancaire-la-cjue-change-le-timing-du-remboursement-1422960"
+        }
+      ],
+      "context": "La DSP2 (directive européenne 2015/2366) encadre les paiements non autorisés : la banque doit rembourser vite, et la « négligence grave » du client sert à partager la perte après coup, pas à bloquer le remboursement. Avant cet arrêt, beaucoup de banques refusaient le remboursement sur ce motif, et la plupart des victimes renonçaient faute de moyens pour aller en justice. Le coût du procès pèse désormais sur la banque, qui doit payer d'abord puis prouver la faute.</context>",
+      "what_changed": "",
+      "confidence": "élevée",
+      "sources_read": [
+        "https://www.lalibre.be/economie/decideurs-chroniqueurs/2026/10/24/phishing-la-banque-doit-rembourser-dabord-leurope-tranche-H4MVSUJIF5H6XIKSX3OICQCIXI/",
+        "https://www.24matins.fr/fraude-bancaire-la-cjue-change-le-timing-du-remboursement-1422960"
+      ],
+      "stats": {
+        "articles_read": 2,
+        "memory_searches": 1,
+        "news_searches": 0,
+        "tool_calls": 3,
+        "calls": 2,
+        "input_tokens": 6,
+        "output_tokens": 2420
+      }
+    },
+    {
+      "article_id": "5cb2bd726295cc29",
+      "title": "Stock Market Crash, Rs 18.37 Lakh Cr Wiped in 7 Weeks; Sensex, Nifty Eyes Longest Losing Streak Since Covid?",
+      "summary": "Les indices indiens Sensex et Nifty enchaînent les baisses : selon Goodreturns, ils ont perdu près de 6 % en sept semaines, et une huitième baisse hebdomadaire consécutive les placerait à leur plus longue série de replis depuis la correction liée au Covid en 2020. Le lundi, le Sensex a touché 72 832 points (-1 064 points, soit -1,44 %) et le Nifty 22 807 points, avec une forte hausse de la volatilité (indice VIX en hausse de 13 à 14 %). Le recul de la capitalisation boursière des entreprises cotées à la Bourse de Bombay (BSE) atteint 18,37 lakh crore de roupies depuis le 10 août. Les causes citées sont le pétrole cher, la hausse des rendements obligataires américains, les tensions au Moyen-Orient, le resserrement de la politique monétaire et les ventes massives des investisseurs étrangers (FII).",
+      "key_figures": [
+        {
+          "value": "18,37 lakh crore",
+          "label": "Baisse de la capitalisation boursière des entreprises cotées au BSE depuis le 10 août (de plus de 494 lakh crore à environ 475,80 lakh crore)",
+          "source_url": "https://www.goodreturns.in/news/stock-market-crash-rs-18-37-lakh-crore-wiped-sensex-nifty-eyes-longest-losing-streak-since-covid-1537671.html"
+        },
+        {
+          "value": "1 064 points",
+          "label": "Chute du Sensex à l'ouverture de la séance de lundi, soit -1,44 %",
+          "source_url": "https://www.goodreturns.in/news/stock-market-crash-rs-18-37-lakh-crore-wiped-sensex-nifty-eyes-longest-losing-streak-since-covid-1537671.html"
+        },
+        {
+          "value": "6,09 lakh crore",
+          "label": "Richesse effacée en une seule journée lors des ventes",
+          "source_url": "https://www.goodreturns.in/news/stock-market-crash-rs-18-37-lakh-crore-wiped-sensex-nifty-eyes-longest-losing-streak-since-covid-1537671.html"
+        },
+        {
+          "value": "7",
+          "label": "Semaines consécutives de baisse du Sensex et du Nifty, selon SBI Securities",
+          "source_url": "https://www.goodreturns.in/news/stock-market-crash-rs-18-37-lakh-crore-wiped-sensex-nifty-eyes-longest-losing-streak-since-covid-1537671.html"
+        }
+      ],
+      "context": "Le marché indien subit une correction prolongée, nourrie par un pétrole cher, des taux américains qui montent et des tensions au Moyen-Orient, dans la continuité d'un épisode de baisse déjà vécu plus tôt en 2026 après le conflit États-Unis/Israël-Iran et le blocage du détroit d'Ormuz. Les sorties de capitaux des investisseurs étrangers et le durcissement monétaire pèsent aussi sur le moral des marchés. Les secteurs les plus touchés sont les métaux, les banques (publiques et privées), la chimie, l'automobile et la finance.",
+      "what_changed": "La mémoire ne contient pas de suivi antérieur de cette série de baisses sur le Sensex et le Nifty ; le 19 octobre, les perspectives évoquaient encore une possible poursuite de la hausse portée par l'IT et les flux étrangers, ce qui contraste avec le repli décrit ici.",
+      "confidence": "moyenne",
+      "sources_read": [
+        "https://www.goodreturns.in/news/stock-market-crash-rs-18-37-lakh-crore-wiped-sensex-nifty-eyes-longest-losing-streak-since-covid-1537671.html"
+      ],
+      "stats": {
+        "articles_read": 1,
+        "memory_searches": 1,
+        "news_searches": 1,
+        "tool_calls": 3,
+        "calls": 3,
+        "input_tokens": 8,
+        "output_tokens": 2905
+      }
+    }
+  ],
+  "analyzed": [
+    {
+      "article": {
+        "id": "4e3708947aece782",
+        "title": "Données, armement, travailleurs du clic : la face cachée des IA (Video)",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWGdHUDE3aS1OZzhsaFEwWDdXa3RGOUtRQXpXX2xSc2xNNDY3OVE2dW1Vc1d0RVRYTUhEdFBXU0FuQTdHeEdCTU1TV1Q2LURaQjRDZTBkQjI4VzJ1MjA5blNxTmVpRkZPWnMwM0VXcnU2RkZNeHc4YlNhVmlKSW1TdzZ0LUZDZDRHeExab2h2c2pWcFFzSWVpVmQ2VEdsMDNLMW5vNENaMTVHeFhTRWlOSw?oc=5",
+        "source": "L'Humanité",
+        "published": "2026-10-25T10:01:00+00:00",
+        "summary": "Données, armement, travailleurs du clic : la face cachée des IA (Video) L'Humanité",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Vidéo de L'Humanité sur la face cachée de l'intelligence artificielle : collecte de données, usages militaires et travail des travailleurs du clic.",
+      "why_it_matters": "Rappelle les coûts humains et industriels de l'IA, sujet souvent évoqué dans les débats sur sa régulation.",
+      "entities": [
+        "L'Humanité"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "6ab4a29d3f7fa000",
+        "title": "Avec l'intelligence artificielle, le cuivre a du plomb dans l'aile",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNNUtDN0lBdE1wOWNxT1dEVjJiWEY4UVBLSGx3dm1BWXlyejRGUTVaWTUzLTItdlYzWWxfMlFWVnZ3UDBGOUR2V2gyUFVFLVZRS1piemlhRnVteFNDVHpNYW8zQXBSODlWUlJOZzJiZlM4S25fNXhqSTdCREJILXNDMDFXMllqMHlwN1ZBYXdqc0pzQUxlcnJ0REhlN3Z3aHA1Y19ldkxkYWtDMTFaX1hRbFRNRVRYNXpZeE05d1ExbEhUWkVkeGZMOE5R?oc=5",
+        "source": "Les Echos",
+        "published": "2026-10-25T10:00:11+00:00",
+        "summary": "Avec l'intelligence artificielle, le cuivre a du plomb dans l'aile Les Echos",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Les Echos analyse l'effet de l'intelligence artificielle sur le cours du cuivre, qui connaît une baisse de dynamique. L'extrait ne donne pas de chiffres.",
+      "why_it_matters": "Illustre le lien entre demande liée à l'IA (data centers, réseaux électriques) et matières premières.",
+      "entities": [
+        "Les Echos"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "2c8b071daef6763e",
+        "title": "Revolut en France : banque, IBAN, garantie des dépôts, frais et pannes",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQakhkQ0ZKRm1qZ0JyNlRwNloxMjRnbWZpWmdZem9EOFd0amFUcXAzSGJyNHhUcU94TFJFREVjQWxiM1JPcmdLbzBSdWg1VkNmczN6Q3FyeXRRUWxudGZBQnA5T3lqbEFNbzNDUC1mTFJUX3JOYUJXMHppYnJYbFNiTU56MGIyVFZpaThsQm1mOWtmVHlDSnVJbmpNM1VoRi13c3RWZw?oc=5",
+        "source": "Mediaterranee.com",
+        "published": "2026-10-25T09:56:38+00:00",
+        "summary": "Revolut en France : banque, IBAN, garantie des dépôts, frais et pannes Mediaterranee.com",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Mediaterranee.com fait le point sur Revolut en France : compte bancaire, IBAN, garantie des dépôts, frais et pannes.",
+      "why_it_matters": "Revolut est une fintech concurrente des banques traditionnelles, et la garantie des dépôts est une notion clé de la régulation bancaire.",
+      "entities": [
+        "Revolut"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a10740e0d1021676",
+        "title": "Brisée par la crise française, la Bourse de Paris vaut-elle encore le détour?",
+        "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQTXJYTm04SlhqcHpHS2tHYW5FVXpIZFI5cHBrWUQ3Uk13YXFHYlptMFZVRzBCb3U3elMwcjFXV1VJV2g3TE5RS3ZVeWRqZk9kQ192TFhMYVdlRkt6NmxvOGR1SldrVFdjM3J5Zm5hZF9VQXBVbEFyZ1JNTG9MVHpmeGlUVkZJOG9IVmdFWlc5X2dTMFl1SnBuT0Qza1E3NXY3R3lPN0J4b1hONE5mOC05alBRd2JONGVqdHJsQzJWblNfb3ZjaWhIYzNB?oc=5",
+        "source": "L'Echo",
+        "published": "2026-10-25T09:51:28+00:00",
+        "summary": "Brisée par la crise française, la Bourse de Paris vaut-elle encore le détour? L'Echo",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "L'Echo s'interroge sur l'intérêt de investir à la Bourse de Paris, fortement affectée par la crise politique française. L'extrait ne donne pas de chiffres.",
+      "why_it_matters": "La crise française pèse sur la valorisation du CAC 40 et sur l'attractivité de la place de Paris.",
+      "entities": [
+        "Bourse de Paris",
+        "L'Echo"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "496b8855898d2fed",
+        "title": "Red Bull utilise une IA pour prendre les bonnes décisions en course",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOaVhSYVplcXJVMnJHREMzU0NBZTZVNjR6aldNd3pUZ1YxYWR3Rjd6WjZCSzBzd2ZsRWltRTU2UGFISHh0Vl9lVkhNenlGeHNrVUtKdmJwYTl2NFRhTlJWeEJqTk1xOFNnbUh5cUs1Z3NqOW1tV1BLLTNMRWVmU3NzY2ItdEdneC02dDVnc0hVd3hLSmZxcFZCMS14dmZlUl9SU1kta2RfRzFJeGViSTgtUnBnSDJ0dDBNX0Fwcmx4U0Vyb0doMUEw?oc=5",
+        "source": "Nextgen-Auto.com",
+        "published": "2026-10-25T09:49:00+00:00",
+        "summary": "Red Bull utilise une IA pour prendre les bonnes décisions en course Nextgen-Auto.com",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "Red Bull utilise l'intelligence artificielle pour aider ses décisions en course automobile. L'extrait ne précise pas la technologie employée.",
+      "why_it_matters": "Exemple d'adoption de l'IA dans l'industrie et le sport de haut niveau, cas d'usage fréquent en entretien.",
+      "entities": [
+        "Red Bull"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "88f78c3efa990790",
+        "title": "« Jusqu'à 350 € » chez BNP Paribas : le détail des 3 conditions derrière la prime de bienvenue",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUkh5Z21YRG1mQUpWbENQbFNuazhlVU5wWVFleGVZOVM3elpiWFFtZ0NubmFtYlVHVFU5ZmN1bFczUmxyd2czZ2JiaUxZekVlYUdvQTJ6UERzRk9QVE1iY05KMUo4OXFjNXJzUmJUR1E5VG5SSExKdmlkUmdfaU1zbm1GSnZsV056RmZUMEVFRTU?oc=5",
+        "source": "JeChange",
+        "published": "2026-10-25T09:35:00+00:00",
+        "summary": "« Jusqu'à 350 € » chez BNP Paribas : le détail des 3 conditions derrière la prime de bienvenue JeChange",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "JeChange détaille les trois conditions pour obtenir la prime de bienvenue « jusqu'à 350 € » proposée par BNP Paribas.",
+      "why_it_matters": "Offre commerciale grand public, utile pour comprendre la concurrence entre banques pour acquérir des clients.",
+      "entities": [
+        "BNP Paribas"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "559fd58f3e1b528a",
+        "title": "Seoul Fintech Week Opens on the 26th With AI Finance in Focus",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaENOcEQweUdhdmtLZnhNMFZHMDNaOE9ScXZVY3NLb3F6d3p0eEI0SGZZYlFhWnJqMXA4N3VRamFqMlRDYkpUZzl2dDh4WHNpeHh0TXNtd1N2RW9rYl9tbE1DTmpHXzdjd2llQkd2T0lrWWZZSUpaSG1FOXJTNUlpNGUxSUNzSV94U1U5S3djcWZUZjZyVWVIMkRKcHhTdw?oc=5",
+        "source": "Seoul Economic Daily",
+        "published": "2026-10-25T09:21:17+00:00",
+        "summary": "Seoul Fintech Week Opens on the 26th With AI Finance in Focus Seoul Economic Daily",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "La Seoul Fintech Week s'ouvre le 26 octobre avec un accent sur la finance propulsée par l'IA.",
+      "why_it_matters": "Montre la convergence entre fintech et IA dans les places financières asiatiques.",
+      "entities": [
+        "Seoul Fintech Week"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "749e619538961ee6",
+        "title": "Berkeley Considers Starting a Public Bank With Taxpayer Dollars",
+        "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAyZ0h4QjEwNFRDVENWM0p5aTRBVlp2UlVmZzlmNzZPRWZ4bVlIc2lmbWRudDVmTGdJZ05xWHlDcnF6VFJka01XVUsxN1dMNXBfblQ4N3V1RE45ZG9NSjROc3pKUmJ2U0JudkV2Z0FfeG5WQzhWeHB1cS1zWUF6ZzA?oc=5",
+        "source": "The New York Times",
+        "published": "2026-10-25T09:01:46+00:00",
+        "summary": "Berkeley Considers Starting a Public Bank With Taxpayer Dollars The New York Times",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "La ville de Berkeley envisage de créer une banque publique financée par l'argent des contribuables.",
+      "why_it_matters": "Les banques publiques locales sont un modèle alternatif de financement qui peut faire débat sur la régulation.",
+      "entities": [
+        "Berkeley",
+        "The New York Times"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "879443a1f14848f6",
+        "title": "Éloge du jugement humain à l’ère de l’IA, par la présidente de l’Islande",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSnJ6cUNSRzBIT3FmcmdoZWNoSGx4ejNKN3g0eUxIMHpnTGJHcDFLR2VWSUZwRkFYdkhPVW1aQUQ2cTQwYUxieWNpX19vQTBEYnJxRGc5WmRDb000NkFiTVhlSUZUVkJoYzhfX250T1VwVG4xelNrQ2xUYzRJUGNuMVJ6ZmtJNHhUQ2Vxdk9yZS1fNUZjcUhfQXVvZlRMMjFpMUtBYzJSaw?oc=5",
+        "source": "TIME France",
+        "published": "2026-10-25T09:00:46+00:00",
+        "summary": "Éloge du jugement humain à l’ère de l’IA, par la présidente de l’Islande TIME France",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "La présidente de l'Islande plaide pour la valeur du jugement humain face à l'essor de l'intelligence artificielle.",
+      "why_it_matters": "Prise de position politique de haut niveau sur la place de l'humain dans les décisions assistées par IA.",
+      "entities": [
+        "TIME France"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "3ce64f39c5083876",
+        "title": "A $30,000 CD sat untouched for 25 years — now the bank says it has no record of the account",
+        "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWlRGQ1lFWXFhZnFVSXZTU0J3em9wUHF2QW5wVTM4V1FTcjMxamRjbWZWM2Z4ZkpPV2tSaC1PRDhxS3VyXzRRTVZGRjA3cjhnUEJuXzJXcHdkVVhLQlhQaDlEaVNHNXpZQW9kRXdVOWh2SWNXSXRXdEFkNjNMQ0hKUHZmMG9yMGJjT2ExVWVlZlJHZ1FPamk0?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-25T09:00:00+00:00",
+        "summary": "A $30,000 CD sat untouched for 25 years — now the bank says it has no record of the account Yahoo Finance",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Un CD (certificat de dépôt) de 30 000 dollars est resté inactif pendant 25 ans, et la banque affirme ne plus avoir de trace du compte.",
+      "why_it_matters": "Illustre la question des comptes dormants et des fonds non réclamés, sujet de régulation bancaire.",
+      "entities": [
+        "Yahoo Finance"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a43202e530a87af0",
+        "title": "En Chine, le tout premier film généré par IA ne soulève pas l’enthousiasme avant sa sortie en salles",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNcXk0ZlRYY1FCR0g2UFJGZDUtUEhxd1ROamw5M18tNHdDaFhNQjljZ0V4REU3UUFRX2RVaU1PWkJ5aENJbFlPSDVVM1llSE9UbjgzQnh5LUh4Sjc0RWwyZnFLRWVxbGVIRzc2R1pNVHZPdFd2MmpjMlNjOEZMYXd6eFhsTGZncnY2RWZLVEZNc3pBUEVXWWhoOG90bi1NZHZycENFbXAtZmlvUkQ0ODB3OU4tbnpFRnBNS0ZzZEdqMEI4aVlSRkQ2R2lWdGM4dk1mZXJraDlR?oc=5",
+        "source": "Le Figaro",
+        "published": "2026-10-25T09:00:00+00:00",
+        "summary": "En Chine, le tout premier film généré par IA ne soulève pas l’enthousiasme avant sa sortie en salles Le Figaro",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "En Chine, le premier film entièrement généré par IA ne suscite pas l'enthousiasme du public avant sa sortie en salles. L'extrait ne donne pas de chiffres de fréquentation.",
+      "why_it_matters": "Illustre l'écart entre les démonstrations d'IA générative et leur acceptation par le public dans les industries créatives.",
+      "entities": [
+        "Le Figaro"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "ba26ada67f7cc68e",
+        "title": "\"La hantise des éditeurs\" : après l’affaire Thélyson Orélien, la chasse à l’IA s’organise",
+        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQYU4xd0lHS0tpZDgxY0RzWElMUjJlMEVRVV8yVjRzcmg5NzhnWi1FNFBKUHhIWVdMa0ZsTlBtd2ZuREVrMDFkU211b1NMSkhWcHB2ZzJSS0owczM0M1dFTktUbnNZcEx0a2NURFNHdVM4RmVEdjdUd3NldEE1a0psbEVrbDRTcHNBQTJkMHB1RjhMbWxTY0pENGFUZTJqaEFDV1hhc3hKNzF3WmhJMkVQN2ZtczdoQVlZZXZXRzg4NE9qU3B1bXB3bENIWGtNRm5yVldiWDU4eHlBYzBBNUtqbUxvcWVVcWRQMUE?oc=5",
+        "source": "France 24",
+        "published": "2026-10-25T08:30:09+00:00",
+        "summary": "\"La hantise des éditeurs\" : après l’affaire Thélyson Orélien, la chasse à l’IA s’organise France 24",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Après l'affaire Thélyson Orélien, des éditeurs se mobilisent pour traquer les contenus générés par IA. L'extrait ne précise pas les détails de l'affaire.",
+      "why_it_matters": "Montre les tensions autour de la propriété intellectuelle et de l'usage non déclaré de l'IA dans l'édition.",
+      "entities": [
+        "France 24",
+        "Thélyson Orélien"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "787827c1184b0021",
+        "title": "Semi-conducteurs : le Vietnam veut monter en gamme",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNYnlMZ0I0dkxDYmFhUzJPdWw3OXBsMlZGbkN5UGd5RlQwS1VkRVlBSEF4c2U2aEc0X1Q0N3doX1BTdjVOaFRsYThXWDU1amJPcWN1MWNYak1mc0VuREhVLXpndjlvYWx2aW5vdW9GQ1o0eDE5MUdQSDFMclJ6a25yV0tWVXdWeDF1Qld3?oc=5",
+        "source": "lecourrier.vn",
+        "published": "2026-10-25T08:19:00+00:00",
+        "summary": "Semi-conducteurs : le Vietnam veut monter en gamme lecourrier.vn",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Le Vietnam cherche à monter en gamme dans la fabrication de semi-conducteurs, c'est-à-dire à passer à des étapes à plus forte valeur ajoutée. L'extrait ne donne pas de calendrier ni de montants.",
+      "why_it_matters": "Les semi-conducteurs restent au cœur des chaînes de valeur tech, et l'émergence de nouveaux acteurs asiatiques intéresse les investisseurs et les conseillers industriels.",
+      "entities": [
+        "Vietnam",
+        "lecourrier.vn"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "750b91560fa61a03",
+        "title": "Ils ont laissé une IA diriger leur entreprise, ce qu'il s'est passé en dit long sur l'avenir du travail",
+        "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxNa0ctU2pVQVp0ci1YOXNmeElTUURsd082SFQ0UnBramRtbUlVYkJiUlVrRWcxV0d2NjBLX0hYZ2xHM0JRZ0Z0dk9WRDJySk9KTEFvQ2ZsUl9zQkktVkFYajRRRTBpdW40akVjMzFzMjk1VmFXcTVxbF84c0FpYUN6U1FCcXhMZ1BZS2UwcmctUlZKMWFSQzI0NmdOc1lNSWI2b3F4OFBac0tKd3VBX3UwNmlQRVBIV1NYOWNLUk1rLXVVcmtCREJhLUlHWWJaOTNDVExxRXkzS0NWY0phYkZreEtnMFR6WGVDN0RLVFFObEx0U2VJeG45RWtR?oc=5",
+        "source": "Futura, le média qui explore le monde",
+        "published": "2026-10-25T08:00:00+00:00",
+        "summary": "Ils ont laissé une IA diriger leur entreprise, ce qu'il s'est passé en dit long sur l'avenir du travail Futura, le média qui explore le monde",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Des entreprises ont laissé une IA diriger leur organisation, avec des conséquences que l'article analyse pour l'avenir du travail. L'extrait ne détaille pas l'expérience.",
+      "why_it_matters": "Expérimentation concrète de délégation de management à l'IA, sujet fréquent dans les discussions sur la transformation des entreprises.",
+      "entities": [
+        "Futura"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "894c928a1586a014",
+        "title": "Le Maroc et l’IA : qui est responsable lorsque le modèle est intégré à l’administration ?",
+        "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOd3BWMDlkZDBEaUtqQW1kd04ycnRnRUJQUDNvWnFYZmRYMTE4OVV1MjI3TnpCT2tUZVpyNGFvVWtaZzR4S2tjOEd4S3Z4Mjh2U0Uwd3I5Y0xqV1ZzdnJySldHTW4yRk9zTEZPLTNkUGNCWXBrcHg5dHpTSGxaWUVpelZWSjI5UXlBU3VhSHUxNjBrcjJOX3BELWVzMTlkY1lXUTBQbVAyX1hwVXdsVWpZekNNM0pncDlJRW1RRUJYWkYzVnBGYWNJbU5nTnZPdk1UbmNpbndVQWUyY0Z4Z0psSVFkLXh4QQ?oc=5",
+        "source": "Atalayar",
+        "published": "2026-10-25T08:00:00+00:00",
+        "summary": "Le Maroc et l’IA : qui est responsable lorsque le modèle est intégré à l’administration ? Atalayar",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Article sur la question de la responsabilité juridique lorsqu'un modèle d'IA est intégré à l'administration marocaine. L'extrait ne donne pas de réponse précise.",
+      "why_it_matters": "La question de la responsabilité des décisions algorithmiques publiques est un enjeu réglementaire qui rejoint l'AI Act.",
+      "entities": [
+        "Maroc",
+        "Atalayar"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a36adbdb4880d71c",
+        "title": "Cryptocurrencies cannot circumvent sanctions: Bank of Israel responds to Netanyahu",
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOMzk5VkZIQ25BSXB6emdUay1lemhuQS1lRHRTOTZab09PVzFmcG5RVm1keTRqZF8wZjVqazhzUHdEdWl2Tm5tR2JLd1FKYW1IY0tOYnN5X0RSUGsyeEgtTnZhWUN4ZlFkQ3JyM0dJTWN2c3dnX2QzT0g4aUxvZWNuZWl4RzFpUTBXZ3h1dWtEdkRBeTZnRDBScFRZLXhTQzdXS19aUUNXVy1qQ2l1N1NGVDJ4Q0ZFeU5ibFI5a3Z5QUNvRmJa?oc=5",
+        "source": "Anadolu Ajansı",
+        "published": "2026-10-25T07:45:55+00:00",
+        "summary": "Cryptocurrencies cannot circumvent sanctions: Bank of Israel responds to Netanyahu Anadolu Ajansı",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "La Banque d'Israël répond au Premier ministre Netanyahu en affirmant que les cryptomonnaies ne permettent pas de contourner les sanctions. L'extrait ne donne pas le détail de la déclaration.",
+      "why_it_matters": "Position d'une banque centrale sur les crypto-actifs et les sanctions, sujet clé de la régulation financière.",
+      "entities": [
+        "Banque d'Israël",
+        "Benjamin Netanyahu",
+        "Anadolu Ajansı"
+      ],
+      "related": [
+        {
+          "title": "Cryptomonnaies et sanctions : la Banque d’Israël contredit Benjamin Netanyahou et met en garde contre un isolement économique",
+          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQakpQZXNwdC10M01fR3ExYW1VekdvU09aTVlyTFozM0xrUU4yZzU4NjR6aUlNUVBWM0h2Mld0NV9WeGhwQnh5amFFajJraFBfRjhiMzZVc3UtcmxUd1RfOU5JcnhPdDcwOU14R3RPckNtdXZHNTcycFoxTXJNd2U0OXFpMnNHU0xRNV8tY0w3TFo1MVVISnZGYkpFNUVPVDd5Y2h5UExNMHIxZC1sYkprZEFJRzNZOFJOeEtfQkJCQUlRb3ZmLW40VlNadEdKMjczUkNaT2IwaEhEUHlvSHRzdVlEdmt0cVEwY20yTTBBbFlwVkl6Rk1uSlVB?oc=5",
+          "source": "i24NEWS"
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "3d5f3e6bca83f81d",
+        "title": "STI Index (^STI) charts, data and news",
+        "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB2RVVLTWwwbXljUFZNNGZEZlhya3NDbXp1YmFyaUNrNW42VDV5WjEzcE0weWVGdDZ2NkVfTGFLVTQxR3lERlRmeG9ENnNLU0JRUUowdg?oc=5",
+        "source": "Yahoo Finance Singapore",
+        "published": "2026-10-25T07:37:42+00:00",
+        "summary": "STI Index (^STI) charts, data and news Yahoo Finance Singapore",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "marches",
+      "relevance": 2,
+      "summary_fr": "Page de données Yahoo Finance pour l'indice STI de Singapour, sans information d'actualité.",
+      "why_it_matters": "Page de cotation générique, sans information nouvelle sur le marché.",
+      "entities": [
+        "Yahoo Finance",
+        "STI Singapour"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "995bbc525e5c6b30",
+        "title": "Failles dans PHP, « colonne vertébrale du web » : avec l’IA, « une période assez chaotique » commence pour la cybersécurité, analyse un ex-conseiller d’Obama",
+        "url": "https://news.google.com/rss/articles/CBMirgJBVV95cUxPWG91MUdkd204UXpDVGFpdFlXQ3hNa1VOUkU4YXp5ZWMxZTEyQ19yN09scmQxSXRmSWgxV3BVV1A3ZWo1WlBJUGNMNmVBUzIwMjJJckQ0cDNLdVJWOWp3UEwwWVVNa3JoRmd1OEY2Y2tETFlRaENfaDl2TTRNQ0F3My1Bc2ZfWW1FcUdCUFN4NXd1VHJpX1RzdWpXeTBaNmZaTUZlTUs0SmMtTUpqbnd5Y24zcEJ1OFpianJjb1ZMOEh1YkxmYnpBZ0FMZG9ZRkltSWJoOXVJSFpOTGVKMlhYeFM5d0lGTjRxeUg1TGswRDdodHdnaTZrQ3hqZ29XTzV0ZThSY1VqTWJKMXRaQWNvOUZJUXNSMnZSbnh6QnZ3YUpQQXp2Z0RuRWlQOVRDZw?oc=5",
+        "source": "Sud Ouest",
+        "published": "2026-10-25T07:24:42+00:00",
+        "summary": "Failles dans PHP, « colonne vertébrale du web » : avec l’IA, « une période assez chaotique » commence pour la cybersécurité, analyse un ex-conseiller d’Obama Sud Ouest",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Des failles de sécurité ont été détectées dans PHP, langage très répandu sur le web. Un ancien conseiller d'Obama estime que l'IA ouvre une période chaotique pour la cybersécurité.",
+      "why_it_matters": "Le lien entre IA et cybersécurité devient un risque d'entreprise majeur, notamment pour les banques et les acteurs financiers.",
+      "entities": [
+        "PHP",
+        "Sud Ouest"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "5cb2bd726295cc29",
+        "title": "Stock Market Crash, Rs 18.37 Lakh Cr Wiped in 7 Weeks; Sensex, Nifty Eyes Longest Losing Streak Since Covid?",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOSWppX1ZOb0pDTFIyMGFlZExVMkVVNEpWMUpKWjJ6T2RRbC1qNXZBdmo1NExGd0poZGJOVGVHZWVrQTBqWFdlR3R0cF85YllRNTFPXzhTdjQ5UFFtVVpOQTl5OVhxWThrNVdvejVkcWNLSnFrZkU0ZXB2bnkxcXRYeVV3Y0VwcXVHRVNpOElXYjl3N3VXc2lyV2tjemc3QUVwZXZhbFZrUzBOZmFNcWJVLU8tcm1lNFY4eXRsU0ZNUUtCZE5qWmxNVVljcndIZ0VmYkl2TmpXcjM?oc=5",
+        "source": "Goodreturns",
+        "published": "2026-10-25T07:14:29+00:00",
+        "summary": "Stock Market Crash, Rs 18.37 Lakh Cr Wiped in 7 Weeks; Sensex, Nifty Eyes Longest Losing Streak Since Covid? Goodreturns",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "Le marché boursier indien a perdu 18,37 milliards de roupies... plus précisément 18,37 lakh crore de roupies (environ 18 370 milliards) en sept semaines, et le Sensex et le Nifty pourraient enregistrer leur plus longue série de baisses depuis le Covid.",
+      "why_it_matters": "Une baisse prolongée des indices d'un grand marché émergent est un signal à suivre pour les investisseurs internationaux.",
+      "entities": [
+        "Sensex",
+        "Nifty",
+        "Goodreturns"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "d09845460e437909",
+        "title": "Des agences du Crédit Agricole vont fermer ou réduire leur activité : « Ils veulent diminuer notre offre de services »",
+        "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQa01RYmhkOEZOd2hRcjR1QkNXeW1zYTVoejkyYjVhNzZzLVFieEFFQzUyc0F0TEN5eEFWTkFQVTJjUzB5M0pVblE3dTl3djJzYVBDbVFhZjZ5YW5tT1NIX0xKMnRoYTBGUDZlQXg2bmVMQk1iRm9pV09aVy1qckRpQldYNmFFc0hnQWxQZEVLR0pLd2lLcDVHWXo1eWZSNWFJcElQZnZuOEhlcFdrTDNwbXBwbkdPYVlTYXVWRnVKeEtOTzVqMnZ2ZmZwYU0ybzItN0YtdTJ2ZGcwb3FmVzgtWUJBNk8wOUhsMzNzLThEblE?oc=5",
+        "source": "Le Dauphiné Libéré",
+        "published": "2026-10-25T07:02:11+00:00",
+        "summary": "Des agences du Crédit Agricole vont fermer ou réduire leur activité : « Ils veulent diminuer notre offre de services » Le Dauphiné Libéré",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Des agences du Crédit Agricole vont fermer ou réduire leur activité, selon un article du Dauphiné Libéré. Les salariés évoquent une volonté de réduire l'offre de services.",
+      "why_it_matters": "La réduction du réseau d'agences illustre la transformation du modèle de distribution bancaire en France.",
+      "entities": [
+        "Crédit Agricole",
+        "Le Dauphiné Libéré"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f9e787a2afd1d0ae",
+        "title": "Fraude bancaire, la CJUE change le timing du remboursement",
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOQjA4dEhhdVhLd0dTVjktOXFjRFZmQ3VKYkNDdnAwdl96SWkxcTE2X0Q2cExJSURXWXpQcDRkZndEQmd1VXkzdE1oclRLLTBrRFlYZW9OQ0F3Y21NU0MzLW5pZ0NEUkZVdWs1NGpNZUVLUmx3QkQ3c2pKVzRfc0hDeVRkRnZUWUZMbTdmVEtqMG5yWmc?oc=5",
+        "source": "24matins",
+        "published": "2026-10-25T07:00:20+00:00",
+        "summary": "Fraude bancaire, la CJUE change le timing du remboursement 24matins",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "La Cour de justice de l'Union européenne (CJUE) modifie le calendrier de remboursement des victimes de fraude bancaire. Le titre ne donne pas davantage de détails.",
+      "why_it_matters": "Une décision de la CJUE sur les fraudes bancaires peut modifier les obligations des banques envers leurs clients dans toute l'Union européenne.",
+      "entities": [
+        "CJUE"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e91c14b19c40dd51",
+        "title": "Il reçoit 129 000 € au lieu de 12 900 € et rend l’argent : sa banque lui offre 50 €",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORzNZVDN6NXFrRjNPUUxWNzdpMk5IMWQwbUZnYnNIUlJlbjROU0VBb1JjNWlHTTNjWXVsNFlOMkxDVmhnb0xPa3M0R29fUjZ5X3hYSHFzZExPYUlmRUFKd0dkZzhCTmRucjZLbGVmc2J1ekhWQmdMb0hFY0ZlZHRFT1gyMXhEd3FIdlpnWUNDSGtIelZKMTBDb0hpQU4xZW45ZURKUWVraXp4SWJVWkE?oc=5",
+        "source": "Linfo.re",
+        "published": "2026-10-25T06:32:41+00:00",
+        "summary": "Il reçoit 129 000 € au lieu de 12 900 € et rend l’argent : sa banque lui offre 50 € Linfo.re",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 3,
+      "summary_fr": "Un client a reçu 129 000 € au lieu de 12 900 € par erreur, a rendu la somme, et sa banque lui a offert 50 €.",
+      "why_it_matters": "Anecdote illustrant les erreurs de virement et la gestion de la relation client, peu structurante.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a6a079aed6745a92",
+        "title": "Finance Panel Selects 46 Topics, Including AI And Digital Assets",
+        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVk8zckc2bjNLWGp4aXdXdEpudl9VUnFMR2Z0RnV0UTZlWnlNU0JiRGdCVHhKamF3VXUyOUxpMWVxMmV0SktiOVBqVmJ4OUVIVmVXLTlIellhNGVKb0ZtUWJfTHZzcUpObV9kYWltaVo0dDFheVY4Vm92aXJHUlJ6QldSaV9MSDdETlNr?oc=5",
+        "source": "Sarkaritel.com",
+        "published": "2026-10-25T06:17:56+00:00",
+        "summary": "Finance Panel Selects 46 Topics, Including AI And Digital Assets Sarkaritel.com",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Un panel financier a retenu 46 sujets, dont l'IA et les actifs numériques, sans détails supplémentaires dans le titre.",
+      "why_it_matters": "Indique que l'IA et les actifs numériques figurent parmi les priorités de réflexion du secteur financier.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "7a778bf30c56f396",
+        "title": "La ville de Sète refuse désormais d'imprimer les affiches générées par l'IA",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZDRONnFDYmpYM3gxUnR6SklFY2FjcXVMZ2h3eFdIUGtWNUhTLVdGa251QTEyeXpuNEhIYTdSSEZiS1BBZC04clFKLUp0Z2VtUTEyd0dkMUJER0twMlZwdm1QcEhuZHhyOF9JZl96RFhwNlBKbVBvUVNEUzJGWjF1U1lYc0lRM2lfQ3BWQmNsaW9TUFhxNGVVTEFqeTAzUThBa0pOeHdMSTdSVDRIUDVfVGM2RGFSek1wSnVFbDQ5S2JpR0ZPbFN3?oc=5",
+        "source": "ici.fr",
+        "published": "2026-10-25T06:15:03+00:00",
+        "summary": "La ville de Sète refuse désormais d'imprimer les affiches générées par l'IA ici.fr",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "La ville de Sète refuse désormais d'imprimer des affiches générées par IA.",
+      "why_it_matters": "Exemple local de réticence face aux contenus générés par IA, anecdotique pour le secteur.",
+      "entities": [
+        "Ville de Sète"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "b34cdb18e70d2ff1",
+        "title": "Catherine Barnel reconduite à la présidence du Crédit Agricole Provence Côte d’Azur pour un troisième mandat",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5NbS1PUWRBUHVVZkltV1JuaDlxV3hkV2VtMTZSOVVyOVN4S3ZqM0ZhaGR0dlVHQUUyYkpZN2dCUGxRTHM0Y0luNk9rQS0wazZiUEgzZzZXS3FqamxoYzBEU0VnTVVtaHRrMmdGdHRNRTU?oc=5",
+        "source": "https://horticulture-abadie-pyrenees.com/",
+        "published": "2026-10-25T06:13:51+00:00",
+        "summary": "Catherine Barnel reconduite à la présidence du Crédit Agricole Provence Côte d’Azur pour un troisième mandat https://horticulture-abadie-pyrenees.com/",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Catherine Barnel est reconduite pour un troisième mandat à la présidence du Crédit Agricole Provence Côte d'Azur.",
+      "why_it_matters": "Information de gouvernance régionale du groupe Crédit Agricole, utile mais d'intérêt limité. La source est un site sans rapport évident avec la banque.",
+      "entities": [
+        "Catherine Barnel",
+        "Crédit Agricole Provence Côte d'Azur"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "0639cd066f64da36",
+        "title": "River City Bank (RCBC) Stock Can Strong Q3 Earnings Silence Long Term Doubts",
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYUQzNzJfdjBIOVlHSTJXRU5tN3FGZ1pRYVhTN1lYdEM0WnUxNnVMWGlCNTZ3VUpiTzlKMHBOUEJVM2p3UUZ0TEdNSzNNVXl5a1NLengxTWF6ZmJ4TUNOYTZBUlBHYzhDOTVwbFNPUGk4R2Q0cTRtLUN4c2pSTUw3Y3JnYUlGQVUzd25lbk82cTFIcmtmbnc?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-25T06:10:00+00:00",
+        "summary": "River City Bank (RCBC) Stock Can Strong Q3 Earnings Silence Long Term Doubts Yahoo Finance",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "River City Bank (RCBC) fait l'objet d'un article sur son titre après ses résultats du troisième trimestre. Les informations disponibles se limitent au titre.",
+      "why_it_matters": "Les résultats trimestriels des petites banques américaines donnent un aperçu de la santé du secteur bancaire régional.",
+      "entities": [
+        "River City Bank"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a291082493df938b",
+        "title": "Preferred Bank (PFBC) Q3 Earnings Face Net Interest Margin Pressure",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOSlFUNExzbUZFcjhNRjJ4SVhHbG05cHBsWUUza25KY25XY0MtWUNuSmRZV3ZiUW5zdjlhaXNmUUoyVTd0ZVJ0bXhnLWxPNEJaVl9QTzVabVZpcmlzX0s5VXo2d1J1cXpuVi1LRzZPOElPZ0F0Sjl4d1I1M1pPRDQ4Q284VkZzZ08taEJzdzd1cHBjWHF2d3JfSFBGMG0?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-25T06:09:23+00:00",
+        "summary": "Preferred Bank (PFBC) Q3 Earnings Face Net Interest Margin Pressure Yahoo Finance",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Preferred Bank (PFBC) publie ses résultats du troisième trimestre, avec une pression attendue sur sa marge d'intérêt nette. La marge d'intérêt nette, écart entre les revenus de crédit et le coût de la collecte, est un indicateur clé des banques.",
+      "why_it_matters": "La marge d'intérêt nette est au cœur du modèle économique bancaire et revient souvent en entretien.",
+      "entities": [
+        "Preferred Bank"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "edc107878eaf24e4",
+        "title": "Intelligence artificielle : c’est quoi ce problème « d’alignement », qui fait tant polémique ces derniers mois ?",
+        "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxNbFZmYkQzSWdPS0dfTEJrNm15UkJDNDdiWnA1dC03ZlMtWVM4bTRXTzRyeUNIS0N5TXp5a0lYQVZJd05lbTRmZ3FxNFRiQk5YM205eHk1ODY2aWhOX2lBUXBzSWRySkxmaHJKX2xWQzU5OTgzNmNPZVJBM0J0THRMYVRQU0psVzZNWF9nOWQtYmVadkFTZnVCMy1HQTZ4cG9ubWZXU0piOXJXRTZldUtiY0VocjIxdHdCRGNlMTNrUl9uSElVa240TW9pLXR2S2FVQ3JHRXhTTzlwQWozaENvei1HTTEtTnZrcUZBR1VCX3c0TWgzdmJRZ3pQNUlldEJ2d3p1cUYyWmZtOURoNlBTNUpaaUNvZEFlUkxGd3RQNjFsOEpTbWJMZmh3?oc=5",
+        "source": "Ouest-France",
+        "published": "2026-10-25T06:00:10+00:00",
+        "summary": "Intelligence artificielle : c’est quoi ce problème « d’alignement », qui fait tant polémique ces derniers mois ? Ouest-France",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "L'article explique la notion de « problème d'alignement » en intelligence artificielle, au cœur de débats récents. Il porte sur la difficulté à faire correspondre le comportement des IA aux intentions humaines.",
+      "why_it_matters": "La notion d'alignement est un concept central des débats sur la sécurité de l'IA et revient fréquemment en entretien tech.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e9836709fd86e560",
+        "title": "Intelligence artificielle : la région PACA se classe 2ᵉ région de France la plus avancée",
+        "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPZldScmJfeXhiVXJ2ejZEWVNEbUpPbGFkV0tVWVZtQXFWYU5YS3VBbnhZb0ZFRWZsRUlkZzBWUUowZUQtUWFoeFN4VDBYNXB0d05jY0Y2MnFBZXRvSXFRZVlfWjhzRDhUREJDUnU3MEFDY1ZkTk0xV1BiVnR3Q3MtTm1jLWQ5UzBKR1puaWhZbE5zN0JfOWZudjQ3cXRnaEdKdHlfYlFjdzZuSEFSVEVuRkRyVXVYN3JXS3I2ZHVzaGp2X0hLSVp1blhVYW9VTlVQN2FGZVptWUM?oc=5",
+        "source": "Maritima",
+        "published": "2026-10-25T05:58:00+00:00",
+        "summary": "Intelligence artificielle : la région PACA se classe 2ᵉ région de France la plus avancée Maritima",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "La région PACA se classe 2e région française la plus avancée en intelligence artificielle. L'article ne détaille pas les critères du classement.",
+      "why_it_matters": "Donne un aperçu de la dynamique régionale de l'IA en France.",
+      "entities": [
+        "Région PACA"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "0688c49672dfed12",
+        "title": "Meet the Ultra-High-Yield Dividend Stock That Has Doubled the S&P 500's Returns This Year",
+        "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSWRvdkEwRWJIUjkzRjF5Nkd1aC1NNTVoMDVLZjlwWVgtTUJ3ZkJ1NGVfb1ZPcFNMTFR4NUlQVGd2LUFET1l6SnpKOHczY2F6X1IyWXNtUmNRU2FBRGwwWXllVWpNWWM4YUhuYkM0OUxPMWJBVENBZVNVSy1JSXZxQWZ3UWNxT3FqVndheEctYVBpekMyQ1ZKdllBZw?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-25T05:38:00+00:00",
+        "summary": "Meet the Ultra-High-Yield Dividend Stock That Has Doubled the S&P 500's Returns This Year Yahoo Finance",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "Un article présente une action à très haut rendement de dividende ayant plus que doublé la performance du S&P 500 cette année. Le nom de l'action n'apparaît pas dans le titre.",
+      "why_it_matters": "Illustre le type de discours promotionnel autour des actions à fort dividende, à prendre avec prudence.",
+      "entities": [
+        "S&P 500"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f87123af108d9f75",
+        "title": "Pourquoi les prix des billets d'avions pourraient augmenter de 10 à 20%?",
+        "url": "https://www.bfmtv.com/economie/entreprises/transports/video-pourquoi-les-prix-des-billets-d-avions-pourraient-augmenter-de-10-a-20_VN-202610250052.html",
+        "source": "bfmtv.com",
+        "published": "2026-10-25T05:35:47+00:00",
+        "summary": "Les billets d'avion pourraient augmenter de 10 à 20% en Europe l'année prochaine, prévient Michael O'Leary, le patron de Ryanair. En cause : l’envolée des prix du kérosène, la fin des contrats protégeant les compagnies aériennes contre cette hausse ainsi que la réduction du nombre de vols. En France, les tarifs ont déjà bondi de plus de 10% en septembre.",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Michael O'Leary, patron de Ryanair, prévoit une hausse des billets d'avion de 10 à 20% en Europe l'an prochain, à cause de la flambée du kérosène et de la fin des contrats de couverture. En France, les tarifs ont déjà bondi de plus de 10% en septembre.",
+      "why_it_matters": "La hausse du kérosène, matière première clé, illustre l'impact des prix de l'énergie sur l'inflation et les résultats des compagnies.",
+      "entities": [
+        "Ryanair",
+        "Michael O'Leary"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "b8b619246b559f8b",
+        "title": "AI Financing: The Bond Market Lends Cheaply to Infrastructure and Dearly to Implementation",
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1mbXZ1V0p4MWJ0MzQ5QTlUUnRFeTlTZk5qdV9DUUZHRUY4Qkl6NzdGU2p2VXVHbUxGNzJib2Q4WnZ0TWc2SllNMENpVzhxVjZFTVd1SXRCM25CQQ?oc=5",
+        "source": "https://economy.ac/",
+        "published": "2026-10-25T05:23:41+00:00",
+        "summary": "AI Financing: The Bond Market Lends Cheaply to Infrastructure and Dearly to Implementation https://economy.ac/",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Un article analyse le financement de l'IA par le marché obligataire, qui prête à bon marché pour les infrastructures et plus cher pour la mise en œuvre. Le titre ne donne pas de chiffres.",
+      "why_it_matters": "Le financement de la course à l'IA par la dette est un sujet majeur pour les métiers de la finance et du conseil.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "6a04130e6d6d070b",
+        "title": "Is Preferred Bank (PFBC) Fairly Valued As Third Quarter Earnings Land?",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQk5tX28zWndjbjNiODRPaUhHNkRzcjZqUEluSHFHaGlBNnRFelhJWXo5UWp1MGl3dnVfV2lTWFJpSFZFLU5lOVFpRGZRUE4wSzdSS195c3FOcFV3akEwMWYtTDBOUUpveERNa3VmN2h2b2xYVG1jb1VCRWtLMlBVa1F1Zl94ZllmbVdZaXR2ZTd1WEdVSm9yV25xZXZUY1k?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-25T05:16:00+00:00",
+        "summary": "Is Preferred Bank (PFBC) Fairly Valued As Third Quarter Earnings Land? Yahoo Finance",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Un article se demande si l'action Preferred Bank (PFBC) est correctement valorisée après la publication de ses résultats du troisième trimestre.",
+      "why_it_matters": "Illustre la méthode d'analyse de valorisation d'une banque après publication de résultats.",
+      "entities": [
+        "Preferred Bank"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "dfe0c39bd57ca7d0",
+        "title": "Le Vietnam mise sur l’IA incarnée",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE56ZGdmTm5wQkM4ZjdDbVVadmVLeE83bUFfNU1UbW81Nk91MVB6VFZkM0NQbDFrYWJvY2FQdm9TbzVVaGFWcjhjenZBaU9Uai1TbTRGbzlWTzNUWm1YdU1tSXdSaEVMWFBmX3dOeEpZblhVT1BtMVE?oc=5",
+        "source": "lecourrier.vn",
+        "published": "2026-10-25T04:40:00+00:00",
+        "summary": "Le Vietnam mise sur l’IA incarnée lecourrier.vn",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Le Vietnam met en avant l'IA incarnée (robotique dotée d'une présence physique). L'extrait ne donne pas de chiffres ni de détails sur les projets.",
+      "why_it_matters": "L'IA incarnée, qui combine modèles d'IA et robots, est un axe de développement industriel que les pays émergents cherchent à investir.",
+      "entities": [
+        "Vietnam"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "3c4c9fce1c2fb20c",
+        "title": "Pour identifier le recours à l’IA dans les œuvres, la musique affiche une sérieuse avance sur l’édition et le cinéma",
+        "url": "https://www.lemonde.fr/economie/article/2026/10/25/pour-identifier-le-recours-a-l-ia-dans-les-uvres-la-musique-affiche-une-serieuse-avance-sur-l-edition-et-le-cinema_6800033_3234.html",
+        "source": "lemonde.fr",
+        "published": "2026-10-25T04:30:16+00:00",
+        "summary": "Si les plateformes de streaming musical collent déjà une étiquette sur les titres générés par intelligence artificielle, le chemin reste long avant une transparence réelle sur le sujet dans les livres ou les films. Quelques initiatives existent, en revanche, dans la photographie.",
+        "feed_theme": "marches"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Les plateformes de streaming musical étiquettent déjà les titres générés par IA, alors que la transparence reste limitée pour les livres et les films. Quelques initiatives existent en photographie.",
+      "why_it_matters": "La traçabilité des contenus générés par IA est un enjeu de régulation et de droit d'auteur, lié à l'application de l'AI Act.",
+      "entities": [
+        "Spotify",
+        "Le Monde"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "8e1038a4965fd339",
+        "title": "« Je n’ai pas la force de lutter contre l’IA » : face aux ravages de l’automatisation, une partie des jeunes se tourne vers des métiers manuels",
+        "url": "https://www.lemonde.fr/campus/article/2026/10/25/je-n-ai-pas-la-force-de-lutter-contre-l-ia-face-aux-ravages-de-l-automatisation-une-partie-des-jeunes-se-tourne-vers-des-metiers-manuels_6800031_4401467.html",
+        "source": "lemonde.fr",
+        "published": "2026-10-25T04:30:11+00:00",
+        "summary": "De jeunes actifs, dont la profession a été vidée de son sens par l’intelligence artificielle générative, décident de se reconvertir dans des secteurs préservés.",
+        "feed_theme": "marches"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "De jeunes actifs dont le métier a été vidé de sens par l'IA générative se reconvertissent vers des métiers manuels. Le phénomène est décrit comme une réaction à l'automatisation.",
+      "why_it_matters": "Ce mouvement illustre les effets sociaux de l'adoption de l'IA générative sur l'emploi des cols blancs, sujet fréquent en entretien.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "ac9c3c709ccc904f",
+        "title": "Your faith shouldn’t cost you a bank account",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNTGhaLTNGR3lyZlJtdTd2S0VlSTJSRERUTkxpQl9nTzI0MndQTkdoWnlrdHJuN0p2V3NLamdSRnliT0UtcG94ekU4RVpLWDBIT2hqTm9yZ0ZjNi1Ib2pZZjdHaVk5QnR4WXJuQlZTNjBVcjVYbWJJcU5yUEVXSkk5bll3X0dGVFhoVVlfTldR?oc=5",
+        "source": "Christian Post",
+        "published": "2026-10-25T04:02:36+00:00",
+        "summary": "Your faith shouldn’t cost you a bank account Christian Post",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 2,
+      "summary_fr": "Un article de Christian Post aborde l'accès aux comptes bancaires pour les personnes de foi. L'extrait ne contient pas d'information détaillée.",
+      "why_it_matters": "La question de l'accès aux services bancaires touche à l'inclusion financière, mais le sujet reste ici peu documenté.",
+      "entities": [
+        "Christian Post"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "030e55c8dd913dfc",
+        "title": "APPLE Cours Action AAPL, Cotation Bourse NASDAQ",
+        "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5CNEk1My1WQlM4QzdlX0c3NW9LUnVTa2dCSzQ1S0Z4dHI3MjdhSzA1UTBSSWotOUhwNXJXV2Q4SFBQc0ZkSDJ6UG9rWU9ZcDA?oc=5",
+        "source": "Boursorama",
+        "published": "2026-10-25T03:09:56+00:00",
+        "summary": "APPLE Cours Action AAPL, Cotation Bourse NASDAQ Boursorama",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "Page de cotation boursière de l'action Apple (AAPL) au Nasdaq, sans données chiffrées dans l'extrait.",
+      "why_it_matters": "Le cours d'Apple est un repère des valeurs technologiques, mais cette page seule n'apporte pas d'information.",
+      "entities": [
+        "Apple"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a9d9d1a0847bc352",
+        "title": "Synovus Is Building Its Own AI Agents in the Middle of a $117 Billion Merger",
+        "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTVgzbTZvVXNFdkV0a1hIQ3hvaWp5ZnM4UGRKSmx2QjhEWlRhR3NRMUdnMmdkQXQ1QmhIN1Y1MG55bURRWmJESlEwc3M2MjY0OURnQXdZZTBTRkhSWVFqOV9mdHVZM2NEM0RtQVRPd1dzdDZYQkJHQzN2ZGdwYk5OZHFlZ21RczJxd1JILUR2RFpXanE4MGhHUGhkcjBYRWVTRm05LUxwbEZjQjhObVE?oc=5",
+        "source": "AIM Media House",
+        "published": "2026-10-25T02:56:00+00:00",
+        "summary": "Synovus Is Building Its Own AI Agents in the Middle of a $117 Billion Merger AIM Media House",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "Synovus développe ses propres agents d'IA alors qu'il est engagé dans une fusion évaluée à 117 milliards de dollars.",
+      "why_it_matters": "Une banque régionale qui déploie des agents d'IA pendant une fusion illustre l'adoption de l'IA en finance, un sujet d'entretien courant.",
+      "entities": [
+        "Synovus"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "c4854c0a967a5f62",
+        "title": "National Bank Holdings (NBHC) Stock Looks Discounted Despite Its 39% Run",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNZHdRcHcwVXY3aXplTDBqVXAtamI2QzliSktjNmNJa0c1ZzV1QUh0MW40TFRfUEl6RGRTclZzZUdXQ0lScThhNW5RQ20tMWtTRWw1T3h3VUtGbVd3M1RVOEgwYnd2Q1ZKMU1NOWhuNXZkNHQxVDJKcDNwQ1U3Y2czdEFfdlpaQ2dwZFE0b2FJVFYtN1o4UzdWZDlZYmhYeGc?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-25T02:13:00+00:00",
+        "summary": "National Bank Holdings (NBHC) Stock Looks Discounted Despite Its 39% Run Yahoo Finance",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "National Bank Holdings (NBHC) a progressé de 39 % et son action est présentée comme décotée malgré cette hausse.",
+      "why_it_matters": "Un exemple d'analyse de valorisation d'une banque régionale américaine après une forte hausse.",
+      "entities": [
+        "National Bank Holdings"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "c853c8de78fc7432",
+        "title": "Wan Hai posts 97.63 percent growth. Wan Hai stock yields 2.52 percent",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOaXlPaU9HTDVWVlh4VUxUaUdva2lYSkNxdkNUcTRlUjB0UVhIRnNwcVFsaDFQSVkxR1JBQUs2YkRGUHROb1RzaTNfa3lSUjFCMF93M0plWURkSVZJSDR6MWo4OEoyU0RvSkExbzNFMHJVRFp1bi1fYnB4RmlKMGFXN1JjclVlWWJaOEFiSG42TTBMQjQzajhrRUZudWJROHc1QmxWSzlneUJDajVyeDItSnpXbElZZ1JpMTBVN2czVEVqS1RxZWc?oc=5",
+        "source": "ad-hoc-news.de",
+        "published": "2026-10-25T01:52:38+00:00",
+        "summary": "Wan Hai posts 97.63 percent growth. Wan Hai stock yields 2.52 percent ad-hoc-news.de",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "Wan Hai annonce une croissance de 97,63 % et son action affiche un rendement de 2,52 %. L'extrait ne précise pas la période concernée.",
+      "why_it_matters": "Wan Hai est un armateur taïwanais dont les résultats reflètent la santé du transport maritime de conteneurs.",
+      "entities": [
+        "Wan Hai"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "1792dd0b403af36b",
+        "title": "Agence de la Banque populaire incendiée à Tours : dégâts, relogements et questions pour les banques et assureurs",
+        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNODBDX0hEcy1KTmVZaWdSQnJiYUtseXVIQjR5LU44RXpZN1kycGs5VDEzQ2p3WVpkNXZOVGlPemtGNmt3eUh5UjYyWkdORTFoWWZoUWlhMWMxcDdZbFZXM1d3SUlsOGxiSy1HS1dyZFNJZ2Q5UzNIbHphUUxTVHJVM2NtNVBiYjNnVkNaUWFQd1dVMDBYalVQMEk4cTNkM1FoNDBmU1RSQ0psR3JBdm81RDcxMlhJWWFRR1c2QzRUV3UxZFBJaXZ3Z3NiMGx5dURuYkRBTUllWmNNbUhM?oc=5",
+        "source": "https://renseignementeconomique.fr/",
+        "published": "2026-10-25T01:50:57+00:00",
+        "summary": "Agence de la Banque populaire incendiée à Tours : dégâts, relogements et questions pour les banques et assureurs https://renseignementeconomique.fr/",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Une agence de la Banque populaire a été incendiée à Tours, entraînant des dégâts et des relogements. Le sujet pose des questions pour les banques et assureurs.",
+      "why_it_matters": "Un incident de ce type concerne la gestion des risques et l'assurance des réseaux bancaires.",
+      "entities": [
+        "Banque populaire"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "af298307a5852f14",
+        "title": "STI Ends Week Higher After Banking Rally, AI Concerns",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWVdmYUw2blIwQjlNUUQ0dGxwdk1WYlNqR0VaUE1MbXRkcHREOEtZYUFpWnBHMEtNeXE3U0V5VWs3NXpyb1FiRXk5c0hrVW4xQ0JiRXdHZGpUTGhyMzVCQ2l5RUZST3JwbEhlU1JlRkxZTG9IdGFnXy1rNHd3b3JpQzJ3N1ZIVkVTcEN6NHlpWGlwdGNjS3RHNlo1YkUxUQ?oc=5",
+        "source": "BusinessToday Malaysia",
+        "published": "2026-10-25T01:30:00+00:00",
+        "summary": "STI Ends Week Higher After Banking Rally, AI Concerns BusinessToday Malaysia",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "L'indice STI de Singapour termine la semaine en hausse, porté par un rally bancaire, malgré des inquiétudes liées à l'IA. L'extrait ne donne pas de chiffres précis.",
+      "why_it_matters": "Le rally des banques singapouriennes illustre la sensibilité des marchés régionaux aux valeurs financières et au thème de l'IA.",
+      "entities": [
+        "STI",
+        "BusinessToday Malaysia"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "c335efbb15877732",
+        "title": "Trump annonce qu'Audi va construire une usine de 4 milliards de dollars aux États-Unis, en Géorgie",
+        "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPMGR2WFhlRzNyYXBCS01hSmtuN19zOWtNVWpsNkJhZTlGV3ZxN2NLLTA2WDA1MFpNTWZ2NC11RnVmc2wydjE1bWtLTDdQdkN3dTd3TzNDdHpGZzRwVVBwamg0QkxpS2dFM2xXa2FleWptdG1KNHNyTVRubE5mZVNURnZWZ3Rhb0tyeHctMnNTMlFqdmRGV0M0TWpqRFpSNE5EaXhMQUw1NXg3TTFTREM2Yms5UXJjS01MS0s4TXlKcXdoYTZ1MGVHOVM2bGIwaFpuWE1zWDJxYk55MWxTZnYzMnBYcjZ0OTNDVl9QLTRfdmsydXVNc2FwNVF0WTFITWlydG5TajRB0gGLAkFVX3lxTE5ic0ExRjh6d2FUSjI3bTVVcWExUWF6TEFIZW9kcFluaFpjeDNqS1BYeFNkZ0xtcUlmVGZfTm0zbkQ0NzdPdkJHcDJCVFY3RFJSOVlaV3JrNVdRczdYenU0czFaRTBvVnlJZlpsdzlYSlpnRzlrTWdUOUpqRmNjYm9jNGtsS0p4eUQxdG0wREpuSTVvRUxxTUVmODl5Y20tZkFqX2JLWmdkMURIZFk2N3F3eTBrcWVLcjFZLVFSSXdlS0E4a1B3VV9aS0dkaUFyQlhPZUl2S0FreWRWemRINEtRNFlGSVFfSDAwMWlXVm5QRXpsS0Yta3o2SmMwVFNTenIyZVYxUnJxN2dMbw?oc=5",
+        "source": "Boursorama",
+        "published": "2026-10-25T00:27:00+00:00",
+        "summary": "Trump annonce qu'Audi va construire une usine de 4 milliards de dollars aux États-Unis, en Géorgie Boursorama",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Donald Trump annonce qu'Audi va construire une usine de 4 milliards de dollars aux États-Unis, en Géorgie. L'investissement s'inscrit dans la politique d'implantation industrielle américaine.",
+      "why_it_matters": "Un investissement industriel de 4 Md$ d'un constructeur allemand illustre les flux d'investissement directs liés aux politiques tarifaires américaines.",
+      "entities": [
+        "Audi",
+        "Donald Trump",
+        "Géorgie"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f626479109766d84",
+        "title": "France's Interest-Free Mortgage Expansion Strains Budget, Testing Korea's Basic Finance Push",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNcE1vdFE1dlRCS2FYczVLMVJqVmRjV0JwNkg1MnpCVXB3a0VMZDlpZnQxU1M4Nm1yZE5XWUVtcVBJbGNYSWlWbWFGNFI5ZTZSUGt1SFNjcjZBU0JfMHJ6amFCRW10dTVKS2pvVWtSMWE5RXhPTXhuMlI2NmVhMjVDVkZWTHRNa1dXLTB5YWs3eWJrb2lxalljZ2pudUVmQQ?oc=5",
+        "source": "Seoul Economic Daily",
+        "published": "2026-10-25T00:15:05+00:00",
+        "summary": "France's Interest-Free Mortgage Expansion Strains Budget, Testing Korea's Basic Finance Push Seoul Economic Daily",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Le dispositif de prêts immobiliers sans intérêt (prêt à taux zéro) en France pèse sur le budget public, selon Seoul Economic Daily qui le compare aux efforts coréens en matière de finance de base.",
+      "why_it_matters": "Le financement public du logement sans intérêt est un sujet de politique budgétaire et de crédit immobilier utile pour comparer les modèles.",
+      "entities": [
+        "France",
+        "Corée du Sud",
+        "Seoul Economic Daily"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e744d0a76cb2f9ac",
+        "title": "Actinver reports MXN 501.81 million profit. Actinver stock yields 4.56 percent",
+        "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQQVFjNkg4MU1CeEdaRS1iU25EWTVmckgwbjlvMFZPRWpKSlprdWowNVl4eXVKVnN6U2ZuYmJGRW9nVGdmRnhSOEpjWllJQU5DVjdBVVVmdXRXWWljdFRiQmN6V1NOUW5PNTZpNkNWMEJ5WDVMV09naDBBNHV6V2hmTzFpV0oyN2VIcDRidUdlVVp5U20xT3BJRFNrZEJIcHdWQ0UyZGx6QUVhU0tUdmNZUm5XNjVDRU9YYnN1OU5rN0lJQ0ZrZ0FmS1dVeER3U3ZRTVE?oc=5",
+        "source": "ad-hoc-news.de",
+        "published": "2026-10-25T00:10:00+00:00",
+        "summary": "Actinver reports MXN 501.81 million profit. Actinver stock yields 4.56 percent ad-hoc-news.de",
+        "feed_theme": "marches"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Le groupe mexicain Actinver annonce un bénéfice de 501,81 millions de pesos mexicains. Son action affiche un rendement de dividende de 4,56 %.",
+      "why_it_matters": "Résultat d'une banque d'investissement mexicaine, utile pour suivre les établissements financiers émergents.",
+      "entities": [
+        "Actinver"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "28e92915a501be25",
+        "title": "Central banks must secure trust as AI risks reshape finance: IMF tech chief",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPcHlUSElyYUN0WjQ4Tkd4bkVpUDVkam4zSFItenNWQnQ0Q3lFeUpxSlo0cmVvNGdHSEV1VjRzS0dlOVUzdEpFdDNMN05nWlVEdU0zVXNXd29PRkREN29jT3VXY1hsaG5OakxuTVFiUDRDM2M5UmFtYUIwTlFWN1RZZUxTQWFWaHkzVlhoOGxkUWRiOTQxclJfVQ?oc=5",
+        "source": "Island.lk",
+        "published": "2026-10-25T00:05:21+00:00",
+        "summary": "Central banks must secure trust as AI risks reshape finance: IMF tech chief Island.lk",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 7,
+      "summary_fr": "Le responsable technologique du FMI estime que les banques centrales doivent préserver la confiance alors que les risques liés à l'IA transforment la finance.",
+      "why_it_matters": "Le positionnement du FMI sur les risques de l'IA dans la finance est un sujet classique en entretien sur la régulation et la gouvernance.",
+      "entities": [
+        "FMI",
+        "Banques centrales"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "129d1321344fc5f1",
+        "title": "Centerspace sets November 2 results date. Centerspace stock yields 5.41 percent",
+        "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxObWxKM3FLZHV1d2pzX3V0bVdxTFRKeHEzMXdwU0hvYmVWRjEwVVU5am1WMTBXcUJNc2o2N2NDNVhDZXB0bWxjeTdhODdJaUNGLTBXcEJtSHRvczhPbmppcGlmWU9YY2hfdjlDb21QX0ZjYXRPVHdnbkUySXJOOFhPRV9UT1pKMHBZME81UkRCV1dkZ3lkZEtEWllSUFB4dGRRcmJRcGlOazB6cHpna0xrdXRHbXhTOUxUSmVLZHh6Qkc0T0ZhVjN2MzhqeDdrWTUwSFVJ?oc=5",
+        "source": "ad-hoc-news.de",
+        "published": "2026-10-24T23:16:16+00:00",
+        "summary": "Centerspace sets November 2 results date. Centerspace stock yields 5.41 percent ad-hoc-news.de",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "Centerspace annonce la date de publication de ses résultats au 2 novembre. Son action affiche un rendement de 5,41 %.",
+      "why_it_matters": "Annonce de calendrier de résultats, intérêt limité hors suivi de ce foncier américain.",
+      "entities": [
+        "Centerspace"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "792fd246e5634356",
+        "title": "T&D Holdings sets November 13 results date: T&D Holdings stock yields 3.49 percent",
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPbFNfd3A1TEVKektOUEFLcXNvTWxMRVdnekVjNjdVRy1DLVZDZmJuQVdTNWE0cmw1SWVRNG1EU3JDY2d3d1pJcHNIVkRMVjR2aUE4OWVHdHUzNkw0cTZiVTg1Z2RoM19LTnBqRU9kWUQyVTEyMTFwRTBGQkduRHRvRXBYcjJQNHdSQVZyd0xkSG14QzlRdkd4RXJ3NDBFdVhnNTRMVTM0SHFYZ3dock5sREwzVFBHd0dFY19SQ1ByTTA1Y3pmcUNJYllTcjd0bGFEcVpQRlNQZllYZmU4SElmSXJn?oc=5",
+        "source": "ad-hoc-news.de",
+        "published": "2026-10-24T22:46:52+00:00",
+        "summary": "T&D Holdings sets November 13 results date: T&D Holdings stock yields 3.49 percent ad-hoc-news.de",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "T&D Holdings annonce la publication de ses résultats au 13 novembre. Son action affiche un rendement de 3,49 %.",
+      "why_it_matters": "Annonce de calendrier d'un assureur japonais, intérêt limité pour le suivi de marché.",
+      "entities": [
+        "T&D Holdings"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "34547ad1a41147b3",
+        "title": "Banque ou néobanque en difficulté : vos retraits peuvent-ils être bloqués ou plafonnés, combien de temps, et comment le FGDR vous rembourse-t-il ? (2026)",
+        "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNak5DN0NlcVVYS2VmcXlld2hrN0N0OVpRSDF0QXlDOHNGc3dmNTB6OGFSZnNuS3NhNEYycDA5UUdvV3VpMTJjU2JsSlpFS1VzS1JKTkRGNzB6czFLZzBUbTAzUGpqeVNUZzhQOVFHNXNHVEQwWEZXM0xJSTRUU1ZMcDNxWHNZQzVKS3lZNFYzeUtkS0FHcE1fTGUzTFdsQ0RFWlpwM2xhZlctYlQ0QnplSzJhYVQxWXdvNy1uZVB6MHBqa1NSNUE?oc=5",
+        "source": "Kohen Avocats",
+        "published": "2026-10-24T22:37:00+00:00",
+        "summary": "Banque ou néobanque en difficulté : vos retraits peuvent-ils être bloqués ou plafonnés, combien de temps, et comment le FGDR vous rembourse-t-il ? (2026) Kohen Avocats",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "L'article explique les conditions dans lesquelles les retraits peuvent être bloqués ou plafonnés en cas de difficulté d'une banque ou néobanque, et comment le FGDR rembourse les déposants.",
+      "why_it_matters": "Le mécanisme de garantie des dépôts (FGDR, plafond de 100 000 €) est une notion incontournable en banque de détail et en régulation.",
+      "entities": [
+        "FGDR",
+        "Kohen Avocats"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "60ceb5d42bacc830",
+        "title": "Lignes de défense - Avec HypAIRion la chasse française prépare l'arrivée de l'IA dans les cockpits",
+        "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNb1BwWDYzdGhEam5oNlM1OTl4Q2JVQVpkczBuV0IzVVI2VnhLSkp4X3ViNWhSNnZxamotLVc1cmItY3B6Mzdwa3BXQk9fUlliZjIzOTMxSzJuTzdGQi1JZ3hmYm9iN3VQaThLRi1CbndWYWpsRDZkb2xjeWZ0MVpTZjUtZi11SWxCTGd2akhHZllfM1ZHWTlCWjBSZ1NIR3dJVW1PekZ3dVVfbHBXTk9ObnJvQklEaU94amNqcHp5NGJVT0F4VEJkUm5XNHc2enFtYXN6a09iU0J2bmxqN3htc0tMSFNvU20zR3lYNA?oc=5",
+        "source": "RFI",
+        "published": "2026-10-24T22:08:00+00:00",
+        "summary": "Lignes de défense - Avec HypAIRion la chasse française prépare l'arrivée de l'IA dans les cockpits RFI",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Le programme HypAIRion vise à préparer l'intégration de l'IA dans les cockpits des avions de chasse français.",
+      "why_it_matters": "Exemple d'adoption de l'IA dans l'industrie de défense, utile pour illustrer les usages sectoriels de l'IA.",
+      "entities": [
+        "HypAIRion",
+        "RFI"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "744adea0bab183e5",
+        "title": "Dow, S&P 500, Nasdaq Futures Slip As Global Bond Rout Catches Up With Markets: LUNR, MSTR, WYFI, AMLX Stocks In Focus",
+        "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQQzF2VEYzX3F5VWswOWdIMk9uWHJ6elE5SjZBeVJKeGdMaDZkMS1nNFVLOEhzbXJhMXkxcFUtUkxGT0NrY2RtVU4ybXRVOEpfamxOb1AzNVV3ek5aY3hvMi1yQmdtZEVKWXgtNU14MDUyM1RaU2ZnVGNzOWlVSmgyVERrSlZYRjRXSHYzU09FbGdEY1NESHR1Z2pzV0hGNkUtT0lvbVktWkowOGpNcUtjV1ZSUWJoVHFoWk92UDVFVjhPcnBPMmdxMnNZeG9CWmJjc1NIalpiVlJyS3NzaGkycGRtalpfR1hrTE43WGswMkE3SThBdFBoc3VFY0xmQnFHYWdYYnhKNnVjejA?oc=5",
+        "source": "Stocktwits",
+        "published": "2026-10-24T22:02:11+00:00",
+        "summary": "Dow, S&P 500, Nasdaq Futures Slip As Global Bond Rout Catches Up With Markets: LUNR, MSTR, WYFI, AMLX Stocks In Focus Stocktwits",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "Les futures sur le Dow, le S&P 500 et le Nasdaq reculent alors qu'une vente globale d'obligations atteint les marchés actions.",
+      "why_it_matters": "Une hausse des taux obligataires qui touche les actions est un mouvement de fond à connaître pour les entretiens de marché.",
+      "entities": [
+        "Dow Jones",
+        "S&P 500",
+        "Nasdaq"
+      ],
+      "related": [
+        {
+          "title": "How S&P 500, Dow, Nasdaq Futures Are Moving Amid Rising Bond Yields, Trump-Xi Summit",
+          "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxObVpiQ1FnYU9GQ3pvMXhRa0I0YmxKdkFOUWZQT01aMFBIaU5ocUktZ2U5Z01xUWgwVlJET1dZbGU5QThycEE5dUlUTmJ1WjFIT0V0YWhGUTh5V1dkSWxaWmZ4MzRkOTd2XzUtMHFFS1hrcW45c2FFZzJ6bG1fdGh0bmJ6TTJPRHZYRlF1bHF5U3Y4SVk3ZzNUYlFEbEhVVXdTcWl4UWxjb04yak4xNktNRFpNbXliWTF5Sy1zTDI0d0lBM1FRdlVGa0JScndoRk5QQkc1UkFpam5zeFNHOWR6R0RjTzY0SFQ3OVdxRDdDelBvNU5jVTJlZFAwUjQ?oc=5",
+          "source": "Stocktwits"
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "5d1f0c7d8598792d",
+        "title": "L'instant IA : SOC agentique, réduire le temps de réaction - 24/10",
+        "url": "https://www.bfmtv.com/economie/replay-emissions/les-emissions-partenaires/video-l-instant-ia-soc-agentique-reduire-le-temps-de-reaction-24-10_VN-202610240460.html",
+        "source": "bfmtv.com",
+        "published": "2026-10-24T21:34:42+00:00",
+        "summary": "BFM BUSINESS PARTENAIRE - Ce samedi 24 octobre, Yannick Fhima, directeur des solutions data d'Elastic, était l'invité de l'émission L'instant IA présentée par Frédéric Simottel. L'instant IA est à voir sur BFM Business. Cette émission a été réalisée en partenariat avec Elastic.",
+        "feed_theme": "marches"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "Émission sponsorisée de BFM Business réalisée avec Elastic, où Yannick Fhima, directeur des solutions data, présente l'usage de l'IA agentique pour les centres de sécurité (SOC) afin de réduire le temps de réaction.",
+      "why_it_matters": "Illustre une application concrète de l'IA agentique en cybersécurité, mais il s'agit de contenu partenaire peu informatif.",
+      "entities": [
+        "Elastic",
+        "BFM Business",
+        "Yannick Fhima"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "bd7e52ad5781dac3",
+        "title": "Oil, Treasury Yields, Bitcoin: 3 Market Signals To Watch This Week",
+        "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNNjVrV1RDUVVoUTVCaE50Qkw0VWJXODVUQTlYYi14U2hNZkdkRmYwbFFJbmprdThYcWMtSjB4ZDlOcy1ncVIwdTROaURTWXhuMWRYMDBpZzdkU1duc1NKY0FFTFg3ckJOaVFiWXBpLTZ1Uk5jeElYeDZsYW1MMlZNNjMyeTBEMGJrazFhRnNOc0FORlNVZmNXWERXZ1lSa3JFTmp2VE43WEJGOGRsdmg3NFExTW9yQkhlbVlubVhHcnh4VzZXM0NfdVEwVFVsckZCQWJweTNDT09zT3V1VUVr?oc=5",
+        "source": "Stocktwits",
+        "published": "2026-10-24T20:40:42+00:00",
+        "summary": "Oil, Treasury Yields, Bitcoin: 3 Market Signals To Watch This Week Stocktwits",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "Article Stocktwits annonçant trois signaux de marché à suivre cette semaine : pétrole, rendements du Trésor et bitcoin.",
+      "why_it_matters": "Vue d'ensemble des facteurs de marché de la semaine, mais l'extrait ne donne aucun chiffre.",
+      "entities": [
+        "Stocktwits"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "3f438f37dc9be324",
+        "title": "IPO readiness: Positioning for a successful exit",
+        "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNRXMtTE1zb2h2dFBoQXpvcXNoMDJRajU5ZkpOU05mRmJkVFRBZE9oOFpPNzNleFU3MFM5bG5pNE5MY0plSmxkWDRoNGFaSk1oWnRGWWk4ZWFnT3NyOWx4bmZiVkZTRU54UVZoLUJZX2JsOVFza1ZGNXV3QzdRNXJDM0hKOEFoQlgwd0pfQ205QjF0MW1SUTVzWGQtMDQzOF9HaWxiVkRjcw?oc=5",
+        "source": "RSM US LLP",
+        "published": "2026-10-24T20:37:09+00:00",
+        "summary": "IPO readiness: Positioning for a successful exit RSM US LLP",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "Article de RSM US sur la préparation à une introduction en bourse (IPO) pour réussir une sortie.",
+      "why_it_matters": "Notion utile sur le processus d'introduction en bourse, sans donnée de marché précise.",
+      "entities": [
+        "RSM US LLP"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "ae06b2c1cdeef4f6",
+        "title": "How S&P 500, Dow, Nasdaq Futures Are Moving Amid Rising Bond Yields, Trump-Xi Summit",
+        "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxObVpiQ1FnYU9GQ3pvMXhRa0I0YmxKdkFOUWZQT01aMFBIaU5ocUktZ2U5Z01xUWgwVlJET1dZbGU5QThycEE5dUlUTmJ1WjFIT0V0YWhGUTh5V1dkSWxaWmZ4MzRkOTd2XzUtMHFFS1hrcW45c2FFZzJ6bG1fdGh0bmJ6TTJPRHZYRlF1bHF5U3Y4SVk3ZzNUYlFEbEhVVXdTcWl4UWxjb04yak4xNktNRFpNbXliWTF5Sy1zTDI0d0lBM1FRdlVGa0JScndoRk5QQkc1UkFpam5zeFNHOWR6R0RjTzY0SFQ3OVdxRDdDelBvNU5jVTJlZFAwUjQ?oc=5",
+        "source": "Stocktwits",
+        "published": "2026-10-24T20:13:58+00:00",
+        "summary": "How S&P 500, Dow, Nasdaq Futures Are Moving Amid Rising Bond Yields, Trump-Xi Summit Stocktwits",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Stocktwits analyse les mouvements des contrats à terme S&P 500, Dow et Nasdaq face à la hausse des rendements obligataires et à un sommet Trump-Xi.",
+      "why_it_matters": "La hausse des taux longs et le contexte géopolitique pèsent sur les indices américains, facteur clé pour les entretiens de marchés.",
+      "entities": [
+        "S&P 500",
+        "Nasdaq",
+        "Trump",
+        "Xi Jinping"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f542d96ba901ca0e",
+        "title": "À partir du 20 novembre 2026, les découverts de moins de 200 € seront traités comme un crédit",
+        "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNZzRnT3BvcFR5Ri10azFkQm5qY2prT1BXRm9uRVNLMnVJUmFUUW5DQnN3V2hRRldfVkRzMG41c3hEZmUxTlFTRHF6bjR6ajU3TldCNHRNcEdfclFpU2pNSlRKUTJRVWhKXzlXRGhHbG5vdnpEZ3hMRVJsektTOGJiT3l2RU5WUTRFVHFTcFdGR3VHZVh1a0xnTjFnMGIweXZwUEZuVHlLVjVhOW1KbFpMY1I5bVVRMlpsVW5XQ2UyUnk2Um8?oc=5",
+        "source": "https://renseignementeconomique.fr/",
+        "published": "2026-10-24T20:10:59+00:00",
+        "summary": "À partir du 20 novembre 2026, les découverts de moins de 200 € seront traités comme un crédit https://renseignementeconomique.fr/",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 7,
+      "summary_fr": "À partir du 20 novembre 2026, les découverts de moins de 200 € seront traités comme un crédit.",
+      "why_it_matters": "Changement réglementaire concret pour les clients bancaires et la gestion du crédit à la consommation.",
+      "entities": [
+        "renseignementeconomique.fr"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "9bf6806ea4ae316a",
+        "title": "Realty Income Stock Climbs Back as Treasury Yields Retreat, Yet Challenges Persist",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQUFliRnhCcFVLbFU3TVhWX3BXNzhERHdDRnIyU0lCNFFuRzRic0J5Z3I4R1pCNW1mblI2THN0SXJzU0F4cE1xYkoxWkZ1WG4yckJ5bkk2VG1GdWN6ZGtwZUhNMGZTRlJxWUx4ak1JZjNsSGQ5cldGUDRQWFlQXzU5VVFoUzNHWmQ1R2pQYm1IaU5KcHFRcWNqem03NU9RR0JFRWgzRlVPNlhwLXdsY0Z1WFdYeHZFaWJrNWdoRGFJQWZ4TkducUpKQ1FqXzhnTlM1eHdMZQ?oc=5",
+        "source": "Benzinga",
+        "published": "2026-10-24T19:15:07+00:00",
+        "summary": "Realty Income Stock Climbs Back as Treasury Yields Retreat, Yet Challenges Persist Benzinga",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "Benzinga indique que l'action Realty Income remonte alors que les rendements du Trésor reculent, tout en signalant des difficultés persistantes.",
+      "why_it_matters": "Illustre la sensibilité des foncières cotées aux taux obligataires.",
+      "entities": [
+        "Realty Income",
+        "Benzinga"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "b0af889ad05fbb7f",
+        "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+        "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+        "source": "techcrunch.com",
+        "published": "2026-10-24T19:00:00+00:00",
+        "summary": "From Apple's repeatedly delayed Siri AI to OpenAI's messy \"super app\" launch, here's a look at the AI projects that shut down or missed expectations.",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 7,
+      "summary_fr": "TechCrunch recense les projets d'IA abandonnés ou en deçà des attentes, dont le Siri d'Apple retardé à plusieurs reprises et le lancement chaotique d'une « super app » d'OpenAI.",
+      "why_it_matters": "Donne un panorama des échecs et retards des grands acteurs de l'IA, utile pour nuancer les discours sur la feuille de route des labos.",
+      "entities": [
+        "Apple",
+        "OpenAI",
+        "Siri"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "07fe1d37a212578e",
+        "title": "Jack Dorsey's new AI voice assistant sounds human. Too human.",
+        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOW5DUG52ZlQ3akcwQkxjRTdWTC05UEtJV01GUFhBTmVFd1E2cWdWYk1jbktBTGVmMHZYcTV2eXp4VlBhaGN2TlV0YmduQTIxYkpSdEgwcjF0cDFSdjZ6MVZNOWdXZWRMREk3V1ZJcDEwTTMtTTNMQ2Vkekt6a0FiMS1qNjBqT19vS2stNWktU1o4UFRTcmk1NGwycFhTcHZCVHlV?oc=5",
+        "source": "TheStreet",
+        "published": "2026-10-24T18:40:33+00:00",
+        "summary": "Jack Dorsey's new AI voice assistant sounds human. Too human. TheStreet",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Jack Dorsey, cofondateur de Block et de Twitter, présente un nouvel assistant vocal IA jugé très proche de la voix humaine. L'article critique ce réalisme excessif.",
+      "why_it_matters": "Le débat sur le réalisme des voix IA touche aux questions d'acceptabilité et de régulation des assistants conversationnels.",
+      "entities": [
+        "Jack Dorsey",
+        "Block"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "d9b1d25138a0bd30",
+        "title": "3 Financial Stocks That Could Benefit From Rising Yields And Volatility",
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOSmU5YTA0THZSV2duWXctal9JVXk4S0Q3YW9XVmV4RlNmR1R3bkxlVDA5VjZZTk56RnJKY2VRbHNmRmt1RTMwYlBEZU1ELUVmX1d6NTI4QWxiQWktU0htUW8zRUswdkJoZzhjOTMyTU5tMDFtTFJ3M2o5b2FkTFhrMF9BVHdDU1FTUHRjd24tMTRWNmp2azBOVnpGQnlGZw?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-24T18:12:13+00:00",
+        "summary": "3 Financial Stocks That Could Benefit From Rising Yields And Volatility Yahoo Finance",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Un article de Yahoo Finance identifie trois valeurs financières qui pourraient profiter de la hausse des rendements obligataires et de la volatilité. Il n'indique pas de chiffres dans l'extrait.",
+      "why_it_matters": "La hausse des taux longs modifie la rentabilité des banques et assureurs, un point utile pour comprendre la sensibilité du secteur financier aux taux.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "4766c76faa6ceb03",
+        "title": "Jim Cramer’s Case for “Accidental High Yielders” When the Fed Shakes the Market",
+        "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPVkJxaWpnMW5nM2twRHp5c3g5Y2Q0UFR0cG9hd3RyQi1PYks4aWRnYk1mTjZ6RE1abzd5UkY1OUxSSFpyWTE4dTFLUXVneHB5ZGZzMzMwMVE1UmQ1M1lRNUpOSzR6UkVPV0tZSVhtTGRfM1FOVThwb3pYRHY5VElFeHJ4aFJPY0RoREw0V3IzT0MzWGltVmZTUU41cWRkaGowREdTcER4QkJDbTdBXy10NVRIOFFTTGFOY1NJOQ?oc=5",
+        "source": "24/7 Wall St.",
+        "published": "2026-10-24T18:00:00+00:00",
+        "summary": "Jim Cramer’s Case for “Accidental High Yielders” When the Fed Shakes the Market 24/7 Wall St.",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Jim Cramer met en avant des valeurs à fort rendement dit « accidentel » lorsque la Fed fait chuter les marchés. L'extrait ne donne pas de chiffres.",
+      "why_it_matters": "Il montre comment les décisions de la Fed influencent les stratégies de rendement des investisseurs actions.",
+      "entities": [
+        "Jim Cramer",
+        "Federal Reserve"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "fe30cf651e7b3f59",
+        "title": "Casey's October 30 ex-date. Casey's General Stores stock yields 0.40 percent",
+        "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPdXBuWFNQU2RVbzFnQTUyemZEWVdPUlBNbUg5M3FYUmNnTVhqZTl5YnQ0MWZPcE5zOXQzRWxJQzhmRW9XU1hvaWpsMHc4VXltQTNfLThQR2lGa0R1QTE0ekJrT1ZEWlE2VEV0RnppbDhQOUhSSVZJWnd2cHp0RmM4ZzhHd1NGLXBWckJsZGR2YUhEZHd5SGpCOW8tazJlUlItNG9GTVFMV2hKR0s1aV9IUWN3QVNjemQ3QkFtWmZkMl95R2w1Vi1PeE5QSlNKSFZManNRdw?oc=5",
+        "source": "ad-hoc-news.de",
+        "published": "2026-10-24T17:12:11+00:00",
+        "summary": "Casey's October 30 ex-date. Casey's General Stores stock yields 0.40 percent ad-hoc-news.de",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 2,
+      "summary_fr": "Casey's General Stores annonce une date de détachement de dividende au 30 octobre, avec un rendement de 0,40 %. Il s'agit d'un article automatisé.",
+      "why_it_matters": "Le détachement de dividende est un événement de routine qui fait baisser mécaniquement le cours de l'action à la date concernée.",
+      "entities": [
+        "Casey's General Stores"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "af2eaa86b9bcf02f",
+        "title": "BlueScope stock yields 9.16 percent with fiscal 2026 EBIT at AUD 1.27 billion",
+        "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQMmdyXzcwUVpSRUxoZkIxRnJsQlhyLTJXN291Tkt4ejR5cUdXT2hVYWNMZ2Z2dmlEWHNKMzB0d21UNTlxZnRmOTlDcTVFLVNSLWR3THJRUXRMU2oyLWJkQzlyWEl1SXpxQ1FhaGxtMjFhdEtjRTF1MHFCeHpkVFhJbEd3Zlg3ZmhaUGY2dTU1LW1vcUtYZmprZzBvbXRqTlVxa3A5RER0Y3RQbnNoWGNrZ3FLVEVrTk9lU0pSNkxKMlh3N2FNSGdkWFBtWW9IRzJ1RUkzdF9pRQ?oc=5",
+        "source": "ad-hoc-news.de",
+        "published": "2026-10-24T17:07:20+00:00",
+        "summary": "BlueScope stock yields 9.16 percent with fiscal 2026 EBIT at AUD 1.27 billion ad-hoc-news.de",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "BlueScope affiche un EBIT prévisionnel de 1,27 milliard AUD pour l'exercice 2026, avec un rendement de 9,16 %. L'article est automatisé et ne contient pas d'analyse.",
+      "why_it_matters": "Il donne un ordre de grandeur des résultats d'un acteur australien de l'acier, utile pour suivre le secteur des matériaux.",
+      "entities": [
+        "BlueScope"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "681ce711f7ad3004",
+        "title": "J.P. Morgan and Chainlink Collaborate on AI in Finance",
+        "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBvVGVvY2NaOHo5aXRyVk0xb3N1RFk3Si1VS0hJeWtzSVQ2LU1tQmF5TUZzVjdfcHFPSVcxbGhYb1VyYzNnazlLU0F3emN6bC1ONGhtazFQZDMxQ1Q2?oc=5",
+        "source": "Cryptonews.net",
+        "published": "2026-10-24T17:07:19+00:00",
+        "summary": "J.P. Morgan and Chainlink Collaborate on AI in Finance Cryptonews.net",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 7,
+      "summary_fr": "J.P. Morgan et Chainlink annoncent une collaboration sur l'intelligence artificielle appliquée à la finance. L'extrait ne détaille pas le périmètre du projet.",
+      "why_it_matters": "Le rapprochement entre une grande banque et une infrastructure blockchain illustre la convergence entre IA, finance de marché et actifs tokenisés.",
+      "entities": [
+        "J.P. Morgan",
+        "Chainlink"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "600d815f868e4771",
+        "title": "Cryptomonnaies et sanctions : la Banque d’Israël contredit Benjamin Netanyahou et met en garde contre un isolement économique",
+        "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQakpQZXNwdC10M01fR3ExYW1VekdvU09aTVlyTFozM0xrUU4yZzU4NjR6aUlNUVBWM0h2Mld0NV9WeGhwQnh5amFFajJraFBfRjhiMzZVc3UtcmxUd1RfOU5JcnhPdDcwOU14R3RPckNtdXZHNTcycFoxTXJNd2U0OXFpMnNHU0xRNV8tY0w3TFo1MVVISnZGYkpFNUVPVDd5Y2h5UExNMHIxZC1sYkprZEFJRzNZOFJOeEtfQkJCQUlRb3ZmLW40VlNadEdKMjczUkNaT2IwaEhEUHlvSHRzdVlEdmt0cVEwY20yTTBBbFlwVkl6Rk1uSlVB?oc=5",
+        "source": "i24NEWS",
+        "published": "2026-10-24T17:07:00+00:00",
+        "summary": "Cryptomonnaies et sanctions : la Banque d’Israël contredit Benjamin Netanyahou et met en garde contre un isolement économique i24NEWS",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "La Banque d'Israël contredit Benjamin Netanyahou sur les cryptomonnaies et met en garde contre un isolement économique. L'extrait ne détaille pas les mesures évoquées.",
+      "why_it_matters": "Une banque centrale qui s'oppose publiquement au gouvernement sur les crypto-actifs est un signal sur la politique monétaire et la régulation des crypto-actifs.",
+      "entities": [
+        "Banque d'Israël",
+        "Benjamin Netanyahou"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "6923ed1e300c864c",
+        "title": "Jon Hernández, expert en intelligence artificielle : « Les gens utilisent ChatGPT pour rechercher des connaissances, comme s’il s’agissait de Google, et c’est leur plus grande erreur.",
+        "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxNbnpUc04xaTRqZXY3azVHOFkyX3VpeDlqamg0WlRZQVg3TGVqOWU1MFN2UWJ0MWM5OERnclRiT0RxVTFITFI5UTNURmxjZGRzWmUyYlRMcWdHTDFjdkIzcHZERmxNQlF2TnRLMXQ1MjZMaFdzc3I4d3kzbEhtRDRHWTdTcFcwVEhyYnM1cGZ2M1JRYXVGbC1YejZQalRuSXBvcVUycW9FVnBaQXVlWjBCNFpKT2pVSXdqSG5ONWhfeG9vNXU4c3RTWnFiZzFKRWFVUGp4dzRZcnNQVnJYOVNIQzJoMkttaW5vY0kyRFdCSXBMWlhTbVZXcndhcUlPcmF5NVlDaGNNZV9SWDNmaXBWbDJrenRsSlgyTjVkbFR5MTFxbFYwdlZ3MHJhSk43cm1rTFdpMlRhY2VOUQ?oc=5",
+        "source": "La Crème Du Gaming",
+        "published": "2026-10-24T17:00:52+00:00",
+        "summary": "Jon Hernández, expert en intelligence artificielle : « Les gens utilisent ChatGPT pour rechercher des connaissances, comme s’il s’agissait de Google, et c’est leur plus grande erreur. La Crème Du Gaming",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Jon Hernández, expert en IA, met en garde contre l'usage de ChatGPT comme un moteur de recherche classique. Il s'agit d'une opinion d'expert.",
+      "why_it_matters": "La distinction entre recherche documentaire et génération de texte est un point de discussion courant sur les usages professionnels de l'IA.",
+      "entities": [
+        "Jon Hernández",
+        "ChatGPT",
+        "OpenAI"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "963f836f510eda28",
+        "title": "US Stock Market Trading Outlook For August 3-7: Is August Bearish Or Bullish For Nasdaq, Dow Jones, S&P 500?",
+        "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQZldrVzNaZ2VXWVRGaXFGTTZRU3FXNklpTk5XLTRuS2hveFRuLTA2R0xCTDMtY3VUT1ROTHJSbjR2cVRYcUdaLWlhR1dROWJ6cFcyS255R0IxeGhkVjR4QzlRVE9sMGdhdjVOanU2aUZINENYVkVvb3VJRld2SmFMOUI1TUFydlcxMUtpdEFXaFU3TXUyMGVGdzV5aHFnUjRoX0JMalhQTUM1M1B6a3VxUkFPUGZYTmowdWhtUU5iVGN4RUV0UWNlclV0eEcxNXg1QXRMdDE5U096bXRm?oc=5",
+        "source": "Goodreturns",
+        "published": "2026-10-24T16:21:54+00:00",
+        "summary": "US Stock Market Trading Outlook For August 3-7: Is August Bearish Or Bullish For Nasdaq, Dow Jones, S&P 500? Goodreturns",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "Article de perspectives sur les marchés américains (Nasdaq, Dow Jones, S&P 500) pour la semaine du 3 au 7 août, qui s'interroge sur un biais haussier ou baissier. L'extrait ne contient pas de données chiffrées.",
+      "why_it_matters": "Ce type de prévision hebdomadaire reflète le sentiment de marché, mais ne repose pas sur des faits nouveaux solides.",
+      "entities": [
+        "Nasdaq",
+        "Dow Jones",
+        "S&P 500"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "1dcb67c5d45ffde1",
+        "title": "Phishing : la banque doit rembourser d'abord, l'Europe tranche !",
+        "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQQS0xTV93b1Vhek5wRTVtaExQTGtsMXpJa2FLbWU4anhwQk0yaE9FVW50SDN3aURsSzdPbDhqY25HbjhRYng5dElWSHAtVTNaUThlS2gycUtncDYzV1B3ODhsREJPR0RjOGFSRF8zZThfVDhDYUNJbjk3QzFKQTd5dDNuTWphTlFueGhoZ3dreUpaSWs3bzFsWi1WZVB1R0gwc3ZLUTF6Z1dUNG53Yk5TQlJyRnpXdkM0LXV1VjBhcmZIcXdCb2E1VG52cl9kOTdJNmhlQ1drRnlBRHg2eTZEYVVlT2VDZw?oc=5",
+        "source": "La Libre.be",
+        "published": "2026-10-24T16:09:00+00:00",
+        "summary": "Phishing : la banque doit rembourser d'abord, l'Europe tranche ! La Libre.be",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 7,
+      "summary_fr": "Selon La Libre.be, la justice européenne tranche en faveur des consommateurs victimes de phishing : la banque doit d'abord rembourser le client. Le détail de la décision n'est pas précisé dans l'extrait.",
+      "why_it_matters": "Cette décision européenne renforce les obligations de remboursement des banques face à la fraude par phishing, un sujet clé de la régulation des paiements.",
+      "entities": [
+        "Union européenne"
+      ],
+      "related": [
+        {
+          "title": "Fraude bancaire, la CJUE change le timing du remboursement",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOQjA4dEhhdVhLd0dTVjktOXFjRFZmQ3VKYkNDdnAwdl96SWkxcTE2X0Q2cExJSURXWXpQcDRkZndEQmd1VXkzdE1oclRLLTBrRFlYZW9OQ0F3Y21NU0MzLW5pZ0NEUkZVdWs1NGpNZUVLUmx3QkQ3c2pKVzRfc0hDeVRkRnZUWUZMbTdmVEtqMG5yWmc?oc=5",
+          "source": "24matins"
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "35d668020c863316",
+        "title": "Block’s new voice model sounds eerily human",
+        "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
+        "source": "techcrunch.com",
+        "published": "2026-10-24T16:00:00+00:00",
+        "summary": "Block said that the voice model can run locally on a MacBook M4 Max",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Block présente un nouveau modèle vocal jugé très humain, capable de tourner localement sur un MacBook M4 Max.",
+      "why_it_matters": "L'exécution locale de voix IA réaliste illustre la progression rapide des modèles audio embarqués.",
+      "entities": [
+        "Block"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "8b8b537f8c06062a",
+        "title": "Nvidia Funding Pressure Is Reshaping AI Data Center Finance Stocks",
+        "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQWE5FLXUxTzFiVnlFaGpuV1RfOVdPdFhlVzAxSXZOdlk4MnVKVzdaNkduWkc0OUhNVDBKMFBDODVvTEtVVVF2alRBOWp6RGl3NEZPYzVTRC1hQ2Z4WW5uN2hyYnhKUUJSVDNiOVZ6bjNhaWo5U0xXVHF2VkZxa1djSjZkemh5VThQT2JraFd3TEU4bDlqd1lTZUhtNndDdUk2ZUUxOHZDZzFyQjJhYVZXa2M3MHo0blAxekszUE9SeHFwOF9yVHV1QkVON2lSQ1RDc1F1dUFLYkFPRWQzSUHSAeMBQVVfeXFMT0ZYNUM1cG1yNC10SS1XWDFJZFNVRlR4bXY2LWR3emJ5TzktNkJ5YlAxZVRubTZCdWJpNXNmSnN6OTJlWm9XSWJPd1VsYmVEZXFKLTdkRVlnNmJTMnJxaTd3RE84MHF3ZWV3MGtiRG1LZXdkb0tUTHlMSmdUZkJMLTE1ZkFHS0tXd3FVS0VOYlQxR3Q1MG5TTFhwTW1mUE5BVWpWNnpvNERIdzMwUXdscS1pU1RpbTZlMnpvTlZDSjdCcnZIekFKeEFMYXRpY2RLTl9PRXAwRFk3a0Q5QnVIS1VKSEk?oc=5",
+        "source": "Simply Wall Street",
+        "published": "2026-10-24T15:37:32+00:00",
+        "summary": "Nvidia Funding Pressure Is Reshaping AI Data Center Finance Stocks Simply Wall Street",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Simply Wall Street analyse comment la pression de financement liée à Nvidia transforme les valeurs de financement des data centers IA. L'extrait ne donne pas de chiffres.",
+      "why_it_matters": "Le financement des data centers dédiés à l'IA devient un enjeu d'investissement et de crédit majeur.",
+      "entities": [
+        "Nvidia"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "4d8884ad276d8c0f",
+        "title": "JetBlue Stock Sinks, Bond Yields Surge as Creditors Hire Advisors Amid Higher Jet Fuel Prices",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPZldYOFFvREpjRGxpU25YTDRqM0ctMmlkX0JSaUxoN3BlbzdOU1JpOXBuek13S09YZVpkNy1CZExKNEYzTmdidExSVUlIM19taWJEYk5NQWZEc244UEhHUnR1cFp1dE1pbnF4a0J1d0F4WXJ1Q0Rvb0xlelI2WE5GWllWdENEcFJsLU9yVnQwRXpuT0pTQ2ZYVkJjWEZ3TXM2aGg2dEQtOXotSVZUR2VleE9kVkFRZkhxWTZHRC1zdnJpd2wtYkhrNVlDY1B6RUREaVU0U3NtQXg3b011MDdkeGR4QQ?oc=5",
+        "source": "Benzinga",
+        "published": "2026-10-24T15:30:07+00:00",
+        "summary": "JetBlue Stock Sinks, Bond Yields Surge as Creditors Hire Advisors Amid Higher Jet Fuel Prices Benzinga",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "L'action JetBlue recule et les rendements obligataires grimpent alors que ses créanciers engagent des conseillers, sur fond de hausse du prix du kérosène. Ces tensions signalent une fragilité financière de la compagnie.",
+      "why_it_matters": "Un créancier qui s'organise sur une dette de compagnie aérienne montre comment la hausse du carburant peut dégrader le crédit d'une entreprise.",
+      "entities": [
+        "JetBlue"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "b405a941f93c3c9b",
+        "title": "\"On va évidemment en discuter\": une hausse du Smic avant le 1er janvier \"fait partie des débats\", selon Roland Lescure",
+        "url": "https://www.bfmtv.com/economie/on-va-evidemment-en-discuter-une-hausse-du-smic-avant-le-1er-janvier-fait-partie-des-debats-selon-roland-lescure_AD-202610240331.html",
+        "source": "bfmtv.com",
+        "published": "2026-10-24T15:27:09+00:00",
+        "summary": "Interrogé sur une potentielle hausse anticipée du salaire minimum, le ministre de l'Économie a affirmé que \"ça fait partie des paramètres qu'on doit mettre sur la table avec les partenaires sociaux\".",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Le ministre de l'Économie Roland Lescure dit que une hausse anticipée du Smic avant le 1er janvier fait partie des paramètres à discuter avec les partenaires sociaux. Aucune décision n'est annoncée.",
+      "why_it_matters": "Une revalorisation anticipée du Smic aurait un impact direct sur les salaires, l'inflation et le budget des entreprises.",
+      "entities": [
+        "Roland Lescure"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "110fd09f65f25a52",
+        "title": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
+        "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+        "source": "techcrunch.com",
+        "published": "2026-10-24T15:00:00+00:00",
+        "summary": "A new study found Grok's AI overwhelmingly recommends Republican candidates while OpenAI's GPT favors Democrats, with the two AI models disagreeing in more than 90% of nearly 500 election races.",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Une étude indique que le modèle Grok d'xAI recommande majoritairement des candidats républicains, tandis que GPT d'OpenAI favorise les démocrates. Les deux modèles divergent sur plus de 90 % de près de 500 courses électorales.",
+      "why_it_matters": "Les biais politiques des modèles d'IA posent des questions de neutralité et de régulation.",
+      "entities": [
+        "xAI",
+        "OpenAI"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "46f33ce6aebc5e65",
+        "title": "Arnaque au trading : j'ai viré moi-même l'argent, ma banque doit-elle me rembourser ?",
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdnRWM2NtUjZ1QmMtVUt5Sm9aMTRkWE0xWDMyLTE3ZVVBNEVIY3drUjNaaGl6Wmxpdzl6SWJnaHBwNWo0aS02dnVVUmtqTFlLZklvUmxnWGs5cThST011UEhZRmlHOHhmNnM4SVdBQWtTM1VBTm8yWWRMbHhMNjMyU01FSTczRFhkcGZ5UVN3dVNRakpVaTFPbTBZM2pxSERpanBaZ0pzZms?oc=5",
+        "source": "Kohen Avocats",
+        "published": "2026-10-24T14:38:00+00:00",
+        "summary": "Arnaque au trading : j'ai viré moi-même l'argent, ma banque doit-elle me rembourser ? Kohen Avocats",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Article juridique sur la responsabilité d'une banque lorsque le client a lui-même viré les fonds dans une arnaque au trading. L'extrait ne détaille pas la réponse juridique.",
+      "why_it_matters": "Les arnaques au trading et la question du remboursement bancaire sont un sujet récurrent de litige et de protection client.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "bbc9c35dded74113",
+        "title": "AI Agents Challenge Banking Security as Blockchain Identity Advances",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNY05UbTU1bUZWWEVzVGczV1RDQlVONHkyRzFuY3hacFpHN0FLNmJjNGozTmkwM0NjaTZXVG14aUhFRkJtZTcwS3hhaXZ4cmRXcnNZSENXeXFJVE0xSkZPRnFLN0IxcXFFdWFrcWlYNUFGQVQ4aEpLRXFuTDdVcjYwMHpmMW1GbkhybHZoZktFdi00N1F1eU92RkVKUFAzNFVfRnFFTA?oc=5",
+        "source": "KuCoin",
+        "published": "2026-10-24T14:33:17+00:00",
+        "summary": "AI Agents Challenge Banking Security as Blockchain Identity Advances KuCoin",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Article sur les risques que les agents IA font peser sur la sécurité bancaire, en parallèle de l'essor de l'identité sur blockchain. L'extrait est un titre sans chiffres.",
+      "why_it_matters": "Les agents IA dans la banque posent de nouveaux enjeux de sécurité et d'identification.",
+      "entities": [],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "67b05c7ae077269a",
+        "title": "Couche-Tard propose une offre pouvant atteindre 8 milliards de dollars pour Cumberland Farms, rapporte le Time",
+        "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxNeVFUcFhMaDRjLVNQZTBLOUdMWmpaT1FLWnEtQ0dKQi1lQWFXMFhpZWlmdi04Z3RudmUxSkFPRFQ3U0hhZVdTc0ZMLWtta0gya28wc3AwUXFsNHowc2txc3ZNR01KT1VwRmUtcU9WNDdndnBqT0pFN1Q4WE0wVjhFa0E3ZFZQdjRIdmcyYVBCRUoyVDcyQ1p0YXBTM2J2Sm1DLUc1OHRZMHgxZnJjUTJzNER2OEpTcWFMNmlwRlVxSmRwQ3hzZlc1ZHhPWjUxX2x6NExhMVJUazZzdmR2LU1hNE5UdmV5UTFadmRBWTh1Wk1iQ0RIYUExOEpBMUFiMDVXdHRrMDVNOFBCd3JKTzJ5UDJPdHoyVlnSAZwCQVVfeXFMTThPU1N1WFVmV0huc1BSZ3RyRjg0RlNnVTluXzNueG0xS0xMc3c0NHh5c0M1Qkx6RGYweEpUVDdRcmp1QzlHdkFySWFVNERnUlhIQjlVVk1zV1k4cmdyTGJoT0JMZTJZZzNKU01VOExsLTVKRkl5ZUt4cl9GcElNWlFkSlpYUUJySm9pTU9majBqN0pQZk1WQUhMRW85T1NnejBjYkxQMnJNcXhZcDQ1aDRyMVhieDV2U0loNWF1U0dFWGJHNmNucHdNQVdtVFpINV94NFQ2dnF6RXQzOS1TQk9oRDc5aVg2SHNLQ3UwS1RLR0dkUDZ4QmZJZFRJUEpfQTJpemt2aThFeUNKYVJhbmtnZTRYUlVaZWpXdjA?oc=5",
+        "source": "Boursorama",
+        "published": "2026-10-24T14:21:25+00:00",
+        "summary": "Couche-Tard propose une offre pouvant atteindre 8 milliards de dollars pour Cumberland Farms, rapporte le Time Boursorama",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Couche-Tard propose une offre pouvant atteindre 8 milliards de dollars pour Cumberland Farms, selon le Time. L'information provient d'un média qui cite des sources.",
+      "why_it_matters": "Une acquisition de cette taille dans la distribution de carburant et de proximité est une opération de M&A notable.",
+      "entities": [
+        "Couche-Tard",
+        "Cumberland Farms"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "0d4ae8a7dd392962",
+        "title": "Here are the top AI agents that can live in your text messages",
+        "url": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/",
+        "source": "techcrunch.com",
+        "published": "2026-10-24T14:00:00+00:00",
+        "summary": "We created a list of the most notable AI agents that can live in your text messages, from general assistants to agents designed for families, travel, and work.",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "TechCrunch recense les principaux agents IA accessibles par SMS, des assistants généralistes aux agents dédiés à la famille, aux voyages et au travail.",
+      "why_it_matters": "Tendance grand public des agents IA, utile en culture générale mais peu structurante.",
+      "entities": [
+        "TechCrunch"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "5013b7ec51ab1bb5",
+        "title": "Moody’s épargne la France, mais Roland Lescure met en garde ceux qui veulent \"voter un budget en dérive\"",
+        "url": "https://www.bfmtv.com/economie/economie-social/finances-publiques/moody-s-epargne-la-france-mais-lescure-met-en-garde-ceux-qui-veulent-voter-un-budget-en-derive_AD-202610240309.html",
+        "source": "bfmtv.com",
+        "published": "2026-10-24T13:59:49+00:00",
+        "summary": "Le maintien de la note de la France à Aa3 par Moody’s, malgré une perspective négative, est \"la reconnaissance de la force et de la diversité de l’économie française\", estime Roland Lescure. Mais le ministre de l’Économie y voit aussi un avertissement adressé aux parlementaires, alors que les tensions politiques font grimper les taux d’emprunt et compliquent l’adoption du budget.",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 8,
+      "summary_fr": "Moody's maintient la note de la France à Aa3 avec perspective négative. Roland Lescure y voit une reconnaissance de l'économie française et un avertissement aux parlementaires, alors que les tensions politiques font monter les taux d'emprunt et compliquent le budget.",
+      "why_it_matters": "La note souveraine et la hausse des taux d'emprunt français conditionnent le coût de la dette publique et le débat budgétaire en cours.",
+      "entities": [
+        "Moody's",
+        "Roland Lescure"
+      ],
+      "related": [
+        {
+          "title": "\"On va évidemment en discuter\": une hausse du Smic avant le 1er janvier \"fait partie des débats\", selon Roland Lescure",
+          "url": "https://www.bfmtv.com/economie/on-va-evidemment-en-discuter-une-hausse-du-smic-avant-le-1er-janvier-fait-partie-des-debats-selon-roland-lescure_AD-202610240331.html",
+          "source": "bfmtv.com"
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "82a3891b856c46ea",
+        "title": "Banks Preparing for Aftermath of Unprecedented Catastrophe Caused by AI",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNUjk2WmZDUGFsRTdKUW1sVThMQWszb29NeFNiMjZ1dC00ZGFxQXlLSjduUjVyUkQtVnJYUHNhbmZJZVAycDdsdnRKcXlCaDVJTzlBd21ITzJ1ZXJQemdxYnJ6WnpyZU1vLTlOa0JVU1F0Q2FEaVFlX1FlelVtX05KZVd1Y2d1RnJsRXIxTGl3?oc=5",
+        "source": "Futurism",
+        "published": "2026-10-24T13:55:00+00:00",
+        "summary": "Banks Preparing for Aftermath of Unprecedented Catastrophe Caused by AI Futurism",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Futurism rapporte que des banques se préparent aux conséquences d'une catastrophe sans précédent causée par l'IA. L'article reste général et ne précise ni l'événement ni les montants.",
+      "why_it_matters": "Le sujet illustre les risques systémiques que les banques associent à l'IA, un thème fréquent en gestion des risques.",
+      "entities": [
+        "Futurism"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "2d1705277d2cf512",
+        "title": "The next challenge is not adopting AI.",
+        "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5mZHR4ZzZoSzJBUHJBUnVHeXg2eUlGNWtEYkIxYVdienhkNHZlbXRLY0lYa1I0Yi05bWlnaURvcl9HNHZ2Rm1UVE9nMVd5ajJETUxzVnhTNzJlMUFNemxrSEdzYTVwYXhnTnF1MWJybVltZHBzeWfSAX5BVV95cUxNcTVKdXlBdHFTUFlyS3FqOWVJQzktMUxyb2VNOTlPY1FHQ2pxTlJvdUd1VG13VWxvTG1kN1RNbFRnUHFLcmh2UjZ5RXgtSFdVUXJNd1g2SmxQZ3JWS0xlX05MSDc0VzJtY0FYd2U2TGt5bGFXQzdQaHVhcHc0amc?oc=5",
+        "source": "Banking Frontiers",
+        "published": "2026-10-24T13:28:38+00:00",
+        "summary": "The next challenge is not adopting AI. Banking Frontiers",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Banking Frontiers affirme que le prochain défi du secteur bancaire n'est plus l'adoption de l'IA. Le titre ne détaille pas l'argumentaire.",
+      "why_it_matters": "Le passage de l'adoption à la mise à l'échelle de l'IA est un angle fréquent en entretien bancaire.",
+      "entities": [
+        "Banking Frontiers"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "eabbe021a0a5b8d7",
+        "title": "Peter Schiff warns a stock market crash could hit before the midterm elections — citing high inflation and AI stock hype",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTUgyZHRscmpTVHk3QnZrYWliM0xHR2g0bExTRUdkOUthV3RMWnYtOThoLXhUdmxOVWttVlpmTGE5alU0eGdTOThCVmhybEQyUDFDaFRTMW9xYXVEQ0JaS2ZBME1ENDBSY2l4UG1UNlVfWF9TQVN1ODEwSVFpaF9FSElQQ19oc0dlaXhiZm45N3o?oc=5",
+        "source": "MoneyWise.com",
+        "published": "2026-10-24T13:00:18+00:00",
+        "summary": "Peter Schiff warns a stock market crash could hit before the midterm elections — citing high inflation and AI stock hype MoneyWise.com",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Peter Schiff avertit qu'un krach boursier pourrait survenir avant les élections de mi-mandat américaines, en citant une forte inflation et l'engouement pour les valeurs liées à l'IA. Il s'agit d'une opinion d'analyste et non d'une prévision chiffrée.",
+      "why_it_matters": "Les craintes de bulle sur les valeurs IA sont un sujet central des marchés actuels et des discussions en entretien.",
+      "entities": [
+        "Peter Schiff",
+        "MoneyWise.com"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a885d6610315e716",
+        "title": "AU Small Finance Bank Q2’FY27 slides: 53% profit surge, AI gains",
+        "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTkRJVjFQNWtnSWFxMHk3TE90Z0RtT3BsdXVGejg3OC1PdllIVGdZVU1vdDJqdnl4OFB3eV9kY25HQkRyNGl2VnZCZC1DWGhtNEZsNE1rQWdRal8zeFpPejJxdlRPQ2J0T19Hc2Ywekhzb2dYN18wckJocV9tdk5NdDl4dEJ0azlvYlpzNGtxSGRBYkRNT25ObWZVdHNTdkQxVGtPRFBKTVYwTFhSZUxzRl94dFNNT3dsUlBCSmpB?oc=5",
+        "source": "Investing.com India",
+        "published": "2026-10-24T12:58:46+00:00",
+        "summary": "AU Small Finance Bank Q2’FY27 slides: 53% profit surge, AI gains Investing.com India",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "AU Small Finance Bank annonce une hausse de 53 % de son bénéfice au deuxième trimestre de l'exercice 2026-2027 et met en avant les gains liés à l'IA. Les détails chiffrés complets ne figurent pas dans l'extrait.",
+      "why_it_matters": "Exemple concret de banque qui relie hausse de résultats et déploiement de l'IA, utile pour un cas d'entretien.",
+      "entities": [
+        "AU Small Finance Bank",
+        "Investing.com India"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "1a3b9ca78c8fc946",
+        "title": "Stock-Bond Correlation: Oil Broke The Hedge. Oil Will Fix It.",
+        "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOelF4SlJKWGlhamVjRWlwbDEzZm1pUS1nMURyRXY3Q0dpTlZraTJMbUpBRUNGZG5oNnBvQWpvZkRxdzZZRldUcEY4Sjl6cndMektqWjNJRXd1bGdEZE5xSm8yNWVZU3ZRLTJLV3RLVFpBSDlmMVdHR19fVFFkWGxieF9ZVHJVc0hsMU13WGNzOG1vSXJLcldJa3Y4UWNieFYyQ2d1MGRfcWxMclU?oc=5",
+        "source": "Real Investment Advice",
+        "published": "2026-10-24T12:27:19+00:00",
+        "summary": "Stock-Bond Correlation: Oil Broke The Hedge. Oil Will Fix It. Real Investment Advice",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Real Investment Advice explique que la corrélation actions-obligations s'est dégradée à cause du pétrole, qui a cassé la couverture traditionnelle. L'article suggère que le pétrole pourrait rétablir cette relation.",
+      "why_it_matters": "La corrélation entre actions et obligations détermine l'efficacité des portefeuilles diversifiés, un point clé en gestion d'actifs.",
+      "entities": [
+        "Real Investment Advice"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "77bb541b57daa1cd",
+        "title": "Traditional stockbroking firms must adapt to AI driven changes or risk becoming obsolete in 10 years: DEA",
+        "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxPNTFvSFhUMDNwT0ZTZnF4VXBhLThDd2tRZEYwb2ZQMkJUSnlpSEpvQWVQcmdaMUNSRnNMMXMxT09CeTFnVTlhZE10dkdqd2d0UmpTOWUyYzBNTS0xckI1cVdvVDRGa1FYV3Mwd1RfZDJ5QUgtR2U1Y2ktR21ENlRBLTNOY1VETHVHSlExdnFzeVdwcXRfaHlvbEhuQ1h5b3JFNEN2X2hVVG9Ua09PU0xCUWNFV2hfWmpWb2JBZjAySDFZeWx0c0dDTzhsWE1uTVM2dmNhal9FbmNnbzhGQmdTMWFqQUVOdUZhVEJoRVRCLWhDZ2JNZFJlV2c0THNOT0E0ZEhPazFOX0xUSlFUalYwLVVyMllDelhidTlMYVh5a1R1VlQ5SDFwWnJRS3VuY3h0TlBqbWdLc1Z5c2fSAcACQVVfeXFMT3pwS21JQUZpd0p1ZUZGUGtTbFdTb2tUOWFRY3V1ZE1nR0RUMlc5bTROa05QMHh5UDZKdXFwQndvandnMUlGU0hYWnVKU2RobGxkaDZSNzI5Qk1XWURzeXdFMmt5b0dJRVlHcjlnZHBVTXRzMmtkeFA3dmR0dXFnQTJqQ1hRX0QxbXRpN1puTmxlclpRcGpFNTNDYlJqNm43aWZBckZhRGJ2bzc5b2s4SXRoX3hpU3l3Sk9qSG5GbW5CWEw0andFdW9QRUlTVzVRNHVsUlFTZldaTVJocktqbmpzZVY1M1c1M3JtNjdhVDltMlQxandBbnhFMHpRQTU0bnNpSEsxZG5LczNmZENjV1FuNEJ4YWh1ajMyNF9VbklmZW9LZlMtdEx1bmJQMEVRWm94Wk5PR3IxZVNJM2Y2Yjc?oc=5",
+        "source": "The Economic Times",
+        "published": "2026-10-24T12:12:53+00:00",
+        "summary": "Traditional stockbroking firms must adapt to AI driven changes or risk becoming obsolete in 10 years: DEA The Economic Times",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Le régulateur indien DEA estime que les courtiers traditionnels doivent s'adapter aux changements liés à l'IA, faute de devenir obsolètes d'ici dix ans. L'article ne chiffre pas l'impact.",
+      "why_it_matters": "Le courtage en bourse est directement menacé par l'IA, un enjeu de transformation pour les acteurs financiers.",
+      "entities": [
+        "DEA",
+        "The Economic Times"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "671ce4028203a742",
+        "title": "Indian Stock Market Outlook Next Week, 26-30 Oct: Sensex, Nifty Likely To Fall Further Amid Crude Oil Surge",
+        "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOc3h0NE1DbnBkN3c4QzRtV3lHYU1xWG4yYmdCWlZ2NUhreVdPM29Ud04wbFJCdEplNmJKYVFyd0k0YzZRblJwdEpVNDlDWTZGRExDWDQyR21CampSLTI5WDU5cm02WVBZcFVHUFRQWjFMdk5PY3JMa3dGV3JqWGY3REVOLUVadl9PcWkzd3JoczhRa3NyT0VjelZaUEY3am5jTGZ1aVdjNHRJRnh6TDBfX2ZYb04xckpoOWlBWml4T2lSVnplSmVremcySk05R0Yxb19Kc2hNMlNZdw?oc=5",
+        "source": "Goodreturns",
+        "published": "2026-10-24T12:03:17+00:00",
+        "summary": "Indian Stock Market Outlook Next Week, 26-30 Oct: Sensex, Nifty Likely To Fall Further Amid Crude Oil Surge Goodreturns",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 5,
+      "summary_fr": "Goodreturns prévoit que le Sensex et le Nifty pourraient encore baisser la semaine du 26 au 30 octobre, sous l'effet de la hausse du pétrole brut. Il s'agit d'une prévision de presse sans chiffre précis.",
+      "why_it_matters": "Le prix du pétrole est un facteur de risque pour les marchés émergents, notamment indiens.",
+      "entities": [
+        "Sensex",
+        "Nifty",
+        "Goodreturns"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e11ab88073572f6f",
+        "title": "Tech Stock Sell-Off: This Could Be the Most Powerful Reason to Buy Bonds Right Now",
+        "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPb0pDRWFhd1N5bnVTbXh1QUI2cEdtUVZGOThwYXY5bm8yTVZXUm9DNzRyR2ptV2d2Zi1QN25la3piQk9iS3hPYktVcnVNWjNHZFl3eWRjLTNyNVFBdXQxaFVuTkFHaE1rTmtRWnRLazdoZXpJZnNGYVhqbi15OWZ1emY2cHV0Zw?oc=5",
+        "source": "The Motley Fool",
+        "published": "2026-10-24T11:50:00+00:00",
+        "summary": "Tech Stock Sell-Off: This Could Be the Most Powerful Reason to Buy Bonds Right Now The Motley Fool",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "The Motley Fool évoque une baisse des valeurs technologiques et défend l'idée que cela pourrait inciter à acheter des obligations. L'article reste une opinion sans chiffres dans l'extrait.",
+      "why_it_matters": "Le lien entre krach technologique et rotation vers les obligations est un raisonnement classique en allocation d'actifs.",
+      "entities": [
+        "The Motley Fool"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "266b38663fb99ce3",
+        "title": "Evercore Outlines Key Credit and Treasury Yield Thresholds That Could Signal AI Stock Market Correction",
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQRjl1bEEwRXhlbUllRjhudk5fT2p6ZzFSX2RSZWh1WXRkTVpvb1k2WjhSZDJzcHpxNlplVGtQc29oWU1ocU1yckVfYWNZY3BNTEtGdW1rVjJEV0ZQdFc3VWp4UU9Day11T3c2dXEwbFJWSDBGNF9OV3lrTmg1cWEtUlcyQzRFTWg5QVBwMEFtbw?oc=5",
+        "source": "Yahoo Finance UK",
+        "published": "2026-10-24T11:49:00+00:00",
+        "summary": "Evercore Outlines Key Credit and Treasury Yield Thresholds That Could Signal AI Stock Market Correction Yahoo Finance UK",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Evercore identifie des seuils de spreads de crédit et de rendements du Trésor américain qui pourraient signaler une correction du marché boursier lié à l'IA. L'extrait ne donne pas les niveaux chiffrés.",
+      "why_it_matters": "Des indicateurs de crédit et de taux comme signaux de correction sont un outil d'analyse courant en strats de marché.",
+      "entities": [
+        "Evercore",
+        "Yahoo Finance UK"
+      ],
+      "related": [
+        {
+          "title": "Evercore Identifies Credit and Bond Yield Levels That Could Signal an AI Market Correction",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONEJWVElQNXJiNDlueEQ2NFFSenhxZzZmMlRpWG91X2FIME9nSzlfbW9LT2dVZENvZkJsZTlwRm56ZFBraEJaQXA5bHVBd1JmUVp5djRqQk9IUXprSnBibkJhS3R1c2Jlb2t3V1FLOFB2TU1zQWh0cE9SUF9HbWJnaFRPeEJfZ1EzTGFQRGdSdTNkbWpNZFBmYmVwSGctVFNlajFldA?oc=5",
+          "source": "Yahoo Finance"
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "35da16eb6ac5b202",
+        "title": "Evercore Identifies Credit and Bond Yield Levels That Could Signal an AI Market Correction",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONEJWVElQNXJiNDlueEQ2NFFSenhxZzZmMlRpWG91X2FIME9nSzlfbW9LT2dVZENvZkJsZTlwRm56ZFBraEJaQXA5bHVBd1JmUVp5djRqQk9IUXprSnBibkJhS3R1c2Jlb2t3V1FLOFB2TU1zQWh0cE9SUF9HbWJnaFRPeEJfZ1EzTGFQRGdSdTNkbWpNZFBmYmVwSGctVFNlajFldA?oc=5",
+        "source": "Yahoo Finance",
+        "published": "2026-10-24T11:47:00+00:00",
+        "summary": "Evercore Identifies Credit and Bond Yield Levels That Could Signal an AI Market Correction Yahoo Finance",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Evercore présente des niveaux de crédit et de rendements obligataires qui pourraient annoncer une correction du marché de l'IA. L'extrait ne précise pas ces niveaux.",
+      "why_it_matters": "Ces seuils de taux et de crédit servent à surveiller un retournement des valeurs IA, un sujet d'actualité en marchés.",
+      "entities": [
+        "Evercore",
+        "Yahoo Finance"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "905956af8fb29868",
+        "title": "US Banks Blocking AI Agents' Access To Customer Accounts: Risks Of Letting AI Manage Your Finances",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUkZMRGV3djFqanlHYmFteDdLbFpnMktNbmNJSnoxTGFEVDUwREw3eExGbldSMzZKeWRwcmpoUW51VmRlSVViaG1GQkpqWjEwcFNGUmc3M3VOUlVxWnFvbWdSbEhXd2tUVnVRZmMzMkpEYVZiMFVLX2hDODJHc3UyeUFlNUpmNVc2RlRlRTJIQm1QeFo0LURISGhJOXZONjVKSTZ6QktaaHRocnc1RnJNc1lmS3dxdlA1ZzJpVzc4VDVzRDBQNnc1V2o5cUpOS0puT1pPbU4tSXoxMDNpZVZSR3Zud9IB6wFBVV95cUxQMmpyZTRwSl9KdTF0XzJRZlRUVzdSMVQteU5zUzdPR3Bfd1pfWkoxbDFiS2JWc2FfcDNoQnkwTlAtdFVwUkhZMVRNTmFOWERtYVZBc1RDU3pFelpSTFdWY2hzdzRUMnl5OGktWi1vVTA4NmtpZ2dFT2JjczZyM21NTFB3dGJvU2NrWlZxclp1WUpnYmYwWjFEeHZLSDRWaGZoT01xSWR1V21ZS2pjcnhnSzB0QjktNG9JdlRBMFlWcDdxOUZERFdwd1RCdkdTTHZQS3BDZ0pYNFhFZmR4UDNyQWlsZXN3eG5HWGNz?oc=5",
+        "source": "NDTV Profit",
+        "published": "2026-10-24T11:21:33+00:00",
+        "summary": "US Banks Blocking AI Agents' Access To Customer Accounts: Risks Of Letting AI Manage Your Finances NDTV Profit",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "Selon NDTV Profit, des banques américaines bloquent l'accès des agents d'IA aux comptes clients. Le titre évoque les risques de confier la gestion de ses finances à une IA.",
+      "why_it_matters": "Le sujet touche à la sécurité des données bancaires et à la frontière entre banques et agents d'IA, un enjeu actuel pour les métiers de la banque.",
+      "entities": [
+        "NDTV Profit",
+        "banques américaines"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "8da3aeb583a4091f",
+        "title": "Why The Uk Tech And Banking Sector Is Becoming An Ai Job Cut Testing Ground",
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxON09nSDFvcFZkaGRxOHZOaHdGXzVnaUpzSGtPaFpseXdZc2E1RVFnb1lrUklneXV6WUNjUHFQUW1UYnpqRnU4VjlmMW50NFJqYkpXOGJUdTB1Z1hidlNscF83dlBhTmlBTzNpVHhLS3hrMEMwODhIMEY1MmlUa1FoS2FGR19QVFVURGc?oc=5",
+        "source": "ИФЗ РАН",
+        "published": "2026-10-24T11:13:52+00:00",
+        "summary": "Why The Uk Tech And Banking Sector Is Becoming An Ai Job Cut Testing Ground ИФЗ РАН",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "L'article indique que le secteur tech et bancaire britannique devient un terrain d'essai pour les suppressions d'emplois liées à l'IA. Le contenu détaillé n'est pas disponible.",
+      "why_it_matters": "Les suppressions d'emplois liées à l'IA dans la banque britannique anticipent les transformations attendues dans le secteur financier.",
+      "entities": [
+        "Royaume-Uni"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "412004f011edb711",
+        "title": "L&T Finances Pitch Point Launchpad for AI Start-ups: Past winners Arrowhead AI and SpoofSense Share Success Stories Ahead of the Second Edition",
+        "url": "https://news.google.com/rss/articles/CBMinAJBVV95cUxObjVjaF9SY3BMRWhmckhkdUZBbEJxV2tvOEVremx6VUd4WTdla0s3M1h2RzBIWFl0NUUyQ29ZQ1YzbWpOVWZIclI4Sk5iMDJveG1QZUNNNVpMWWFPQWZOb2l3TzRpcXJIdEJvV2UzcDR1LWM5WHdEd3gyenlDWmVZck4tUWRjYXF3QkpaNkZwRTJGNXJERUdXM2RDb3B3VXZnbUlXelAyRDZFT2pnbURUanA1WHZIS2ZiUEZRWGJIaTJMeFNBdXhXOThjNTYyVXFseTFld09CUmZFQXZZLTZGMTRKdHNMVjVwRXhiR3RoX2ZDZkFFbVc4bU9nTzd5UGtTWWctelVkckxlQnhkc01EdGhvQUNmeXgtdDhuV9IBnAJBVV95cUxObjVjaF9SY3BMRWhmckhkdUZBbEJxV2tvOEVremx6VUd4WTdla0s3M1h2RzBIWFl0NUUyQ29ZQ1YzbWpOVWZIclI4Sk5iMDJveG1QZUNNNVpMWWFPQWZOb2l3TzRpcXJIdEJvV2UzcDR1LWM5WHdEd3gyenlDWmVZck4tUWRjYXF3QkpaNkZwRTJGNXJERUdXM2RDb3B3VXZnbUlXelAyRDZFT2pnbURUanA1WHZIS2ZiUEZRWGJIaTJMeFNBdXhXOThjNTYyVXFseTFld09CUmZFQXZZLTZGMTRKdHNMVjVwRXhiR3RoX2ZDZkFFbVc4bU9nTzd5UGtTWWctelVkckxlQnhkc01EdGhvQUNmeXgtdDhuVw?oc=5",
+        "source": "The Tribune",
+        "published": "2026-10-24T11:12:49+00:00",
+        "summary": "L&T Finances Pitch Point Launchpad for AI Start-ups: Past winners Arrowhead AI and SpoofSense Share Success Stories Ahead of the Second Edition The Tribune",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 3,
+      "summary_fr": "L&T Finance lance un programme Pitch Point Launchpad destiné aux start-ups d'IA, avec pour anciens lauréats Arrowhead AI et SpoofSense. La deuxième édition est annoncée.",
+      "why_it_matters": "C'est un exemple de programme d'accélération d'IA porté par un acteur financier indien, d'intérêt limité pour un entretien.",
+      "entities": [
+        "L&T Finance",
+        "Arrowhead AI",
+        "SpoofSense"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "4873105fba25c9df",
+        "title": "Moonshot AI reports Kim K3.1 Pro tops rivals with 64.4 on finance test",
+        "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB3TW1xbzFMeFA0d0VIUXBRWEtBTkdaQktkcFV1MUhqY3doLURHdV80RmF4eGs0MlQydTk4LUhNbldNVnozNTVZUkxSRTh2ckd6MllEV1p6SEU5U1Uxd3RrYjdWS3lkQlNtclBENFpvUUM?oc=5",
+        "source": "The Cryptonomist",
+        "published": "2026-10-24T11:11:59+00:00",
+        "summary": "Moonshot AI reports Kim K3.1 Pro tops rivals with 64.4 on finance test The Cryptonomist",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Moonshot AI annonce que son modèle Kimi K3.1 Pro obtient 64,4 à un test de finance, devant ses concurrents selon l'entreprise. Il s'agit d'une autocommunication de résultats non vérifiée.",
+      "why_it_matters": "Les benchmarks sectoriels comme ce test financier servent à comparer les modèles d'IA utilisés dans la finance.",
+      "entities": [
+        "Moonshot AI"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a8e20ecfca957be0",
+        "title": "10 000 € placés sur le CAC 40 en janvier sont passés sous la mise : voici ce qu'ils vaudraient à Tokyo",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOY3EwS1RLNGtQRkVyNTBxSDl6WnJILXd3U2lxNWxvMEw0bmVjd1IydkNFbHQ3Nm5neXZFY3hiR2N0UHduSVRfRkhneU1ZQU5TdHZMVDZwZDJMQnhMVHN6RGt2MTVVWlY1Y3lxdWo4RlNBamtHLXJaNW9vUS04QlItUjFHZEtmUllYa01HbkJMNzV2Vi1weDlvSg?oc=5",
+        "source": "Selectra",
+        "published": "2026-10-24T10:55:19+00:00",
+        "summary": "10 000 € placés sur le CAC 40 en janvier sont passés sous la mise : voici ce qu'ils vaudraient à Tokyo Selectra",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 4,
+      "summary_fr": "Selectra indique que 10 000 € investis dans le CAC 40 en janvier sont passés sous la mise, et compare avec leur valeur potentielle à Tokyo. L'article ne détaille pas les niveaux de cours.",
+      "why_it_matters": "Il illustre la performance du CAC 40 depuis le début de l'année, sans analyse des causes.",
+      "entities": [
+        "CAC 40",
+        "Selectra"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "5c60b8ad73cd2f19",
+        "title": "Want Income for Life? PepsiCo Yields 4.3% and Has the Kind of Competitive Moat That Makes the Income Durable.",
+        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQc1g1TkNWMjVsY2lJOUo4WFZPbkgyZFZOV1lLWUlnT3ItRm5ZczZDSk5rRkpkNXAxNE9YYnVtOTZ0dXdCOU1yUjVyWEJqUExCMDlRUDc2TXE2R2lEVEVqM1ROVGU5RG5QVXFjRlFJempFSDhLcngwbmFYd2U3QlhNb0pEbEhyd0ZtNS1hX3hMNVdPT1hHTTZkYw?oc=5",
+        "source": "The Motley Fool",
+        "published": "2026-10-24T10:55:00+00:00",
+        "summary": "Want Income for Life? PepsiCo Yields 4.3% and Has the Kind of Competitive Moat That Makes the Income Durable. The Motley Fool",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 3,
+      "summary_fr": "The Motley Fool présente PepsiCo comme une valeur offrant un rendement de 4,3 % et un avantage concurrentiel durable. Il s'agit d'un article d'opinion orienté vers l'investissement en dividendes.",
+      "why_it_matters": "Le rendement du dividende et les avantages concurrentiels sont des critères de base pour analyser une action.",
+      "entities": [
+        "PepsiCo"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "2ffdfe0d9a3d8251",
+        "title": "Lok Sabha’s Standing Committee on Finance selects 46 subjects for 2026-27 review, including AI, Sebi and GST",
+        "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNYjlVS0xCNDBRTzE0M0drMXBJRVFjQzZkanE1S0xrZGIxc0FjX3hSdFNRZEFKRGR3bzlVYUYxeUNsZ0JBSGVrZm5qV3RoSjB4bVFjZ0sxdWxjVVJ0ZjVpQzUwQWlCMm1UZTFyRnFiMEE0TEVrMzZSMTFSV2xpRHZnVFl3YXNoeU1UeG5xNGhfSDFVSDV6NGpTbFFpY0NqNDEzRnhHUENoa2pqTjgwUmxKWEM3UVFnbHFTZlNOcXFHUXNMY2MtUUdDbmhjSVdvNUt4Y1ZINzlVYzltN0xTdzAzY0dtb9IB8AFBVV95cUxPYzg1VXE5X1pka2JuVzVhQjBuNkRKMzFtT2ZyY2ZPNmFvSURzdXZtdWFLN1NMQ2lxNjVTVEtsQnNkVXlpQmY4bm92UXRjS1VYRktncmhYODBGVHN1RFVMMy1lWmZOZ0lIM09YV3FEb2ZnZ3lTS0c1SEVnSUhVbXNVT3QwSzJlNWs5NDYxNkZ2UXNSMkJSUnNUdFZaem5IWGt2ajBzVXVPUFpYUWxNWGpha1ZOWDB0QTR5emhjY01QYWUyczlxRXRCYm1BZ3pKWHRGUG9qbktHclFOREhvc3RGVHpuTm4wVG5sbkF0eEprVWg?oc=5",
+        "source": "Fortune India",
+        "published": "2026-10-24T10:26:51+00:00",
+        "summary": "Lok Sabha’s Standing Committee on Finance selects 46 subjects for 2026-27 review, including AI, Sebi and GST Fortune India",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "La commission permanente des finances de la Lok Sabha a retenu 46 sujets pour sa revue 2026-27, dont l'IA, le régulateur Sebi et la TVA (GST). Ces thèmes concernent la régulation financière indienne.",
+      "why_it_matters": "Cela montre que l'Inde prépare un encadrement parlementaire de l'IA et des marchés financiers.",
+      "entities": [
+        "Lok Sabha",
+        "Sebi"
+      ],
+      "related": []
+    }
+  ]
+}
