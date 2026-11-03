@@ -111,6 +111,13 @@ def model_for(config: dict, kind: str = "model") -> str:
     return name or llm_cfg.get(kind) or llm_cfg["model"]
 
 
+def batch_size_for(config: dict) -> int:
+    """Articles par appel. Les petits modèles tiennent mieux le JSON sur des lots courts :
+    `llm.models.<fournisseur>.batch_size` l'emporte sur `llm.batch_size`."""
+    section = (config["llm"].get("models") or {}).get(provider_of(config)) or {}
+    return int(section.get("batch_size") or config["llm"]["batch_size"])
+
+
 # --- Client Anthropic (Claude) ----------------------------------------------------------------------
 
 def _cached_system(system: str) -> list[dict]:

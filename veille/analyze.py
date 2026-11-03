@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import logging
 
+from .guards import has_placeholder
+from .llm import batch_size_for
 from .models import AnalyzedArticle, Article
 
 log = logging.getLogger(__name__)
@@ -74,12 +76,11 @@ def _format_batch(batch: list[Article]) -> str:
 def analyze(articles: list[Article], llm, config: dict) -> list[AnalyzedArticle]:
     system = build_system_prompt(config)
     valid_themes = set(config["themes"])
-    size = config["llm"]["batch_size"]
+    size = batch_size_for(config)
     results: list[AnalyzedArticle] = []
 
-    for start in range(0, len(articles), size):
-        batch = articles[start:start + size]
-        log.info("Analyse des articles %d à %d...", start + 1, start + len(batch))
+    def run_batch(batch: list[Article], label: str) -> None:
+        log.info("Analyse des articles %s...", label)
         try:
             out = llm.structured(system, _format_batch(batch), "enregistrer_analyse", ANALYSIS_SCHEMA)
         except Exception as e:
@@ -87,15 +88,26 @@ def analyze(articles: list[Article], llm, config: dict) -> list[AnalyzedArticle]
             # tous les lots échoueront de la même façon. On arrête tout.
             if getattr(e, "status_code", None) in (400, 401, 403):
                 raise
+            # Sortie structurée invalide (petit modèle) : on coupe le lot en deux et on réessaie,
+            # ce qui sauve la plupart des articles au lieu de perdre tout le lot.
+            if isinstance(e, RuntimeError) and len(batch) > 1:
+                log.warning("Lot invalide (%s), découpé en deux", e)
+                mid = len(batch) // 2
+                run_batch(batch[:mid], f"{label} (1/2)")
+                run_batch(batch[mid:], f"{label} (2/2)")
+                return
             # Erreur passagère (réseau, surcharge) : on saute ce lot et on continue.
             log.error("Lot ignoré : %s", e)
-            continue
+            return
         for item in out.get("articles", []):
             idx = item.get("index")
             if not isinstance(idx, int) or not 0 <= idx < len(batch):
                 continue  # le modèle a halluciné un index : on ignore
             if item["theme"] not in valid_themes:
                 continue
+            if has_placeholder(item["summary_fr"], item["why_it_matters"]):
+                log.info("Résumé à trous écarté : %s", batch[idx].title[:70])
+                continue  # « X% », « valeurs non précisées » : mieux vaut pas de résumé qu'un faux
             results.append(AnalyzedArticle(
                 article=batch[idx],
                 theme=item["theme"],
@@ -104,4 +116,9 @@ def analyze(articles: list[Article], llm, config: dict) -> list[AnalyzedArticle]
                 why_it_matters=item["why_it_matters"].strip(),
                 entities=item.get("entities", [])[:4],
             ))
+
+    for start in range(0, len(articles), size):
+        batch = articles[start:start + size]
+        run_batch(batch, f"{start + 1} à {start + len(batch)}")
+
     return results

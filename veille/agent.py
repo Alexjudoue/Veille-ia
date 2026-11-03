@@ -27,6 +27,7 @@ from decimal import Decimal, InvalidOperation
 from urllib.parse import urlparse
 
 from . import tools
+from .guards import has_placeholder
 from .llm import model_for
 from .models import AnalyzedArticle, DeepDive
 
@@ -390,6 +391,9 @@ def _conclude(data: dict, run: Run, trace: dict, item: AnalyzedArticle, finish):
     summary = data.get("summary")
     if not isinstance(summary, str) or not summary.strip():
         return finish("repli_v1", "analyse finale vide")
+
+    if has_placeholder(summary, data.get("context"), data.get("what_changed")):
+        return finish("repli_v1", "analyse finale à trous (X%, valeurs non précisées)")
 
     figures, rejected = verify_figures(data.get("key_figures") or [], run)
     if rejected:

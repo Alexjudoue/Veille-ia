@@ -12,6 +12,7 @@ llm:
     mistral:
       model: open-mistral-nemo        # Mistral Nemo 12B : le seul accessible avec la clé gratuite (Small : quota 0)
       synthesis_model: open-mistral-nemo
+      batch_size: 8                   # lots courts : un petit modèle tient mieux le JSON strict
     anthropic:
       model: claude-haiku-5-5
       synthesis_model: claude-haiku-5-5

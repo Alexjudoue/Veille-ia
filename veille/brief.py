@@ -5,6 +5,7 @@ import logging
 from datetime import datetime
 from urllib.parse import urlparse
 
+from .guards import has_placeholder
 from .llm import model_for
 from .models import AnalyzedArticle, DeepDive
 
@@ -140,7 +141,10 @@ def synthesize(selected: dict[str, list[AnalyzedArticle]], llm, config: dict,
     out = llm.structured(system, prompt, "rediger_synthese", schema,
                          max_tokens=1500, model=model_for(config, "synthesis_model"))
     # Garde-fous dans le code : on ne fait pas seulement confiance au prompt
-    out["key_points"] = out.get("key_points", [])[:max_points]
+    out["key_points"] = [p for p in out.get("key_points", []) if not has_placeholder(p)][:max_points]
+    for key in ("connection", "interview_question"):
+        if has_placeholder(out.get(key)):
+            out[key] = ""
     if n < 2:
         out["connection"] = ""
     return out
