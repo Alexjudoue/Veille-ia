@@ -1,6 +1,6 @@
 # Agent de veille économique : marchés, banques, IA
 
-Chaque matin à 7h45 (heure de Paris, week-end compris), cet agent lit une quinzaine de flux d'actualité, élimine les doublons et le bruit, demande à un LLM (Claude) de noter et résumer chaque article, puis rédige un brief : les 3 informations à retenir, un fil rouge entre les actualités et une question d'entretien possible. Le brief est enregistré dans `briefs/` et peut être envoyé par e-mail ou sur Telegram.
+Chaque matin à 7h45 (heure de Paris, week-end compris), cet agent lit une quinzaine de flux d'actualité, élimine les doublons et le bruit, demande à un LLM (Mistral par défaut, Claude en option) de noter et résumer chaque article, puis rédige un brief : les 3 informations à retenir, un fil rouge entre les actualités et une question d'entretien possible. Le brief est enregistré dans `briefs/` et peut être envoyé par e-mail ou sur Telegram.
 
 **Nouveauté V2 : un vrai agent.** Pour les événements les mieux notés, le modèle décide lui-même quoi faire : lire l'article en entier, chercher dans la mémoire ce qui s'est passé les jours précédents, lancer une recherche complémentaire, puis rendre une analyse approfondie (chiffres clés vérifiés, contexte, « ce qui change depuis hier »). Chaque raisonnement est tracé dans `briefs/AAAA-MM-JJ.trace.json`.
 
@@ -34,7 +34,7 @@ flowchart LR
 |---|---|
 | `config.yaml` | Thèmes, flux, profil du lecteur, seuils, réglages de l'agent. Tout se règle ici sans toucher au code. |
 | `veille/collect.py` | Téléchargement des flux, nettoyage, filtre de date, déduplication. |
-| `veille/llm.py` | Appel à l'API Claude : sortie JSON structurée (pipeline), tours avec outils (agent), comptage des tokens séparé. |
+| `veille/llm.py` | Couche LLM à deux fournisseurs (`mistral`, `anthropic`) derrière une même interface : sortie JSON structurée (pipeline), tours avec outils (agent), limiteur de débit et réessais (Mistral), comptage des tokens séparé. |
 | `veille/analyze.py` | Classement, notation et résumé des articles par lots. |
 | `veille/agent.py` | **V2.** Boucle de tool use, budget, vérification des chiffres, trace. |
 | `veille/tools.py` | **V2.** Les outils : lecture d'article, décodage des liens Google News, recherche d'actualité. |
@@ -57,7 +57,34 @@ flowchart LR
 
 - **Texte parasite réparé.** Il arrive que le modèle recopie un paramètre de l'outil (`<parameter name="key_figures">[...]`) dans un champ texte. Le code coupe ce texte et récupère les chiffres qui s'y trouvaient, qui passent ensuite par la même vérification que les autres.
 
-## Optimisation du coût (v2.2)
+## Choix du fournisseur de modèle (v2.3)
+
+Depuis la v2.3, l'agent tourne par défaut sur **Mistral** (offre gratuite « Experiment »), sans crédits à payer. Claude reste disponible : **une seule ligne** à changer dans `config.yaml`.
+
+```yaml
+llm:
+  provider: mistral      # ou : anthropic
+```
+
+| | `mistral` (défaut) | `anthropic` |
+|---|---|---|
+| Modèle | `open-mistral-nemo` (voir ci-dessous : `mistral-small-2603` est refusé par la clé gratuite testée) | `claude-haiku-5-5` |
+| Clé (`.env` et secret GitHub) | `MISTRAL_API_KEY` | `ANTHROPIC_API_KEY` |
+| Coût | 0 $ (offre gratuite) | environ 0,03 $ par brief |
+| Prompt caching, effort de réflexion | sans objet (ignorés) | utilisés |
+
+Les modèles de chaque fournisseur se règlent dans `llm.models.<fournisseur>` (`model` pour le tri, la notation et l'agent ; `synthesis_model` pour la synthèse).
+
+**Comment ça marche.** `agent.py` et le reste du pipeline ne connaissent qu'une interface (`structured` et `chat`). Le client Mistral traduit l'historique de l'agent (`tool_use` / `tool_result`) vers le format Mistral (`tool_calls`, rôle `tool`, `tool_call_id`) et renvoie une réponse de même forme : budget, conclusion forcée et vérification des chiffres sont identiques pour les deux fournisseurs. La sortie structurée passe par un appel de fonction forcé, dont le résultat est validé contre le schéma (un nouvel essai si invalide, puis le lot est ignoré).
+
+**Limites de l'offre gratuite.**
+- Environ **1 requête par seconde** : un limiteur de débit espace les requêtes (`llm.rate_limit.requests_per_second`). Sur une erreur 429 (ou 5xx, coupure réseau), le client réessaie avec une attente qui double (2, 4, 8, 16, 32 s, ou l'attente demandée par le serveur), jusqu'à 5 fois.
+- Une erreur de clé ou de requête (400, 401, 403) n'est jamais réessayée : le pipeline s'arrête sans écrire de brief vide ; si c'est l'agent, le brief V1 est écrit.
+- L'offre gratuite plafonne aussi les tokens par minute et par mois (valeurs à vérifier sur ton tableau de bord Mistral) ; le brief affiche les tokens consommés pour surveiller la consommation.
+- **Modèles accessibles.** Avec la clé gratuite testée, `mistral-small-2603`, `mistral-small-latest` et `mistral-medium-latest` répondent 429 avec un quota de 0 requête par minute ; `open-mistral-nemo` et `ministral-8b-latest` répondent. Le défaut est donc `open-mistral-nemo`.
+- **Qualité (premier essai, 30 articles, 130 s, 0 $).** Le pipeline complet fonctionne, mais le brief est moins fiable que celui de Claude : un lot de 15 articles perdu (sortie structurée invalide deux fois), un texte « X% / Y% » laissé dans un résumé, une erreur de fond (Apollo présenté comme une fintech), des « ce qui change » peu fondés et une synthèse plus vague. Les chiffres clés restent vérifiés dans le code. À relire avant de diffuser, ou repasser à `provider: anthropic`.
+
+## Optimisation du coût (v2.2, mesures faites avec Claude)
 
 Tarif de `claude-haiku-5-5` : 0,10 $ par million de tokens en entrée, 0,50 $ en sortie. Le cache est compté à 1,25 x l'entrée à l'écriture et 0,1 x à la lecture (barème standard, non confirmé pour ce modèle). Le coût affiché dans le brief est une estimation calculée à partir des tokens que l'API renvoie.
 
@@ -95,12 +122,12 @@ cd Veille-ia
 python -m venv .venv
 source .venv/bin/activate        # Windows : .venv\Scripts\activate
 pip install -r requirements.txt
-echo "ANTHROPIC_API_KEY=ta-clé" > .env    # crée le fichier .env avec ta clé API
+echo "MISTRAL_API_KEY=ta-clé" > .env    # crée le fichier .env avec ta clé API (ANTHROPIC_API_KEY si provider: anthropic)
 ```
 
 Pour l'envoi par e-mail ou Telegram, ajoute aussi les variables correspondantes dans `.env` (voir `.env.example` et plus bas). Le fichier `.env` n'est jamais publié.
 
-La clé API se crée sur [console.anthropic.com](https://console.anthropic.com).
+La clé Mistral se crée sur [console.mistral.ai](https://console.mistral.ai) (offre gratuite « Experiment »), la clé Claude sur [console.anthropic.com](https://console.anthropic.com).
 
 ## Utilisation
 
@@ -146,7 +173,7 @@ Résultat : une seule exécution utile par jour, au changement d'heure (25 octob
 **Mise en place**
 
 1. Pousse le projet sur GitHub.
-2. Dans *Settings > Secrets and variables > Actions > New repository secret*, crée : `ANTHROPIC_API_KEY`, `EMAIL_SENDER` (ton adresse Gmail), `EMAIL_APP_PASSWORD` (le mot de passe d'application de 16 lettres) et `EMAIL_TO` (le destinataire ; plusieurs adresses séparées par des virgules partent en copie cachée). Les deux secrets Telegram restent optionnels.
+2. Dans *Settings > Secrets and variables > Actions > New repository secret*, crée : `MISTRAL_API_KEY` (ou `ANTHROPIC_API_KEY` si `provider: anthropic`), `EMAIL_SENDER` (ton adresse Gmail), `EMAIL_APP_PASSWORD` (le mot de passe d'application de 16 lettres) et `EMAIL_TO` (le destinataire ; plusieurs adresses séparées par des virgules partent en copie cachée). Les deux secrets Telegram restent optionnels.
 3. Dans l'onglet *Actions > Veille quotidienne > Run workflow*, lance une exécution à la main pour vérifier. Case *force* cochée : le brief est regénéré même si les articles ont déjà été vus (`--no-memory`).
 
 **À savoir.** Un e-mail qui ne part pas fait échouer l'exécution (GitHub t'envoie alors sa propre alerte) ; le brief et la mémoire sont tout de même sauvegardés. Un lancement manuel ignore la garde : il peut donc produire un second e-mail dans la journée.
@@ -157,6 +184,7 @@ Résultat : une seule exécution utile par jour, au changement d'heure (25 octob
 - [x] **V2, agent** : boucle de tool use (`read_article`, `search_memory`, `search_news`, `submit_analysis`), budget, chiffres vérifiés, trace de chaque raisonnement, coût de l'agent suivi à part.
 - [x] **Envoi par e-mail** : brief HTML via Gmail, destinataires multiples en copie cachée.
 - [x] **V2.2, coût et automatisation** : prompt caching, lectures plafonnées, coût estimé dans chaque brief, envoi quotidien à 7h45 heure de Paris toute l'année.
+- [x] **V2.3, Mistral** : fournisseur configurable (Mistral gratuit ou Claude), limiteur de débit, réessais sur 429, sortie structurée validée.
 - [ ] **V3, évaluation** : jeu d'articles annotés à la main pour mesurer la qualité du score de pertinence et des analyses de l'agent, suivi du coût et des retours des lecteurs.
 
 ## Limites connues
@@ -165,6 +193,6 @@ Résultat : une seule exécution utile par jour, au changement d'heure (25 octob
 - **Beaucoup de sites ne se laissent pas lire** (paywall, accès refusé : environ la moitié des liens testés). L'agent essaie alors un autre lien du même événement ou une recherche ; à défaut, l'événement garde son résumé V1.
 - **Le décodage des liens Google News repose sur un service interne non documenté.** Il fonctionne aujourd'hui, mais Google peut le modifier : l'agent le traite alors comme un échec d'outil.
 - **La vérification des chiffres est volontairement simple** : elle contrôle qu'un nombre apparaît dans le texte lu, pas qu'il est associé au bon sujet. Un chiffre écrit en toutes lettres (« quatre milliards ») n'est pas reconnu et sera écarté.
-- **Pas de température réglable.** Le modèle par défaut (`claude-haiku-5-5`) n'accepte pas d'autre température que la sienne ; la fiabilité vient des schémas stricts et des vérifications dans le code.
+- **Pas de température réglable avec Claude.** `claude-haiku-5-5` n'accepte pas d'autre température que la sienne ; la fiabilité vient des schémas stricts et des vérifications dans le code.
 - Les flux RSS changent parfois d'adresse : un flux cassé est ignoré, il suffit de le remplacer dans `config.yaml`.
 - Contenu généré par IA : les chiffres doivent être vérifiés dans la source avant d'être réutilisés.

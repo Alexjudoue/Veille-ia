@@ -5,6 +5,7 @@ import logging
 from datetime import datetime
 from urllib.parse import urlparse
 
+from .llm import model_for
 from .models import AnalyzedArticle, DeepDive
 
 log = logging.getLogger(__name__)
@@ -137,7 +138,7 @@ def synthesize(selected: dict[str, list[AnalyzedArticle]], llm, config: dict,
     }}
     prompt = "Articles retenus aujourd'hui :\n" + "\n".join(lines)
     out = llm.structured(system, prompt, "rediger_synthese", schema,
-                         max_tokens=1500, model=config["llm"]["synthesis_model"])
+                         max_tokens=1500, model=model_for(config, "synthesis_model"))
     # Garde-fous dans le code : on ne fait pas seulement confiance au prompt
     out["key_points"] = out.get("key_points", [])[:max_points]
     if n < 2:
@@ -249,7 +250,9 @@ def render_markdown(selected, synthesis: dict, config: dict, date: datetime, sta
                   f"{nb(entree(ag))} tokens en entrée (dont {nb(ag.get('cache_read_tokens', 0))} relus "
                   f"depuis le cache) et {nb(ag['output_tokens'])} en sortie "
                   "(non inclus dans le total ci-dessus).*")
-    if stats.get("total_cost_usd"):
+    if stats.get("free_tier"):
+        md.append(f"*Offre gratuite {stats.get('provider', '')} : 0 $ (les tokens restent comptés ci-dessus).*")
+    elif stats.get("total_cost_usd"):
         md.append(f"*Coût estimé de ce brief : {stats['total_cost_usd']:.3f} $.*")
     md += ["", "*Résumés générés par IA, fondés sur les titres, extraits et articles lus : "
                "vérifie les chiffres dans l'article source.*"]

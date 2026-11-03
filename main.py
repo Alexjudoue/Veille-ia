@@ -75,8 +75,13 @@ def main() -> None:
         return
 
     # 2. Analyse
-    from veille.llm import LLM
-    llm = LLM(config["llm"]["model"], effort=config["llm"].get("effort") or None)
+    from veille.llm import FREE_PROVIDERS, make_llm, model_for, provider_of
+    try:
+        llm = make_llm(config)       # fournisseur choisi dans config.yaml (llm.provider)
+    except (RuntimeError, ValueError) as e:     # clé manquante, fournisseur inconnu
+        logging.error("%s", e)
+        raise SystemExit(1)
+    logging.info("Fournisseur : %s, modèle : %s", provider_of(config), model_for(config))
     try:
         analyzed = analyze(articles, llm, config)
     except Exception as e:
@@ -107,6 +112,9 @@ def main() -> None:
         "cache_write_tokens": llm.usage.cache_write_tokens,
         "cache_read_tokens": llm.usage.cache_read_tokens,
         "cost_usd": round(llm.usage.cost_usd, 5),
+        "provider": provider_of(config),
+        "model": model_for(config),
+        "free_tier": provider_of(config) in FREE_PROVIDERS,
     }
     if traces:   # coût de l'agent, séparé de celui du pipeline
         stats["agent"] = {"events": len(traces), "deep_dives": len(deep_dives),

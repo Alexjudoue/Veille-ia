@@ -2,14 +2,29 @@
 # Tout ce qui se règle sans toucher au code est ici.
 
 llm:
-  # Modèle rapide et peu coûteux : suffisant pour trier et résumer des articles.
-  model: claude-haiku-5-5
-  # Modèle utilisé pour la synthèse finale (peut être le même).
-  synthesis_model: claude-haiku-5-5
+  # Fournisseur du modèle : « mistral » (offre gratuite) ou « anthropic » (Claude, payant).
+  # C'est la seule ligne à changer pour passer de l'un à l'autre (et la clé API correspondante
+  # dans .env : MISTRAL_API_KEY ou ANTHROPIC_API_KEY).
+  provider: mistral
+  # Modèles de chaque fournisseur : `model` pour le tri, la notation et l'agent,
+  # `synthesis_model` pour la synthèse finale (peut être le même).
+  models:
+    mistral:
+      model: open-mistral-nemo        # Mistral Nemo 12B : le seul accessible avec la clé gratuite (Small : quota 0)
+      synthesis_model: open-mistral-nemo
+    anthropic:
+      model: claude-haiku-5-5
+      synthesis_model: claude-haiku-5-5
   batch_size: 15          # nombre d'articles envoyés au LLM par appel
-  # Effort de réflexion du pipeline (tri, notation, synthèse) : "low" suffit pour des
-  # tâches à schéma strict et réduit les tokens de sortie. Vide = défaut du modèle.
+  # Anthropic seulement : effort de réflexion du pipeline (tri, notation, synthèse) ; "low" suffit
+  # pour des tâches à schéma strict. Vide = défaut du modèle. Ignoré par Mistral.
   effort: low
+  # Mistral seulement : l'offre gratuite « Experiment » limite à environ 1 requête par seconde.
+  rate_limit:
+    requests_per_second: 1   # débit maximal (on espace les requêtes)
+    max_retries: 5           # réessais sur erreur 429 (trop de requêtes) ou 5xx
+    base_wait_s: 2           # première attente ; elle double à chaque essai (2, 4, 8, 16, 32 s)
+    max_wait_s: 60           # attente maximale (ou celle demandée par le serveur, plafonnée)
 
 collect:
   lookback_hours: 30      # on garde les articles publiés depuis X heures
@@ -22,8 +37,8 @@ agent:
   deep_dive_count: 4      # nombre d'événements approfondis par jour
   max_tool_calls: 5       # budget d'appels d'outils par événement
   max_reads: 2            # articles lus avec succès par événement (le texte est relu à chaque tour)
-  agent_model: ""         # vide = même modèle que llm.model
-  effort: medium          # effort de réflexion de l'agent (il doit choisir ses outils)
+  agent_model: ""         # vide = le modèle du fournisseur actif (llm.models.<fournisseur>.model)
+  effort: medium          # Anthropic seulement : effort de réflexion de l'agent (ignoré par Mistral)
   article_max_chars: 4500 # texte gardé par article lu
 
 brief:

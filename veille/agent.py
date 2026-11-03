@@ -9,7 +9,8 @@ Pipeline ou agent ?
 
 La boucle (une par événement) :
     1. on présente l'événement au modèle, avec les outils à sa disposition ;
-    2. le modèle répond par des appels d'outils (stop_reason == "tool_use") ;
+    2. le modèle répond par des appels d'outils (stop_reason == "tool_use"; le client Mistral
+       traduit sa réponse vers cette même forme, voir llm.py) ;
     3. on exécute chaque outil et on renvoie les résultats ("tool_result") ;
     4. on recommence jusqu'à l'appel de `submit_analysis` (l'outil final)
        ou jusqu'à épuisement du budget, auquel cas on FORCE cet appel.
@@ -26,6 +27,7 @@ from decimal import Decimal, InvalidOperation
 from urllib.parse import urlparse
 
 from . import tools
+from .llm import model_for
 from .models import AnalyzedArticle, DeepDive
 
 log = logging.getLogger(__name__)
@@ -267,7 +269,8 @@ def _call_model(llm, model, system, messages, force: bool, effort: str | None = 
     try:
         return llm.chat(system, messages, TOOL_DEFS, tool_choice=FORCE_SUBMIT, **opts)
     except Exception as e:
-        if getattr(e, "status_code", None) == 400 and "tool_choice" in str(e):
+        # 400 (Anthropic) ou 422 (Mistral) : le modèle ne gère pas le forçage de l'outil
+        if getattr(e, "status_code", None) in (400, 422) and "tool_choice" in f"{e} {getattr(e, 'body', '')}":
             return llm.chat(system, messages, TOOL_DEFS, **opts)
         raise
 
@@ -276,7 +279,7 @@ def investigate(item: AnalyzedArticle, llm, memory, config: dict, today: str):
     """Boucle agentique pour UN événement. Renvoie (DeepDive ou None, trace)."""
     cfg = config["agent"]
     max_calls = cfg["max_tool_calls"]
-    model = cfg.get("agent_model") or config["llm"]["model"]
+    model = cfg.get("agent_model") or model_for(config)
     first, allowed = _first_message(item, today, max_calls)
     run = Run(config, memory, today, allowed)
     system = build_system_prompt(config, max_calls)

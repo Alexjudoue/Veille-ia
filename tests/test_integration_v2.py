@@ -81,7 +81,7 @@ def test_synthesis_uses_enriched_summary():
 # --- main.py de bout en bout ---------------------------------------------------------
 
 class StubLLM:
-    """Remplace veille.llm.LLM : répond à l'analyse, au regroupement, à la synthèse et à l'agent."""
+    """Remplace veille.llm.make_llm : répond à l'analyse, au regroupement, à la synthèse et à l'agent."""
     def __init__(self, model, effort=None):
         self.usage, self.agent_usage = llm_module.Usage(), llm_module.Usage()
         self.agent_steps = [
@@ -115,7 +115,7 @@ def run_main(tmp_path, monkeypatch):
     monkeypatch.setenv("ANTHROPIC_API_KEY", "test")
     monkeypatch.setattr(main_module, "collect", lambda config: [
         article(0, "La BCE maintient ses taux", "https://exemple.fr/0"), article(1, "Autre sujet")])
-    monkeypatch.setattr(llm_module, "LLM", StubLLM)
+    monkeypatch.setattr(llm_module, "make_llm", lambda config: StubLLM(None))
     monkeypatch.setattr(agent.tools, "read_article", lambda url, max_chars: (URL, TEXT))
 
     def run(*flags):

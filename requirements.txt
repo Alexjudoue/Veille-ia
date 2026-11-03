@@ -1,4 +1,6 @@
-anthropic>=0.40
+anthropic>=0.40            # seulement si llm.provider = anthropic
+mistralai>=2.0,<3          # client officiel Mistral (llm.provider = mistral)
+jsonschema>=4.0            # validation des sorties structurées
 feedparser>=6.0
 requests>=2.31
 trafilatura>=2.0

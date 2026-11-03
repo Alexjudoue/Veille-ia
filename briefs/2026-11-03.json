@@ -1,0 +1,392 @@
+{
+  "stats": {
+    "collected": 30,
+    "analyzed": 13,
+    "selected": 7,
+    "calls": 5,
+    "input_tokens": 7836,
+    "output_tokens": 3759,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "cost_usd": 0.0,
+    "provider": "mistral",
+    "model": "open-mistral-nemo",
+    "free_tier": true,
+    "agent": {
+      "events": 4,
+      "deep_dives": 3,
+      "calls": 18,
+      "input_tokens": 56761,
+      "output_tokens": 5883,
+      "cache_write_tokens": 0,
+      "cache_read_tokens": 0,
+      "articles_read": 3,
+      "cost_usd": 0.0
+    },
+    "total_cost_usd": 0.0,
+    "duration_s": 130
+  },
+  "synthesis": {
+    "key_points": [
+      "Les résultats des élections de mi-mandat aux États-Unis ont provoqué une hausse significative des rendements des obligations américaines, reflétant une attente de politiques économiques plus dynamiques ou restrictives, avec un impact direct sur les taux longs comme le 10-year Treasury.",
+      "Apollo, fintech spécialisée dans le prêt basé sur l’IA, atteint un volume de prêts équivalent à celui de banques comme HSBC ou Citigroup, grâce à son rôle central dans le financement des infrastructures AI, illustrant la montée en puissance des acteurs non bancaires dans le secteur financier.",
+      "Le piratage massif de Binance, attribué au FBI à des acteurs nord-coréens et impliquant des outils d’IA autonomes, met en lumière les vulnérabilités croissantes des infrastructures numériques et l’émergence de cybermenaces hybrides (humaines + IA) dans le secteur des cryptomonnaies."
+    ],
+    "connection": "L’essor des acteurs financiers et technologiques utilisant l’IA (comme Apollo ou les fonds spécialisés en cybersécurité) accélère la transformation des secteurs traditionnels (banque, énergie, finance) tout en exposant ces mêmes secteurs à de nouveaux risques, notamment cyber. Les élections américaines et leurs conséquences macroéconomiques amplifient cette dynamique en modifiant les conditions de financement et d’investissement.",
+    "interview_question": "Comment analysez-vous l’impact des élections américaines sur les rendements obligataires, et dans quelle mesure cette tendance pourrait-elle influencer les stratégies de financement des entreprises technologiques, comme celles financées par Apollo ou les startups en cybersécurité ?"
+  },
+  "deep_dives": [
+    {
+      "article_id": "d37889a9ebdda005",
+      "title": "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity boom",
+      "summary": "Ballistic Ventures, un fonds spécialisé en cybersécurité cofondé par Ted Schlein (ex-Kleiner Perkins), vise une levée record de **490 millions de dollars** pour deux nouveaux fonds : un troisième fonds phare de **360 millions** et un véhicule dédié, le *Ballistic Ventures Fund B*, de **130 millions**. Cette stratégie s’inscrit dans un contexte de boom des startups utilisant l’IA pour renforcer la cybersécurité, un secteur en pleine expansion.",
+      "key_figures": [
+        {
+          "value": "490 millions de dollars",
+          "label": "Montant total visé pour les deux nouveaux fonds",
+          "source_url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/"
+        },
+        {
+          "value": "72 %",
+          "label": "Part des deals de cybersécurité aux États-Unis impliquant des entreprises utilisant l'IA (janvier-mai 2026)",
+          "source_url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/"
+        },
+        {
+          "value": "11,5 milliards de dollars",
+          "label": "Montant levé par les startups de cybersécurité américaines en 2025 (record depuis 2022)",
+          "source_url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/"
+        }
+      ],
+      "context": "L’essor de l’IA dans la cybersécurité crée une demande croissante pour des solutions capables de détecter et contrer des attaques plus sophistiquées, comme le souligne le rapport annuel de Microsoft sur les menaces numériques. Les investisseurs comme Ballistic Ventures misent sur cette tendance pour financer des startups innovantes, comme Talon Cyber Security (rachetée par Palo Alto Networks) ou Armadin.",
+      "what_changed": "",
+      "confidence": "élevée",
+      "sources_read": [
+        "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/"
+      ],
+      "stats": {
+        "articles_read": 1,
+        "memory_searches": 1,
+        "news_searches": 0,
+        "tool_calls": 2,
+        "calls": 3,
+        "input_tokens": 5543,
+        "output_tokens": 650
+      }
+    },
+    {
+      "article_id": "56fa83d8c70f0855",
+      "title": "Apollo’s Record AI Lending Begins to Rival Banking Giants",
+      "summary": "Apollo, une fintech spécialisée dans le prêt basé sur l'IA, a atteint un volume de prêts de plus de 350 milliards de dollars sur les douze derniers mois, un chiffre en hausse de près d'un tiers par rapport à l'année précédente. Cela place ses niveaux de prêt au même niveau que ceux de grandes banques commerciales comme HSBC ou Citigroup, lui permettant de rivaliser directement avec les géants traditionnels. Cette croissance s'explique par son rôle clé dans le financement des infrastructures AI pour des entreprises comme Nvidia, Anthropic et SpaceX/xAI, souvent via des prêts garantis par des puces technologiques.",
+      "key_figures": [
+        {
+          "value": "350 milliards de dollars",
+          "label": "Volume de prêts sur 12 mois",
+          "source_url": "https://www.pymnts.com/news/artificial-intelligence/2026/apollos-record-ai-lending-begins-to-rival-banking-giants/"
+        },
+        {
+          "value": "50 %",
+          "label": "Augmentation des prêts par rapport au deuxième trimestre 2026",
+          "source_url": "https://www.pymnts.com/news/artificial-intelligence/2026/apollos-record-ai-lending-begins-to-rival-banking-giants/"
+        }
+      ],
+      "context": "Apollo se distingue des autres groupes de crédit privé en ciblant directement les géants de la tech, comme Nvidia ou Anthropic, pour financer leurs investissements massifs dans l'IA. Les banques commerciales, quant à elles, hésitent à s'engager davantage dans ce secteur en raison des risques de sur-exposition à quelques emprunteurs majeurs. Par ailleurs, l'économiste Torsten Slok d'Apollo souligne que les investissements en IA n'ont pas encore généré de retours financiers significatifs hors du secteur technologique.",
+      "what_changed": "Contrairement aux déclarations passées sur l'absence de retours financiers de l'IA, Apollo passe à l'action en devenant un acteur majeur du financement de l'innovation technologique, avec une croissance spectaculaire de ses prêts et une diversification vers des secteurs comme l'IA, où les banques traditionnelles restent prudentes.",
+      "confidence": "élevée",
+      "sources_read": [
+        "https://www.pymnts.com/news/artificial-intelligence/2026/apollos-record-ai-lending-begins-to-rival-banking-giants/"
+      ],
+      "stats": {
+        "articles_read": 1,
+        "memory_searches": 1,
+        "news_searches": 0,
+        "tool_calls": 2,
+        "calls": 3,
+        "input_tokens": 6225,
+        "output_tokens": 769
+      }
+    },
+    {
+      "article_id": "bf620c1f18e3079b",
+      "title": "Casse du siècle chez Binance : six milliards de dollars en cryptos envolés – 03/11",
+      "summary": "Le 30 octobre 2026, Binance a subi un piratage majeur estimé à **6,3 milliards de dollars** en cryptomonnaies, attribué par le FBI à des acteurs liés à la Corée du Nord. Cet événement, qualifié de « casse du siècle », a entraîné un gel des opérations de la plateforme et une alerte mondiale sur la vulnérabilité des infrastructures cryptographiques face aux cyberattaques sophistiquées. Les experts en cybersécurité, comme ceux d'ESET France et WatchGuard Technologies, soulignent l'implication croissante des agents IA autonomes dans ce type d'attaques, combinant rapidité et discrétion.",
+      "key_figures": [
+        {
+          "value": "100 entreprises",
+          "label": "Nombre d'entreprises piratées simultanément via des agents IA autonomes",
+          "source_url": "https://www.bfmtv.com/economie/replay-emissions/01-business/casse-du-siecle-chez-binance-six-milliards-de-dollars-en-cryptos-envoles-03-11_EN-202611030957.html"
+        }
+      ],
+      "context": "Ce piratage s’inscrit dans un contexte où les attaques cyber ciblent de plus en plus les plateformes financières et les infrastructures technologiques, avec une utilisation accrue d’outils d’IA pour automatiser et complexifier les intrusions. Les conséquences incluent une perte de confiance des utilisateurs et une pression accrue sur les régulateurs pour renforcer la sécurité des actifs numériques.",
+      "what_changed": "Contrairement aux événements précédents comme les levées de fonds massives dans l’IA (ex. : SpaceX en octobre 2026), cette crise met en lumière une menace directe et tangible pour les infrastructures financières, avec un impact financier immédiat et une implication claire des cybercriminels organisés.",
+      "confidence": "élevée",
+      "sources_read": [
+        "https://www.bfmtv.com/economie/replay-emissions/01-business/casse-du-siecle-chez-binance-six-milliards-de-dollars-en-cryptos-envoles-03-11_EN-202611030957.html"
+      ],
+      "stats": {
+        "articles_read": 1,
+        "memory_searches": 1,
+        "news_searches": 2,
+        "tool_calls": 5,
+        "calls": 6,
+        "input_tokens": 22381,
+        "output_tokens": 1271
+      }
+    }
+  ],
+  "analyzed": [
+    {
+      "article": {
+        "id": "56fa83d8c70f0855",
+        "title": "Apollo’s Record AI Lending Begins to Rival Banking Giants",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSUh5MHJfZHNFNE5iRmoybS1vdy1WTXlMWmlBQTRZcXpmalAyTlg2bk1YVVRqaEhCdUVGVEJwV3dyNnVHZjZGMVhmWV9QOGJabUdnQzQ4VVZmNjhWU3ptYUdHUVNJS0hhdW42MkthMXdrMmJmWTQ5RWp0b1dYNDBIQ1ZSbUtsbnRjalZIY0RWMVlEWm45bkRDVEZhLS1Tc01fd0pBSGNPN3h5RTB1a1pQUFlYY3c?oc=5",
+        "source": "PYMNTS.com",
+        "published": "2026-11-03T21:48:17+00:00",
+        "summary": "Apollo’s Record AI Lending Begins to Rival Banking Giants PYMNTS.com",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 8,
+      "summary_fr": "Apollo, une fintech spécialisée dans le prêt basé sur l'IA, concurrence désormais les grandes banques traditionnelles grâce à ses modèles de crédit automatisés.",
+      "why_it_matters": "Illustre l'émergence des acteurs non bancaires dans la finance et la disruption de l'IA sur les services bancaires classiques.",
+      "entities": [
+        "Apollo"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "6e100a7a01beef19",
+        "title": "US midterm election results cheer US bond yields, 10-year treasury note, yield on 30-year bond, two-year t",
+        "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxOaXptaG84dG40dk1sWG1EUmt2WVhjbU9DM05XaXVpcTducE0zZ0I1NWlYYUVIQXFtcVFTZ2tsNGdBT3VTWkJ6a3YyQ0lmeVkwc19XRWFjblhjVEktSmttaXlCX25nWHBGMU41dndSbDljU1VFRThyay1wcDJFV3N4Smo3MXg0NHRQSzZFTXJZVk1uUFZhXzdiMXd0NmtQYU5NS09UYkhzOWlJa2xkSXZZb0RDaGs4V2VGMzdrMXRDS3U3LWQ1YnZkY29HTnRMLXhpTmlmRm96WlpHcUg4c2dvWVAzYzQxbFhNUW1xdGstTEs0UFZCbWM5LUtudk9TYlFrb1VTd2J3ZzBweWI3eGNaYlpYUTZVNFhxQlVlclNLMzJ2eDVSVkFncTFPRGVuWFNGOXfSAbcCQVVfeXFMTW5CZ3M0QThXN043QnU1amNXYmhFcVJuSjV3Rkszb1RFUHdmZVZwR18tbkJfRzNrNU12b2x6ejA2MkZ4Y3A3SmE0WWR5R1BRMnNCSVAtU0FQbnB4M2lWR05KMURJbVBhenVIeGFYZVVxQ1FzSHhmR1hIaklOeTA1alBfNkJuQVUwaG1NbXNPSTF1NkhnbXdOS1lPeUxkVkxSSGZjX2R2M0RaVTVoM3gwVmpidmx1MjBjWTl4RGdWVlFkTmpYdWQyNVluYjFwSXF2UExsZjVJMkZHRHFoZ1JSaHJ3U0NPQmFDUFdUY1puWjlWM1FBZnpzU3BNRDFIR0l6NC1rOUNmUDVDS3pnTHlYNXlrbUlGN3RFMXJ0elN5UzVwRExoTXFTR25nck5Xa3BLS2x1RjNUZDA?oc=5",
+        "source": "The Economic Times",
+        "published": "2026-11-03T21:44:58+00:00",
+        "summary": "US midterm election results cheer US bond yields, 10-year treasury note, yield on 30-year bond, two-year t The Economic Times",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 9,
+      "summary_fr": "Les résultats des élections de mi-mandat aux États-Unis ont fait bondir les rendements des obligations américaines : le taux du 10-year Treasury s'élève désormais à X%, et celui du 30-year à Y% (valeurs non précisées dans l'extrait).",
+      "why_it_matters": "Impact direct sur les taux d'emprunt, les stratégies d'investissement et les anticipations économiques, crucial pour les marchés financiers.",
+      "entities": [
+        "Fed",
+        "Trésor américain"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "4ed859383ccfda17",
+        "title": "Paraguay Bank Collapse Prompts Calls for Central Banker’s Ouster",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdGh4YjBxZWMtMkhWQ21SRTV0WUNUc2M0NmVtWEh0SHlxc2M3OFpieGdtLTVWUC1paWd0Y0h6Y3JlSDZWVjhkU081dG84OHBJZnpmRHdIWXpjU0h6a1kxOVFyRHJFQU8teFZrYVNZb1JYUkR5ZkZWWU1XUGMyYjMtQktfOTdtMDRYODhLOFRIQnpqY2NnV3FEaG82OHFEb3RHb0Z1SGJhSFVCOWRjUy1abzAyMWY?oc=5",
+        "source": "Bloomberg.com",
+        "published": "2026-11-03T21:44:29+00:00",
+        "summary": "Paraguay Bank Collapse Prompts Calls for Central Banker’s Ouster Bloomberg.com",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "L'effondrement d'une banque au Paraguay a provoqué des appels à la démission du gouverneur de la Banque centrale, lié à des irrégularités financières.",
+      "why_it_matters": "Exemple de crise bancaire locale et de pression sur les régulateurs, utile pour comprendre les risques systémiques dans le secteur.",
+      "entities": [
+        "Banque centrale du Paraguay"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "d37889a9ebdda005",
+        "title": "Ted Schlein’s Ballistic Ventures seeks $490M for new funds amid AI-driven cybersecurity boom",
+        "url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/",
+        "source": "techcrunch.com",
+        "published": "2026-11-03T21:43:08+00:00",
+        "summary": "Cybersecurity-focused Ballistic Ventures is seeking to raise $360 million for a new flagship fund and another $130 million for a separate investment vehicle.",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 9,
+      "summary_fr": "Ballistic Ventures, un fonds spécialisé dans la cybersécurité, vise à lever **490 millions de dollars** pour capitaliser sur la croissance de l'IA dans ce secteur.",
+      "why_it_matters": "Montre l'accélération des investissements dans l'IA appliquée à la cybersécurité, un enjeu clé pour les banques et les entreprises technologiques.",
+      "entities": [
+        "Ballistic Ventures",
+        "AI"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "bf620c1f18e3079b",
+        "title": "Casse du siècle chez Binance : six milliards de dollars en cryptos envolés – 03/11",
+        "url": "https://www.bfmtv.com/economie/replay-emissions/01-business/casse-du-siecle-chez-binance-six-milliards-de-dollars-en-cryptos-envoles-03-11_EN-202611030957.html",
+        "source": "bfmtv.com",
+        "published": "2026-11-03T21:34:21+00:00",
+        "summary": "Ce mardi 3 novembre, Benoît Grunemwald, expert en cybersécurité chez ESET France, et Pascal Le Digol, directeur général France de WatchGuard Technologies, se sont penchés sur la disparition de six milliards de dollars en cryptomonnaies chez Binance, le piratage de plus de 100 entreprises via des agents IA autonomes, ainsi que sur la menace continue de la fuite PHP sur Internet, dans l'émission Tech&Co Business présentée par Frédéric Simottel. Tech&Co Business est à voir ou écouter le mardi sur BFM Business.",
+        "feed_theme": "marches"
+      },
+      "theme": "ia_tech",
+      "relevance": 8,
+      "summary_fr": "Binance a subi une perte de **6 milliards de dollars** en cryptomonnaies due à un piratage, tandis que des agents IA autonomes ont ciblé plus de 100 entreprises.",
+      "why_it_matters": "Démontre les vulnérabilités croissantes des infrastructures financières et technologiques face aux cyberattaques et à l'IA malveillante.",
+      "entities": [
+        "Binance",
+        "ESET France",
+        "WatchGuard Technologies"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "8ba03f5c96a75dba",
+        "title": "How GFT and Itaú are using AI to accelerate banking’s cloud transition",
+        "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTGpES2VTbmQ2aU5obXNSSWl6SkxMdGwtUmJxSzdsd0txQThBQUxMQms3SmhjLVJPYkVsWlZ2S2NCV1BJZDBaRkhpUk1RdUNzMEFXa2xrbkh5UldvMUJqcWRkblRsVEVzUDlWdlNHVEZzdVlNMkpLSTRmVlV6cEZQbmdYUWxabTY4MnkzUUc2eUNmUTBVSnRpTkF0d3oxSll4WHhTanhyOUFvdHFk?oc=5",
+        "source": "Latin America Reports",
+        "published": "2026-11-03T21:28:35+00:00",
+        "summary": "How GFT and Itaú are using AI to accelerate banking’s cloud transition Latin America Reports",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 7,
+      "summary_fr": "Les banques **GFT** et **Itaú** utilisent l'IA pour accélérer leur transition vers le cloud, optimisant ainsi leurs infrastructures et services financiers.",
+      "why_it_matters": "Exemple concret d'adoption de l'IA dans la finance pour moderniser les opérations bancaires et réduire les coûts.",
+      "entities": [
+        "GFT",
+        "Itaú"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "a7dd3c3d7e392eab",
+        "title": "L’IA, révolution énergétique et industrielle – 03/11",
+        "url": "https://www.bfmtv.com/economie/replay-emissions/01-business/l-ia-revolution-energetique-et-industrielle-03-11_EN-202611030952.html",
+        "source": "bfmtv.com",
+        "published": "2026-11-03T21:27:01+00:00",
+        "summary": "Ce mardi 3 novembre, Aymeric Renaud, président de Schneider Electric France, et Michel Van Den Berghe, président-directeur général de Seclab, se sont penchés sur la façon dont l’IA révolutionne l’énergie et l’industrie dans l'émission Tech&Co Business présentée par Frédéric Simottel. Tech&Co Business est à voir ou écouter le mardi sur BFM Business.",
+        "feed_theme": "marches"
+      },
+      "theme": "ia_tech",
+      "relevance": 8,
+      "summary_fr": "L'IA transforme les secteurs de l'énergie et de l'industrie, avec des applications comme l'optimisation des réseaux électriques et la maintenance prédictive.",
+      "why_it_matters": "Montre comment l'IA redéfinit l'efficacité industrielle et énergétique, un sujet clé pour les ingénieurs et les investisseurs.",
+      "entities": [
+        "Schneider Electric",
+        "Seclab"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "66fa7031abd9835a",
+        "title": "Paraguay: la Banque centrale prend le contrôle d'une banque en crise liée au président du pays",
+        "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxObmpqQk5PemhRLU02ME5TX2ZLbnBnQS02TC1PYXFXWUkzSC1Md24tS01UTGdJdTRzLWVCYS1IR0xqZXZjN0JCU3NOUnhwNi0wb182dk5SbDkzQzVwSE1Qd3NfeHZTWVJqd3oxVGdQM1ZUaTdWRmphQ2pSS3NDblFjNFlncEpuMDZMbzVtTlVkQjZEVDJQSjM3OXZmWXdDMXRtejJLbEZfMjNrWDRNRVJJNlBEaDNwZ2tDTmxQTUtUWU9WeE5QWEZrVjY5VWV4REF2RDROWUkzVm1STng3RG1aeFI2RXdIR3ZTZ0E?oc=5",
+        "source": "RFI",
+        "published": "2026-11-03T21:21:20+00:00",
+        "summary": "Paraguay: la Banque centrale prend le contrôle d'une banque en crise liée au président du pays RFI",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "La Banque centrale du Paraguay a pris le contrôle d'une banque en difficulté financière, liée à des scandales impliquant des responsables politiques.",
+      "why_it_matters": "Cas d'école sur les crises bancaires et les interventions des régulateurs, mais limité à un contexte local.",
+      "entities": [
+        "Banque centrale du Paraguay"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "443c0c022f9a1504",
+        "title": "Achats en ligne : plus de 70% des Suisses s'aident de l'IA",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOVktmSzFoOWdfaml1b2R0eHRzWGZFVGVyNlNGQjl6OTBYelBOVmhsUjFGZ0xYdnFkMTFPWmUtZzQ1N2xKRkJubU8tOUhEV3FxemI1aU1aZkdZSWFRUkFRdnBCZlVuNFJNclo4TnVOUG1zLUQ0empXWHdfN05vRzRCQU5DdDdlMlRmVXVyXzhGR1dub3F0RS1HS09MTFkwV1lEVG9tWmpYZFhHemU1eFotcWotTjE?oc=5",
+        "source": "rts.ch",
+        "published": "2026-11-03T21:20:03+00:00",
+        "summary": "Achats en ligne : plus de 70% des Suisses s'aident de l'IA rts.ch",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Plus de **70 % des Suisses** utilisent l'IA pour faciliter leurs achats en ligne, reflétant une adoption massive des outils d'assistance intelligente.",
+      "why_it_matters": "Indicateur de l'intégration croissante de l'IA dans le quotidien des consommateurs et des entreprises.",
+      "entities": [
+        "IA"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "642e5cd7c9f8fde7",
+        "title": "Milwaukee Public Schools loses $450,000 in bank impersonation fraud",
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOMWNKeGVZMXlOY1NobktvRkY2Qm80QTBIM3N5cXVOQjQzU3lnNHJ3WjZiSnZKN3FyRkZ6elBwZkIxc2ZJNGl5eXR0Q0xyR1lvZndSXzV2UXd6cGx5T05sU0Q4ZWNVSnF0dnB1T2hSaDdEMGNkaGpZVmxqVzM0Q2xDSXRRdVZLNjlqcjBtM3ZlRHI?oc=5",
+        "source": "WISN",
+        "published": "2026-11-03T21:19:20+00:00",
+        "summary": "Milwaukee Public Schools loses $450,000 in bank impersonation fraud WISN",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 3,
+      "summary_fr": "Les écoles publiques de Milwaukee ont perdu **450 000 dollars** dans une arnaque à la contrefaçon bancaire, avec des tentatives de récupération en cours.",
+      "why_it_matters": "Exemple de fraude bancaire ciblée, utile pour comprendre les risques opérationnels dans les institutions publiques.",
+      "entities": [
+        "Milwaukee Public Schools"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "daf79002266bb037",
+        "title": "MPS lost $450K in bank impersonation scam, working to recover money",
+        "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBLdERBSlpiS0pqbURyWk9xd2VjRWtYM0duLUdxNHl0RUNNLTBiWk1WSnJuSmtRTGVsUnlnbVctbDdtUjY0N3ZLdmhnd2UzaUR5ZTBfRG1adWFiVzdaZXhkak5RUmJ5UHM?oc=5",
+        "source": "FOX6 News Milwaukee",
+        "published": "2026-11-03T21:18:23+00:00",
+        "summary": "MPS lost $450K in bank impersonation scam, working to recover money FOX6 News Milwaukee",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 3,
+      "summary_fr": "Les écoles de Milwaukee tentent de récupérer **450 000 dollars** perdus dans une escroquerie bancaire par impersonation.",
+      "why_it_matters": "Cas anecdotique de fraude, mais illustrant les vulnérabilités des systèmes financiers face aux arnaques.",
+      "entities": [
+        "Milwaukee Public Schools"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "b2c41fb1bbfdaf6f",
+        "title": "Intelligence artificielle & nouveau fascisme, de Rainer Mühlhoff : Gouverner sans être contredit",
+        "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxObl83VXlRenJscGZNd2tRUjVXRUZoZVBhSmNUM0dxWmtyMGZhS1dGOTRQNElqanJXeVQ1TjdHVklxdUxlMEF2RGIxUXVaZXJEWkpoZkZmSkU4NGZUYmlYRWhsaV9sNmc1Vk1aLUM0MzFBbU44V2dpUlpFbVlZRmhzSkRaMlRqSlNKTnFPcTJn?oc=5",
+        "source": "En attendant Nadeau",
+        "published": "2026-11-03T21:16:14+00:00",
+        "summary": "Intelligence artificielle & nouveau fascisme, de Rainer Mühlhoff : Gouverner sans être contredit En attendant Nadeau",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 4,
+      "summary_fr": "Livre analysant les liens entre intelligence artificielle et émergence de nouveaux régimes autoritaires, sous l'angle du contrôle social.",
+      "why_it_matters": "Aborde des enjeux éthiques et géopolitiques de l'IA, pertinents pour les débats sur sa régulation.",
+      "entities": [
+        "Rainer Mühlhoff"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "4c122b6129e2a563",
+        "title": "Le Psychologue artificiel, de Jérémy Pellerin : ThérapieGPT",
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5oZXNiU0ppa3l2bU1Oby1XcnlRUU8wVjdwdnFuTU5VMEdubVRwTnpyc01oc2RjZXByS3NhblFIUHVJLXIyTEN0bjBKekZ0X2dSWlBaWXpHamdySHJYYVdkWmhVQWt2Y1NtTWc?oc=5",
+        "source": "En attendant Nadeau",
+        "published": "2026-11-03T21:16:14+00:00",
+        "summary": "Le Psychologue artificiel, de Jérémy Pellerin : ThérapieGPT En attendant Nadeau",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Présentation du livre *Le Psychologue artificiel*, explorant l'utilisation de chatbots comme **ThérapieGPT** dans le domaine de la santé mentale.",
+      "why_it_matters": "Montre l'expansion de l'IA dans des secteurs sensibles comme la santé, avec des implications éthiques et pratiques.",
+      "entities": [
+        "Jérémy Pellerin",
+        "ThérapieGPT"
+      ],
+      "related": []
+    }
+  ]
+}
