@@ -294,9 +294,19 @@ def test_billing_error_stops_agent_but_keeps_earlier_work(good_tools):
 
     selected = {"marches": [event(), event(related=False)], "banques": [], "ia_tech": []}
     llm = Broke(reply(use("a", "read_article", url=URL2)), reply(submit()))
-    dives, traces = agent.run_agent(selected, llm, FakeMemory(), CONFIG, TODAY)
+    cfg = {**CONFIG, "agent": {**CONFIG["agent"], "stop_after_success": False}}    # on veut voir le 2e événement
+    dives, traces = agent.run_agent(selected, llm, FakeMemory(), cfg, TODAY)
     assert len(dives) == 1 and len(traces) == 2                       # le 1er réussit, le 2e arrête l'agent
     assert traces[1]["reason"] == "API refusée (clé ou crédits)"
+
+
+def test_agent_stops_at_first_success_when_configured(good_tools):
+    """Le PDF n'a qu'un focus : dès qu'une analyse réussit, on ne paie pas d'autre boucle."""
+    selected = {"marches": [event(), event(related=False)], "banques": [], "ia_tech": []}
+    llm = FakeLLM(reply(use("a", "read_article", url=URL2)), reply(submit()))
+    assert CONFIG["agent"]["stop_after_success"] is True
+    dives, traces = agent.run_agent(selected, llm, FakeMemory(), CONFIG, TODAY)
+    assert len(dives) == 1 and len(traces) == 1 and len(llm.calls) == 2
 
 
 def test_pick_events_takes_best_rated():

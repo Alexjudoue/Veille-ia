@@ -2,10 +2,10 @@
 
 Exemples :
     python main.py --dry-run     # collecte seule, sans appel au LLM (gratuit)
-    python main.py               # brief complet dans briefs/AAAA-MM-JJ.md
+    python main.py               # brief complet : PDF d'une page dans briefs/AAAA-MM-JJ.pdf
     python main.py --send        # + envoi sur Telegram
     python main.py --email       # + envoi par e-mail
-    python main.py --test-email  # renvoie le dernier brief par e-mail (aucun appel au LLM)
+    python main.py --test-email  # renvoie le dernier PDF par e-mail (aucun appel au LLM)
 """
 from __future__ import annotations
 
@@ -20,7 +20,9 @@ from dotenv import load_dotenv
 from veille import __version__
 from veille.agent import run_agent
 from veille.analyze import analyze
-from veille.brief import render_markdown, render_telegram, select, synthesize
+from veille.brief import render_telegram, select
+from veille.page import build_page
+from veille.pdf import render_pdf
 from veille.collect import collect
 from veille.deliver import send_email, send_telegram
 from veille.memory import Memory
@@ -33,9 +35,9 @@ def main() -> None:
     p.add_argument("--no-memory", action="store_true", help="ignore les articles déjà vus")
     p.add_argument("--no-agent", action="store_true", help="désactive l'agent d'approfondissement (comportement V1)")
     p.add_argument("--send", action="store_true", help="envoie le brief sur Telegram")
-    p.add_argument("--email", action="store_true", help="envoie le brief par e-mail")
+    p.add_argument("--email", action="store_true", help="envoie le PDF du brief par e-mail")
     p.add_argument("--test-email", action="store_true",
-                   help="envoie le dernier brief existant par e-mail, sans collecte ni LLM (gratuit)")
+                   help="envoie le dernier PDF existant par e-mail, sans collecte ni LLM (gratuit)")
     p.add_argument("--limit", type=int, default=0, help="nombre max d'articles analysés (tests)")
     args = p.parse_args()
 
@@ -47,12 +49,13 @@ def main() -> None:
 
     if args.test_email:
         # Test d'envoi : on réutilise le brief le plus récent, sans rien régénérer
-        briefs = sorted(Path("briefs").glob("????-??-??.md"))
+        briefs = sorted(Path("briefs").glob("????-??-??.pdf"))
         if not briefs:
-            logging.error("Aucun brief dans briefs/ : lance d'abord python main.py.")
+            logging.error("Aucun PDF dans briefs/ : lance d'abord python main.py.")
             raise SystemExit(1)
         last = briefs[-1]
-        ok = send_email(last.read_text(encoding="utf-8"), f"[Test] Veille économique du {last.stem}")
+        d = datetime.strptime(last.stem, "%Y-%m-%d")
+        ok = send_email(last.read_bytes(), last.name, f"[Test] Veille du {d:%d/%m/%Y}")
         raise SystemExit(0 if ok else 1)
 
     # 1. Collecte
@@ -100,7 +103,12 @@ def main() -> None:
     deep_dives, traces = [], []
     if config.get("agent", {}).get("enabled") and not args.no_agent:
         deep_dives, traces = run_agent(selected, llm, memory, config, today)
-    synthesis = synthesize(selected, llm, config, deep_dives)
+    # 3 ter. Une seule page : rédaction courte (limites appliquées par le code), puis PDF A4
+    try:
+        page = build_page(selected, deep_dives, llm, config, now, len(analyzed))
+    except Exception as e:
+        logging.error("Arrêt : la page n'a pas pu être rédigée.\n  %s", getattr(e, "message", e))
+        raise SystemExit(1)
 
     stats = {
         "collected": len(articles),
@@ -127,15 +135,21 @@ def main() -> None:
                           "cost_usd": round(llm.agent_usage.cost_usd, 5)}
     stats["total_cost_usd"] = round(llm.usage.cost_usd + llm.agent_usage.cost_usd, 5)
     stats["duration_s"] = round((datetime.now(timezone.utc) - now).total_seconds())
-    md = render_markdown(selected, synthesis, config, now, stats, deep_dives)
+    try:
+        pdf, pages = render_pdf(page)          # une seule page A4, réduite automatiquement si besoin
+    except Exception as e:
+        logging.error("Arrêt : le PDF n'a pas pu être généré (%s: %s).", type(e).__name__, e)
+        logging.error("Aucun brief écrit, aucun article marqué comme lu.")
+        raise SystemExit(1)
+    stats["pages"] = pages
 
     out_dir = Path("briefs")
     out_dir.mkdir(exist_ok=True)
-    md_path = out_dir / f"{now:%Y-%m-%d}.md"
-    md_path.write_text(md, encoding="utf-8")
+    pdf_path = out_dir / f"{now:%Y-%m-%d}.pdf"
+    pdf_path.write_bytes(pdf)
     # Les données brutes servent à évaluer la qualité de l'agent (V3)
     (out_dir / f"{now:%Y-%m-%d}.json").write_text(
-        json.dumps({"stats": stats, "synthesis": synthesis,
+        json.dumps({"stats": stats, "page": page,
                     "deep_dives": [d.to_dict() for d in deep_dives],
                     "analyzed": [a.to_dict() for a in analyzed]},
                    ensure_ascii=False, indent=2),
@@ -147,15 +161,15 @@ def main() -> None:
             json.dumps({"date": today, "events": traces}, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
-    logging.info("Brief écrit : %s", md_path)
+    logging.info("Brief écrit : %s (%d page)", pdf_path, pages)
     logging.info("Usage : %s", stats)
 
     # 4. Mémoire et envoi
     memory.mark_seen(articles)
     memory.save_analyzed(analyzed, f"{now:%Y-%m-%d}")
     if args.send:
-        send_telegram(render_telegram(selected, synthesis, config, now))
-    if args.email and not send_email(md, f"Veille économique du {now:%d/%m/%Y}"):
+        send_telegram(render_telegram(selected, {"key_points": page["points"]}, config, now))
+    if args.email and not send_email(pdf, pdf_path.name, f"Veille du {now:%d/%m/%Y}"):
         # Le brief est écrit et la mémoire sauvegardée ; mais un e-mail perdu ne doit pas
         # passer inaperçu (GitHub Actions marque alors l'exécution en échec et vous prévient).
         raise SystemExit(1)

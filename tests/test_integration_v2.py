@@ -101,7 +101,9 @@ class StubLLM:
                  "why_it_matters": "Utile.", "entities": []}]}
         if tool_name == "regrouper_evenements":
             return {"groups": []}
-        return {"key_points": ["La BCE maintient ses taux."], "connection": "", "interview_question": "Pourquoi ?"}
+        # rediger_page : focus_summary vide -> le code retombe sur l'analyse de l'agent (ou le résumé v1)
+        return {"subtitle": "BCE et taux", "points": ["La BCE maintient ses taux."], "focus_title": "La BCE reste stable",
+                "focus_summary": "", "reads": [], "question": "Pourquoi ?"}
 
     def chat(self, system, messages, tools, tool_choice=None, **kw):
         self.agent_usage.add(300, 30)
@@ -126,11 +128,20 @@ def run_main(tmp_path, monkeypatch):
     return run
 
 
-def test_main_runs_agent_and_writes_trace(run_main):
+def pdf_text(path) -> tuple[str, int]:
+    """Texte et nombre de pages d'un PDF."""
+    from pypdf import PdfReader
+    reader = PdfReader(str(path))
+    return "\n".join(pg.extract_text() for pg in reader.pages), len(reader.pages)
+
+
+def test_main_runs_agent_and_writes_pdf_and_trace(run_main):
     briefs, day = run_main()
-    md = (briefs / f"{day}.md").read_text(encoding="utf-8")
-    assert "## Analyses approfondies" in md and "Analyse approfondie." in md
-    assert "Agent : 1 article lu, 2 appels au modèle" in md
+    text, pages = pdf_text(briefs / f"{day}.pdf")
+    assert pages == 1
+    assert "focus du jour" in text.lower() and "Analyse approfondie." in text     # le focus vient de l'agent
+    assert "Agent :" not in text and "pertinence" not in text and "Aussi couvert" not in text
+    assert not (briefs / f"{day}.md").exists()                              # plus de .md long
 
     trace = json.loads((briefs / f"{day}.trace.json").read_text(encoding="utf-8"))
     [event] = trace["events"]
@@ -138,13 +149,14 @@ def test_main_runs_agent_and_writes_trace(run_main):
     assert event["model_calls"] == 2 and event["input_tokens"] == 600
 
     data = json.loads((briefs / f"{day}.json").read_text(encoding="utf-8"))
-    assert data["stats"]["agent"]["calls"] == 2 and data["stats"]["calls"] == 2   # le pipeline (analyse + synthèse) est compté à part
+    assert data["stats"]["agent"]["calls"] == 2 and data["stats"]["calls"] == 2   # le pipeline (analyse + page) est compté à part
+    assert data["stats"]["pages"] == 1 and data["page"]["focus"]["figures"][0]["value"] == "2,5 %"
     assert len(data["deep_dives"]) == 1
 
 
 def test_main_no_agent_restores_v1_behaviour(run_main):
     briefs, day = run_main("--no-agent")
-    md = (briefs / f"{day}.md").read_text(encoding="utf-8")
-    assert "Analyses approfondies" not in md and "BCE v1" in md
+    text, pages = pdf_text(briefs / f"{day}.pdf")
+    assert pages == 1 and "BCE v1" in text                  # sans agent : résumé v1, aucun chiffre
     assert not (briefs / f"{day}.trace.json").exists()
     assert "agent" not in json.loads((briefs / f"{day}.json").read_text(encoding="utf-8"))["stats"]

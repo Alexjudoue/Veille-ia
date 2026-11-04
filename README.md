@@ -1,6 +1,6 @@
 # Agent de veille économique : marchés, banques, IA
 
-Chaque matin à 7h45 (heure de Paris, week-end compris), cet agent lit une quinzaine de flux d'actualité, élimine les doublons et le bruit, demande à un LLM (Mistral par défaut, Claude en option) de noter et résumer chaque article, puis rédige un brief : les 3 informations à retenir, un fil rouge entre les actualités et une question d'entretien possible. Le brief est enregistré dans `briefs/` et peut être envoyé par e-mail ou sur Telegram.
+Chaque matin à 7h45 (heure de Paris, week-end compris), cet agent lit une quinzaine de flux d'actualité, élimine les doublons et le bruit, demande à un LLM (Mistral par défaut, Claude en option) de noter et résumer chaque article, puis rédige un brief **d'une seule page A4 au format PDF** : l'essentiel en 3 points, le focus du jour approfondi par l'agent (avec des chiffres vérifiés), les articles à lire par thème avec un lien vers chaque média, et une question d'entretien. Le PDF est enregistré dans `briefs/` et envoyé en pièce jointe d'un mail de deux lignes (ou résumé sur Telegram).
 
 **Nouveauté V2 : un vrai agent.** Pour les événements les mieux notés, le modèle décide lui-même quoi faire : lire l'article en entier, chercher dans la mémoire ce qui s'est passé les jours précédents, lancer une recherche complémentaire, puis rendre une analyse approfondie (chiffres clés vérifiés, contexte, « ce qui change depuis hier »). Chaque raisonnement est tracé dans `briefs/AAAA-MM-JJ.trace.json`.
 
@@ -38,9 +38,13 @@ flowchart LR
 | `veille/analyze.py` | Classement, notation et résumé des articles par lots. |
 | `veille/agent.py` | **V2.** Boucle de tool use, budget, vérification des chiffres, trace. |
 | `veille/tools.py` | **V2.** Les outils : lecture d'article, décodage des liens Google News, recherche d'actualité. |
-| `veille/brief.py` | Sélection, regroupement par événement, synthèse et mise en forme. |
+| `veille/brief.py` | Sélection et regroupement par événement ; rendu Telegram. |
+| `veille/page.py` | **v2.4.** Contenu de la page unique : une rédaction courte par le modèle, limites de longueur appliquées par le code, replis si le modèle échoue. |
+| `veille/shorten.py` | **v2.4.** Troncature propre : fin de phrase, jamais au milieu d'un mot ni d'un nombre. |
+| `veille/pdf.py` + `veille/templates/brief.html` | **v2.4.** Gabarit HTML/CSS (Jinja2) converti en PDF par WeasyPrint, réduit automatiquement pour tenir sur une page. |
+| `veille/guards.py` | Détection des textes à trous (« X% », « valeurs non précisées »). |
 | `veille/memory.py` | Base SQLite des articles vus et analysés, avec recherche pour l'agent. |
-| `main.py` | Orchestration de bout en bout. |
+| `main.py` | Orchestration de bout en bout (PDF, e-mail, Telegram). |
 
 ## Choix techniques
 
@@ -56,6 +60,18 @@ flowchart LR
 - **Échecs absorbés.** Site payant, erreur 403, délai dépassé : l'outil renvoie un échec que le modèle peut contourner (autre lien, recherche). Sans aucune source lisible, l'événement garde son résumé V1. Une erreur de clé ou de crédits (400, 401, 403) arrête seulement l'agent : le brief V1, déjà payé, est écrit.
 
 - **Texte parasite réparé.** Il arrive que le modèle recopie un paramètre de l'outil (`<parameter name="key_figures">[...]`) dans un champ texte. Le code coupe ce texte et récupère les chiffres qui s'y trouvaient, qui passent ensuite par la même vérification que les autres.
+
+## Le brief en une page PDF (v2.4)
+
+Le mail ne contient plus le brief : il transporte un **PDF d'une seule page A4** (`briefs/AAAA-MM-JJ.pdf`), objet « Veille du JJ/MM/AAAA ».
+
+Contenu : en-tête, **L'essentiel** (3 points de 25 mots au plus), **Focus du jour** (3 phrases au plus, 2 à 3 chiffres clés vérifiés dans le texte lu, lien vers l'article), **À lire** (3 articles au plus par thème : titre reformulé de 10 mots, une phrase de 20 mots, nom du média en lien cliquable), **question d'entretien**, pied de page discret. Plus de scores, de niveaux de confiance, de « aussi couvert par » ni de statistiques d'agent ; les statistiques restent dans `briefs/AAAA-MM-JJ.json`.
+
+**Concision garantie, en trois couches.** (1) Les limites sont demandées au modèle dans le prompt et dans le schéma JSON (`maxLength`). (2) Le code les applique ensuite lui-même : coupe en fin de phrase, sinon à la limite d'un mot, sans jamais séparer un nombre de son unité (« 2,5 % », « 350 milliards »). (3) Si la page déborde quand même, elle est réduite automatiquement (3, 2 puis 1 article par thème, moins de chiffres, police jusqu'à 92 %) plutôt que de passer à deux pages ; si rien ne tient, l'exécution échoue au lieu d'envoyer un PDF de deux pages. Toutes les limites se règlent dans `config.yaml` (`brief.page`).
+
+**Le focus** est la meilleure analyse approfondie de l'agent (`agent.deep_dive_count: 2` événements essayés, arrêt dès le premier succès). Sans analyse réussie, c'est le meilleur article avec son résumé v1, **sans chiffres** : un chiffre non vérifié n'apparaît jamais. Si le modèle rate la rédaction, des textes de repli tirés des résumés déjà validés sont utilisés : le PDF sort toujours.
+
+**Pourquoi WeasyPrint.** Il lit du HTML/CSS ordinaire (`@page` A4, flexbox, polices système), crée des liens cliquables et indique le nombre de pages produites, ce qui permet de garantir la page unique. Il tourne sur GitHub Actions, avec Pango installé par le workflow. Contrepartie : il demande Pango, qui n'est pas natif sous Windows (voir l'installation).
 
 ## Choix du fournisseur de modèle (v2.3)
 
@@ -125,6 +141,11 @@ pip install -r requirements.txt
 echo "MISTRAL_API_KEY=ta-clé" > .env    # crée le fichier .env avec ta clé API (ANTHROPIC_API_KEY si provider: anthropic)
 ```
 
+**Génération du PDF (WeasyPrint) : Pango est nécessaire.**
+- *Linux / GitHub Actions* : `sudo apt-get install libpango-1.0-0 libpangoft2-1.0-0 fonts-liberation` (le workflow le fait).
+- *Windows* : installe [MSYS2](https://www.msys2.org) (`winget install MSYS2.MSYS2`), puis dans un terminal MSYS2 : `pacman -S mingw-w64-x86_64-pango`. Le programme trouve `C:\msys64\mingw64in` tout seul ; sinon, définis `WEASYPRINT_DLL_DIRECTORIES` avec ce dossier.
+- *macOS* : `brew install pango`.
+
 Pour l'envoi par e-mail ou Telegram, ajoute aussi les variables correspondantes dans `.env` (voir `.env.example` et plus bas). Le fichier `.env` n'est jamais publié.
 
 La clé Mistral se crée sur [console.mistral.ai](https://console.mistral.ai) (offre gratuite « Experiment »), la clé Claude sur [console.anthropic.com](https://console.anthropic.com).
@@ -134,17 +155,17 @@ La clé Mistral se crée sur [console.mistral.ai](https://console.mistral.ai) (o
 ```bash
 python main.py --dry-run --no-memory   # liste les articles collectés, sans appel au LLM (gratuit)
 python main.py --limit 15              # premier vrai test, limité à 15 articles
-python main.py                         # brief complet -> briefs/AAAA-MM-JJ.md (+ .trace.json)
+python main.py                         # brief complet -> briefs/AAAA-MM-JJ.pdf (+ .json et .trace.json)
 python main.py --no-agent              # comportement V1 : sans approfondissement, moins cher
-python main.py --email                 # + envoi par e-mail
-python main.py --test-email            # renvoie le dernier brief par e-mail, sans LLM (gratuit)
+python main.py --email                 # + envoi du PDF par e-mail
+python main.py --test-email            # renvoie le dernier PDF par e-mail, sans LLM (gratuit)
 python main.py --send                  # + envoi Telegram
 pytest                                 # tests, sans réseau ni clé
 ```
 
 ## Envoi par e-mail (optionnel)
 
-Le brief part en HTML mis en forme (lisible sur téléphone), avec une version texte en secours. L'envoi passe par le serveur SMTP de Gmail, sans service tiers.
+Le mail a pour objet « Veille du JJ/MM/AAAA », un corps de deux lignes, et le PDF en pièce jointe (lisible sur téléphone). L'envoi passe par le serveur SMTP de Gmail, sans service tiers.
 
 1. Active la [validation en deux étapes](https://myaccount.google.com/signinoptions/two-step-verification) sur ton compte Google.
 2. Crée un [mot de passe d'application](https://myaccount.google.com/apppasswords) (code de 16 lettres, révocable à tout moment). Ce n'est pas ton mot de passe Google.
@@ -165,7 +186,7 @@ Le workflow `.github/workflows/veille.yml` génère le brief **tous les jours à
 **Pourquoi deux crons et une garde.** Le cron de GitHub est en UTC, et Paris passe de UTC+2 (été) à UTC+1 (hiver). Un seul cron serait faux la moitié de l'année. Le workflow programme donc les deux horaires, `45 5` et `45 6` (UTC), et un premier job « garde » décide lequel doit s'exécuter :
 
 - il lit l'heure à Paris (`TZ=Europe/Paris`) ; avant 7h, c'est le mauvais cron (le cron d'été tombe à 6h45 l'hiver) : on passe ;
-- si le brief du jour existe déjà dans `briefs/`, l'autre cron ou un lancement manuel est déjà passé : on passe, **pas de double envoi** ;
+- si le PDF du jour existe déjà dans `briefs/`, l'autre cron ou un lancement manuel est déjà passé : on passe, **pas de double envoi** ;
 - sinon on exécute.
 
 Résultat : une seule exécution utile par jour, au changement d'heure (25 octobre, puis fin mars) comme le reste de l'année, sans rien modifier à la main. Cette garde teste « après 7h et pas encore de brief » plutôt que « exactement 7h45 » : GitHub retarde parfois les crons de plusieurs minutes, et un retard ne fait pas perdre le brief du jour. En heure d'été, si la première exécution échoue avant d'écrire le brief, le second cron (8h45) réessaie ; en hiver, une seule exécution est utile et il n'y a pas de réessai automatique.
@@ -185,6 +206,7 @@ Résultat : une seule exécution utile par jour, au changement d'heure (25 octob
 - [x] **Envoi par e-mail** : brief HTML via Gmail, destinataires multiples en copie cachée.
 - [x] **V2.2, coût et automatisation** : prompt caching, lectures plafonnées, coût estimé dans chaque brief, envoi quotidien à 7h45 heure de Paris toute l'année.
 - [x] **V2.3, Mistral** : fournisseur configurable (Mistral gratuit ou Claude), limiteur de débit, réessais sur 429, sortie structurée validée.
+- [x] **V2.4, brief en une page PDF** : PDF A4 unique envoyé en pièce jointe, concision garantie par le code, focus du jour, liens cliquables.
 - [ ] **V3, évaluation** : jeu d'articles annotés à la main pour mesurer la qualité du score de pertinence et des analyses de l'agent, suivi du coût et des retours des lecteurs.
 
 ## Limites connues

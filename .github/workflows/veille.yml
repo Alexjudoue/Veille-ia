@@ -46,7 +46,7 @@ jobs:
           elif [ "$((10#$heure))" -lt 7 ]; then
             # Le cron d'été (5h45 UTC) tombe à 6h45 l'hiver : trop tôt, le cron d'hiver prendra le relais.
             echo "Il est avant 7h à Paris : ce n'est pas le bon cron, on passe."; lancer=non
-          elif [ -f "briefs/$jour.md" ]; then
+          elif [ -f "briefs/$jour.pdf" ]; then
             # Le brief du jour est déjà dans le dépôt : l'autre cron, ou un lancement manuel, est passé avant.
             echo "Le brief du $jour existe déjà : pas de second envoi."; lancer=non
           else
@@ -66,6 +66,12 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+
+      # WeasyPrint (génération du PDF) a besoin de Pango et de polices système
+      - name: Installer Pango et les polices du PDF
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libpango-1.0-0 libpangoft2-1.0-0 fonts-liberation
 
       - run: pip install -r requirements.txt
 

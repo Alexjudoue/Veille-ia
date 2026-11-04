@@ -444,6 +444,8 @@ def run_agent(selected: dict[str, list[AnalyzedArticle]], llm, memory, config: d
         traces.append(trace)
         if dive:
             dives.append(dive)
+            if config["agent"].get("stop_after_success"):
+                break        # le focus du jour est trouvé : inutile de payer d'autres boucles
         else:
             log.info("  -> résumé v1 conservé (%s)", trace["reason"])
     return dives, traces

@@ -35,7 +35,8 @@ collect:
 # V2 : l'agent lit les articles en entier pour les événements les mieux notés.
 agent:
   enabled: true
-  deep_dive_count: 4      # nombre d'événements approfondis par jour
+  deep_dive_count: 2      # événements essayés par jour ; le PDF n'a qu'un seul « focus »
+  stop_after_success: true  # s'arrête dès qu'une analyse approfondie réussit (le focus est trouvé)
   max_tool_calls: 5       # budget d'appels d'outils par événement
   max_reads: 2            # articles lus avec succès par événement (le texte est relu à chaque tour)
   agent_model: ""         # vide = le modèle du fournisseur actif (llm.models.<fournisseur>.model)
@@ -46,6 +47,20 @@ brief:
   min_relevance: 6        # score minimal (0-10) pour apparaître dans le brief
   max_items_per_theme: 6
   language: français
+  # La page PDF (une seule feuille A4). Toutes les limites sont appliquées par le code,
+  # en plus d'être demandées au modèle : un texte trop long est raccourci proprement.
+  page:
+    subtitle_words: 14      # sous-titre de l'en-tête
+    points: 3               # « L'essentiel »
+    point_words: 25         # mots par point
+    focus_sentences: 3      # phrases du focus du jour
+    focus_words: 60         # mots maximum pour tout le focus
+    figures: 3              # chiffres clés vérifiés du focus (2 à 3)
+    figure_label_words: 10  # mots de l'intitulé d'un chiffre
+    reads_per_theme: 3      # articles « À lire » par thème (réduit seul si la page déborde)
+    title_words: 10         # titre reformulé d'un article
+    blurb_words: 20         # phrase d'explication d'un article
+    question_words: 25      # question d'entretien
 
 # Le profil du lecteur : c'est ce qui permet au LLM de juger la pertinence.
 reader_profile: >
