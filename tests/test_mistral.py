@@ -303,3 +303,19 @@ def test_brief_shows_free_tier_instead_of_cost():
     md = render_markdown({"marches": [], "banques": [], "ia_tech": []}, {"key_points": []}, CONFIG,
                          datetime(2026, 10, 18, tzinfo=timezone.utc), stats)
     assert "Offre gratuite mistral" in md and "Coût estimé" not in md
+
+
+def test_soft_length_limits_do_not_fail_validation_but_required_fields_do():
+    """Un petit modèle dépasse souvent maxItems/maxLength : le code raccourcit ensuite ; seule une réponse
+    inutilisable (champ obligatoire absent) déclenche un nouvel essai."""
+    schema = {"type": "object", "required": ["points"], "properties": {
+        "points": {"type": "array", "maxItems": 3, "items": {"type": "string", "maxLength": 5}}}}
+    too_long = {"points": ["un texte bien trop long", "b", "c", "d", "e"]}
+    llm, client, _ = make(completion(too_long))
+    assert llm.structured("s", "p", "enregistrer", schema) == too_long          # accepté en un seul appel
+    assert len(client.calls) == 1
+    assert client.calls[0]["tools"][0]["function"]["parameters"]["properties"]["points"]["maxItems"] == 3  # toujours demandé
+
+    llm, client, _ = make(completion({"autre": 1}), completion({"points": ["a"]}))
+    assert llm.structured("s", "p", "enregistrer", schema) == {"points": ["a"]}  # champ obligatoire manquant : on réessaie
+    assert len(client.calls) == 2

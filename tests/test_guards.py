@@ -105,3 +105,16 @@ def test_synthesis_drops_placeholder_parts():
     out = synthesize({"marches": [event()], "banques": [], "ia_tech": []}, Llm(), CONFIG)
     assert out["key_points"] == ["La BCE maintient ses taux."]
     assert out["connection"] == "" and out["interview_question"] == "Pourquoi ?"
+
+
+@pytest.mark.parametrize("text", [
+    "le bénéfice net a plus que doublé, passant de X à plus de 2X",
+    "un résultat de Y millions", "une hausse de 2X en un an",
+])
+def test_bare_variable_placeholders_detected(text):
+    assert has_placeholder(text)
+
+
+@pytest.mark.parametrize("text", ["Il y a de quoi s'inquiéter", "Passage de x à y dans la formule", "Le groupe X (ex-Twitter)", "iPhone 15 Pro Max 2x"])
+def test_french_words_are_not_flagged(text):
+    assert not has_placeholder(text)

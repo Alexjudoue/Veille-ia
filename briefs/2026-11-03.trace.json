@@ -2,12 +2,129 @@
   "date": "2026-11-03",
   "events": [
     {
+      "event": "Markets Aim for Another Historic Win on Bank of England Rate Bets",
+      "steps": [
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxObHg3a2E3OUQ5MzRLaEdTUXlhV29Xb0NwS0RTQXlfeXZUbXpySUdnQVpwZGJKMjF3TzAyeWJwRnd6Znl1YS1mdW1MRmxkZVVwbktlTHFFZ1NIVlp5emRrSnZnakprMlEteHIxLXkyZDNqQVdURERDMG8tMnFoTW9tRVVuUGhkUm9UcFlvQWx0eXlkYkllYVZrQlp0bkxaWUlCdHp3MWdOYXJsQXdGN3U5eXVWUkZhWGVKWGJj"
+          },
+          "error": "lien non autorisé : utilise uniquement les liens fournis dans la demande ou renvoyés par search_news",
+          "duration_s": 0.0
+        },
+        {
+          "tool": "search_news",
+          "args": {
+            "query": "Bank of England historic rate cut bets markets reaction 2026-11-03",
+            "lang": "en"
+          },
+          "result_chars": 15,
+          "duration_s": 0.62
+        },
+        {
+          "tool": "search_news",
+          "args": {
+            "query": "Bank of England rate cut expectations markets reaction November 3 2026",
+            "lang": "en"
+          },
+          "result_chars": 2722,
+          "duration_s": 0.61
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE45V1JheVN6eHBRVFBFNHNWdVBxdDBaSDZrVm0wOHJnWUFhM3hRWERQY0c5TWlqY0ZlQnNjbXVEbmY4QWYzMktwOUo5anZFQnI2OVJkeTVRTzVxQQ"
+          },
+          "error": "lien non autorisé : utilise uniquement les liens fournis dans la demande ou renvoyés par search_news",
+          "duration_s": 0.0
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORkJPa3I0ekJyVEI0RFJhY210TmplVHJZQ0xJNy1qenNkc0lMMHk0TmZwdDV1TEVZNmJoV3dfVlNTT3UyZHE5Q01SdmQ4eDd4WjAzZVhFMFB3VUd5QjlYXzZ5MWFRYzdIQVRVM1JMZXNyQ05aTExrejM4cHdBSktKSlJOOWxkY0V4YkNRRDZZTzlDZUYzZHlUWXdhTFUxNXJSNXc"
+          },
+          "error": "lien non autorisé : utilise uniquement les liens fournis dans la demande ou renvoyés par search_news",
+          "duration_s": 0.0
+        }
+      ],
+      "model_calls": 6,
+      "input_tokens": 15408,
+      "output_tokens": 1009,
+      "status": "repli_v1",
+      "reason": "aucun article lisible",
+      "cache_write_tokens": 0,
+      "cache_read_tokens": 0,
+      "articles_read": 0,
+      "memory_searches": 0,
+      "news_searches": 2,
+      "tool_calls": 5
+    },
+    {
+      "event": "AI’s control over the bond market is growing — even rivaling war and elections",
+      "steps": [
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNS1NBRlhsdTBiaVVrdlNZbElNbzQ0OWd3Wk5sQmFmRm54bGtPXzlhbi1XUy0tYVFEVDNtOEhISjRaOFZuaE5QRDROcnNaQlZmYjVOMWRES1RjUld1OWZVNUl1QU5vMU00c2s5LWdCcUVGUGU3VXJRbVFOeVI2YUZuTFBJTFRQNDR2RHR5bzU0UERsM2xCODFfa2ZTWkJ0MWdTOGtESlplSmNYMGt1Y3EyWkNmVk5Da0pEdkE"
+          },
+          "error": "lien non autorisé : utilise uniquement les liens fournis dans la demande ou renvoyés par search_news",
+          "duration_s": 0.0
+        },
+        {
+          "tool": "search_news",
+          "args": {
+            "query": "AI’s control over the bond market is growing — even rivaling war and elections site:marketwatch.com",
+            "lang": "fr"
+          },
+          "result_chars": 15,
+          "duration_s": 1.31
+        },
+        {
+          "tool": "search_news",
+          "args": {
+            "query": "AI influence on bond market rivaling war and elections",
+            "lang": "en"
+          },
+          "result_chars": 407,
+          "duration_s": 0.75
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://www.marketwatch.com/stories/ais-control-over-the-bond-market-is-growing-even-rivaling-war-and-elections/"
+          },
+          "error": "lien non autorisé : utilise uniquement les liens fournis dans la demande ou renvoyés par search_news",
+          "duration_s": 0.0
+        },
+        {
+          "tool": "search_news",
+          "args": {
+            "query": "AI bond market influence war elections",
+            "lang": "en"
+          },
+          "result_chars": 3658,
+          "duration_s": 0.7
+        }
+      ],
+      "model_calls": 6,
+      "input_tokens": 13327,
+      "output_tokens": 864,
+      "status": "repli_v1",
+      "reason": "aucun article lisible",
+      "cache_write_tokens": 0,
+      "cache_read_tokens": 0,
+      "articles_read": 0,
+      "memory_searches": 0,
+      "news_searches": 3,
+      "tool_calls": 5
+    },
+    {
       "event": "US midterm election results cheer US bond yields, 10-year treasury note, yield on 30-year bond, two-year t",
       "steps": [
         {
           "tool": "read_article",
           "args": {
-            "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxOaXptaG84dG40dk1sWG1EUmt2WVhjbU9DM05XaXVpcTducE0zZ0I1NWlYYUVIQXFtcVFTZ2tsNGdBT3VTWkJ6a3YyQ0lmeVkwc19XRWFjblhjVEktSmttaXlCX25nWHBGMU41dndSbDljU1VFRThyay1wcDJFV3N4Smo3MXg0NHRQSzZFTXJZVk1uUFZhXzdiMXd0NmtQYU5NS09UYkhzOWlJa2xkSXZZb0RDaGs4V2VGMzdrMXRDS3U3LWQ1YnZkY29HTnRMLXhpTmlmRm96WlpHcUg4c2dvWVAzYzQxbFhNUW1xdGstTEs0UFZCbWM5LUtudk9TYlFrb1VTd2J3ZzBweWI3eGNaYlpYUTZVNFhxQlVlclNLMzJ2eDVSVkFncTFPRGVuWFNGOXfSAbcCQVVfeXFMTW5CZ3M0QThXN043QnU1amNXYmhFcVJuSjV3Rkszb1RFUHdmZVZwR18tbkJfRzNrNU12b2x6ejA2MkZ4Y3A3SmE0WWR5R1BRMnNCSVAtU0FQbnB4M2lWR05KMURJbVBhenVIeGFYZVVxQ1FzSHhmR1hIaklOeTA1alBfNkJuQVUwaG1NbXNPSTF1NkhnbXdOS1lPeUxkVkxSSGZjX2R2M0RaVTVoM3gwVmpidmx1MjBjWTl4RGdWVlFkTmpYdWQyNVluYjFwSXF2UExsZjVJMkZHRHFoZ1JSaHJ3U0NPQmFDUFdUY1puWjlWM1FBZnpzU3BNRDFIR0l6NC1rOUNmUDVDS3pnTHlYNXlrbUlGN3RFMXJ0elN5UzVwRExoTXFTR25nck5Xa3BLS2x1RjNUZDA"
+            "url": "https://news.google.com/rss/articles/CBMisgJBVV95cUxOaXptaG84dG40dk1sWG1EUmt2WVhjbU9DM05XaXVpcTducE0zZ0I1NWlYYUVIQXFtcVFTZ2tsNGdBT3VTWkJ6a3YyQ0lmeVkwc19XRWFjblhjVEktSmttaXlCX25nWHBGMU41dndSbDljU1VFRThyay1wcDJFV3N4Smo3MXg0NHRQSzZFTXJZVk1uUFZhXzdiMXd0NmtQYU5NS09UYkhzOWlJa2xkSXZZb0RDaGs4V2VGMzdrMXRDS3U3LWQ1YnZkY29HTnRMLXhpTmlmRm96WlpHcUg4c2dvWVAzYzQxbFhNUW1xdGstTEs0UFZCbWM5LUtudk9TYlFrb1VTd2J3ZzBweWI3eGNaYlpYUTZVNFhxQlVlclNLMzJ2eDVSVkFncTFPRGVuWFNGOXfSAbcCQVVfeXFMTW5CZ3M0QThXN043QnU1amNXYmhFcVJuSjV3Rkszb1RFUHdmZVZwR18tbkJfRzNrNU12b2x6ejA2MkZ4Y3A3SmE0WWR5R1BRMnNCSVAtU0FQbnB4M2lWR05KMURJbVBhenVIeGFYZVVxQ1FzSHhmR1hIaklOeTA1ilBfNkJuQVUwaG1NbXNPSTF1NkhnbXdOS1lPeUxkVkxSSGZjX2R2M0RaVTVoM3gwVmpidmx1MjBjWTl4RGdWVlFkTmpYdWQyNVluYjFwSXF2UExsZjVJMkZHRHFoZ1JSaHJ3U0NPQmFDUFdUY1puWjlWM1FBZnpzU3BNRDFIR0l6NC1rOUNmUDVDS3pnTHlYNXlrbUlGN3RFMXJ0elN5UzVwRExoTXFTR25nck5Xa3BLS2x1RjNUZDA"
           },
           "error": "lien non autorisé : utilise uniquement les liens fournis dans la demande ou renvoyés par search_news",
           "duration_s": 0.0
@@ -15,28 +132,29 @@
         {
           "tool": "search_news",
           "args": {
-            "query": "US midterm election results 2026 bond yields 10-year Treasury note 30-year bond two-year Treasury",
+            "query": "US midterm election results cheer US bond yields 10-year treasury note yield on 30-year bond two-year treasury site:theeconomictimes.com",
             "lang": "fr"
           },
-          "result_chars": 424,
-          "duration_s": 0.45
-        },
-        {
-          "tool": "read_article",
-          "args": {
-            "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNbVhsbVMxcXZEdGZBZEg4OXlkMEVDWWcxaHdhU1ozMDV4c2JkS0tUWldSSXdtV1ZHQXdtYkhDc09NTjJySnVhVUdsa1hFNkloNGVwY2IxcEpVcERVNTJrY09iV01QMWZnVUFDa1p2bUdlOVotWWptdkFTaGY4OUhHc0hxZXhJNHZZaUVGeGNzeTZpODI3My16WEZOVFhwWTFlSGpFSjB3bW5rR3pERURJQ1VDMUlJNDZ1eFM5S1hwNjFqYl9KOG1UQmRnSQ"
-          },
-          "error": "lien non autorisé : utilise uniquement les liens fournis dans la demande ou renvoyés par search_news",
-          "duration_s": 0.0
+          "result_chars": 15,
+          "duration_s": 0.38
         },
         {
           "tool": "search_news",
           "args": {
-            "query": "US midterm election results 2026 Treasury yields 10-year bond",
+            "query": "US midterm election results bond yields 10-year treasury 30-year treasury site:theeconomictimes.com",
             "lang": "en"
           },
-          "result_chars": 4057,
-          "duration_s": 0.59
+          "result_chars": 15,
+          "duration_s": 0.33
+        },
+        {
+          "tool": "search_news",
+          "args": {
+            "query": "US midterm election results 2026 bond yields 10-year treasury 30-year treasury",
+            "lang": "en"
+          },
+          "result_chars": 4739,
+          "duration_s": 0.72
         },
         {
           "tool": "read_article",
@@ -48,15 +166,15 @@
         }
       ],
       "model_calls": 6,
-      "input_tokens": 22612,
-      "output_tokens": 3193,
+      "input_tokens": 22090,
+      "output_tokens": 2016,
       "status": "repli_v1",
       "reason": "aucun article lisible",
       "cache_write_tokens": 0,
       "cache_read_tokens": 0,
       "articles_read": 0,
       "memory_searches": 0,
-      "news_searches": 2,
+      "news_searches": 3,
       "tool_calls": 5
     },
     {
@@ -68,7 +186,7 @@
             "url": "https://techcrunch.com/2026/11/03/ted-schleins-ballistic-ventures-seeks-490m-for-new-funds-amid-ai-driven-cybersecurity-boom/"
           },
           "result_chars": 2887,
-          "duration_s": 0.5
+          "duration_s": 0.45
         },
         {
           "tool": "search_memory",
@@ -80,8 +198,8 @@
         }
       ],
       "model_calls": 3,
-      "input_tokens": 5543,
-      "output_tokens": 650,
+      "input_tokens": 5573,
+      "output_tokens": 653,
       "status": "ok",
       "reason": "",
       "cache_write_tokens": 0,
@@ -90,102 +208,6 @@
       "memory_searches": 1,
       "news_searches": 0,
       "tool_calls": 2
-    },
-    {
-      "event": "Apollo’s Record AI Lending Begins to Rival Banking Giants",
-      "steps": [
-        {
-          "tool": "read_article",
-          "args": {
-            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSUh5MHJfZHNFNE5iRmoybS1vdy1WTXlMWmlBQTRZcXpmalAyTlg2bk1YVVRqaEhCdUVGVEJwV3dyNnVHZjZGMVhmWV9QOGJabUdnQzQ4VVZmNjhWU3ptYUdHUVNJS0hhdW42MkthMXdrMmJmWTQ5RWp0b1dYNDBIQ1ZSbUtsbnRjalZIY0RWMVlEWm45bkRDVEZhLS1Tc01fd0pBSGNPN3h5RTB1a1pQUFlYY3c?oc=5"
-          },
-          "result_chars": 2507,
-          "duration_s": 1.23
-        },
-        {
-          "tool": "search_memory",
-          "args": {
-            "query": "Apollo"
-          },
-          "result_chars": 715,
-          "duration_s": 0.0
-        }
-      ],
-      "model_calls": 3,
-      "input_tokens": 6225,
-      "output_tokens": 769,
-      "status": "ok",
-      "reason": "",
-      "cache_write_tokens": 0,
-      "cache_read_tokens": 0,
-      "articles_read": 1,
-      "memory_searches": 1,
-      "news_searches": 0,
-      "tool_calls": 2
-    },
-    {
-      "event": "Casse du siècle chez Binance : six milliards de dollars en cryptos envolés – 03/11",
-      "steps": [
-        {
-          "tool": "read_article",
-          "args": {
-            "url": "https://www.bfmtv.com/economie/replay-emissions/01-business/casse-du-siecle-chez-binance-six-milliards-de-dollars-en-cryptos-envoles-03-11_EN-202611030957.html"
-          },
-          "result_chars": 4519,
-          "duration_s": 0.58
-        },
-        {
-          "tool": "search_news",
-          "args": {
-            "query": "Binance 6 milliards dollars cryptomonnaies piratage ESET WatchGuard Technologies",
-            "lang": "fr"
-          },
-          "result_chars": 15,
-          "duration_s": 0.36
-        },
-        {
-          "tool": "search_memory",
-          "args": {
-            "query": "Binance 6 milliards cryptomonnaies piratage"
-          },
-          "result_chars": 2366,
-          "duration_s": 0.0
-        },
-        {
-          "tool": "search_news",
-          "args": {
-            "query": "Binance cryptomonnaies piratage 6 milliards dollars site officiel ou communiqué officiel",
-            "lang": "fr"
-          },
-          "result_chars": 4537,
-          "duration_s": 0.83
-        },
-        {
-          "tool": "read_article",
-          "args": {
-            "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTFhHaTdDcnJrUFd1RTRrUTVHNjA4azB2TkJ3SE1tcDhvZ2NtYl9sZGhhSXRLTWY0aVZKb25HcnA2ajNhdDI4VGs4Q0hPVElCTE9pSGtpcGMyVmhRYXc3Ql9WT0o1Uy1Mb21pLS02UDZCSWFOc1NIYXdVUXhvOW9WYVFIZlYzQklGTFpyYzQwcjR0eWw2bDQ4ZjRscWZnZUFPdjR1WjRB"
-          },
-          "error": "lien non autorisé : utilise uniquement les liens fournis dans la demande ou renvoyés par search_news",
-          "duration_s": 0.0
-        }
-      ],
-      "model_calls": 6,
-      "input_tokens": 22381,
-      "output_tokens": 1271,
-      "status": "ok",
-      "reason": "",
-      "cache_write_tokens": 0,
-      "cache_read_tokens": 0,
-      "rejected_figures": [
-        {
-          "value": "6,3 milliards de dollars",
-          "label": "Montant estimé des cryptomonnaies volées"
-        }
-      ],
-      "articles_read": 1,
-      "memory_searches": 1,
-      "news_searches": 2,
-      "tool_calls": 5
     }
   ]
 }

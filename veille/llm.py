@@ -250,6 +250,24 @@ def _is_retryable(err) -> bool:
                                   "RemoteProtocolError", "ReadError", "WriteError", "PoolTimeout")
 
 
+SOFT_LIMITS = ("maxLength", "maxItems")
+
+
+def _without_soft_limits(schema):
+    """Copie du schéma sans les limites de LONGUEUR (maxLength, maxItems).
+
+    Ces limites sont demandées au modèle (elles restent dans le schéma envoyé), mais un petit modèle les
+    dépasse souvent : si la validation les imposait, un point de trop ferait échouer toute la rédaction
+    deux fois de suite. Le code raccourcit ensuite lui-même (shorten.py) ; la validation ne garde que
+    ce qui rend la réponse inutilisable : champs obligatoires manquants, mauvais types, valeurs d'énumération.
+    """
+    if isinstance(schema, dict):
+        return {k: _without_soft_limits(v) for k, v in schema.items() if k not in SOFT_LIMITS}
+    if isinstance(schema, list):
+        return [_without_soft_limits(v) for v in schema]
+    return schema
+
+
 def _tool_to_mistral(tool: dict) -> dict:
     """Outil au format Anthropic -> format Mistral. Le champ `strict` (propre à Anthropic) est ignoré."""
     return {"type": "function",
@@ -411,7 +429,7 @@ class MistralLLM:
                     data = _args_of(calls[0].function.arguments)
                 else:   # pas d'appel d'outil : parfois le JSON est dans le texte
                     data = _args_of(_text_of(msg.content).strip().removeprefix("```json").removesuffix("```"))
-                jsonschema.validate(data, schema)
+                jsonschema.validate(data, _without_soft_limits(schema))
                 return data
             except (ValueError, jsonschema.ValidationError) as e:
                 problem = getattr(e, "message", str(e))

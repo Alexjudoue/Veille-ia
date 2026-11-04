@@ -16,6 +16,9 @@ _PLACEHOLDER = re.compile(
     r"|\bvaleurs?\s+(?:exactes?\s+)?(?:non|pas)\s+(?:précis|communiqu|disponib|fourni)"
     r"|\bnon\s+précis[ée]e?s?\s+dans\s+l[’']extrait"
     r"|\[[^\]]*(?:à compléter|insérer|\.\.\.|…)[^\]]*\]"
+    # « passant de X à plus de 2X » : lettre-variable seule, majuscule obligatoire (« y » est un mot français)
+    r"|\b(?:de|à|par|environ|vers|jusqu'à|jusqu’à)\s+(?-i:[XYZ])(?![\w'’-])"
+    r"|(?<![\w])\d+(?-i:[XYZ])(?![\w])"
     r"|\b(?:TBD|lorem ipsum)\b",
     re.IGNORECASE,
 )
