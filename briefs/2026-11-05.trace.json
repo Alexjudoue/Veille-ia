@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-05",
+  "events": [
+    {
+      "event": "Bank of England poised to hike rates for first time in 3 years",
+      "steps": [
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQYXM1eE1qNm05dkg5WWJabktscTRfLXlCdktDcTJYRjYzR2RLUXc1UkdTZHFwSzNCV2NxQTdPT2JrRTVENFNOeTdiYWtFZzZ0dFowUXV1anpnSWZudktCR3FwZm9QMFhJUTJtckJfdlpQM21seG1BVEV0MWpfNXJOZjhhcEwzUG5XZ2FNRk9RS0JrSFU4bElfdTFB?oc=5"
+          },
+          "error": "accès refusé (HTTP 401) : site protégé ou payant",
+          "duration_s": 1.53
+        },
+        {
+          "tool": "search_news",
+          "args": {
+            "query": "Bank of England poised to hike rates for first time in 3 years site:reuters.com",
+            "lang": "fr"
+          },
+          "result_chars": 376,
+          "duration_s": 0.45
+        },
+        {
+          "tool": "search_news",
+          "args": {
+            "query": "Bank of England rate hike 2026",
+            "lang": "en"
+          },
+          "result_chars": 2862,
+          "duration_s": 0.62
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPOFVxcW9DcnR5S1BVdndGZkhXT1F1SUR0WEZTbkRsSzRLSmtiOXFZdXNneUs4VXVCaV9ldFZQVVdHMnVvWDBrZERDTFo5bHc4NE9GelZKbmloVi1VVTVmN0tiZXFUSW5fMFIzMXZCWE5CWHd5TEdHc2VvRVA3T1VCRV9XampjTDBmd3BpTlkyNjBScTJReVhCanlUX21XX1dhbWc"
+          },
+          "error": "lien non autorisé : utilise uniquement les liens fournis dans la demande ou renvoyés par search_news",
+          "duration_s": 0.0
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE45V1JheVN6eHBRVFBFNHNWdVBxdDBaSDZrVm0wOHJnWUFhM3hRWERQY0c5TWlqY0ZlQnNjbXVEbmY4QWYzMktwOUo5anZFQnI2OVJkeTVRTzVxQQ"
+          },
+          "error": "lien non autorisé : utilise uniquement les liens fournis dans la demande ou renvoyés par search_news",
+          "duration_s": 0.0
+        }
+      ],
+      "model_calls": 6,
+      "input_tokens": 16354,
+      "output_tokens": 1613,
+      "status": "repli_v1",
+      "reason": "aucun article lisible",
+      "cache_write_tokens": 0,
+      "cache_read_tokens": 0,
+      "articles_read": 0,
+      "memory_searches": 0,
+      "news_searches": 2,
+      "tool_calls": 5
+    },
+    {
+      "event": "La Banque d'Angleterre vers sa première hausse de taux depuis plus de trois ans",
+      "steps": [
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5tUWlKWVhVUURoSVRpT2dDVWJkemRYcjIwTHJMQU5QZlh5Q3k5VXlZdjk1UGxWS3R1eDUzMkt5UnRycDlYTHFrWFZVTktPOVhPWlBoMXJXcTd4RmxaNXhjeWVB?oc=5"
+          },
+          "result_chars": 3213,
+          "duration_s": 2.03
+        },
+        {
+          "tool": "search_memory",
+          "args": {
+            "query": "Banque d'Angleterre taux directeurs inflation"
+          },
+          "result_chars": 2181,
+          "duration_s": 0.02
+        },
+        {
+          "tool": "search_news",
+          "args": {
+            "query": "Banque d'Angleterre taux directeur 5 novembre 2026",
+            "lang": "fr"
+          },
+          "result_chars": 3508,
+          "duration_s": 0.41
+        },
+        {
+          "tool": "read_article",
+          "args": {
+            "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQVUxObUhQS0dDZmlmcWdVYWxJRDJUZGxJNHdhNEhuaGJVUWpmeEFKTUxZLTdRX3dBRjRVVG43MWlGbnNnbTlYbTQtb2pma1RRbzVOLV9RakFTVXJTNGZXak1CenZDckktLWJxRVBLMHpyUll2ZUxmd2tUaWc1cE1ycDUzbjRyTmJwZE1fSC1SQU9KMEtPeHVWTTk5ODNyNUhsVHhCQzA0dEEwSm5UUkgxdG5ncTNWRkwzU0p6bm52NkZOWFhsY0NyNjFTLUFmZEZ2QklUVlZyektRaDNZN0RoYzdXNi1JUlRveWhlS3FHWjdId0tvRmfSAfYBQVVfeXFMUFVMTm1IUEtHQ2ZpZnFnVWFsSUQyVGRsSTR3YTRIbmhiVVFqZnhBSk1MWS03UV93QUY0VVRuNzFpRm5zZ205WG00LW9qZmtUUW81Ti1fUWpBU1VyUzRmV2pNQnp2Q3JJLS1icUVQSzB6clJZdmVMZndrVGlnNXBNcnA1M240ck5icGRNX0gtUkFPSjBLT3h1Vk05OTgzcjVIbTR4QkMwNHRBMEpuVFJIMXRuZ3EzVkZMM1NKem5udjZGTlhYbGNDcjYxUy1BZmRGdkJJVFZWcnpLUWgzWTdEaGM3VzYtSVJUb3loZUtxR1o3SHdLb0Zn"
+          },
+          "error": "lien non autorisé : utilise uniquement les liens fournis dans la demande ou renvoyés par search_news",
+          "duration_s": 0.0
+        },
+        {
+          "tool": "search_news",
+          "args": {
+            "query": "Banque d'Angleterre taux directeur 4 novembre 2026 décision officielle",
+            "lang": "fr"
+          },
+          "result_chars": 2673,
+          "duration_s": 0.77
+        }
+      ],
+      "model_calls": 5,
+      "input_tokens": 18578,
+      "output_tokens": 1801,
+      "status": "ok",
+      "reason": "",
+      "cache_write_tokens": 0,
+      "cache_read_tokens": 0,
+      "articles_read": 1,
+      "memory_searches": 1,
+      "news_searches": 2,
+      "tool_calls": 5
+    }
+  ]
+}

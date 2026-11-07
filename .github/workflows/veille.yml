@@ -46,9 +46,10 @@ jobs:
           elif [ "$((10#$heure))" -lt 7 ]; then
             # Le cron d'été (5h45 UTC) tombe à 6h45 l'hiver : trop tôt, le cron d'hiver prendra le relais.
             echo "Il est avant 7h à Paris : ce n'est pas le bon cron, on passe."; lancer=non
-          elif [ -f "briefs/$jour.pdf" ]; then
-            # Le brief du jour est déjà dans le dépôt : l'autre cron, ou un lancement manuel, est passé avant.
-            echo "Le brief du $jour existe déjà : pas de second envoi."; lancer=non
+          elif [ -f "briefs/$jour.sent" ]; then
+            # Le brief du jour a déjà été ENVOYÉ : l'autre cron, ou un lancement manuel, est passé avant.
+            # (On teste l'envoi, pas le PDF : un PDF sans mail doit être renvoyé, pas ignoré.)
+            echo "Le brief du $jour a déjà été envoyé : pas de second envoi."; lancer=non
           else
             echo "Premier passage après 7h à Paris sans brief du jour : on exécute."; lancer=oui
           fi

@@ -58,6 +58,17 @@ def main() -> None:
         ok = send_email(last.read_bytes(), last.name, f"[Test] Veille du {d:%d/%m/%Y}")
         raise SystemExit(0 if ok else 1)
 
+    # Reprise : le brief du jour existe mais son e-mail n'est pas parti (échec d'envoi
+    # précédent). On renvoie le PDF existant au lieu de tout regénérer ou de rester muet.
+    today_pdf = Path("briefs") / f"{now:%Y-%m-%d}.pdf"
+    sent_marker = today_pdf.with_suffix(".sent")
+    if args.email and today_pdf.exists() and not sent_marker.exists():
+        logging.info("Brief du jour déjà écrit mais jamais envoyé : renvoi du PDF existant.")
+        ok = send_email(today_pdf.read_bytes(), today_pdf.name, f"Veille du {now:%d/%m/%Y}")
+        if ok:
+            sent_marker.write_text(f"{datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC\n", encoding="utf-8")
+        raise SystemExit(0 if ok else 1)
+
     # 1. Collecte
     articles = collect(config)
     memory = Memory()
@@ -169,7 +180,9 @@ def main() -> None:
     memory.save_analyzed(analyzed, f"{now:%Y-%m-%d}")
     if args.send:
         send_telegram(render_telegram(selected, {"key_points": page["points"]}, config, now))
-    if args.email and not send_email(pdf, pdf_path.name, f"Veille du {now:%d/%m/%Y}"):
+    if args.email and send_email(pdf, pdf_path.name, f"Veille du {now:%d/%m/%Y}"):
+        sent_marker.write_text(f"{datetime.now(timezone.utc):%Y-%m-%d %H:%M} UTC\n", encoding="utf-8")
+    elif args.email:
         # Le brief est écrit et la mémoire sauvegardée ; mais un e-mail perdu ne doit pas
         # passer inaperçu (GitHub Actions marque alors l'exécution en échec et vous prévient).
         raise SystemExit(1)

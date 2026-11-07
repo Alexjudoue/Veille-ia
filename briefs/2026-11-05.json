@@ -1,0 +1,642 @@
+{
+  "stats": {
+    "collected": 30,
+    "analyzed": 22,
+    "selected": 16,
+    "calls": 23,
+    "input_tokens": 28669,
+    "output_tokens": 11074,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "cost_usd": 0.0,
+    "provider": "mistral",
+    "model": "open-mistral-nemo",
+    "free_tier": true,
+    "agent": {
+      "events": 2,
+      "deep_dives": 1,
+      "calls": 11,
+      "input_tokens": 34932,
+      "output_tokens": 3414,
+      "cache_write_tokens": 0,
+      "cache_read_tokens": 0,
+      "articles_read": 1,
+      "cost_usd": 0.0
+    },
+    "total_cost_usd": 0.0,
+    "duration_s": 262,
+    "pages": 1
+  },
+  "page": {
+    "date": "05/11/2026",
+    "subtitle": "Inflation, taux et IA : l'actualité économique clé.",
+    "points": [
+      "La Banque d'Angleterre relève ses taux pour la première fois depuis 2023, face à une inflation persistante.",
+      "Le Brésil arrête ses baisses de taux après l'élection de Lula, à cause d'une inflation toujours élevée.",
+      "Un régulateur américain encadre l'usage de l'IA dans les banques pour garantir sécurité et conformité."
+    ],
+    "focus": {
+      "title": "BoE relève ses taux pour lutter contre l'inflation.",
+      "summary": "La Banque d'Angleterre augmente ses taux directeurs de 3,75 % à 4 %, première hausse depuis août 2023. L'inflation au Royaume-Uni reste élevée, à 3,5 %, presque le double de l'objectif. Cette décision reflète les tensions géopolitiques et leur impact sur les prix de l'énergie.",
+      "figures": [
+        {
+          "value": "3,75 %",
+          "url": "https://fr.tradingview.com/news/afp:8919ab2cbb899:0/",
+          "label": "taux directeur précédent de la BoE"
+        },
+        {
+          "value": "4 %",
+          "url": "https://fr.tradingview.com/news/afp:8919ab2cbb899:0/",
+          "label": "nouveau taux directeur annoncé par la BoE"
+        },
+        {
+          "value": "3,5 %",
+          "url": "https://fr.tradingview.com/news/afp:8919ab2cbb899:0/",
+          "label": "taux d'inflation au Royaume-Uni en septembre 2026"
+        }
+      ],
+      "source": "fr.tradingview.com",
+      "url": "https://fr.tradingview.com/news/afp:8919ab2cbb899:0/"
+    },
+    "themes": [
+      {
+        "key": "marches",
+        "label": "Marchés financiers",
+        "reads": [
+          {
+            "title": "BoE prépare hausse des taux.",
+            "blurb": "La Banque d'Angleterre pourrait relever ses taux pour la première fois depuis trois ans.",
+            "source": "Reuters",
+            "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQYXM1eE1qNm05dkg5WWJabktscTRfLXlCdktDcTJYRjYzR2RLUXc1UkdTZHFwSzNCV2NxQTdPT2JrRTVENFNOeTdiYWtFZzZ0dFowUXV1anpnSWZudktCR3FwZm9QMFhJUTJtckJfdlpQM21seG1BVEV0MWpfNXJOZjhhcEwzUG5XZ2FNRk9RS0JrSFU4bElfdTFB?oc=5"
+          },
+          {
+            "title": "Brésil stoppe baisse des taux.",
+            "blurb": "La banque centrale brésilienne arrête son cycle de baisse après l'élection de Lula.",
+            "source": "Reuters",
+            "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZEFUME9sYnFseThMNGczNTU1OGwtT1ZzWk5yNXpVWGpfZWpFbjVYcHJ0NS1iRjNVNGcyQnZ4cXp3WkRuVTJ3UF8takxXTnV6ZjZ5RXFsVkVGazQwbkdkZ3czRTZ1QXp6RVo4eVZxRGpJSkN0dXhzSWZ6V0N4RGwzdTVsTF9vYlFHdUlrakdlZGF4bnFPYzlNZ1dUT2FHTnlJZTlYSWlYZ1psV2NQSHB2RExDZUg?oc=5"
+          },
+          {
+            "title": "Brésil maintient taux malgré attentes.",
+            "blurb": "Inflation persistante empêche la baisse des taux malgré les espoirs du marché.",
+            "source": "WSJ",
+            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTzBzM3JOaW9OaUJJb2RyNEMwb0tta2dvWUNHUGk4bXYwTjJZeHpFdmFOOHZWdENjR2EtaHQ4Vl91VVdnXzBVSmZ0ZEtTMVBWQnRDWTBEbE9lTU1wZFVETTJQZmwtSlFXaDhXU0NVZGt5djNpakVhZjdia19PRzdYa2dIb09nOFFENkhDVU03a1c3WVJyVWJVWGZGQ2RzVUEyWjRLYW5yTlVmNGRMOVl4WVdrY0Q1M0xULXc?oc=5"
+          }
+        ]
+      },
+      {
+        "key": "banques",
+        "label": "Banques et finance",
+        "reads": [
+          {
+            "title": "Régulateur bancaire encadre l'IA.",
+            "blurb": "Un cadre est publié pour sécuriser l'usage de l'IA dans les banques américaines.",
+            "source": "www.tokenpost.com",
+            "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1iWlFYVjc0LUpWOVFsWVQtaVVYSWlyTUZrV1dzQ09PU08zc001Q2dsTFdsU1cxNVJlNEJaWVgwM3RhSmhwajZHaHYzdlMxZ1hUOEtwd3luM0VUU2M?oc=5"
+          },
+          {
+            "title": "Corée du Sud renforce sécurité financière.",
+            "blurb": "Le pays prépare une refonte du secteur financier pour l'ère de l'IA et ses risques.",
+            "source": "Chosunbiz",
+            "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNc0NTeHlpY19FWDNEa19PNGI4VFdJTWRiRWtPLTlWd1I5OE5LbENRdU1uMWZneFBqZ1BzOXN2eEY5UU10SUIza0NvRDE4NzVHbjY2RkFMdlIxbmVObTNDcU5GUGZmWkszTUV1ZkhGWjRiYkNZLUV5NXNTSElueU9NY9IBlAFBVV95cUxNdW10QVZyaURWOXdRV1Jwc2NkX2luVXlyQ1NSdFFZYjlhWVQzUzVublpNQ0NlaXQ3Qml0YXBuMS1BLTRWQ1hDSDZmazloXzBGWVNDUXBYdTBJbU14Nl9RTE16R1pTZUJ1TkxVMnNldG1wdGd5R2hWQ0oxdlFtZVlBVTBkZmwxTTR0bXotWkFxWVpUNThs?oc=5"
+          },
+          {
+            "title": "DBS manque ses profits trimestriels.",
+            "blurb": "Volatilité des marchés affecte les résultats de la banque singapourienne DBS.",
+            "source": "Reuters",
+            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZTU3NHZrQ0JWNGxYMThkNGxJdWF0SDRrZ3NXUlpZem83cEoxRlp6MnI5QlNMeVRMdUJGRTJHNUFzdFlvZ293eXJ5RlRzUjJHV2xLZ1dlaC1xLW1uV0RfQnQ4bVBNQ0dFcG9vcVFEZmQwdS1tNEFtd2hXN2RyOE9NRmVYZjdOck1KR2F5bjlNekdlYmJGUlpreHlmRzZXMDBsRnVfaHBvUGlscUVVeEtOWG5vSk0yVm9KeS1jRTk3dGtFZw?oc=5"
+          }
+        ]
+      },
+      {
+        "key": "ia_tech",
+        "label": "IA et tech",
+        "reads": [
+          {
+            "title": "Arm anticipe hausse des revenus.",
+            "blurb": "Arm prévoit une croissance des revenus grâce à la demande en IA et puces adaptées.",
+            "source": "Global Banking & Finance Review",
+            "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSlVXbDhMTm1HYVdtU0lTQVF0d1RfVUdlVnZSWjNSdkhmVVJodkRUTTQySHV6YjRTZ3dBSlVCMFdMbGprallpdW80dENqOVh0TmNnMGtGNTE1MFg1R2JkOHFlMU9PelpWY0VDTERicy1aUmpLM09Tc25pRXMzNTVsazY1V0RySFdDdDZpdzlZZER6dkNzaENnUHd0Y3RLQkU?oc=5"
+          },
+          {
+            "title": "14 certifications IA pour financiers.",
+            "blurb": "Le Corporate Finance Institute compare des formations en IA pour les professionnels de la finance.",
+            "source": "Corporate Finance Institute",
+            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNnZmUm9lN2lsN3FVSGlJWXoxOVFXemUyVWpnUW5KMHo1eWl4X0cxREwyNjY1VXJkeWlGaTJVWDBCQzlZaDk4ZUdxTTYwLXk2eWhUVzl6dk16SlF3aXpXZ0xLQTJYY25BZmJxOF9zNFJqcUJ3d25sV1F4a2d5QjRqS3ZLRDBrQXRJOXhTR3BfOWhWR2hjUHlwVFBfaGNiNng0UnhhN3lYRXd6N0N0ZUhzSVBxdHNob2l5RFZQQV96czFtZw?oc=5"
+          },
+          {
+            "title": "Apple réduit budgets IA internes.",
+            "blurb": "Apple diminue ses dépenses internes pour l'utilisation de l'IA selon TechCrunch.",
+            "source": "techcrunch.com",
+            "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/"
+          }
+        ]
+      }
+    ],
+    "question": "Comment analysez-vous l'impact d'une hausse des taux directeurs sur les investissements en technologies émergentes comme l'IA ?",
+    "analyzed": 22
+  },
+  "deep_dives": [
+    {
+      "article_id": "55ac812e62a8bdba",
+      "title": "La Banque d'Angleterre vers sa première hausse de taux depuis plus de trois ans",
+      "summary": "La Banque d'Angleterre (BoE) a annoncé le 4 novembre 2026 une première hausse de ses taux directeurs depuis août 2023, passant de 3,75 % à 4 %. Cette décision s'inscrit dans un contexte d'inflation persistante au Royaume-Uni, qui a atteint 3,5 % en septembre 2026, soit presque le double de l'objectif de la BoE. Cette hausse intervient après une série de tensions géopolitiques liées au conflit au Moyen-Orient, qui ont fait grimper les prix de l'énergie et alimenté les pressions inflationnistes mondiales.",
+      "key_figures": [
+        {
+          "value": "3,75 %",
+          "label": "taux directeur précédent de la BoE",
+          "source_url": "https://fr.tradingview.com/news/afp:8919ab2cbb899:0/"
+        },
+        {
+          "value": "4 %",
+          "label": "nouveau taux directeur annoncé par la BoE",
+          "source_url": "https://fr.tradingview.com/news/afp:8919ab2cbb899:0/"
+        },
+        {
+          "value": "3,5 %",
+          "label": "taux d'inflation au Royaume-Uni en septembre 2026",
+          "source_url": "https://fr.tradingview.com/news/afp:8919ab2cbb899:0/"
+        }
+      ],
+      "context": "La décision de la BoE s'explique par l'inflation persistante, alimentée par la hausse des prix de l'énergie due aux tensions géopolitiques au Moyen-Orient. Malgré une croissance économique résiliente et un chômage en légère baisse, la BoE anticipe une inflation pouvant atteindre près de 4 % au début de 2027. Cette hausse des taux vise à freiner la demande et à stabiliser les prix, mais elle pourrait aussi ralentir la croissance et peser sur le pouvoir d'achat des ménages.",
+      "what_changed": "Contrairement aux semaines précédentes où les anticipations se concentraient sur des discussions prudentes ou des ajustements mineurs (comme pour la Banque du Japon ou la Banque du Canada), la BoE a pris une décision concrète et significative, marquant un tournant après une période de statu quo depuis décembre 2025.",
+      "confidence": "élevée",
+      "sources_read": [
+        "https://fr.tradingview.com/news/afp:8919ab2cbb899:0/"
+      ],
+      "stats": {
+        "articles_read": 1,
+        "memory_searches": 1,
+        "news_searches": 2,
+        "tool_calls": 5,
+        "calls": 5,
+        "input_tokens": 18578,
+        "output_tokens": 1801
+      }
+    }
+  ],
+  "analyzed": [
+    {
+      "article": {
+        "id": "1c7da4acfcdd25cb",
+        "title": "Apple is reportedly cutting budgets for its internal AI usage",
+        "url": "https://techcrunch.com/2026/11/04/apple-is-reportedly-cutting-budgets-for-its-internal-ai-usage/",
+        "source": "techcrunch.com",
+        "published": "2026-11-05T01:26:22+00:00",
+        "summary": "The company is said to be significantly dropping the amount it's spending on AI for its engineering teams.",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 7,
+      "summary_fr": "Apple réduit significativement son budget dédié à l'utilisation interne de l'IA pour ses équipes d'ingénierie, selon des informations de TechCrunch.",
+      "why_it_matters": "Ce changement reflète une possible réorientation stratégique des géants tech dans l'adoption de l'IA, un sujet clé pour les entretiens en tech et finance.",
+      "entities": [
+        "Apple",
+        "IA"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "2c368bf7ce921244",
+        "title": "After the midterms, a bigger clash over data centers could be coming",
+        "url": "https://techcrunch.com/2026/11/04/after-the-midterms-a-bigger-clash-over-data-centers-could-be-coming/",
+        "source": "techcrunch.com",
+        "published": "2026-11-05T01:02:14+00:00",
+        "summary": "Data center opposition crossed party lines in Tuesday’s midterms.",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Après les élections de mi-mandat aux États-Unis, une opposition croisée aux centres de données pourrait émerger, selon TechCrunch.",
+      "why_it_matters": "Les régulations autour des infrastructures tech (comme les data centers) impactent directement les investissements et les opérations des entreprises technologiques et financières.",
+      "entities": [
+        "États-Unis",
+        "data centers"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "4e0e166c2ae1e51a",
+        "title": "Best AI Certifications for Finance Professionals: 14 Credentials and Courses Compared",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNnZmUm9lN2lsN3FVSGlJWXoxOVFXemUyVWpnUW5KMHo1eWl4X0cxREwyNjY1VXJkeWlGaTJVWDBCQzlZaDk4ZUdxTTYwLXk2eWhUVzl6dk16SlF3aXpXZ0xLQTJYY25BZmJxOF9zNFJqcUJ3d25sV1F4a2d5QjRqS3ZLRDBrQXRJOXhTR3BfOWhWR2hjUHlwVFBfaGNiNng0UnhhN3lYRXd6N0N0ZUhzSVBxdHNob2l5RFZQQV96czFtZw?oc=5",
+        "source": "Corporate Finance Institute",
+        "published": "2026-11-05T00:49:47+00:00",
+        "summary": "Best AI Certifications for Finance Professionals: 14 Credentials and Courses Compared Corporate Finance Institute",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 8,
+      "summary_fr": "Le Corporate Finance Institute compare 14 certifications et formations en IA destinées aux professionnels de la finance, pour se former aux enjeux technologiques du secteur.",
+      "why_it_matters": "Ces certifications sont essentielles pour les étudiants en finance et ingénierie souhaitant intégrer des compétences en IA dans leur parcours professionnel ou leurs entretiens.",
+      "entities": [
+        "Corporate Finance Institute",
+        "IA",
+        "finance"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "35bd070cb027aaaa",
+        "title": "U.S. Banking Regulator Issues Framework for Banks’ AI Use",
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1iWlFYVjc0LUpWOVFsWVQtaVVYSWlyTUZrV1dzQ09PU08zc001Q2dsTFdsU1cxNVJlNEJaWVgwM3RhSmhwajZHaHYzdlMxZ1hUOEtwd3luM0VUU2M?oc=5",
+        "source": "www.tokenpost.com",
+        "published": "2026-11-05T00:48:00+00:00",
+        "summary": "U.S. Banking Regulator Issues Framework for Banks’ AI Use www.tokenpost.com",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 9,
+      "summary_fr": "Un régulateur bancaire américain publie un cadre pour encadrer l'utilisation de l'IA par les banques, visant à garantir sécurité et conformité.",
+      "why_it_matters": "Cette décision influence directement les pratiques des banques et les attentes en matière de régulation technologique, un sujet clé pour les entretiens en conseil bancaire et finance.",
+      "entities": [
+        "régulateur bancaire américain",
+        "banques",
+        "IA"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "33301b2ef8e91718",
+        "title": "MPS oversight gaps identified years before bank impersonation scam",
+        "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9sQ0VCLXZ2MmJwQmdteFJ5RGlLYm1XT0s2elRfeUtyUnhocUtRVDlzS0FxRnYtRjRlVnZnaFBublp2eXM3NmRXQ0h1Z3cwWXN6WEppQVhINHFvMVpzRnZSS1J2WEhBWml3c0ZoQjY4S1Vwb1E2ck9yNTZ5QQ?oc=5",
+        "source": "FOX6 News Milwaukee",
+        "published": "2026-11-05T00:25:27+00:00",
+        "summary": "MPS oversight gaps identified years before bank impersonation scam FOX6 News Milwaukee",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 5,
+      "summary_fr": "Des lacunes dans la surveillance de MPS (banque américaine) ont été identifiées des années avant une escroquerie par impersonation bancaire.",
+      "why_it_matters": "Cet exemple illustre les risques liés à la cybersécurité et à la régulation bancaire, pertinents pour comprendre les enjeux de sécurité dans le secteur financier.",
+      "entities": [
+        "MPS",
+        "escroquerie bancaire"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "1334910671cf6b70",
+        "title": "Korea Deep Learning Tests AI Agent With Shinhan Vietnam Finance",
+        "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUE45VFZ0NnVBU0NLWTQ0RXdkc1B2bkhVZlJBcjFRemg0bDlYRjJHUHlpem81MVl1cV9YWWh1RWljbzA2Nmhyb3ZtLVB1b2RhWHRVeGZOZTJubk12b2tKeXNzbGU0Tmx1c2FvY2pCR3RCYnFwdDI4alEyVWE1OXZHR2swemdKMnVXU2tkTlM0eFdLMm1kSW1scmpYYmJjeVBZZUE?oc=5",
+        "source": "Seoul Economic Daily",
+        "published": "2026-11-05T00:05:51+00:00",
+        "summary": "Korea Deep Learning Tests AI Agent With Shinhan Vietnam Finance Seoul Economic Daily",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "La Corée du Sud teste un agent IA développé par Korea Deep Learning en collaboration avec Shinhan Vietnam Finance pour des applications financières.",
+      "why_it_matters": "Cela illustre l'adoption croissante de l'IA dans le secteur bancaire et financier, un sujet clé pour les entretiens en conseil ou tech.",
+      "entities": [
+        "Korea Deep Learning",
+        "Shinhan Vietnam Finance",
+        "Corée du Sud"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "53511ccfb7296589",
+        "title": "Bank of England poised to hike rates for first time in 3 years",
+        "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQYXM1eE1qNm05dkg5WWJabktscTRfLXlCdktDcTJYRjYzR2RLUXc1UkdTZHFwSzNCV2NxQTdPT2JrRTVENFNOeTdiYWtFZzZ0dFowUXV1anpnSWZudktCR3FwZm9QMFhJUTJtckJfdlpQM21seG1BVEV0MWpfNXJOZjhhcEwzUG5XZ2FNRk9RS0JrSFU4bElfdTFB?oc=5",
+        "source": "Reuters",
+        "published": "2026-11-05T00:03:00+00:00",
+        "summary": "Bank of England poised to hike rates for first time in 3 years Reuters",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 9,
+      "summary_fr": "La Banque d'Angleterre (BoE) pourrait relever ses taux directeurs pour la première fois depuis 3 ans, le 2 novembre 2023, en réponse à l'inflation persistante.",
+      "why_it_matters": "Une décision majeure de la BoE impacte les marchés financiers mondiaux, les taux d'intérêt et les stratégies d'investissement, essentiel pour comprendre les dynamiques économiques.",
+      "entities": [
+        "Banque d'Angleterre (BoE)",
+        "taux directeurs",
+        "inflation"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "0ffbfd22dcd6e2b5",
+        "title": "South Korea doubles security checks, readies AI-era overhaul for finance",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNc0NTeHlpY19FWDNEa19PNGI4VFdJTWRiRWtPLTlWd1I5OE5LbENRdU1uMWZneFBqZ1BzOXN2eEY5UU10SUIza0NvRDE4NzVHbjY2RkFMdlIxbmVObTNDcU5GUGZmWkszTUV1ZkhGWjRiYkNZLUV5NXNTSElueU9NY9IBlAFBVV95cUxNdW10QVZyaURWOXdRV1Jwc2NkX2luVXlyQ1NSdFFZYjlhWVQzUzVublpNQ0NlaXQ3Qml0YXBuMS1BLTRWQ1hDSDZmazloXzBGWVNDUXBYdTBJbU14Nl9RTE16R1pTZUJ1TkxVMnNldG1wdGd5R2hWQ0oxdlFtZVlBVTBkZmwxTTR0bXotWkFxWVpUNThs?oc=5",
+        "source": "Chosunbiz",
+        "published": "2026-11-05T00:00:00+00:00",
+        "summary": "South Korea doubles security checks, readies AI-era overhaul for finance Chosunbiz",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "banques",
+      "relevance": 8,
+      "summary_fr": "La Corée du Sud renforce les contrôles de sécurité et prépare une refonte du secteur financier pour s'adapter à l'ère de l'IA, avec une attention particulière aux risques liés aux innovations technologiques.",
+      "why_it_matters": "Ce mouvement montre comment les régulateurs et institutions financières anticipent les défis posés par l'IA, un enjeu stratégique pour les banques et les fintechs.",
+      "entities": [
+        "Corée du Sud",
+        "secteur financier",
+        "IA",
+        "régulation"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "e8263330c4c75653",
+        "title": "Brazil's central bank ends run of rate cuts after Lula election win",
+        "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZEFUME9sYnFseThMNGczNTU1OGwtT1ZzWk5yNXpVWGpfZWpFbjVYcHJ0NS1iRjNVNGcyQnZ4cXp3WkRuVTJ3UF8takxXTnV6ZjZ5RXFsVkVGazQwbkdkZ3czRTZ1QXp6RVo4eVZxRGpJSkN0dXhzSWZ6V0N4RGwzdTVsTF9vYlFHdUlrakdlZGF4bnFPYzlNZ1dUT2FHTnlJZTlYSWlYZ1psV2NQSHB2RExDZUg?oc=5",
+        "source": "Reuters",
+        "published": "2026-11-04T23:38:07+00:00",
+        "summary": "Brazil's central bank ends run of rate cuts after Lula election win Reuters",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "La banque centrale du Brésil a arrêté son cycle de baisse des taux après l'élection de Luiz Inácio Lula da Silva, en raison de l'inflation toujours élevée.",
+      "why_it_matters": "Cette décision reflète l'impact des changements politiques sur la politique monétaire et les marchés financiers émergents, pertinent pour analyser les dynamiques économiques globales.",
+      "entities": [
+        "Banque centrale du Brésil",
+        "Luiz Inácio Lula da Silva",
+        "inflation",
+        "taux"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "ccd76d2fdee1633d",
+        "title": "Paraguay bank crisis spurs lawmakers' calls to impeach president",
+        "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPQnVQS0hGM3R0Ynl5bHhWNDN2dkFQX1BqT3NWSnJaYzlXODRySlJ2TnNzZUdSY1FvWVBYMkxrOTQ2aDB1V2tlT1JuX3lwTVA0SzV4cTVzeGcwcHpoZUxleFpaYnFtQkhuQXJWYnoyalBmRm1pdi0wYXVuakM2c0ZLZzJ4LUN2c244MVV1a2tzd1BrZS1icjQxOFAtMXcwRXJiV2RqLV8tbnZxMEpHSlV4Uw?oc=5",
+        "source": "Reuters",
+        "published": "2026-11-04T23:10:09+00:00",
+        "summary": "Paraguay bank crisis spurs lawmakers' calls to impeach president Reuters",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 4,
+      "summary_fr": "Une crise bancaire au Paraguay pousse les législateurs à demander la destitution du président, après des faillites et des retraits massifs.",
+      "why_it_matters": "Cet événement montre les risques systémiques dans le secteur bancaire et les réactions politiques en cas de crise financière locale.",
+      "entities": [
+        "Paraguay",
+        "crise bancaire",
+        "législateurs"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "428c2030ed049d05",
+        "title": "Brazil’s Central Bank Stops Easing Cycle as Inflation Remains High",
+        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOTzBzM3JOaW9OaUJJb2RyNEMwb0tta2dvWUNHUGk4bXYwTjJZeHpFdmFOOHZWdENjR2EtaHQ4Vl91VVdnXzBVSmZ0ZEtTMVBWQnRDWTBEbE9lTU1wZFVETTJQZmwtSlFXaDhXU0NVZGt5djNpakVhZjdia19PRzdYa2dIb09nOFFENkhDVU03a1c3WVJyVWJVWGZGQ2RzVUEyWjRLYW5yTlVmNGRMOVl4WVdrY0Q1M0xULXc?oc=5",
+        "source": "WSJ",
+        "published": "2026-11-04T23:09:00+00:00",
+        "summary": "Brazil’s Central Bank Stops Easing Cycle as Inflation Remains High WSJ",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "La banque centrale du Brésil a mis fin à son assouplissement monétaire en raison d'une inflation persistante, malgré les attentes de baisse des taux.",
+      "why_it_matters": "Cette décision illustre les défis des banques centrales face à l'inflation et influence les anticipations des marchés financiers.",
+      "entities": [
+        "Banque centrale du Brésil",
+        "inflation",
+        "taux"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "810289366107398d",
+        "title": "US Bond Yields fall after midterm election 2026 results: Why are 10-year, 30-year, 2-year treasury notes d",
+        "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNdVFsMEc3aFBEMWFxREdUeThMa0ZqRE9DVzdoaE9ab0kzZ196bWxoUjcyRGJISlRqSXR4U21xRmlwSUFhSFR0ZWRMWGVMLWxDN0R1dzZ0Q09MXzZYX2ZGcFJ1MzM2bEZFby1yZmRzRF9URXFzemhCZE1zbjRWRmN0N0FsN2JaUzVfQjVXWEoxRTR2WS1JXzZCNTdrMVNVcGJTaDhaSTh5aWJFM3dDUmlrYXFTWWtxcGFTOTJNU010ZEx4UDdwdm1KdFpTZ3BoMzhsVVhwNG1YYXJycVVobWYxUUc0RHJOdHdRNjNLWlBnbHYwZzRpc1QyVlIxZFBYaHJzRWd4RTRqUHUxb1VnUXRN0gGUAkFVX3lxTE9fRldaalItYmE1R3ZiZFZDWkp0cjVTU0I1blZfdEV2dVRmM1lfT0ZFU3dESWZmWkZZc19XZ0RJMkM4eTBtVjZoN2dLNWkzVUtuSFRkSFhWNThUY0tfbFAxRWpYWk5RSDl1Mmt2WUk4dEE4bkpRLVZyYWtBdGpfTGwzZG5NaDVPT3cwd0ZKMzF0RDN4V3RHYnI3d2JYczlpa0xRMWVWS1phNzZyMER5Rk1fbGpNZThIeFRFV0NLaGFJRTk4Tlk5TEF5TUlvMklrQ09tY1I5c3RPT1JjanlKNDl0dDZqRzBsdG1YQzZDcVc1andyNG9PNnBtZWZXUFZMc3ltalhIQnQ2UEliU1hEVmZfSm40QQ?oc=5",
+        "source": "The Economic Times",
+        "published": "2026-11-04T23:05:55+00:00",
+        "summary": "US Bond Yields fall after midterm election 2026 results: Why are 10-year, 30-year, 2-year treasury notes d The Economic Times",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 6,
+      "summary_fr": "Les rendements des obligations américaines (Treasury notes) à 10 ans, 30 ans et 2 ans ont baissé après les résultats des élections de mi-mandat de 2026 aux États-Unis.",
+      "why_it_matters": "Les mouvements des taux d'intérêt aux États-Unis ont un impact direct sur les marchés financiers mondiaux et les stratégies d'investissement, crucial pour les analyses économiques.",
+      "entities": [
+        "Treasury notes",
+        "États-Unis",
+        "élections de mi-mandat 2026",
+        "taux d'intérêt"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "55ac812e62a8bdba",
+        "title": "La Banque d'Angleterre vers sa première hausse de taux depuis plus de trois ans",
+        "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5tUWlKWVhVUURoSVRpT2dDVWJkemRYcjIwTHJMQU5QZlh5Q3k5VXlZdjk1UGxWS3R1eDUzMkt5UnRycDlYTHFrWFZVTktPOVhPWlBoMXJXcTd4RmxaNXhjeWVB?oc=5",
+        "source": "TradingView",
+        "published": "2026-11-04T23:01:09+00:00",
+        "summary": "La Banque d'Angleterre vers sa première hausse de taux depuis plus de trois ans TradingView",
+        "feed_theme": "banques"
+      },
+      "theme": "marches",
+      "relevance": 9,
+      "summary_fr": "La Banque d'Angleterre (BoE) pourrait procéder à sa première hausse de ses taux directeurs depuis plus de trois ans, un signal fort contre l’inflation persistante.",
+      "why_it_matters": "Cette décision impacte directement les marchés financiers mondiaux, les flux de capitaux vers les actifs risqués (comme les actions) et les coûts d’emprunt en livre sterling, des éléments clés pour les entretiens en finance internationale.",
+      "entities": [
+        "Banque d'Angleterre (BoE)",
+        "taux directeurs",
+        "inflation"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "b487440a640f3570",
+        "title": "Maison de l’IA : 150 000 sensibilisés",
+        "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQY1B5RmtrQ2tVUkFxQjNkc2p6eWZUYjBGZUlER19ZczNmcEdnaGI1ZHNRam5BX1h5MmJMNFRhOUFlYUtPTjk3VlJfa3FrQ1BCaVZjeXhBS3NzLWtqMGg5UHhaZ1M1Ullzem54LVBnRVpCNVNybzVTTGgzMmQ2WHFZSw?oc=5",
+        "source": "Team Nice Côte d'Azur",
+        "published": "2026-11-04T22:45:46+00:00",
+        "summary": "Maison de l’IA : 150 000 sensibilisés Team Nice Côte d'Azur",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 2,
+      "summary_fr": "La Maison de l’IA a formé ou sensibilisé 150 000 personnes, principalement dans la région Nice Côte d'Azur, sur les enjeux liés à l'intelligence artificielle.",
+      "why_it_matters": "Cela montre une initiative locale d'adoption de l'IA en France, utile pour comprendre les dynamiques d'éducation et de sensibilisation dans ce domaine.",
+      "entities": [
+        "Maison de l’IA",
+        "Nice Côte d'Azur"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "33a7076609087ff9",
+        "title": "AI PACs spent millions trying to shape Congress — here’s how they fared",
+        "url": "https://techcrunch.com/2026/11/04/ai-pacs-spent-millions-trying-to-shape-congress-heres-how-they-fared/",
+        "source": "techcrunch.com",
+        "published": "2026-11-04T22:45:09+00:00",
+        "summary": "AI industry PACs spent millions influencing the 2026 midterms, with mixed results. Political groups are already looking toward the next election cycle.",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Les comités d'action politique (PACs) liés au secteur de l'IA ont dépensé des millions de dollars pour influencer les élections de mi-mandat de 2026 aux États-Unis, avec des résultats mitigés. Les groupes politiques commencent déjà à se préparer pour le prochain cycle électoral.",
+      "why_it_matters": "Cela montre l'impact croissant du lobbying dans le secteur de l'IA sur les décisions politiques, un enjeu clé pour la régulation future (comme l'AI Act) et les opportunités d'affaires dans ce domaine.",
+      "entities": [
+        "IA",
+        "PACs",
+        "élections de mi-mandat 2026",
+        "secteur politique américain"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "11624ef4b2569268",
+        "title": "Singapore's DBS warns of uncertain outlook as market volatility drives Q3 profit miss",
+        "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZTU3NHZrQ0JWNGxYMThkNGxJdWF0SDRrZ3NXUlpZem83cEoxRlp6MnI5QlNMeVRMdUJGRTJHNUFzdFlvZ293eXJ5RlRzUjJHV2xLZ1dlaC1xLW1uV0RfQnQ4bVBNQ0dFcG9vcVFEZmQwdS1tNEFtd2hXN2RyOE9NRmVYZjdOck1KR2F5bjlNekdlYmJGUlpreHlmRzZXMDBsRnVfaHBvUGlscUVVeEtOWG5vSk0yVm9KeS1jRTk3dGtFZw?oc=5",
+        "source": "Reuters",
+        "published": "2026-11-04T22:39:00+00:00",
+        "summary": "Singapore's DBS warns of uncertain outlook as market volatility drives Q3 profit miss Reuters",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 7,
+      "summary_fr": "La banque singapourienne DBS a manqué ses objectifs de profit pour le 3e trimestre 2023 en raison de la volatilité des marchés financiers, et alerte sur un contexte économique incertain.",
+      "why_it_matters": "Cela illustre l'impact direct de la volatilité des marchés sur les résultats des grandes banques, un sujet clé pour comprendre les risques financiers et les stratégies de gestion des banques comme BNP Paribas ou JPMorgan.",
+      "entities": [
+        "DBS",
+        "volatilité des marchés",
+        "profit trimestriel"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "cb19c14849a3f00a",
+        "title": "Arm Holdings Forecasts Q3 Revenue Boost Amid AI Spending Surge",
+        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSlVXbDhMTm1HYVdtU0lTQVF0d1RfVUdlVnZSWjNSdkhmVVJodkRUTTQySHV6YjRTZ3dBSlVCMFdMbGprallpdW80dENqOVh0TmNnMGtGNTE1MFg1R2JkOHFlMU9PelpWY0VDTERicy1aUmpLM09Tc25pRXMzNTVsazY1V0RySFdDdDZpdzlZZER6dkNzaENnUHd0Y3RLQkU?oc=5",
+        "source": "Global Banking & Finance Review",
+        "published": "2026-11-04T22:18:45+00:00",
+        "summary": "Arm Holdings Forecasts Q3 Revenue Boost Amid AI Spending Surge Global Banking & Finance Review",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 9,
+      "summary_fr": "Arm Holdings anticipe une hausse de ses revenus au T3 2023, portée par une augmentation des dépenses en IA. L'entreprise mise sur la demande croissante pour ses puces et technologies adaptées aux applications d'intelligence artificielle.",
+      "why_it_matters": "Ce mouvement reflète l'accélération de l'adoption de l'IA dans les infrastructures technologiques, un sujet clé pour les entretiens en tech et finance, notamment sur les investissements dans les semi-conducteurs et l'innovation.",
+      "entities": [
+        "Arm Holdings",
+        "IA",
+        "semi-conducteurs"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "90248c1ffce43a9b",
+        "title": "Nothing CEO says company’s mysterious AI-first device is dropping next month",
+        "url": "https://techcrunch.com/2026/11/04/nothing-ceo-says-companys-mysterious-ai-first-device-is-dropping-next-month/",
+        "source": "techcrunch.com",
+        "published": "2026-11-04T22:13:16+00:00",
+        "summary": "While it's not yet clear what kind of product the smartphone startup is cooking up, Nothing's CEO said the product is designed to leverage AI for productivity gains.",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "Nothing, une startup spécialisée dans les smartphones, annonce le lancement prochain (mi-novembre) d’un appareil mystérieux centré sur l’IA, conçu pour améliorer la productivité. Aucune précision technique ou nom du produit n’est donnée pour l’instant.",
+      "why_it_matters": "Ce lancement pourrait marquer une entrée significative de Nothing dans le domaine de l’IA appliquée aux appareils grand public, un secteur en forte croissance et stratégique pour les acteurs tech et financiers.",
+      "entities": [
+        "Nothing",
+        "IA",
+        "smartphones"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f7bfbdd380c3530f",
+        "title": "European Stock Markets Today: STOXX Europe 600, FTSE MIB, DAX, CAC 40 and FTSE 100 Rally as Oil and Bond Yields Ease",
+        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQTlc4WG9HYVc4OEktUURpU1E0akdyMjZaY0pkSzBrS0lBdmtfUU1ZNmQ3ZnlaaUhEV3dwT0NsWlFZZk9NalpyVGdmaXY3QTUzY2s3QkZXTHlXOTBTbnBPZnA5cVVvVHVHeEdlSlVDNEVpOWNNSi1OU0FiLUVBcnY0T3VEdkdOaS00UzlQNWhtMkpIckNrNDdmajBRRTFpNXFTcU9fNjlsY1pTX282U2RiMlJmTDlhM2NkOWJfRFZlam1kOWxOOE85ei1FODJQNV9YQTdrZW5Pd1BLOXZOSGJtNg?oc=5",
+        "source": "BBN Times",
+        "published": "2026-11-04T21:56:27+00:00",
+        "summary": "European Stock Markets Today: STOXX Europe 600, FTSE MIB, DAX, CAC 40 and FTSE 100 Rally as Oil and Bond Yields Ease BBN Times",
+        "feed_theme": "marches"
+      },
+      "theme": "marches",
+      "relevance": 7,
+      "summary_fr": "Les indices européens (STOXX Europe 600, CAC 40, DAX, FTSE 100, FTSE MIB) ont progressé hier en raison d’une baisse des prix du pétrole et des rendements obligataires.",
+      "why_it_matters": "Ces mouvements illustrent les réactions des marchés aux signaux économiques, essentiels pour comprendre les stratégies d’investissement et les dynamiques macroéconomiques.",
+      "entities": [
+        "STOXX Europe 600",
+        "CAC 40",
+        "DAX",
+        "FTSE 100"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "f3f4f568585b6de9",
+        "title": "Almost no one uses AI agents to book their Uber, company says",
+        "url": "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/",
+        "source": "techcrunch.com",
+        "published": "2026-11-04T21:56:01+00:00",
+        "summary": "During its busiest week last quarter, Uber said only four people booked a ride using an AI agent.",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 5,
+      "summary_fr": "Uber précise qu’en pleine période de forte activité, seulement 4 utilisateurs ont réservé un trajet via un agent IA.",
+      "why_it_matters": "Ce chiffre montre les limites actuelles de l’adoption des agents IA dans les services grand public, un point clé pour discuter de leur potentiel et de leurs défis.",
+      "entities": [
+        "Uber",
+        "IA",
+        "agents IA"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "11939ea8c6ebf2a2",
+        "title": "First Take: Platinum Bank’s New CEO, Nicole Sever",
+        "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1NdWFOSkVuTUFVT0lEdDhta3VPSWxVN2ZlSGxYaXF6WnFSa2RlSURrSFdid1A0SERkZzFTQnVITGNaLXd2X1hSZEtMUWp0NUJQcnp1WHVMSWVkdmlray1udENOb0c?oc=5",
+        "source": "Twin Cities Business",
+        "published": "2026-11-04T21:53:27+00:00",
+        "summary": "First Take: Platinum Bank’s New CEO, Nicole Sever Twin Cities Business",
+        "feed_theme": "banques"
+      },
+      "theme": "banques",
+      "relevance": 6,
+      "summary_fr": "Nicole Sever a été nommée nouvelle PDG de Platinum Bank, une banque américaine.",
+      "why_it_matters": "Les changements de direction en banque reflètent des évolutions stratégiques ou opérationnelles, utiles pour analyser la gouvernance et les tendances sectorielles.",
+      "entities": [
+        "Platinum Bank",
+        "Nicole Sever",
+        "PDG"
+      ],
+      "related": []
+    },
+    {
+      "article": {
+        "id": "8f95cc4c4efa957e",
+        "title": "INTELLIGENCE ARTIFICIELLE-À l'occasion des référendums organisés lors des élections de mi-mandat, les électeur",
+        "url": "https://news.google.com/rss/articles/CBMi1gJBVV95cUxNY09iby1fNEE4alF4ZFlxVW4zTGd5RkZZSk1fWlJJd2RMX2tqN0lTc0FCeU5od0tGRW5pcmJqNm1UNFlpZzJOUWtIN0Q0eTh4Uk9JUDhtR2ZQNlFWOHRKbWRPaUlIWGlQN3daeTQxMWp1VWtmelQzUEJ5VmQxaDNhUG4tSS0tVHNhOXVsWHhodGg4TEROQVJuV29uVHFUVDFSRmwwbTFPOWNCUV9VNndjLW5odmI5YkNNN2wyc3Q4emR1T3VzUWFkZEU4a0NJeWk5a1VEWjAtMGRLV0tIQjJvRHBEQ0FCVzVZYUJ0N1A0RlFfV3I0MlBqbjBpNXc0Q1Vxd0Z6SlRUZWtuOHNTWXNRenZ1bFkwOVA3MjEtb1RrbDMzbHEyV3BIMjBMdEk0Z25hRGxnN3RTRjEwaXFYN3JXQXdkamtaaF9GUkNVQ3FCVHZacXFjTHfSAdYCQVVfeXFMTWNPYm8tXzRBOGpReGRZcVVuM0xneUZGWUpNX1pSSXdkTF9rajdJU3NBQnlOaHdLRkVuaXJiajZtVDRZaWcyTlFrSDdENHk4eFJPSVA4bUdmUDZRVjh0Sm1kT2lJSFhpUDd3Wnk0MTFqdVVrZnpUM1BCeVZkMWgzYVBuLUktLVRzYTl1bFh4aHRoOExETkFSbldvblRxVFQxUkZsMG0xTzljQlFfVTZ3Yy1uaHZiOWJDTTdsMnN0OHpkdU91c1FhZGRFOGtDSXlpOWtVRFowLTBkS1dLSEIyb0RwRENBQlc1WWFCdDdQNEZRX1dyNDJQam4waTV3NENVcXdGekpUVGVrbjhzU1lzUXp2dWxZMDlQNzIxLW9Ua2wzM2xxMldwSDIwTHRJNGduYURsZzd0U0YxMGlxWDdyV0F3ZGprWmhfRlJDVUNxQlR2WnFxY0x3?oc=5",
+        "source": "Boursorama",
+        "published": "2026-11-04T21:49:03+00:00",
+        "summary": "INTELLIGENCE ARTIFICIELLE-À l'occasion des référendums organisés lors des élections de mi-mandat, les électeur Boursorama",
+        "feed_theme": "ia_tech"
+      },
+      "theme": "ia_tech",
+      "relevance": 6,
+      "summary_fr": "L’IA a été employée pour analyser les résultats de référendums lors des élections de mi-mandat aux États-Unis.",
+      "why_it_matters": "Cette utilisation montre comment l’IA influence les processus politiques et sociaux, un sujet pertinent pour discuter de son impact sociétal et de sa régulation.",
+      "entities": [
+        "IA",
+        "référendums",
+        "élections de mi-mandat"
+      ],
+      "related": []
+    }
+  ]
+}
