@@ -5,9 +5,11 @@ name: Veille quotidienne
 # on programme donc les DEUX horaires possibles, et le job « garde » ne laisse passer
 # que celui qui tombe à 7h45 à Paris. Une seule exécution utile par jour, toute l'année.
 on:
-  schedule:
-    - cron: "45 5 * * *"   # 7h45 à Paris en heure d'été (UTC+2)
-    - cron: "45 6 * * *"   # 7h45 à Paris en heure d'hiver (UTC+1)
+  # Envoi quotidien désactivé : le brief part désormais du PC (Planificateur de tâches Windows, 7h45).
+  # Pour réactiver GitHub, remettre ces deux lignes :
+  #   schedule:
+  #     - cron: "45 5 * * *"   # 7h45 à Paris en heure d'été (UTC+2)
+  #     - cron: "45 6 * * *"   # 7h45 à Paris en heure d'hiver (UTC+1)
   workflow_dispatch:       # bouton « Run workflow » pour lancer à la main
     inputs:
       force:
