@@ -30,6 +30,9 @@ flowchart LR
 - **Le pipeline (V1)** suit toujours les mêmes étapes, dans le même ordre : collecter, noter, résumer, rédiger. C'est prévisible, peu coûteux, mais le modèle ne voit que le titre et l'extrait RSS.
 - **L'agent (V2)** reçoit un objectif (« approfondis cet événement ») et des outils. À chaque tour, **c'est lui qui choisit** : lire un article, comparer avec la mémoire, chercher ailleurs, ou conclure. Le code se contente d'exécuter les outils demandés, de renvoyer les résultats et de faire respecter un budget. Si l'agent échoue, l'événement garde son résumé V1 : le pipeline sert de filet de sécurité.
 
+**Version pédagogique.** [`docs/boucle_agentique_simplifiee.py`](docs/boucle_agentique_simplifiee.py) rejoue la boucle de `investigate()` en une soixantaine de lignes, sans réseau ni clé API (un faux modèle, trois outils factices, vérification des chiffres).
+Lancer `python docs/boucle_agentique_simplifiee.py`, puis `--budget 2` pour voir la conclusion forcée.
+
 | Fichier | Rôle |
 |---|---|
 | `config.yaml` | Thèmes, flux, profil du lecteur, seuils, réglages de l'agent. Tout se règle ici sans toucher au code. |
